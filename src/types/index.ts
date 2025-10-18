@@ -39,13 +39,25 @@ export interface StudyTopic {
 // Score and leaderboard types
 export interface ScoreRecord {
   id: string
+  userId: string
   userName: string
   quizId: string // 'test' for test mode, category id for quiz mode
+  quizName: string
   score: number
   totalQuestions: number
   percentage: number
   timestamp: string
+  type: 'quiz' | 'test'
   answers: AnswerRecord[]
+}
+
+export interface QuizResult {
+  question: Question
+  userAnswer: number
+  correctAnswer: number
+  isCorrect: boolean
+  shuffledOptions: string[]
+  newCorrectIndex: number
 }
 
 export interface AnswerRecord {

@@ -139,6 +139,7 @@ export function useScores() {
     loading,
     error,
     addScore,
+    saveScore: addScore, // Alias for consistency
     getUserScores,
     getQuizScores,
     getLeaderboard,

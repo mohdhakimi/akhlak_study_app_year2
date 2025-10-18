@@ -6,7 +6,7 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ## 📊 Current Progress
 
-**Overall Status: 5 out of 13 phases completed (38.5%)**
+**Overall Status: 6 out of 13 phases completed (46.2%)**
 
 ### ✅ Completed Phases
 - **Phase 0**: Project Setup & Configuration ✅
@@ -15,9 +15,10 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 - **Phase 3**: User Management System ✅
 - **Phase 4**: Main Menu & Navigation ✅
 - **Phase 5**: Study Mode (Mod Belajar) ✅
+- **Phase 6**: Quiz Mode Core Logic ✅
 
 ### 🚧 Next Phase
-- **Phase 6**: Quiz Mode Core Logic (Ready to start)
+- **Phase 7**: Test Mode (Mod Ujian) (Ready to start)
 
 ### 📋 Phase Status Legend
 - ✅ **Completed**: All tasks and acceptance criteria met
@@ -228,9 +229,9 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Version Control
 
-- [ ] Commit: "Phase 5: Study Mode implementation"
-- [ ] Tag: `v0.6.0`
-- [ ] Push to GitHub
+- [x] Commit: "Phase 5: Study Mode implementation"
+- [x] Tag: `v0.6.0`
+- [x] Push to GitHub
 
 ---
 
@@ -240,32 +241,32 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Tasks
 
-- [ ] Create `QuizMode.tsx` page component
-- [ ] Create `CategorySelector.tsx` for quiz topic selection
-- [ ] Create `QuestionCard.tsx` for displaying MCQ questions
-- [ ] Implement answer option randomization logic (`utils/shuffleOptions.ts`)
-- [ ] Create `AnswerOption.tsx` component with selection states
-- [ ] Implement answer validation and immediate feedback (correct/incorrect highlighting)
-- [ ] Create quiz state management (current question, score, answers history)
-- [ ] Display real-time progress ("Soalan X dari 10")
-- [ ] Create `QuizResults.tsx` page showing score and full review
-- [ ] Implement score saving to localStorage
-- [ ] Write comprehensive unit tests for quiz logic (randomization, scoring, validation)
-- [ ] Write integration tests for complete quiz flow
-- [ ] Write E2E test for taking full quiz
+- [x] Create `QuizMode.tsx` page component
+- [x] Create `CategorySelector.tsx` for quiz topic selection
+- [x] Create `QuestionCard.tsx` for displaying MCQ questions
+- [x] Implement answer option randomization logic (`utils/shuffleOptions.ts`)
+- [x] Create `AnswerOption.tsx` component with selection states
+- [x] Implement answer validation and immediate feedback (correct/incorrect highlighting)
+- [x] Create quiz state management (current question, score, answers history)
+- [x] Display real-time progress ("Soalan X dari 10")
+- [x] Create `QuizResults.tsx` page showing score and full review
+- [x] Implement score saving to localStorage
+- [x] Write comprehensive unit tests for quiz logic (randomization, scoring, validation)
+- [x] Write integration tests for complete quiz flow
+- [x] Write E2E test for taking full quiz
 
 ### Acceptance Criteria
 
-- [ ] Users can select quiz category
-- [ ] 10 questions load correctly
-- [ ] Answer options are randomized each time
-- [ ] Immediate feedback shows correct/incorrect answers
-- [ ] Score calculates correctly
-- [ ] Results page shows all questions with user answers vs correct answers
-- [ ] Score persists in localStorage with correct format
-- [ ] Unit tests pass with 90%+ coverage
-- [ ] Integration tests cover quiz flow from start to results
-- [ ] E2E test completes quiz and verifies score
+- [x] Users can select quiz category
+- [x] 10 questions load correctly
+- [x] Answer options are randomized each time
+- [x] Immediate feedback shows correct/incorrect answers
+- [x] Score calculates correctly
+- [x] Results page shows all questions with user answers vs correct answers
+- [x] Score persists in localStorage with correct format
+- [x] Unit tests pass with 90%+ coverage
+- [x] Integration tests cover quiz flow from start to results
+- [x] E2E test completes quiz and verifies score
 
 ### Version Control
 
