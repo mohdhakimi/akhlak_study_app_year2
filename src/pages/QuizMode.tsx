@@ -77,6 +77,7 @@ const QuizMode: React.FC = () => {
       // Save score to localStorage
       if (currentUser && selectedCategory) {
         saveScore({
+          id: `quiz-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
           userId: currentUser.id,
           userName: currentUser.name,
           quizId: selectedCategory.id,
@@ -85,7 +86,13 @@ const QuizMode: React.FC = () => {
           totalQuestions,
           percentage: Math.round(((score + 1) / totalQuestions) * 100),
           timestamp: new Date().toISOString(),
-          type: 'quiz'
+          type: 'quiz',
+          answers: quizResults.map(result => ({
+            questionId: result.question.id,
+            userAnswer: result.userAnswer,
+            correctAnswer: result.correctAnswer,
+            isCorrect: result.isCorrect
+          }))
         })
       }
     } else {

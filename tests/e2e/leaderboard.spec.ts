@@ -72,8 +72,24 @@ test.describe('Leaderboard', () => {
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     
-    // Complete quiz quickly
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer second question correctly
+    await page.getByText('Jujur dalam perkataan').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer third question correctly
+    await page.getByText('Supaya Allah SWT suka kepada kita').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer fourth question correctly
+    await page.getByText('Membantu rakan yang memerlukan').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer fifth question correctly
+    await page.getByText('Kita disukai oleh Allah SWT dan orang lain').click()
     await page.getByText('Selesai').click()
     
     // Go to leaderboard
@@ -90,8 +106,21 @@ test.describe('Leaderboard', () => {
     await page.getByRole('heading', { name: 'Mod Ujian' }).click()
     await page.getByText('Mula Ujian').click()
     
-    // Complete test quickly
-    await page.getByText('Jujur').click()
+    // Complete test quickly - answer first few questions correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    await page.getByText('Jujur dalam perkataan').click()
+    await page.getByText('Seterusnya').click()
+    
+    await page.getByText('Supaya Allah SWT suka kepada kita').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Skip remaining questions to complete test quickly
+    for (let i = 0; i < 27; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     // Go to leaderboard
@@ -107,8 +136,8 @@ test.describe('Leaderboard', () => {
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Click different filters and then all
-    await page.getByText('Kuiz').click()
-    await page.getByText('Semua').click()
+    await page.getByRole('button', { name: /Kuiz/ }).click()
+    await page.getByRole('button', { name: /Semua/ }).click()
     
     await expect(page.getByText('Papan Markah - Semua')).toBeVisible()
   })
@@ -129,7 +158,15 @@ test.describe('Leaderboard', () => {
     // Complete a quiz first
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     // Go to leaderboard
@@ -143,7 +180,15 @@ test.describe('Leaderboard', () => {
     // Complete multiple quizzes/tests to have data
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
@@ -156,7 +201,15 @@ test.describe('Leaderboard', () => {
     // Complete a quiz
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
@@ -169,7 +222,15 @@ test.describe('Leaderboard', () => {
     // Complete a quiz
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
@@ -182,7 +243,15 @@ test.describe('Leaderboard', () => {
     // Complete a quiz
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
@@ -195,7 +264,15 @@ test.describe('Leaderboard', () => {
     // Complete a quiz
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
@@ -219,7 +296,7 @@ test.describe('Leaderboard', () => {
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Check if leaderboard is visible on mobile
-    await expect(page.getByText('Papan Markah')).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Papan Markah' }).first()).toBeVisible()
     await expect(page.getByText('Jumlah Percubaan')).toBeVisible()
   })
 
@@ -227,9 +304,9 @@ test.describe('Leaderboard', () => {
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Click different filters
-    await page.getByText('Kuiz').click()
-    await page.getByText('Ujian').click()
-    await page.getByText('Semua').click()
+    await page.getByRole('button', { name: /Kuiz/ }).click()
+    await page.getByRole('button', { name: /Ujian/ }).click()
+    await page.getByRole('button', { name: /Semua/ }).click()
     
     // All buttons should be clickable
     await expect(page.getByText('Semua')).toBeVisible()
@@ -247,7 +324,15 @@ test.describe('Leaderboard', () => {
     // Complete a quiz
     await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
-    await page.getByText('Jujur').click()
+    // Complete quiz quickly - answer first question correctly
+    await page.getByText('Tingkah laku yang baik dan mulia').click()
+    await page.getByText('Seterusnya').click()
+    
+    // Answer remaining questions quickly
+    for (let i = 0; i < 4; i++) {
+      await page.getByText('Seterusnya').click()
+    }
+    
     await page.getByText('Selesai').click()
     
     await page.getByRole('heading', { name: 'Papan Markah' }).first().click()

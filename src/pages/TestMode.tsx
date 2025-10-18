@@ -76,6 +76,7 @@ const TestMode: React.FC = () => {
       // Save score to localStorage
       if (currentUser) {
         saveScore({
+          id: `test-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
           userId: currentUser.id,
           userName: currentUser.name,
           quizId: 'test',
@@ -84,7 +85,13 @@ const TestMode: React.FC = () => {
           totalQuestions,
           percentage: Math.round(((score + 1) / totalQuestions) * 100),
           timestamp: new Date().toISOString(),
-          type: 'test'
+          type: 'test',
+          answers: testResults.map(result => ({
+            questionId: result.question.id,
+            userAnswer: result.userAnswer,
+            correctAnswer: result.correctAnswer,
+            isCorrect: result.isCorrect
+          }))
         })
       }
     } else {

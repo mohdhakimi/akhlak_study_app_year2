@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "lastUpdated": "2025-10-18",
+  "version": "2.0.0",
+  "lastUpdated": "2025-01-18",
   "topics": [
     {
       "id": "akhlak-1",
@@ -9,20 +9,20 @@
       "notes": [
         {
           "id": "akhlak-1-note-1",
-          "title": "Pengenalan Akhlak Terpuji",
-          "content": "Akhlak terpuji adalah tingkah laku yang baik dan mulia yang disukai oleh Allah SWT dan Rasulullah SAW. Ia merangkumi sifat-sifat seperti jujur, amanah, sabar, dan bertanggungjawab.",
+          "title": "Apa itu Akhlak Terpuji?",
+          "content": "Akhlak terpuji adalah tingkah laku yang baik dan mulia. Ia adalah cara kita berkelakuan yang disukai oleh Allah SWT dan Rasulullah SAW.\n\nContoh akhlak terpuji:\n• Jujur - bercakap benar\n• Amanah - boleh dipercayai\n• Sabar - tidak mudah marah\n• Bertanggungjawab - melakukan tugas dengan baik",
           "order": 1
         },
         {
           "id": "akhlak-1-note-2",
-          "title": "Contoh Akhlak Terpuji",
-          "content": "Antara contoh akhlak terpuji yang perlu diamalkan:\n\n1. Jujur dalam perkataan dan perbuatan\n2. Amanah dalam melaksanakan tugas\n3. Sabar menghadapi cabaran\n4. Bertanggungjawab terhadap diri dan keluarga\n5. Menghormati ibu bapa dan guru",
+          "title": "Mengapa Akhlak Terpuji Penting?",
+          "content": "Akhlak terpuji penting kerana:\n\n1. Allah SWT suka kepada kita\n2. Orang lain suka kepada kita\n3. Kita menjadi contoh yang baik\n4. Masyarakat menjadi aman dan sejahtera\n5. Kita mendapat pahala dari Allah SWT",
           "order": 2
         },
         {
           "id": "akhlak-1-note-3",
-          "title": "Kepentingan Akhlak Terpuji",
-          "content": "Akhlak terpuji penting kerana:\n\n• Membuatkan kita disukai oleh Allah SWT\n• Menjadikan kita contoh yang baik kepada orang lain\n• Membina hubungan yang baik dengan keluarga dan rakan\n• Mewujudkan masyarakat yang harmoni dan sejahtera",
+          "title": "Cara Mempraktikkan Akhlak Terpuji",
+          "content": "Kita boleh mempraktikkan akhlak terpuji dengan:\n\n• Bercakap dengan lembut dan sopan\n• Membantu rakan yang memerlukan\n• Meminta maaf jika melakukan kesalahan\n• Berterima kasih kepada orang lain\n• Sentiasa berdoa kepada Allah SWT",
           "order": 3
         }
       ]
@@ -34,211 +34,433 @@
       "notes": [
         {
           "id": "akhlak-2-note-1",
-          "title": "Kewajipan Terhadap Ibu Bapa",
-          "content": "Sebagai anak, kita wajib:\n\n1. Menghormati ibu bapa dengan kata-kata yang lembut\n2. Mematuhi nasihat dan arahan mereka\n3. Membantu mereka dalam kerja-kerja rumah\n4. Mendoakan kesejahteraan mereka\n5. Tidak menyakiti hati mereka",
+          "title": "Kewajipan Anak Terhadap Ibu Bapa",
+          "content": "Sebagai anak, kita wajib:\n\n1. Menghormati ibu bapa\n2. Mematuhi nasihat mereka\n3. Membantu mereka di rumah\n4. Mendoakan kesejahteraan mereka\n5. Tidak menyakiti hati mereka\n\nAllah SWT berfirman: \"Dan Tuhanmu telah memerintahkan supaya kamu jangan menyembah selain Dia dan hendaklah kamu berbuat baik kepada ibu bapa.\"",
           "order": 1
         },
         {
           "id": "akhlak-2-note-2",
           "title": "Cara Menghormati Ibu Bapa",
-          "content": "Cara-cara menghormati ibu bapa:\n\n• Bercakap dengan sopan dan lembut\n• Meminta izin sebelum melakukan sesuatu\n• Membantu mereka apabila diminta\n• Tidak meninggikan suara kepada mereka\n• Sentiasa mendoakan mereka",
+          "content": "Cara-cara menghormati ibu bapa:\n\n• Bercakap dengan sopan dan lembut\n• Meminta izin sebelum melakukan sesuatu\n• Membantu mereka apabila diminta\n• Tidak meninggikan suara kepada mereka\n• Sentiasa mendoakan mereka\n• Mengucapkan terima kasih kepada mereka",
           "order": 2
+        },
+        {
+          "id": "akhlak-2-note-3",
+          "title": "Kisah Nabi Ismail dan Nabi Ibrahim",
+          "content": "Nabi Ismail adalah contoh anak yang taat kepada ibu bapa. Walaupun bapanya Nabi Ibrahim meminta dia untuk berkorban, Nabi Ismail tetap taat dan berkata:\n\n\"Wahai bapaku, lakukanlah apa yang diperintahkan kepadamu. Insya Allah, kamu akan mendapatiku termasuk orang yang sabar.\"\n\nIni menunjukkan betapa pentingnya taat kepada ibu bapa.",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "akhlak-3",
+      "name": "Akhlak Terhadap Guru",
+      "description": "Cara menghormati dan menghargai guru",
+      "notes": [
+        {
+          "id": "akhlak-3-note-1",
+          "title": "Kepentingan Menghormati Guru",
+          "content": "Guru adalah orang yang mengajar kita ilmu pengetahuan. Mereka sangat penting dalam hidup kita kerana:\n\n• Mereka mengajar kita membaca dan menulis\n• Mereka mengajar kita tentang agama\n• Mereka membimbing kita menjadi orang yang baik\n• Mereka sabar mengajar kita\n• Mereka mendoakan kebaikan untuk kita",
+          "order": 1
+        },
+        {
+          "id": "akhlak-3-note-2",
+          "title": "Cara Menghormati Guru",
+          "content": "Cara-cara menghormati guru:\n\n• Memberi salam kepada guru\n• Mendengar dengan teliti ketika guru mengajar\n• Tidak bercakap ketika guru sedang mengajar\n• Menyiapkan kerja rumah yang diberikan\n• Meminta izin sebelum masuk atau keluar kelas\n• Mengucapkan terima kasih kepada guru",
+          "order": 2
+        },
+        {
+          "id": "akhlak-3-note-3",
+          "title": "Kisah Nabi Musa dan Nabi Khidir",
+          "content": "Nabi Musa belajar daripada Nabi Khidir dengan penuh hormat. Nabi Musa berkata:\n\n\"Bolehkah aku mengikutimu supaya kamu mengajarkan kepadaku ilmu yang benar di antara ilmu-ilmu yang telah diajarkan kepadamu?\"\n\nIni menunjukkan betapa pentingnya menghormati guru dan menuntut ilmu dengan cara yang baik.",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "akhlak-4",
+      "name": "Akhlak Terhadap Rakan",
+      "description": "Cara bergaul dengan rakan-rakan dengan baik",
+      "notes": [
+        {
+          "id": "akhlak-4-note-1",
+          "title": "Kepentingan Persahabatan yang Baik",
+          "content": "Rakan adalah orang yang sama umur dengan kita. Persahabatan yang baik penting kerana:\n\n• Rakan boleh membantu kita belajar\n• Rakan boleh bermain bersama-sama\n• Rakan boleh berkongsi kegembiraan\n• Rakan boleh memberikan nasihat yang baik\n• Rakan boleh menjadi teman yang setia",
+          "order": 1
+        },
+        {
+          "id": "akhlak-4-note-2",
+          "title": "Cara Bergaul dengan Rakan",
+          "content": "Cara-cara bergaul dengan rakan yang baik:\n\n• Bercakap dengan lembut dan sopan\n• Berkongsi makanan dan mainan\n• Membantu rakan yang memerlukan\n• Tidak bergaduh atau bergurau yang keterlaluan\n• Meminta maaf jika melakukan kesalahan\n• Sentiasa mendoakan kebaikan untuk rakan",
+          "order": 2
+        },
+        {
+          "id": "akhlak-4-note-3",
+          "title": "Kisah Nabi Muhammad dan Abu Bakar",
+          "content": "Nabi Muhammad SAW dan Abu Bakar adalah sahabat yang sangat rapat. Abu Bakar sentiasa membantu Nabi Muhammad SAW dalam menyebarkan Islam.\n\nAbu Bakar berkata: \"Jika Muhammad berkata, aku percaya. Jika dia memberitahu tentang Allah, aku percaya.\"\n\nIni menunjukkan betapa pentingnya persahabatan yang berdasarkan kepercayaan dan kebaikan.",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "akhlak-5",
+      "name": "Akhlak di Sekolah",
+      "description": "Cara berkelakuan yang baik di sekolah",
+      "notes": [
+        {
+          "id": "akhlak-5-note-1",
+          "title": "Peraturan di Sekolah",
+          "content": "Di sekolah, kita perlu mengikut peraturan yang telah ditetapkan:\n\n• Datang ke sekolah tepat pada waktunya\n• Memakai pakaian yang kemas dan bersih\n• Menjaga kebersihan sekolah\n• Tidak membuat bising di dalam kelas\n• Menghormati semua warga sekolah\n• Menggunakan kemudahan sekolah dengan betul",
+          "order": 1
+        },
+        {
+          "id": "akhlak-5-note-2",
+          "title": "Cara Menjaga Kebersihan Sekolah",
+          "content": "Kita perlu menjaga kebersihan sekolah kerana:\n\n• Sekolah yang bersih membuatkan kita selesa belajar\n• Allah SWT suka kepada kebersihan\n• Kebersihan mencegah penyakit\n• Sekolah yang bersih nampak cantik\n\nCara menjaga kebersihan:\n• Membuang sampah di tempat yang betul\n• Membersihkan meja dan kerusi selepas digunakan\n• Tidak menconteng dinding atau meja",
+          "order": 2
+        },
+        {
+          "id": "akhlak-5-note-3",
+          "title": "Menghormati Semua Warga Sekolah",
+          "content": "Di sekolah, kita perlu menghormati:\n\n• Guru-guru\n• Kakitangan sekolah\n• Rakan-rakan\n• Adik-adik kelas\n• Abang-abang dan kakak-kakak kelas\n\nCara menghormati:\n• Memberi salam kepada semua orang\n• Bercakap dengan sopan\n• Membantu jika diperlukan\n• Tidak mengganggu orang lain",
+          "order": 3
         }
       ]
     }
   ],
   "quizCategories": [
     {
-      "id": "quiz-akhlak-1",
+      "id": "akhlak-1",
       "name": "Akhlak Terpuji",
-      "description": "Ujian pengetahuan tentang akhlak terpuji",
+      "description": "Kuiz tentang akhlak yang terpuji",
       "questions": [
         {
-          "id": "q1",
-          "question": "Apakah maksud akhlak terpuji?",
+          "id": "akhlak-1-q1",
+          "question": "Apakah yang dimaksudkan dengan akhlak terpuji?",
           "options": [
             "Tingkah laku yang buruk",
             "Tingkah laku yang baik dan mulia",
             "Tingkah laku yang biasa-biasa sahaja",
-            "Tingkah laku yang tidak penting"
+            "Tingkah laku yang menakutkan"
           ],
           "correctAnswer": 1,
           "explanation": "Akhlak terpuji adalah tingkah laku yang baik dan mulia yang disukai oleh Allah SWT dan Rasulullah SAW."
         },
         {
-          "id": "q2",
+          "id": "akhlak-1-q2",
           "question": "Antara berikut, yang manakah contoh akhlak terpuji?",
           "options": [
             "Bercakap bohong",
-            "Mencuri barang orang lain",
             "Jujur dalam perkataan",
-            "Mengabaikan tugas"
+            "Mengambil barang orang lain",
+            "Bergaduh dengan rakan"
           ],
-          "correctAnswer": 2,
+          "correctAnswer": 1,
           "explanation": "Jujur dalam perkataan adalah salah satu contoh akhlak terpuji yang perlu diamalkan."
         },
         {
-          "id": "q3",
+          "id": "akhlak-1-q3",
           "question": "Mengapa akhlak terpuji penting?",
           "options": [
-            "Kerana dipaksa oleh guru",
-            "Kerana membuatkan kita disukai oleh Allah SWT",
-            "Kerana mengikut trend semasa",
-            "Kerana malu dengan kawan"
+            "Supaya orang takut kepada kita",
+            "Supaya Allah SWT suka kepada kita",
+            "Supaya kita boleh bergaduh",
+            "Supaya kita boleh berbohong"
           ],
           "correctAnswer": 1,
-          "explanation": "Akhlak terpuji penting kerana membuatkan kita disukai oleh Allah SWT dan menjadi contoh yang baik."
+          "explanation": "Akhlak terpuji penting kerana Allah SWT suka kepada kita dan kita menjadi contoh yang baik kepada orang lain."
         },
         {
-          "id": "q4",
-          "question": "Apakah yang perlu dilakukan apabila ibu bapa memberikan nasihat?",
-          "options": [
-            "Mengabaikan nasihat mereka",
-            "Mematuhi nasihat mereka",
-            "Bercakap kasar kepada mereka",
-            "Menolak nasihat mereka"
-          ],
-          "correctAnswer": 1,
-          "explanation": "Kita wajib mematuhi nasihat ibu bapa kerana mereka menginginkan yang terbaik untuk kita."
-        },
-        {
-          "id": "q5",
-          "question": "Bagaimanakah cara menghormati ibu bapa?",
+          "id": "akhlak-1-q4",
+          "question": "Apakah yang perlu kita lakukan untuk mempraktikkan akhlak terpuji?",
           "options": [
             "Bercakap dengan kasar",
-            "Meninggikan suara kepada mereka",
-            "Bercakap dengan sopan dan lembut",
-            "Mengabaikan mereka"
-          ],
-          "correctAnswer": 2,
-          "explanation": "Kita perlu bercakap dengan sopan dan lembut kepada ibu bapa sebagai tanda hormat."
-        },
-        {
-          "id": "q6",
-          "question": "Apakah yang perlu dilakukan apabila diminta membantu ibu bapa?",
-          "options": [
-            "Menolak untuk membantu",
-            "Membantu mereka dengan rela hati",
-            "Mengeluh dan merungut",
-            "Mengabaikan permintaan mereka"
+            "Membantu rakan yang memerlukan",
+            "Mengganggu orang lain",
+            "Tidak mahu berdoa"
           ],
           "correctAnswer": 1,
-          "explanation": "Kita perlu membantu ibu bapa dengan rela hati apabila diminta sebagai tanda kasih sayang."
+          "explanation": "Membantu rakan yang memerlukan adalah salah satu cara mempraktikkan akhlak terpuji."
         },
         {
-          "id": "q7",
-          "question": "Antara berikut, yang manakah bukan akhlak terpuji?",
+          "id": "akhlak-1-q5",
+          "question": "Apakah faedah mempunyai akhlak terpuji?",
           "options": [
-            "Amanah",
-            "Sabar",
-            "Jujur",
-            "Menipu"
-          ],
-          "correctAnswer": 3,
-          "explanation": "Menipu adalah akhlak yang buruk, bukan akhlak terpuji."
-        },
-        {
-          "id": "q8",
-          "question": "Apakah yang perlu dilakukan untuk menunjukkan kasih sayang kepada ibu bapa?",
-          "options": [
-            "Mendoakan kesejahteraan mereka",
-            "Mengabaikan mereka",
-            "Bercakap kasar kepada mereka",
-            "Tidak menghormati mereka"
-          ],
-          "correctAnswer": 0,
-          "explanation": "Mendoakan kesejahteraan ibu bapa adalah salah satu cara menunjukkan kasih sayang."
-        },
-        {
-          "id": "q9",
-          "question": "Mengapa kita perlu bertanggungjawab?",
-          "options": [
-            "Kerana dipaksa",
-            "Kerana malu",
-            "Kerana ia adalah akhlak terpuji",
-            "Kerana mengikut kawan"
+            "Orang lain tidak suka kepada kita",
+            "Masyarakat menjadi tidak aman",
+            "Kita disukai oleh Allah SWT dan orang lain",
+            "Kita menjadi orang yang jahat"
           ],
           "correctAnswer": 2,
-          "explanation": "Bertanggungjawab adalah akhlak terpuji yang perlu diamalkan dalam kehidupan seharian."
-        },
-        {
-          "id": "q10",
-          "question": "Apakah yang akan berlaku jika kita mengamalkan akhlak terpuji?",
-          "options": [
-            "Kita akan dibenci oleh orang lain",
-            "Kita akan disukai oleh Allah SWT",
-            "Kita akan menjadi malas",
-            "Kita akan menjadi sombong"
-          ],
-          "correctAnswer": 1,
-          "explanation": "Dengan mengamalkan akhlak terpuji, kita akan disukai oleh Allah SWT dan orang lain."
+          "explanation": "Dengan mempunyai akhlak terpuji, kita disukai oleh Allah SWT dan orang lain, serta mewujudkan masyarakat yang harmoni."
         }
       ]
     },
     {
-      "id": "quiz-akhlak-2",
+      "id": "akhlak-2",
       "name": "Akhlak Terhadap Ibu Bapa",
-      "description": "Ujian pengetahuan tentang cara menghormati ibu bapa",
+      "description": "Kuiz tentang cara menghormati ibu bapa",
       "questions": [
         {
-          "id": "q11",
-          "question": "Apakah kewajipan utama anak terhadap ibu bapa?",
+          "id": "akhlak-2-q1",
+          "question": "Apakah kewajipan anak terhadap ibu bapa?",
           "options": [
-            "Mengabaikan mereka",
+            "Menyakiti hati mereka",
             "Menghormati dan mematuhi mereka",
-            "Bercakap kasar kepada mereka",
-            "Tidak peduli tentang mereka"
+            "Tidak mahu membantu mereka",
+            "Bercakap kasar kepada mereka"
           ],
           "correctAnswer": 1,
-          "explanation": "Kewajipan utama anak adalah menghormati dan mematuhi ibu bapa."
+          "explanation": "Anak wajib menghormati dan mematuhi ibu bapa kerana mereka telah membesarkan kita dengan penuh kasih sayang."
         },
         {
-          "id": "q12",
-          "question": "Bagaimanakah cara bercakap dengan ibu bapa?",
+          "id": "akhlak-2-q2",
+          "question": "Bagaimanakah cara menghormati ibu bapa?",
           "options": [
-            "Dengan suara yang keras",
-            "Dengan kata-kata yang kasar",
-            "Dengan sopan dan lembut",
-            "Dengan nada yang marah"
+            "Bercakap dengan kasar",
+            "Bercakap dengan sopan dan lembut",
+            "Tidak mahu meminta izin",
+            "Mengganggu mereka ketika rehat"
           ],
-          "correctAnswer": 2,
-          "explanation": "Kita perlu bercakap dengan sopan dan lembut kepada ibu bapa."
+          "correctAnswer": 1,
+          "explanation": "Kita perlu bercakap dengan sopan dan lembut kepada ibu bapa sebagai tanda hormat."
         },
         {
-          "id": "q13",
-          "question": "Apakah yang perlu dilakukan sebelum melakukan sesuatu?",
+          "id": "akhlak-2-q3",
+          "question": "Apakah yang perlu kita lakukan apabila ibu bapa meminta bantuan?",
+          "options": [
+            "Tidak mahu membantu",
+            "Membantu mereka dengan senang hati",
+            "Mengeluh dan merungut",
+            "Bercakap kasar kepada mereka"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu membantu ibu bapa dengan senang hati apabila mereka meminta bantuan."
+        },
+        {
+          "id": "akhlak-2-q4",
+          "question": "Apakah yang perlu kita lakukan sebelum melakukan sesuatu?",
           "options": [
             "Tidak perlu meminta izin",
-            "Meminta izin dari ibu bapa",
-            "Mengabaikan nasihat mereka",
-            "Melakukan tanpa memberitahu"
+            "Meminta izin daripada ibu bapa",
+            "Melakukan tanpa memberitahu mereka",
+            "Bercakap kasar kepada mereka"
           ],
           "correctAnswer": 1,
-          "explanation": "Kita perlu meminta izin dari ibu bapa sebelum melakukan sesuatu."
+          "explanation": "Kita perlu meminta izin daripada ibu bapa sebelum melakukan sesuatu sebagai tanda hormat."
         },
         {
-          "id": "q14",
-          "question": "Apakah yang perlu dilakukan apabila ibu bapa sakit?",
+          "id": "akhlak-2-q5",
+          "question": "Apakah yang perlu kita lakukan untuk ibu bapa setiap hari?",
+          "options": [
+            "Menyakiti hati mereka",
+            "Mendoakan kesejahteraan mereka",
+            "Tidak mahu bercakap dengan mereka",
+            "Bercakap kasar kepada mereka"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu mendoakan kesejahteraan ibu bapa setiap hari sebagai tanda kasih sayang dan hormat."
+        }
+      ]
+    },
+    {
+      "id": "akhlak-3",
+      "name": "Akhlak Terhadap Guru",
+      "description": "Kuiz tentang cara menghormati guru",
+      "questions": [
+        {
+          "id": "akhlak-3-q1",
+          "question": "Mengapakah kita perlu menghormati guru?",
+          "options": [
+            "Kerana guru mengajar kita ilmu",
+            "Kerana guru menakutkan kita",
+            "Kerana guru memaksa kita",
+            "Kerana guru tidak penting"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Kita perlu menghormati guru kerana mereka mengajar kita ilmu pengetahuan dan membimbing kita menjadi orang yang baik."
+        },
+        {
+          "id": "akhlak-3-q2",
+          "question": "Apakah yang perlu kita lakukan ketika guru sedang mengajar?",
+          "options": [
+            "Bercakap dengan rakan",
+            "Mendengar dengan teliti",
+            "Mengganggu guru",
+            "Tidur di dalam kelas"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu mendengar dengan teliti ketika guru sedang mengajar sebagai tanda hormat dan untuk memahami pelajaran."
+        },
+        {
+          "id": "akhlak-3-q3",
+          "question": "Apakah yang perlu kita lakukan apabila bertemu guru?",
+          "options": [
+            "Mengabaikan guru",
+            "Memberi salam kepada guru",
+            "Bercakap kasar kepada guru",
+            "Tidak mahu bercakap dengan guru"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu memberi salam kepada guru apabila bertemu mereka sebagai tanda hormat."
+        },
+        {
+          "id": "akhlak-3-q4",
+          "question": "Apakah yang perlu kita lakukan dengan kerja rumah yang diberikan guru?",
+          "options": [
+            "Tidak mahu menyiapkannya",
+            "Menyiapkan kerja rumah dengan baik",
+            "Membiarkan rakan yang buat",
+            "Membuang kerja rumah"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu menyiapkan kerja rumah yang diberikan guru dengan baik sebagai tanda menghormati guru."
+        },
+        {
+          "id": "akhlak-3-q5",
+          "question": "Apakah yang perlu kita lakukan apabila ingin masuk atau keluar kelas?",
+          "options": [
+            "Langsung masuk atau keluar",
+            "Meminta izin daripada guru",
+            "Mengganggu guru",
+            "Tidak mahu meminta izin"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu meminta izin daripada guru sebelum masuk atau keluar kelas sebagai tanda hormat."
+        }
+      ]
+    },
+    {
+      "id": "akhlak-4",
+      "name": "Akhlak Terhadap Rakan",
+      "description": "Kuiz tentang cara bergaul dengan rakan",
+      "questions": [
+        {
+          "id": "akhlak-4-q1",
+          "question": "Apakah kepentingan mempunyai rakan yang baik?",
+          "options": [
+            "Rakan boleh membantu kita belajar",
+            "Rakan membuatkan kita malas",
+            "Rakan mengajar kita perkara buruk",
+            "Rakan tidak penting"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Rakan yang baik boleh membantu kita belajar, bermain bersama-sama, dan memberikan nasihat yang baik."
+        },
+        {
+          "id": "akhlak-4-q2",
+          "question": "Bagaimanakah cara bergaul dengan rakan yang baik?",
+          "options": [
+            "Bercakap dengan kasar",
+            "Bercakap dengan lembut dan sopan",
+            "Mengganggu rakan",
+            "Tidak mahu berkongsi"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu bercakap dengan lembut dan sopan kepada rakan sebagai tanda hormat dan kasih sayang."
+        },
+        {
+          "id": "akhlak-4-q3",
+          "question": "Apakah yang perlu kita lakukan apabila rakan memerlukan bantuan?",
+          "options": [
+            "Tidak mahu membantu",
+            "Membantu rakan dengan senang hati",
+            "Mengeluh dan merungut",
+            "Bercakap kasar kepada rakan"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu membantu rakan yang memerlukan bantuan dengan senang hati sebagai tanda persahabatan yang baik."
+        },
+        {
+          "id": "akhlak-4-q4",
+          "question": "Apakah yang perlu kita lakukan apabila melakukan kesalahan kepada rakan?",
+          "options": [
+            "Tidak mahu meminta maaf",
+            "Meminta maaf dengan ikhlas",
+            "Menyalahkan rakan",
+            "Bercakap kasar kepada rakan"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu meminta maaf dengan ikhlas apabila melakukan kesalahan kepada rakan sebagai tanda akhlak yang baik."
+        },
+        {
+          "id": "akhlak-4-q5",
+          "question": "Apakah yang perlu kita lakukan untuk rakan setiap hari?",
+          "options": [
+            "Menyakiti hati rakan",
+            "Mendoakan kebaikan untuk rakan",
+            "Tidak mahu bercakap dengan rakan",
+            "Bercakap kasar kepada rakan"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu mendoakan kebaikan untuk rakan setiap hari sebagai tanda kasih sayang dan persahabatan yang baik."
+        }
+      ]
+    },
+    {
+      "id": "akhlak-5",
+      "name": "Akhlak di Sekolah",
+      "description": "Kuiz tentang cara berkelakuan yang baik di sekolah",
+      "questions": [
+        {
+          "id": "akhlak-5-q1",
+          "question": "Apakah yang perlu kita lakukan di sekolah?",
+          "options": [
+            "Membuat bising di dalam kelas",
+            "Mengikut peraturan sekolah",
+            "Mengganggu rakan-rakan",
+            "Tidak mahu belajar"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu mengikut peraturan sekolah untuk mewujudkan suasana pembelajaran yang baik."
+        },
+        {
+          "id": "akhlak-5-q2",
+          "question": "Mengapakah kita perlu menjaga kebersihan sekolah?",
+          "options": [
+            "Kerana Allah SWT suka kepada kebersihan",
+            "Kerana kebersihan tidak penting",
+            "Kerana kebersihan membazir masa",
+            "Kerana kebersihan susah"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Kita perlu menjaga kebersihan sekolah kerana Allah SWT suka kepada kebersihan dan ia mencegah penyakit."
+        },
+        {
+          "id": "akhlak-5-q3",
+          "question": "Apakah yang perlu kita lakukan dengan sampah?",
+          "options": [
+            "Membuang di mana-mana sahaja",
+            "Membuang di tempat yang betul",
+            "Membiarkan sampah di lantai",
+            "Tidak mahu membuang sampah"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu membuang sampah di tempat yang betul untuk menjaga kebersihan sekolah."
+        },
+        {
+          "id": "akhlak-5-q4",
+          "question": "Siapakah yang perlu kita hormati di sekolah?",
+          "options": [
+            "Hanya guru sahaja",
+            "Semua warga sekolah",
+            "Hanya rakan sahaja",
+            "Tidak perlu menghormati sesiapa"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu menghormati semua warga sekolah termasuk guru, kakitangan, dan rakan-rakan."
+        },
+        {
+          "id": "akhlak-5-q5",
+          "question": "Apakah yang perlu kita lakukan apabila bertemu warga sekolah?",
           "options": [
             "Mengabaikan mereka",
-            "Menjaga dan mendoakan mereka",
+            "Memberi salam kepada mereka",
             "Bercakap kasar kepada mereka",
-            "Tidak peduli tentang mereka"
+            "Tidak mahu bercakap dengan mereka"
           ],
           "correctAnswer": 1,
-          "explanation": "Apabila ibu bapa sakit, kita perlu menjaga dan mendoakan mereka."
-        },
-        {
-          "id": "q15",
-          "question": "Mengapa kita perlu menghormati ibu bapa?",
-          "options": [
-            "Kerana dipaksa",
-            "Kerana mereka telah membesarkan kita",
-            "Kerana malu",
-            "Kerana mengikut kawan"
-          ],
-          "correctAnswer": 1,
-          "explanation": "Kita perlu menghormati ibu bapa kerana mereka telah membesarkan dan menjaga kita."
+          "explanation": "Kita perlu memberi salam kepada semua warga sekolah sebagai tanda hormat dan akhlak yang baik."
         }
       ]
     }
