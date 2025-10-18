@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import Mascot from '../components/Mascot'
+import SoundSettings from '../components/SoundSettings'
+import PageTransition from '../components/PageTransition'
 import { cn } from '../utils/cn'
 
 const MainMenu: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser, openUserSelectionModal } = useUserContext()
+  const [showSoundSettings, setShowSoundSettings] = useState(false)
 
   const menuItems = [
     {
@@ -64,22 +68,31 @@ const MainMenu: React.FC = () => {
       subtitle={TEXT.APP_SUBTITLE}
       currentUser={currentUser?.name}
       onUserClick={handleUserClick}
+      onSoundSettingsClick={() => setShowSoundSettings(true)}
       showUser={true}
+      showSoundSettings={true}
     >
       <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Welcome Section */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-24 h-24 bg-primary-100 rounded-full mb-6">
-              <span className="text-4xl">🐾</span>
+          <PageTransition animation="fade">
+            <div className="text-center mb-12">
+              <div className="flex justify-center mb-6">
+                <Mascot 
+                  expression="happy" 
+                  size="lg" 
+                  animated={true}
+                  className="animate-bounce-gentle"
+                />
+              </div>
+              <h1 className="text-4xl font-bold text-primary-800 mb-4 animate-slide-up">
+                {currentUser ? `Selamat Datang, ${currentUser.name}!` : TEXT.WELCOME}
+              </h1>
+              <p className="text-xl text-primary-600 max-w-2xl mx-auto animate-slide-up">
+                Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.
+              </p>
             </div>
-            <h1 className="text-4xl font-bold text-primary-800 mb-4">
-              {currentUser ? `Selamat Datang, ${currentUser.name}!` : TEXT.WELCOME}
-            </h1>
-            <p className="text-xl text-primary-600 max-w-2xl mx-auto">
-              Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.
-            </p>
-          </div>
+          </PageTransition>
 
           {/* Menu Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -152,7 +165,7 @@ const MainMenu: React.FC = () => {
           {/* Mascot Message */}
           <div className="mt-12 text-center">
             <div className="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
-              <span className="text-2xl mr-3">🐾</span>
+              <Mascot expression="encouraging" size="sm" className="mr-3" />
               <p className="text-gray-700 font-medium">
                 "Jom belajar bersama-sama! Pilih mod yang anda suka untuk mula belajar."
               </p>
@@ -160,6 +173,12 @@ const MainMenu: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Sound Settings Modal */}
+      <SoundSettings
+        isOpen={showSoundSettings}
+        onClose={() => setShowSoundSettings(false)}
+      />
     </Layout>
   )
 }

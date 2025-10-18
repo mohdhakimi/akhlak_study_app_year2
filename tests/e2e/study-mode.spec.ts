@@ -3,6 +3,26 @@ import { test, expect } from '@playwright/test'
 test.describe('Study Mode', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/')
+    
+    // Wait for page to load and check if user selection modal appears
+    await page.waitForLoadState('networkidle')
+    
+    // Check if user selection modal is visible
+    const userModal = page.locator('[role="dialog"]')
+    const isModalVisible = await userModal.isVisible().catch(() => false)
+    
+    if (isModalVisible) {
+      // Click "Create New User" button first
+      await page.getByRole('button', { name: /Cipta Pengguna Baru/ }).click()
+      
+      // Wait for the form to appear and fill it
+      await page.waitForSelector('input[placeholder="Masukkan nama anda di sini..."]')
+      await page.getByPlaceholder('Masukkan nama anda di sini...').fill('Test User')
+      await page.getByRole('button', { name: /Cipta Pengguna Baru/ }).click()
+      
+      // Wait for modal to close
+      await page.waitForSelector('[role="dialog"]', { state: 'hidden' })
+    }
   })
 
   test('should navigate to study mode from main menu', async ({ page }) => {

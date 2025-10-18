@@ -1,13 +1,16 @@
 import React from 'react'
 import { cn } from '../utils/cn'
 import { TEXT } from '../constants/text'
+import Button from './Button'
 
 export interface HeaderProps {
   title?: string
   subtitle?: string
   currentUser?: string
   onUserClick?: () => void
+  onSoundSettingsClick?: () => void
   showUser?: boolean
+  showSoundSettings?: boolean
   className?: string
 }
 
@@ -16,7 +19,9 @@ const Header: React.FC<HeaderProps> = ({
   subtitle = TEXT.APP_SUBTITLE,
   currentUser,
   onUserClick,
+  onSoundSettingsClick,
   showUser = true,
+  showSoundSettings = true,
   className
 }) => {
   return (
@@ -42,10 +47,24 @@ const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* User info */}
-          {showUser && (
-            <div className="flex items-center space-x-4">
-              {currentUser ? (
+          {/* User info and settings */}
+          <div className="flex items-center space-x-4">
+            {/* Sound Settings Button */}
+            {showSoundSettings && onSoundSettingsClick && (
+              <Button
+                onClick={onSoundSettingsClick}
+                variant="ghost"
+                size="sm"
+                className="text-gray-600 hover:text-gray-900"
+                aria-label="Tetapan Audio"
+              >
+                🔊
+              </Button>
+            )}
+
+            {/* User info */}
+            {showUser && (
+              currentUser ? (
                 <button
                   onClick={onUserClick}
                   className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors group"
@@ -102,9 +121,9 @@ const Header: React.FC<HeaderProps> = ({
                     {TEXT.SELECT_USER}
                   </span>
                 </button>
-              )}
-            </div>
-          )}
+              )
+            )}
+          </div>
         </div>
       </div>
     </header>

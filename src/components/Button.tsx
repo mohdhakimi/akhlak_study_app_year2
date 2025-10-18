@@ -1,11 +1,13 @@
 import React from 'react'
 import { cn } from '../utils/cn'
+import { useButtonSound } from '../hooks/useAudio'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'outline'
+  variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
   loading?: boolean
   fullWidth?: boolean
+  enableSound?: boolean
   children: React.ReactNode
 }
 
@@ -18,11 +20,29 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       loading = false,
       fullWidth = false,
       disabled,
+      enableSound = true,
       children,
+      onClick,
+      onMouseEnter,
       ...props
     },
     ref
   ) => {
+    const { playClickSound, playHoverSound } = useButtonSound()
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (enableSound && !disabled && !loading) {
+        playClickSound()
+      }
+      onClick?.(e)
+    }
+
+    const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (enableSound && !disabled && !loading) {
+        playHoverSound()
+      }
+      onMouseEnter?.(e)
+    }
     const baseClasses = 'btn inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
     
     const variantClasses = {
@@ -30,7 +50,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 active:bg-gray-400',
       success: 'bg-success-600 text-white hover:bg-success-700 focus:ring-success-500 active:bg-success-800',
       danger: 'bg-danger-600 text-white hover:bg-danger-700 focus:ring-danger-500 active:bg-danger-800',
-      outline: 'border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500 active:bg-primary-700'
+      outline: 'border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500 active:bg-primary-700',
+      ghost: 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:ring-gray-500 active:bg-gray-200'
     }
     
     const sizeClasses = {
@@ -52,6 +73,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         disabled={disabled || loading}
         ref={ref}
+        onClick={handleClick}
+        onMouseEnter={handleMouseEnter}
         {...props}
       >
         {loading && (

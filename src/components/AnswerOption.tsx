@@ -1,5 +1,6 @@
 import React from 'react'
 import { cn } from '../utils/cn'
+import { useQuizAudio } from '../hooks/useAudio'
 
 export interface AnswerOptionProps {
   option: string
@@ -24,6 +25,21 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
   disabled = false,
   className
 }) => {
+  const { playCorrectSound, playIncorrectSound } = useQuizAudio()
+
+  const handleClick = () => {
+    if (!disabled) {
+      // Play sound based on correctness (if revealed)
+      if (isRevealed) {
+        if (isCorrect) {
+          playCorrectSound()
+        } else if (isIncorrect) {
+          playIncorrectSound()
+        }
+      }
+      onClick()
+    }
+  }
   const getOptionLetter = (index: number): string => {
     return String.fromCharCode(65 + index) // A, B, C, D
   }
@@ -66,7 +82,7 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
 
   return (
     <button
-      onClick={onClick}
+      onClick={handleClick}
       disabled={disabled}
       className={cn(
         'w-full p-4 rounded-lg border-2 text-left transition-all duration-200',

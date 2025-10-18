@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Question } from '../types'
 import Card from './Card'
 import Button from './Button'
 import { cn } from '../utils/cn'
+import { useQuizAudio } from '../hooks/useAudio'
 
 export interface QuizResult {
   question: Question
@@ -36,10 +37,21 @@ const QuizResults: React.FC<QuizResultsProps> = ({
   onViewLeaderboard,
   className
 }) => {
+  const { playQuizCompleteSound, playCelebrationSound } = useQuizAudio()
+  
   const percentage = Math.round((score / totalQuestions) * 100)
   const isPerfect = score === totalQuestions
   const isGood = percentage >= 80
   const isPassing = percentage >= 60
+
+  // Play completion sound when component mounts
+  useEffect(() => {
+    playQuizCompleteSound()
+    if (isPerfect) {
+      // Play celebration sound for perfect score
+      setTimeout(() => playCelebrationSound(), 1000)
+    }
+  }, [playQuizCompleteSound, playCelebrationSound, isPerfect])
 
   const getPerformanceMessage = () => {
     if (isPerfect) {

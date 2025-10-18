@@ -8,7 +8,9 @@ export interface LayoutProps {
   subtitle?: string
   currentUser?: string
   onUserClick?: () => void
+  onSoundSettingsClick?: () => void
   showUser?: boolean
+  showSoundSettings?: boolean
   className?: string
   headerClassName?: string
   mainClassName?: string
@@ -20,7 +22,9 @@ const Layout: React.FC<LayoutProps> = ({
   subtitle,
   currentUser,
   onUserClick,
+  onSoundSettingsClick,
   showUser = true,
+  showSoundSettings = false,
   className,
   headerClassName,
   mainClassName
@@ -32,7 +36,9 @@ const Layout: React.FC<LayoutProps> = ({
         subtitle={subtitle}
         currentUser={currentUser}
         onUserClick={onUserClick}
+        onSoundSettingsClick={onSoundSettingsClick}
         showUser={showUser}
+        showSoundSettings={showSoundSettings}
         className={headerClassName}
       />
       

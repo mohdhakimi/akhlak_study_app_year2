@@ -3,44 +3,64 @@ import { test, expect } from '@playwright/test'
 test.describe('Leaderboard', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/')
+    
+    // Wait for page to load and check if user selection modal appears
+    await page.waitForLoadState('networkidle')
+    
+    // Check if user selection modal is visible
+    const userModal = page.locator('[role="dialog"]')
+    const isModalVisible = await userModal.isVisible().catch(() => false)
+    
+    if (isModalVisible) {
+      // Click "Create New User" button first
+      await page.getByRole('button', { name: /Cipta Pengguna Baru/ }).click()
+      
+      // Wait for the form to appear and fill it
+      await page.waitForSelector('input[placeholder="Masukkan nama anda di sini..."]')
+      await page.getByPlaceholder('Masukkan nama anda di sini...').fill('Test User')
+      await page.getByRole('button', { name: /Cipta Pengguna Baru/ }).click()
+      
+      // Wait for modal to close
+      await page.waitForSelector('[role="dialog"]', { state: 'hidden' })
+    }
   })
 
   test('should navigate to leaderboard from main menu', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     await expect(page).toHaveURL('/leaderboard')
-    await expect(page.getByText('Papan Markah')).toBeVisible()
+    await expect(page.getByText('Lihat prestasi terbaik pelajar dalam kuiz dan ujian')).toBeVisible()
   })
 
   test('should display leaderboard page correctly', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Check main elements
     await expect(page.getByText('Lihat prestasi terbaik pelajar dalam kuiz dan ujian')).toBeVisible()
     await expect(page.getByText('Jumlah Percubaan')).toBeVisible()
-    await expect(page.getByText('Kuiz')).toBeVisible()
-    await expect(page.getByText('Ujian')).toBeVisible()
+    await expect(page.getByText('Kuiz', { exact: true })).toBeVisible()
+    await expect(page.getByText('Ujian', { exact: true })).toBeVisible()
   })
 
   test('should show statistics cards', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Check statistics are displayed
     await expect(page.getByText('Jumlah Percubaan')).toBeVisible()
-    await expect(page.getByText('Kuiz')).toBeVisible()
-    await expect(page.getByText('Ujian')).toBeVisible()
+    await expect(page.getByText('Kuiz', { exact: true })).toBeVisible()
+    await expect(page.getByText('Ujian', { exact: true })).toBeVisible()
   })
 
   test('should display filter buttons', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Check filter buttons
-    await expect(page.getByText('Semua')).toBeVisible()
-    await expect(page.getByText('Kuiz')).toBeVisible()
-    await expect(page.getByText('Ujian')).toBeVisible()
+    await expect(page.getByRole('button', { name: /Semua/ })).toBeVisible()
+    await expect(page.getByRole('button', { name: /Kuiz/ })).toBeVisible()
+    await expect(page.getByRole('button', { name: /Ujian/ })).toBeVisible()
   })
 
   test('should show empty state when no scores', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show empty state
     await expect(page.getByText('Tiada Markah Lagi')).toBeVisible()
@@ -49,7 +69,7 @@ test.describe('Leaderboard', () => {
 
   test('should filter scores by quiz type', async ({ page }) => {
     // First complete a quiz to have some data
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     
     // Complete quiz quickly
@@ -57,7 +77,7 @@ test.describe('Leaderboard', () => {
     await page.getByText('Selesai').click()
     
     // Go to leaderboard
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Filter by quiz
     await page.getByText('Kuiz').click()
@@ -67,7 +87,7 @@ test.describe('Leaderboard', () => {
 
   test('should filter scores by test type', async ({ page }) => {
     // First complete a test to have some data
-    await page.getByText('Mod Ujian').click()
+    await page.getByRole('heading', { name: 'Mod Ujian' }).click()
     await page.getByText('Mula Ujian').click()
     
     // Complete test quickly
@@ -75,7 +95,7 @@ test.describe('Leaderboard', () => {
     await page.getByText('Selesai').click()
     
     // Go to leaderboard
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Filter by test
     await page.getByText('Ujian').click()
@@ -84,7 +104,7 @@ test.describe('Leaderboard', () => {
   })
 
   test('should show all scores when all filter is selected', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Click different filters and then all
     await page.getByText('Kuiz').click()
@@ -94,7 +114,7 @@ test.describe('Leaderboard', () => {
   })
 
   test('should display leaderboard table with correct headers', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Check table headers
     await expect(page.getByText('Kedudukan')).toBeVisible()
@@ -107,13 +127,13 @@ test.describe('Leaderboard', () => {
 
   test('should highlight current user scores', async ({ page }) => {
     // Complete a quiz first
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
     // Go to leaderboard
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should highlight current user
     await expect(page.getByText('Anda')).toBeVisible()
@@ -121,12 +141,12 @@ test.describe('Leaderboard', () => {
 
   test('should show rank icons for top positions', async ({ page }) => {
     // Complete multiple quizzes/tests to have data
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show rank icons
     await expect(page.getByText('🥇')).toBeVisible()
@@ -134,12 +154,12 @@ test.describe('Leaderboard', () => {
 
   test('should display correct type labels', async ({ page }) => {
     // Complete a quiz
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show type labels
     await expect(page.getByText('Kuiz')).toBeVisible()
@@ -147,12 +167,12 @@ test.describe('Leaderboard', () => {
 
   test('should show progress bars for percentages', async ({ page }) => {
     // Complete a quiz
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show percentage progress bars
     await expect(page.getByText('%')).toBeVisible()
@@ -160,12 +180,12 @@ test.describe('Leaderboard', () => {
 
   test('should format dates correctly', async ({ page }) => {
     // Complete a quiz
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show formatted dates
     await expect(page.getByText('Hari ini')).toBeVisible()
@@ -173,12 +193,12 @@ test.describe('Leaderboard', () => {
 
   test('should show encouragement message', async ({ page }) => {
     // Complete a quiz
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show encouragement message
     await expect(page.getByText('Teruskan Berusaha!')).toBeVisible()
@@ -186,7 +206,7 @@ test.describe('Leaderboard', () => {
   })
 
   test('should navigate back to menu', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     await page.getByText('Kembali ke Menu').click()
     
@@ -196,7 +216,7 @@ test.describe('Leaderboard', () => {
 
   test('should be responsive on mobile devices', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 })
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Check if leaderboard is visible on mobile
     await expect(page.getByText('Papan Markah')).toBeVisible()
@@ -204,7 +224,7 @@ test.describe('Leaderboard', () => {
   })
 
   test('should update filter button states', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Click different filters
     await page.getByText('Kuiz').click()
@@ -213,24 +233,24 @@ test.describe('Leaderboard', () => {
     
     // All buttons should be clickable
     await expect(page.getByText('Semua')).toBeVisible()
-    await expect(page.getByText('Kuiz')).toBeVisible()
-    await expect(page.getByText('Ujian')).toBeVisible()
+    await expect(page.getByText('Kuiz', { exact: true })).toBeVisible()
+    await expect(page.getByText('Ujian', { exact: true })).toBeVisible()
   })
 
   test('should show footer message', async ({ page }) => {
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     await expect(page.getByText('Papan markah dikemas kini secara automatik')).toBeVisible()
   })
 
   test('should display user avatars', async ({ page }) => {
     // Complete a quiz
-    await page.getByText('Mod Kuiz').click()
+    await page.getByRole('heading', { name: 'Mod Kuiz' }).click()
     await page.getByText('Akhlak Terpuji').click()
     await page.getByText('Jujur').click()
     await page.getByText('Selesai').click()
     
-    await page.getByText('Papan Markah').click()
+    await page.getByRole('heading', { name: 'Papan Markah' }).first().click()
     
     // Should show user avatars (first letter of name)
     await expect(page.getByText('T')).toBeVisible() // Test User
