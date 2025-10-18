@@ -6,7 +6,7 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ## 📊 Current Progress
 
-**Overall Status: 7 out of 13 phases completed (53.8%)**
+**Overall Status: 8 out of 13 phases completed (61.5%)**
 
 ### ✅ Completed Phases
 - **Phase 0**: Project Setup & Configuration ✅
@@ -17,9 +17,10 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 - **Phase 5**: Study Mode (Mod Belajar) ✅
 - **Phase 6**: Quiz Mode Core Logic ✅
 - **Phase 7**: Test Mode (Mod Ujian) ✅
+- **Phase 8**: Leaderboard (Papan Markah) ✅
 
 ### 🚧 Next Phase
-- **Phase 8**: Leaderboard (Papan Markah) (Ready to start)
+- **Phase 9**: Audio & Visual Enhancements (Ready to start)
 
 ### 📋 Phase Status Legend
 - ✅ **Completed**: All tasks and acceptance criteria met
@@ -306,9 +307,9 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Version Control
 
-- [ ] Commit: "Phase 7: Test Mode implementation"
-- [ ] Tag: `v0.8.0`
-- [ ] Push to GitHub
+- [x] Commit: "Phase 7: Test Mode implementation"
+- [x] Tag: `v0.8.0`
+- [x] Push to GitHub
 
 ---
 
@@ -318,28 +319,28 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Tasks
 
-- [ ] Create `Leaderboard.tsx` page component
-- [ ] Create `LeaderboardTable.tsx` component for score display
-- [ ] Implement filter/toggle for Test vs Quiz categories
-- [ ] Add sorting logic (highest to lowest score)
-- [ ] Display: Rank, Player Name, Score, Date
-- [ ] Format dates in readable Bahasa Melayu format
-- [ ] Show Top 10 entries for each category
-- [ ] Handle empty leaderboard state with encouraging message
-- [ ] Add visual highlights for current user's scores
-- [ ] Write unit tests for sorting and filtering logic
-- [ ] Write integration tests for leaderboard data display
-- [ ] Write E2E test: Complete quiz → Check leaderboard → Verify score appears
+- [x] Create `Leaderboard.tsx` page component
+- [x] Create `LeaderboardTable.tsx` component for score display
+- [x] Implement filter/toggle for Test vs Quiz categories
+- [x] Add sorting logic (highest to lowest score)
+- [x] Display: Rank, Player Name, Score, Date
+- [x] Format dates in readable Bahasa Melayu format
+- [x] Show Top 10 entries for each category
+- [x] Handle empty leaderboard state with encouraging message
+- [x] Add visual highlights for current user's scores
+- [x] Write unit tests for sorting and filtering logic
+- [x] Write integration tests for leaderboard data display
+- [x] Write E2E test: Complete quiz → Check leaderboard → Verify score appears
 
 ### Acceptance Criteria
 
-- [ ] Leaderboard displays all scores correctly sorted
-- [ ] Filter by Test/Quiz works properly
-- [ ] Date formatting is correct and in Bahasa Melayu
-- [ ] Current user's scores are highlighted
-- [ ] Empty state displays appropriately
-- [ ] Unit tests pass with 85%+ coverage
-- [ ] E2E test verifies score persistence and display
+- [x] Leaderboard displays all scores correctly sorted
+- [x] Filter by Test/Quiz works properly
+- [x] Date formatting is correct and in Bahasa Melayu
+- [x] Current user's scores are highlighted
+- [x] Empty state displays appropriately
+- [x] Unit tests pass with 85%+ coverage
+- [x] E2E test verifies score persistence and display
 
 ### E2E Test Checkpoint
 
