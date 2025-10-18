@@ -60,6 +60,15 @@ export interface QuizResult {
   newCorrectIndex: number
 }
 
+export interface TestResult {
+  question: Question
+  userAnswer: number
+  correctAnswer: number
+  isCorrect: boolean
+  shuffledOptions: string[]
+  newCorrectIndex: number
+}
+
 export interface AnswerRecord {
   questionId: string
   userAnswer: number

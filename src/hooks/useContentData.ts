@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'
-import { ContentData, StudyTopic } from '../types'
+import { ContentData, StudyTopic, QuizCategory } from '../types'
 
 export interface UseContentDataReturn {
   contentData: ContentData | null
   topics: StudyTopic[]
+  quizCategories: QuizCategory[]
   loading: boolean
   error: string | null
   refetch: () => void
@@ -48,6 +49,7 @@ export function useContentData(): UseContentDataReturn {
   return {
     contentData,
     topics: contentData?.topics || [],
+    quizCategories: contentData?.quizCategories || [],
     loading,
     error,
     refetch

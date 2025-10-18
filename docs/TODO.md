@@ -6,7 +6,7 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ## 📊 Current Progress
 
-**Overall Status: 6 out of 13 phases completed (46.2%)**
+**Overall Status: 7 out of 13 phases completed (53.8%)**
 
 ### ✅ Completed Phases
 - **Phase 0**: Project Setup & Configuration ✅
@@ -16,9 +16,10 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 - **Phase 4**: Main Menu & Navigation ✅
 - **Phase 5**: Study Mode (Mod Belajar) ✅
 - **Phase 6**: Quiz Mode Core Logic ✅
+- **Phase 7**: Test Mode (Mod Ujian) ✅
 
 ### 🚧 Next Phase
-- **Phase 7**: Test Mode (Mod Ujian) (Ready to start)
+- **Phase 8**: Leaderboard (Papan Markah) (Ready to start)
 
 ### 📋 Phase Status Legend
 - ✅ **Completed**: All tasks and acceptance criteria met
@@ -270,9 +271,9 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Version Control
 
-- [ ] Commit: "Phase 6: Quiz Mode core implementation"
-- [ ] Tag: `v0.7.0`
-- [ ] Push to GitHub
+- [x] Commit: "Phase 6: Quiz Mode core implementation"
+- [x] Tag: `v0.7.0`
+- [x] Push to GitHub
 
 ---
 
@@ -282,26 +283,26 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Tasks
 
-- [ ] Create `TestMode.tsx` page component
-- [ ] Implement random question selection from all categories (30 questions)
-- [ ] Reuse `QuestionCard.tsx` and quiz logic from Phase 6
-- [ ] Ensure no duplicate questions in single test
-- [ ] Create `TestResults.tsx` showing final score (X/30 format)
-- [ ] Implement test score saving with special `testId` identifier
-- [ ] Add visual distinction between Test Mode and Quiz Mode
-- [ ] Write unit tests for question selection algorithm
-- [ ] Write integration tests for complete test flow
-- [ ] Write E2E test for taking full 30-question test
+- [x] Create `TestMode.tsx` page component
+- [x] Implement random question selection from all categories (30 questions)
+- [x] Reuse `QuestionCard.tsx` and quiz logic from Phase 6
+- [x] Ensure no duplicate questions in single test
+- [x] Create `TestResults.tsx` showing final score (X/30 format)
+- [x] Implement test score saving with special `testId` identifier
+- [x] Add visual distinction between Test Mode and Quiz Mode
+- [x] Write unit tests for question selection algorithm
+- [x] Write integration tests for complete test flow
+- [x] Write E2E test for taking full 30-question test
 
 ### Acceptance Criteria
 
-- [ ] Test loads 30 random questions from all topics
-- [ ] No duplicate questions appear in single test
-- [ ] Question randomization and feedback work identically to Quiz Mode
-- [ ] Results page shows score and full review of all 30 questions
-- [ ] Test score saves correctly to localStorage
-- [ ] Unit tests pass with 90%+ coverage
-- [ ] E2E test completes full test and verifies results
+- [x] Test loads 30 random questions from all topics
+- [x] No duplicate questions appear in single test
+- [x] Question randomization and feedback work identically to Quiz Mode
+- [x] Results page shows score and full review of all 30 questions
+- [x] Test score saves correctly to localStorage
+- [x] Unit tests pass with 90%+ coverage
+- [x] E2E test completes full test and verifies results
 
 ### Version Control
 
