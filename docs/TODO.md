@@ -6,7 +6,7 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ## 📊 Current Progress
 
-**Overall Status: 4 out of 13 phases completed (30.8%)**
+**Overall Status: 5 out of 13 phases completed (38.5%)**
 
 ### ✅ Completed Phases
 - **Phase 0**: Project Setup & Configuration ✅
@@ -14,9 +14,10 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 - **Phase 2**: Core UI Components & Layout ✅
 - **Phase 3**: User Management System ✅
 - **Phase 4**: Main Menu & Navigation ✅
+- **Phase 5**: Study Mode (Mod Belajar) ✅
 
 ### 🚧 Next Phase
-- **Phase 5**: Study Mode (Mod Belajar) (Ready to start)
+- **Phase 6**: Quiz Mode Core Logic (Ready to start)
 
 ### 📋 Phase Status Legend
 - ✅ **Completed**: All tasks and acceptance criteria met
@@ -190,9 +191,9 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Version Control
 
-- [ ] Commit: "Phase 4: Main menu and navigation system"
-- [ ] Tag: `v0.5.0`
-- [ ] Push to GitHub
+- [x] Commit: "Phase 4: Main menu and navigation system"
+- [x] Tag: `v0.5.0`
+- [x] Push to GitHub
 
 ---
 
@@ -202,28 +203,28 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Tasks
 
-- [ ] Create `StudyMode.tsx` page component
-- [ ] Create `TopicSelector.tsx` for choosing study topics
-- [ ] Create `StudyCard.tsx` for displaying content chunks
-- [ ] Implement "Seterusnya" (Next) and "Sebelum" (Previous) navigation
-- [ ] Add progress indicator (e.g., "2 dari 5")
-- [ ] Implement content loading from JSON
-- [ ] Add "Kembali ke Menu" (Back to Menu) button
-- [ ] Style with readable fonts and comfortable spacing
-- [ ] Write unit tests for StudyMode components
-- [ ] Write integration tests for navigation through study content
-- [ ] Write E2E test for complete study flow
+- [x] Create `StudyMode.tsx` page component
+- [x] Create `TopicSelector.tsx` for choosing study topics
+- [x] Create `StudyCard.tsx` for displaying content chunks
+- [x] Implement "Seterusnya" (Next) and "Sebelum" (Previous) navigation
+- [x] Add progress indicator (e.g., "2 dari 5")
+- [x] Implement content loading from JSON
+- [x] Add "Kembali ke Menu" (Back to Menu) button
+- [x] Style with readable fonts and comfortable spacing
+- [x] Write unit tests for StudyMode components
+- [x] Write integration tests for navigation through study content
+- [x] Write E2E test for complete study flow
 
 ### Acceptance Criteria
 
-- [ ] Users can select a study topic
-- [ ] Content displays in digestible chunks
-- [ ] Next/Previous navigation works correctly
-- [ ] Progress indicator updates accurately
-- [ ] Can return to main menu
-- [ ] Unit tests pass with 85%+ coverage
-- [ ] Integration tests cover complete study navigation
-- [ ] E2E test completes full study session
+- [x] Users can select a study topic
+- [x] Content displays in digestible chunks
+- [x] Next/Previous navigation works correctly
+- [x] Progress indicator updates accurately
+- [x] Can return to main menu
+- [x] Unit tests pass with 85%+ coverage
+- [x] Integration tests cover complete study navigation
+- [x] E2E test completes full study session
 
 ### Version Control
 
