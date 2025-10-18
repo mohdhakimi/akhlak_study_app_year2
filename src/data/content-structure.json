@@ -1,0 +1,246 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-10-18",
+  "topics": [
+    {
+      "id": "akhlak-1",
+      "name": "Akhlak Terpuji",
+      "description": "Mengenali dan mempraktikkan akhlak yang terpuji dalam kehidupan seharian",
+      "notes": [
+        {
+          "id": "akhlak-1-note-1",
+          "title": "Pengenalan Akhlak Terpuji",
+          "content": "Akhlak terpuji adalah tingkah laku yang baik dan mulia yang disukai oleh Allah SWT dan Rasulullah SAW. Ia merangkumi sifat-sifat seperti jujur, amanah, sabar, dan bertanggungjawab.",
+          "order": 1
+        },
+        {
+          "id": "akhlak-1-note-2",
+          "title": "Contoh Akhlak Terpuji",
+          "content": "Antara contoh akhlak terpuji yang perlu diamalkan:\n\n1. Jujur dalam perkataan dan perbuatan\n2. Amanah dalam melaksanakan tugas\n3. Sabar menghadapi cabaran\n4. Bertanggungjawab terhadap diri dan keluarga\n5. Menghormati ibu bapa dan guru",
+          "order": 2
+        },
+        {
+          "id": "akhlak-1-note-3",
+          "title": "Kepentingan Akhlak Terpuji",
+          "content": "Akhlak terpuji penting kerana:\n\n• Membuatkan kita disukai oleh Allah SWT\n• Menjadikan kita contoh yang baik kepada orang lain\n• Membina hubungan yang baik dengan keluarga dan rakan\n• Mewujudkan masyarakat yang harmoni dan sejahtera",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "akhlak-2",
+      "name": "Akhlak Terhadap Ibu Bapa",
+      "description": "Cara menghormati dan berbuat baik kepada ibu bapa",
+      "notes": [
+        {
+          "id": "akhlak-2-note-1",
+          "title": "Kewajipan Terhadap Ibu Bapa",
+          "content": "Sebagai anak, kita wajib:\n\n1. Menghormati ibu bapa dengan kata-kata yang lembut\n2. Mematuhi nasihat dan arahan mereka\n3. Membantu mereka dalam kerja-kerja rumah\n4. Mendoakan kesejahteraan mereka\n5. Tidak menyakiti hati mereka",
+          "order": 1
+        },
+        {
+          "id": "akhlak-2-note-2",
+          "title": "Cara Menghormati Ibu Bapa",
+          "content": "Cara-cara menghormati ibu bapa:\n\n• Bercakap dengan sopan dan lembut\n• Meminta izin sebelum melakukan sesuatu\n• Membantu mereka apabila diminta\n• Tidak meninggikan suara kepada mereka\n• Sentiasa mendoakan mereka",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "quizCategories": [
+    {
+      "id": "quiz-akhlak-1",
+      "name": "Akhlak Terpuji",
+      "description": "Ujian pengetahuan tentang akhlak terpuji",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Apakah maksud akhlak terpuji?",
+          "options": [
+            "Tingkah laku yang buruk",
+            "Tingkah laku yang baik dan mulia",
+            "Tingkah laku yang biasa-biasa sahaja",
+            "Tingkah laku yang tidak penting"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Akhlak terpuji adalah tingkah laku yang baik dan mulia yang disukai oleh Allah SWT dan Rasulullah SAW."
+        },
+        {
+          "id": "q2",
+          "question": "Antara berikut, yang manakah contoh akhlak terpuji?",
+          "options": [
+            "Bercakap bohong",
+            "Mencuri barang orang lain",
+            "Jujur dalam perkataan",
+            "Mengabaikan tugas"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Jujur dalam perkataan adalah salah satu contoh akhlak terpuji yang perlu diamalkan."
+        },
+        {
+          "id": "q3",
+          "question": "Mengapa akhlak terpuji penting?",
+          "options": [
+            "Kerana dipaksa oleh guru",
+            "Kerana membuatkan kita disukai oleh Allah SWT",
+            "Kerana mengikut trend semasa",
+            "Kerana malu dengan kawan"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Akhlak terpuji penting kerana membuatkan kita disukai oleh Allah SWT dan menjadi contoh yang baik."
+        },
+        {
+          "id": "q4",
+          "question": "Apakah yang perlu dilakukan apabila ibu bapa memberikan nasihat?",
+          "options": [
+            "Mengabaikan nasihat mereka",
+            "Mematuhi nasihat mereka",
+            "Bercakap kasar kepada mereka",
+            "Menolak nasihat mereka"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita wajib mematuhi nasihat ibu bapa kerana mereka menginginkan yang terbaik untuk kita."
+        },
+        {
+          "id": "q5",
+          "question": "Bagaimanakah cara menghormati ibu bapa?",
+          "options": [
+            "Bercakap dengan kasar",
+            "Meninggikan suara kepada mereka",
+            "Bercakap dengan sopan dan lembut",
+            "Mengabaikan mereka"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Kita perlu bercakap dengan sopan dan lembut kepada ibu bapa sebagai tanda hormat."
+        },
+        {
+          "id": "q6",
+          "question": "Apakah yang perlu dilakukan apabila diminta membantu ibu bapa?",
+          "options": [
+            "Menolak untuk membantu",
+            "Membantu mereka dengan rela hati",
+            "Mengeluh dan merungut",
+            "Mengabaikan permintaan mereka"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu membantu ibu bapa dengan rela hati apabila diminta sebagai tanda kasih sayang."
+        },
+        {
+          "id": "q7",
+          "question": "Antara berikut, yang manakah bukan akhlak terpuji?",
+          "options": [
+            "Amanah",
+            "Sabar",
+            "Jujur",
+            "Menipu"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Menipu adalah akhlak yang buruk, bukan akhlak terpuji."
+        },
+        {
+          "id": "q8",
+          "question": "Apakah yang perlu dilakukan untuk menunjukkan kasih sayang kepada ibu bapa?",
+          "options": [
+            "Mendoakan kesejahteraan mereka",
+            "Mengabaikan mereka",
+            "Bercakap kasar kepada mereka",
+            "Tidak menghormati mereka"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Mendoakan kesejahteraan ibu bapa adalah salah satu cara menunjukkan kasih sayang."
+        },
+        {
+          "id": "q9",
+          "question": "Mengapa kita perlu bertanggungjawab?",
+          "options": [
+            "Kerana dipaksa",
+            "Kerana malu",
+            "Kerana ia adalah akhlak terpuji",
+            "Kerana mengikut kawan"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Bertanggungjawab adalah akhlak terpuji yang perlu diamalkan dalam kehidupan seharian."
+        },
+        {
+          "id": "q10",
+          "question": "Apakah yang akan berlaku jika kita mengamalkan akhlak terpuji?",
+          "options": [
+            "Kita akan dibenci oleh orang lain",
+            "Kita akan disukai oleh Allah SWT",
+            "Kita akan menjadi malas",
+            "Kita akan menjadi sombong"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Dengan mengamalkan akhlak terpuji, kita akan disukai oleh Allah SWT dan orang lain."
+        }
+      ]
+    },
+    {
+      "id": "quiz-akhlak-2",
+      "name": "Akhlak Terhadap Ibu Bapa",
+      "description": "Ujian pengetahuan tentang cara menghormati ibu bapa",
+      "questions": [
+        {
+          "id": "q11",
+          "question": "Apakah kewajipan utama anak terhadap ibu bapa?",
+          "options": [
+            "Mengabaikan mereka",
+            "Menghormati dan mematuhi mereka",
+            "Bercakap kasar kepada mereka",
+            "Tidak peduli tentang mereka"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kewajipan utama anak adalah menghormati dan mematuhi ibu bapa."
+        },
+        {
+          "id": "q12",
+          "question": "Bagaimanakah cara bercakap dengan ibu bapa?",
+          "options": [
+            "Dengan suara yang keras",
+            "Dengan kata-kata yang kasar",
+            "Dengan sopan dan lembut",
+            "Dengan nada yang marah"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Kita perlu bercakap dengan sopan dan lembut kepada ibu bapa."
+        },
+        {
+          "id": "q13",
+          "question": "Apakah yang perlu dilakukan sebelum melakukan sesuatu?",
+          "options": [
+            "Tidak perlu meminta izin",
+            "Meminta izin dari ibu bapa",
+            "Mengabaikan nasihat mereka",
+            "Melakukan tanpa memberitahu"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu meminta izin dari ibu bapa sebelum melakukan sesuatu."
+        },
+        {
+          "id": "q14",
+          "question": "Apakah yang perlu dilakukan apabila ibu bapa sakit?",
+          "options": [
+            "Mengabaikan mereka",
+            "Menjaga dan mendoakan mereka",
+            "Bercakap kasar kepada mereka",
+            "Tidak peduli tentang mereka"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Apabila ibu bapa sakit, kita perlu menjaga dan mendoakan mereka."
+        },
+        {
+          "id": "q15",
+          "question": "Mengapa kita perlu menghormati ibu bapa?",
+          "options": [
+            "Kerana dipaksa",
+            "Kerana mereka telah membesarkan kita",
+            "Kerana malu",
+            "Kerana mengikut kawan"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Kita perlu menghormati ibu bapa kerana mereka telah membesarkan dan menjaga kita."
+        }
+      ]
+    }
+  ]
+}
