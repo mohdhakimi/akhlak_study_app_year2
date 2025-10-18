@@ -1,8 +1,12 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { UserProvider, useUserContext } from './contexts/UserContext'
 import UserSelectionModal from './components/UserSelectionModal'
-import Layout from './components/Layout'
-import Button from './components/Button'
+import MainMenu from './pages/MainMenu'
+import StudyMode from './pages/StudyMode'
+import QuizMode from './pages/QuizMode'
+import TestMode from './pages/TestMode'
+import Leaderboard from './pages/Leaderboard'
 import { TEXT } from './constants/text'
 import './App.css'
 
@@ -41,47 +45,16 @@ const AppContent: React.FC = () => {
 
   return (
     <>
-      <Layout
-        title={TEXT.APP_TITLE}
-        subtitle={TEXT.APP_SUBTITLE}
-        currentUser={currentUser?.name}
-        onUserClick={openUserSelectionModal}
-        showUser={true}
-      >
-        <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
-          <div className="text-center">
-            <div className="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                {currentUser ? `${TEXT.WELCOME}, ${currentUser.name}!` : TEXT.WELCOME}
-              </h2>
-              <p className="text-gray-600 mb-6">
-                {currentUser 
-                  ? 'Aplikasi ini sedang dalam pembangunan. Fasa 2 telah selesai!'
-                  : 'Aplikasi ini sedang dalam pembangunan. Fasa 2 telah selesai!'
-                }
-              </p>
-              <div className="space-y-3">
-                <Button
-                  onClick={openUserSelectionModal}
-                  variant="outline"
-                  fullWidth
-                >
-                  {currentUser ? TEXT.SWITCH_USER : TEXT.SELECT_USER}
-                </Button>
-                {currentUser && (
-                  <Button
-                    onClick={() => selectUser(null)}
-                    variant="secondary"
-                    fullWidth
-                  >
-                    Log Keluar
-                  </Button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Layout>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainMenu />} />
+          <Route path="/study" element={<StudyMode />} />
+          <Route path="/quiz" element={<QuizMode />} />
+          <Route path="/test" element={<TestMode />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
 
       <UserSelectionModal
         isOpen={showUserSelectionModal}

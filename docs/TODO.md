@@ -6,16 +6,17 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ## 📊 Current Progress
 
-**Overall Status: 3 out of 13 phases completed (23.1%)**
+**Overall Status: 4 out of 13 phases completed (30.8%)**
 
 ### ✅ Completed Phases
 - **Phase 0**: Project Setup & Configuration ✅
 - **Phase 1**: Data Structure & Local Storage Utilities ✅  
 - **Phase 2**: Core UI Components & Layout ✅
 - **Phase 3**: User Management System ✅
+- **Phase 4**: Main Menu & Navigation ✅
 
 ### 🚧 Next Phase
-- **Phase 4**: Main Menu & Navigation (Ready to start)
+- **Phase 5**: Study Mode (Mod Belajar) (Ready to start)
 
 ### 📋 Phase Status Legend
 - ✅ **Completed**: All tasks and acceptance criteria met
@@ -150,9 +151,9 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Version Control
 
-- [ ] Commit: "Phase 3: User management system implementation"
-- [ ] Tag: `v0.4.0`
-- [ ] Push to GitHub
+- [x] Commit: "Phase 3: User management system implementation"
+- [x] Tag: `v0.4.0`
+- [x] Push to GitHub
 
 ---
 
@@ -162,25 +163,25 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 
 ### Tasks
 
-- [ ] Create `MainMenu.tsx` page component
-- [ ] Add 4 navigation cards: Mod Belajar, Mod Kuiz, Mod Ujian, Papan Markah
-- [ ] Implement routing (use React Router or similar)
-- [ ] Add friendly animal mascot illustration/image
-- [ ] Add welcome message with user's name
-- [ ] Style menu with engaging colors and layout
-- [ ] Implement navigation to each mode (placeholder pages)
+- [x] Create `MainMenu.tsx` page component
+- [x] Add 4 navigation cards: Mod Belajar, Mod Kuiz, Mod Ujian, Papan Markah
+- [x] Implement routing (use React Router or similar)
+- [x] Add friendly animal mascot illustration/image
+- [x] Add welcome message with user's name
+- [x] Style menu with engaging colors and layout
+- [x] Implement navigation to each mode (placeholder pages)
 - [ ] Add basic sound effect toggle in menu (prepare for Phase 8)
-- [ ] Write unit tests for MainMenu component
-- [ ] Write E2E test for navigation from menu to each mode
+- [x] Write unit tests for MainMenu component
+- [x] Write E2E test for navigation from menu to each mode
 
 ### Acceptance Criteria
 
-- [ ] Main menu displays with all 4 mode options
-- [ ] Current user name is displayed
-- [ ] Navigation to each mode works
-- [ ] Menu is responsive and attractive on all devices
-- [ ] Unit tests pass with 90%+ coverage
-- [ ] E2E test navigates through all menu options successfully
+- [x] Main menu displays with all 4 mode options
+- [x] Current user name is displayed
+- [x] Navigation to each mode works
+- [x] Menu is responsive and attractive on all devices
+- [x] Unit tests pass with 90%+ coverage
+- [x] E2E test navigates through all menu options successfully
 
 ### E2E Test Checkpoint
 
