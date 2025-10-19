@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import LeaderboardTable from '../components/LeaderboardTable'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import BackToMenuButton from '../components/BackToMenuButton'
 import { cn } from '../utils/cn'
 
 type FilterType = 'all' | 'quiz' | 'test'
@@ -149,6 +150,8 @@ const Leaderboard: React.FC = () => {
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}
+      showKeluarButton={true}
+      onKeluarClick={handleBackToMenu}
     >
       <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,17 +165,6 @@ const Leaderboard: React.FC = () => {
             </p>
           </div>
 
-          {/* Back Button */}
-          <div className="mb-6">
-            <Button
-              onClick={handleBackToMenu}
-              variant="secondary"
-              className="flex items-center space-x-2"
-            >
-              <span>←</span>
-              <span>Kembali ke Menu</span>
-            </Button>
-          </div>
 
           {/* Statistics Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -256,6 +248,7 @@ const Leaderboard: React.FC = () => {
               </Card>
             </div>
           )}
+
         </div>
       </div>
     </Layout>

@@ -2,6 +2,7 @@ import React from 'react'
 import { QuizCategory } from '../types'
 import Card from './Card'
 import Button from './Button'
+import BackToMenuButton from './BackToMenuButton'
 import { cn } from '../utils/cn'
 
 export interface CategorySelectorProps {
@@ -174,6 +175,16 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
             </div>
           </Card>
         </div>
+      </div>
+
+      {/* Back Button */}
+      <div className="pt-6">
+        <BackToMenuButton
+          onClick={onBack}
+          variant="outline"
+          size="lg"
+          position="center"
+        />
       </div>
     </div>
   )

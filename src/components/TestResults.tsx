@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Question } from '../types'
 import Card from './Card'
 import Button from './Button'
+import BackToMenuButton from './BackToMenuButton'
 import { cn } from '../utils/cn'
 import { useQuizAudio } from '../hooks/useAudio'
 import { useBilingual } from '../contexts/BilingualContext'
@@ -220,13 +221,11 @@ const TestResults: React.FC<TestResultsProps> = ({
               >
                 {formatText('ليهت ڤان مارکاه | Lihat Papan Markah')}
               </Button>
-              <Button
+              <BackToMenuButton
                 onClick={onBackToMenu}
                 variant="outline"
-                className="px-8 py-3"
-              >
-                {formatText('کمبالي ک منو | Kembali ke Menu')}
-              </Button>
+                size="lg"
+              />
             </div>
           </div>
         </Card>

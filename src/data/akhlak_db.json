@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.6.0",
   "lastUpdated": "2025-01-19",
   "topics": [
     {
@@ -211,1730 +211,1730 @@
   "quizCategories": [
     {
       "id": "adab-makan-minum",
-      "name": "ادب ماكن دان مينوم | Adab Makan dan Minum",
+      "name": "ڤلاجرن فرتام: ادب ماكن دان مينوم | Pelajaran Pertama: Adab Makan dan Minum",
       "description": "Kuiz tentang adab-adab makan dan minum",
       "questions": [
         {
           "id": "adab-makan-minum-q1",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم ماكن؟ | Apakah adab yang penting sebelum makan?",
+          "question": "اڤاكه ادب يڠ ڤرلو دلاكوكن سبلوم ماكن دان مينوم؟ | Apakah adab yang perlu dilakukan sebelum makan dan minum?",
           "type": "mcq",
           "options": [
             "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
-            "تيدق ممباسوه تاغن | Tidak membasuh tangan",
-            "ماكن دغن تاغن كيري | Makan dengan tangan kiri",
-            "برچاكب كوتور كتيك ماكن | Bercakap kotor ketika makan",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن ددالم تيدور | Makan dalam tidur"
+            "برنية اعتكاف | Berniat iktikaf",
+            "مماطوهي ڤراتورن جالن راي | Mematuhi peraturan jalan raya",
+            "كوسوق كيكي | Gosok gigi",
+            "مغمبيل وضوء | Mengambil wuduk",
+            "تيدق منچونتيڠ اتاو مروسقكن | Tidak menconteng atau merosakkan",
+            "ملغكه ماسوق كدالم كندراغن دغن كاكي كانن | Melangkah masuk ke dalam kenderaan dengan kaki kanan"
           ],
           "correctAnswer": 0,
-          "explanation": "ممباسوه تاغن هیشک برسیه اداله ادب يغ ڤنتڠ سبلوم ماكن | Membasuh tangan hingga bersih adalah adab yang penting sebelum makan."
+          "explanation": "ممباسوه تاغن هیشک برسیه اداله ادب يڠ ڤنتڠ سبلوم ماكن دان مينوم. | Membasuh tangan hingga bersih adalah adab yang penting sebelum makan dan minum."
         },
         {
           "id": "adab-makan-minum-q2",
-          "question": "اڤاكه ادب كتيك ماكن؟ | Apakah adab ketika makan?",
+          "question": "صلاح ساتو عاقبة بوروق جك تيدق برادب سماس ماكن اياله... | Salah satu akibat buruk jika tidak beradab semasa makan ialah...",
           "type": "mcq",
           "options": [
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق ماكن | Tidak makan"
+            "داقت مغعملكن سنة ٢ نبي محمد ﷺ | Dapat mengamalkan sunnah-sunnah Nabi Muhammad ﷺ",
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "ممبنتو كلنچرن ڤغڬونا جالن راي | Membantu kelancaran pengguna jalan raya",
+            "براوليه كتنغن جيوا | Beroleh ketenangan jiwa",
+            "ممبيسكن ڤمبذيرن | Menghabiskan pembaziran",
+            "ممبنتوق ڤريبادي دان اخلاق يغ موليا | Membentuk peribadi dan akhlak yang mulia",
+            "ملاتيه ديري سوفايا سنتياس برديسيفلين | Melatih diri supaya sentiasa berdisiplin"
           ],
-          "correctAnswer": 1,
-          "explanation": "مغوتاماكن اورغ يغ لبيه توا اداله ادب يغ ڤنتڠ كتيك ماكن | Mengutamakan orang yang lebih tua adalah adab yang penting ketika makan."
+          "correctAnswer": 4,
+          "explanation": "جك تيدق برادب سماس ماكن، كيت اكن ممبيسكن ڤمبذيرن ماكنن. | Jika tidak beradab semasa makan, kita akan menggalakkan pembaziran makanan."
         },
         {
           "id": "adab-makan-minum-q3",
-          "question": "اڤاكه فضيلة برادب كتيك ماكن؟ | Apakah fadhilat beradab ketika makan?",
+          "question": "سماس ماكن دان مينوم، ادب يڠ بتول اداله مغڬوناكن... | Semasa makan dan minum, adab yang betul adalah menggunakan...",
           "type": "mcq",
           "options": [
-            "تيدق دسايڠي الله | Tidak disayangi Allah",
-            "منداڤتكن ڤڽاكيت | Mendatangkan penyakit",
-            "ممبيسكن ڤمبذيرن | Menyebabkan pembaziran",
-            "دفندغ هينا | Dipandang hina",
-            "مندافت كريضاءن الله | Mendapat keredhaan Allah",
-            "تيدق دحرمتي | Tidak dihormati",
-            "برلاكو كمالغن | Berlaku kemalangan"
+            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "ممباچ القرءان دالم كأدأن بروڬوء | Membaca Al-Quran dalam keadaan berwuduk",
+            "مغڬوناكن تاغن كانن كتيك ماكن | Menggunakan tangan kanan ketika makan",
+            "مموهون معاف در قد كدوا دوا ايبو باق | Memohon maaf daripada kedua-dua ibu bapa",
+            "مماطوهي ڤراتورن جالن راي | Mematuhi peraturan jalan raya",
+            "براتور دان مندهولوكن يغ لبيه توا دان عذور | Beratur dan mendahulukan yang lebih tua dan uzur"
           ],
-          "correctAnswer": 4,
-          "explanation": "مندافت كريضاءن الله اداله فضيلة يغ ڤالڠ بسر برادب كتيك ماكن | Mendapat keredhaan Allah adalah fadhilat yang paling besar beradab ketika makan."
+          "correctAnswer": 3,
+          "explanation": "مغڬوناكن تاغن كانن كتيك ماكن اداله سنة نبي محمد ﷺ. | Menggunakan tangan kanan ketika makan adalah sunnah Nabi Muhammad ﷺ."
         },
         {
           "id": "adab-makan-minum-q4",
-          "question": "اڤاكه عاقبة تيدق برادب كتيك ماكن؟ | Apakah akibat tidak beradab ketika makan?",
-          "type": "mcq",
-          "options": [
-            "مندافت كريضاءن الله | Mendapat keredhaan Allah",
-            "دفندغ موليا | Dipandang mulia",
-            "مغيلقكن ڤمبذيرن | Mengelakkan pembaziran",
-            "دافات كصيحتن | Dapat kesihatan",
-            "تيدق دسايڠي الله | Tidak disayangi Allah",
-            "تيدق منداڤتكن ڤڽاكيت | Tidak mendatangkan penyakit",
-            "ممبنتو اورغ لاءين | Membantu orang lain"
-          ],
-          "correctAnswer": 4,
-          "explanation": "تيدق دسايڠي الله اداله عاقبة يغ ڤالڠ بسر تيدق برادب كتيك ماكن | Tidak disayangi Allah adalah akibat yang paling besar tidak beradab ketika makan."
-        },
-        {
-          "id": "adab-makan-minum-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ماكن؟ | Apakah adab yang penting ketika makan?",
-          "type": "mcq",
-          "options": [
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "مغڬوناكن تاغن كانن | Menggunakan tangan kanan",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق ماكن | Tidak makan"
-          ],
-          "correctAnswer": 1,
-          "explanation": "مغڬوناكن تاغن كانن اداله ادب يغ ڤنتڠ كتيك ماكن | Menggunakan tangan kanan adalah adab yang penting ketika makan."
-        },
-        {
-          "id": "adab-makan-minum-q6",
-          "question": "اڤاكه ادب يغ تيدق ايلوق كتيك ماكن؟ | Apakah adab yang tidak elok ketika makan?",
+          "question": "اڤابيلا ترداڤت ماكنن يڠ ترهيدڠ برديكتن، ادبڽ اياله... | Apabila terdapat makanan yang terhidang berdekatan, adabnya ialah...",
           "type": "mcq",
           "options": [
             "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
-            "مغڬوناكن تاغن كانن | Menggunakan tangan kanan",
-            "كلوحوه كتيك ماكن | Gelojoh ketika makan",
+            "مغمبيل اعتبار درفد اية يغ دباچ | Mengambil iktibar daripada ayat yang dibaca",
+            "مينتا ايذين ڬورو | Minta izin guru",
             "دهولوكن مغمبيل ماكنن يغ تردكت | Dahulukan mengambil makanan yang terdekat",
-            "برچاكب فركارا يغ ايلوق | Bercakap perkara yang elok",
-            "منچاچي ماكنن يغ دهيدغكن | Mencaci makanan yang dihidangkan",
-            "تيدق منچاچي ماكنن | Tidak mencaci makanan"
+            "برفاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat",
+            "تيدق بركوراو دان نمبوات بيسي | Tidak bergurau dan membuat bising",
+            "ملاڤورکن کروسقن | Melaporkan kerosakan"
+          ],
+          "correctAnswer": 3,
+          "explanation": "دهولوكن مغمبيل ماكنن يڠ تردكت اداله ادب كتيك ماكن. | Dahulukan mengambil makanan yang terdekat adalah adab ketika makan."
+        },
+        {
+          "id": "adab-makan-minum-q5",
+          "question": "جك كيت برادب سماس ماكن، كيت اكن دڤندڠ موليا اوليه سياڤا؟ | Jika kita beradab semasa makan, kita akan dipandang mulia oleh siapa?",
+          "type": "mcq",
+          "options": [
+            "ڬورو | Guru",
+            "اورغ يغ مملوكن | Orang yang memerlukan",
+            "اورغ راماي | Orang ramai",
+            "اورغ يغ برتڠڬوڠجواب | Orang yang bertanggungjawab",
+            "كلنچرن ڤغڬونا جالن راي | Kelancaran pengguna jalan raya",
+            "ڤغڬونا جالن راي | Pengguna jalan raya",
+            "ڤيهق يغ برتڠڬوڠجواب | Pihak yang bertanggungjawab"
           ],
           "correctAnswer": 2,
-          "explanation": "كلوحوه كتيك ماكن اداله ادب يغ تيدق ايلوق | Gelojoh ketika makan adalah adab yang tidak elok."
+          "explanation": "اورغ راماي اكن ممندڠ موليا كيت جك كيت برادب سماس ماكن. | Orang ramai akan memandang mulia kita jika kita beradab semasa makan."
+        },
+        {
+          "id": "adab-makan-minum-q6",
+          "question": "اڤاكه يڠ ڤرلو دهيندري (دءيلقكن) كتيك كيت سدڠ برچاكب سماس ماكن؟ | Apakah yang perlu dihindari (dielakkan) ketika kita sedang bercakap semasa makan?",
+          "type": "mcq",
+          "options": [
+            "جاغن برچاكب ڤركارا ٢ تيدق ايلوق، كوتور دان جيجيق | Jangan bercakap perkara-perkara tidak elok, kotor dan jijik",
+            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
+            "مڠيکوت ڤراتورن يڠ تله دتتفكن | Mengikut peraturan yang telah ditetapkan",
+            "مموهون معاف در قد كدوا دوا ايبو باق | Memohon maaf daripada kedua-dua ibu bapa",
+            "كم سكن بيليق تيدور | Mengemas bilik tidur",
+            "ممبري تومڤوان كتيك ڬورو مڠاجر | Memberi tumpuan ketika guru mengajar",
+            "برپاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat"
+          ],
+          "correctAnswer": 0,
+          "explanation": "كيت ڤرلو مغيلقكن برچاكب ڤركارا يڠ تيدق ايلوق، كوتور دان جيجيق سماس ماكن. | Kita perlu mengelakkan bercakap perkara yang tidak elok, kotor dan jijik semasa makan."
         },
         {
           "id": "adab-makan-minum-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ سلفس ماكن؟ | Apakah adab yang penting selepas makan?",
+          "question": "صلاح ساتو فضيلة برادب سماس ماكن اياله داڤت مغيلقكن... | Salah satu fadhilat beradab semasa makan ialah dapat mengelakkan...",
           "type": "mcq",
           "options": [
-            "تيدق برسوچي | Tidak bersuci",
-            "برسوچي تاغن دان مولو | Bersuci tangan dan mulut",
-            "تيدق برزيكر | Tidak berzikir",
-            "برچاكب كوتور | Bercakap kotor",
-            "ماكن لاجي | Makan lagi",
-            "تيدق برشكور | Tidak bersyukur",
-            "منچاچي ماكنن | Mencaci makanan"
+            "منداتڠكن ڤڽاكيت | Mendatangkan penyakit",
+            "برلاكو كمالغن | Berlaku kemalangan",
+            "ملاهيركن ڤرموسوهن دان كبنچين | Melahirkan permusuhan dan kebencian",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "سوسه اونتوق ممهمي ڤلاجرن | Susah untuk memahami pelajaran",
+            "مغيلقكن ڤمبذيرن | Mengelakkan pembaziran",
+            "هيلغ سليرا ماكن | Hilang selera makan"
           ],
-          "correctAnswer": 1,
-          "explanation": "برسوچي تاغن دان مولو اداله ادب يغ ڤنتڠ سلفس ماكن | Bersuci tangan dan mulut adalah adab yang penting selepas makan."
+          "correctAnswer": 5,
+          "explanation": "برادب سماس ماكن، ترماسوق ممبيسكن ماكنن، داڤت مغيلقكن ڤمبذيرن. | Beradab semasa makan, termasuk menghabiskan makanan, dapat mengelakkan pembaziran."
         },
         {
           "id": "adab-makan-minum-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم ماكن دان مينوم؟ | Apakah adab yang penting sebelum makan dan minum?",
+          "question": "سبلوم ماكن، كيت هندقله دودوق دڠن... | Sebelum makan, kita hendaklah duduk dengan...",
           "type": "mcq",
           "options": [
-            "تيدق ممباسوه تاغن | Tidak membasuh tangan",
-            "برفاكاين تيدق برسيه | Berpakaian tidak bersih",
-            "دودوق دغن تيدق ترتيب | Duduk dengan tidak tertib",
-            "برفاكاين برسيه دان كمس | Berpakaian bersih dan kemas",
-            "تيدق دودوق | Tidak duduk",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "برچاكب كوتور | Bercakap kotor"
+            "سوڤن دان چركس | Sopan dan cergas",
+            "سنتیسا برديسيفلين | Sentiasa berdisiplin",
+            "برڤاكاين برسيه | Berpakaian bersih",
+            "برتيمبڠ راس | Bertimbang rasa",
+            "ترتيب دان معهادف ماكنن دڠن تنغ | Tertib dan menghadap makanan dengan tenang",
+            "دڠن ڤنوه حرمت | Dengan penuh hormat",
+            "دتمڤت يڠ سسواي | Di tempat yang sesuai"
           ],
-          "correctAnswer": 3,
-          "explanation": "برفاكاين برسيه دان كمس اداله ادب يغ ڤنتڠ سبلوم ماكن دان مينوم | Berpakaian bersih dan kemas adalah adab yang penting sebelum makan dan minum."
+          "correctAnswer": 4,
+          "explanation": "ادب سبلوم ماكن اياله دودوق دڠن ترتيب دان معهادف ماكنن دڠن تنغ. | Adab sebelum makan ialah duduk dengan tertib dan menghadap makanan dengan tenang."
         },
         {
           "id": "adab-makan-minum-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مينوم؟ | Apakah adab yang penting ketika minum?",
+          "question": "اڤاكه فضيلة (كبايكن) جك كيت برادب سماس ماكن دان مينوم؟ | Apakah fadhilat (kebaikan) jika kita beradab semasa makan dan minum?",
           "type": "mcq",
           "options": [
-            "مينوم ددالم تيدور | Minum dalam tidur",
-            "مينوم دغن تيدق برهاتي-هاتي | Minum dengan tidak berhati-hati",
-            "مينوم دغن برهاتي-هاتي | Minum dengan berhati-hati",
-            "مينوم كرتا | Minum kereta",
-            "تيدق مينوم | Tidak minum",
-            "مينوم ددالم كر | Minum dalam kereta",
-            "برچاكب كتيك مينوم | Bercakap ketika minum"
+            "دافت مغرتكن صلة الرحم انتارا جماعة | Dapat mengeratkan silaturrahim antara jemaah",
+            "منيمبولكن كماراهن ڤغڬونا جالن راي | Menimbulkan kemarahan pengguna jalan raya",
+            "ملاهيركن مشاركت تيدق بردسيڤلين | Melahirkan masyarakat tidak berdisiplin",
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan",
+            "دافت منجاك كبرسيهن دان كصيحتن توبوه بادن | Dapat menjaga kebersihan dan kesihatan tubuh badan",
+            "دافت مغعملكن سنة ٢ نبي محمد ﷺ | Dapat mengamalkan sunnah-sunnah Nabi Muhammad ﷺ"
           ],
-          "correctAnswer": 2,
-          "explanation": "مينوم دغن برهاتي-هاتي اداله ادب يغ ڤنتڠ كتيك مينوم | Minum dengan berhati-hati adalah adab yang penting ketika minum."
+          "correctAnswer": 5,
+          "explanation": "برادب سماس ماكن، سڤرتي ممباسوه تاغن، داڤت منجاك كبرسيهن دان كصيحتن توبوه بادن. | Beradab semasa makan, seperti membasuh tangan, dapat menjaga kebersihan dan kesihatan tubuh badan."
         },
         {
           "id": "adab-makan-minum-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ماكن دغن اورغ لاءين؟ | Apakah adab yang penting ketika makan dengan orang lain?",
+          "question": "سياڤاكه يڠ تيدق مپايڠي كيت جك كيت تيدق برادب سماس ماكن؟ | Siapakah yang tidak menyayangi kita jika kita tidak beradab semasa makan?",
           "type": "mcq",
           "options": [
-            "تيدق برتيمبڠ راس | Tidak bertimbang rasa",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri",
-            "برتيمبڠ راس دغن ڤغڬونا يغ لاءين | Bertimbang rasa dengan pengguna yang lain",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق ماكن | Tidak makan",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan"
+            "اورغ يغ مملوكن | Orang yang memerlukan",
+            "كلوارك | Keluarga",
+            "ڬورو | Guru",
+            "كاون ٢ | Kawan-kawan",
+            "مشاركت | Masyarakat",
+            "جماعه مسجد | Jemaah masjid",
+            "الله ﷻ دان رسول الله ﷺ | Allah ﷻ dan Rasulullah ﷺ"
           ],
-          "correctAnswer": 2,
-          "explanation": "برتيمبڠ راس دغن ڤغڬونا يغ لاءين اداله ادب يغ ڤنتڠ كتيك ماكن دغن اورغ لاءين | Bertimbang rasa dengan pengguna yang lain adalah adab yang penting ketika makan dengan orang lain."
+          "correctAnswer": 6,
+          "explanation": "الله ﷻ دان رسول الله ﷺ تيدق مپايڠي اورڠ يڠ تيدق برادب سماس ماكن دان مينوم. | Allah ﷻ dan Rasulullah ﷺ tidak menyayangi orang yang tidak beradab semasa makan dan minum."
         },
         {
           "id": "adab-makan-minum-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم كر؟ | Apakah adab yang penting ketika dalam kereta?",
+          "question": "مڠاڤاكه ڤنتڠ اونتوق برڤاكاين برسيه دان كم سبلوم ماكن؟ | Mengapakah penting untuk berpakaian bersih dan kemas sebelum makan?",
           "type": "mcq",
           "options": [
-            "ماكن ددالم كر | Makan dalam kereta",
-            "تيدق ماكن ددالم كر | Tidak makan dalam kereta",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri"
+            "برفاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat",
+            "مڠيکوت ڤراتورن يڠ تله دتتفكن | Mengikut peraturan yang telah ditetapkan",
+            "بر فاکاین برسیه دان کمس | Berpakaian bersih dan kemas",
+            "تيدق مغمبيل بارغ ميليق اورغ لاءين | Tidak mengambil barang milik orang lain",
+            "براتور دان مندهولوكن يغ لبيه توا | Beratur dan mendahulukan yang lebih tua",
+            "كندراغن يڠ دڬوناكن اداله سلامت دان سمڤورنا | Kenderaan yang digunakan adalah selamat dan sempurna",
+            "مموهون معاف در قد كدوا دوا ايبو باق | Memohon maaf daripada kedua-dua ibu bapa"
           ],
-          "correctAnswer": 1,
-          "explanation": "تيدق ماكن ددالم كر اداله ادب يغ ڤنتڠ | Tidak makan dalam kereta adalah adab yang penting."
+          "correctAnswer": 2,
+          "explanation": "ڤنتڠ اونتوق برڤاكاين برسيه دان كم سبلوم ماكن سباڬاي تندا حرمت. | Penting untuk berpakaian bersih dan kemas sebelum makan sebagai tanda hormat."
         },
         {
           "id": "adab-makan-minum-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم كلس؟ | Apakah adab yang penting ketika dalam kelas?",
+          "question": "انتارا ادب ماكن اياله كيت تيدق بوليه برسيكڤ... | Antara adab makan ialah kita tidak boleh bersikap...",
           "type": "mcq",
           "options": [
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "تيدق ماكن ددالم كلس | Tidak makan dalam kelas",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri"
+            "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
+            "دهولوكن مغمبيل ماكنن يغ تردكت | Dahulukan mengambil makanan yang terdekat",
+            "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
+            "جاغن كلوحوه كتيك ماكن دان مينوم | Jangan gelojoh ketika makan dan minum",
+            "جاغن منچاچي ماكنن يغ دهيدغكن | Jangan mencaci makanan yang dihidangkan",
+            "ممبيسكن ڤمبذيرن | Menghabiskan pembaziran",
+            "تيدق دسايڠي اوليه الله ﷻ | Tidak disayangi oleh Allah ﷻ"
           ],
-          "correctAnswer": 1,
-          "explanation": "تيدق ماكن ددالم كلس اداله ادب يغ ڤنتڠ | Tidak makan dalam kelas adalah adab yang penting."
+          "correctAnswer": 3,
+          "explanation": "كيت ڤرلو مغيلقكن سيكڤ كلوحوه كتيك ماكن دان مينوم. | Kita perlu mengelakkan sikap gelojoh ketika makan dan minum."
         },
         {
           "id": "adab-makan-minum-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك تيدور؟ | Apakah adab yang penting ketika tidur?",
+          "question": "اڤابيلا كيت برادب سماس ماكن دان مينوم، كيت اكن منداڤت... | Apabila kita beradab semasa makan dan minum, kita akan mendapat...",
           "type": "mcq",
           "options": [
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "تيدق ماكن ددالم تيدور | Tidak makan dalam tidur",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri"
+            "تيدق دسايڠي اوليه الله ﷻ | Tidak disayangi oleh Allah ﷻ",
+            "دفندغ هينا اوليه اورغ لاءين | Dipandang hina oleh orang lain",
+            "منداتڠكن ڤڽاكيت | Mendatangkan penyakit",
+            "ممبيسكن ڤمبذيرن | Menghabiskan pembaziran",
+            "منداقت كريضاءن الله ﷻ دان رسول الله ﷺ | Mendapat keredaan Allah ﷻ dan Rasulullah ﷺ",
+            "مغيلقكن ڤمبذيرن | Mengelakkan pembaziran",
+            "دفندغ موليا اوليه اورغ راماي | Dipandang mulia oleh orang ramai"
           ],
-          "correctAnswer": 1,
-          "explanation": "تيدق ماكن ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak makan dalam tidur adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "فضلية يڠ ڤالڠ بسر برادب سماس ماكن اياله منداقت كريضاءن الله ﷻ دان رسول الله ﷺ. | Fadhilat yang paling besar beradab semasa makan ialah mendapat keredaan Allah ﷻ dan Rasulullah ﷺ."
         },
         {
           "id": "adab-makan-minum-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم كرتا؟ | Apakah adab yang penting ketika dalam kereta?",
+          "question": "اڤاكه عاقبة يڠ اكن منيمڤا ديري سنديري جك كيت تيدق برادب سماس ماكن؟ | Apakah akibat yang akan menimpa diri sendiri jika kita tidak beradab semasa makan?",
           "type": "mcq",
           "options": [
-            "ماكن ددالم كرتا | Makan dalam kereta",
-            "تيدق ماكن ددالم كرتا | Tidak makan dalam kereta",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri"
+            "علمو يڠ دڤلاجري دبركتي الله | Ilmu yang dipelajari diberkati Allah",
+            "مندراڤتكن ڤڽاكيت | Mendatangkan penyakit",
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "موده سمڤاي كتمڤت يڠ دتوجو | Mudah sampai ke tempat yang dituju",
+            "دافت منيڠكتكن كأيمانن كڤد الله | Dapat meningkatkan keimanan kepada Allah",
+            "مندراڤت كبركتن هيجلوف | Mendapat keberkatan hidup",
+            "دافت ڬنجرن ڤهالا | Dapat ganjaran pahala"
           ],
           "correctAnswer": 1,
-          "explanation": "تيدق ماكن ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak makan dalam kereta adalah adab yang penting."
+          "explanation": "جك كيت تيدق منجاڬ كبرسيهن دان ادب، كيت اكن منداڤتكن ڤڽاكيت. | Jika kita tidak menjaga kebersihan dan adab, kita akan mendatangkan penyakit."
         },
         {
           "id": "adab-makan-minum-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم كرتا؟ | Apakah adab yang penting ketika dalam kereta?",
+          "question": "جك كيت تيدق برادب سماس ماكن، كيت اكن دڤندڠ... | Jika kita tidak beradab semasa makan, kita akan dipandang...",
           "type": "mcq",
           "options": [
-            "ماكن ددالم كرتا | Makan dalam kereta",
-            "تيدق ماكن ددالم كرتا | Tidak makan dalam kereta",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "منچاچي ماكنن | Mencaci makanan",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "مغوتاماكن ديري سنديري | Mengutamakan diri sendiri"
+            "موليا | Mulia",
+            "سوڤن | Sopan",
+            "چركس | Cergas",
+            "تنغ | Tenang",
+            "ديسايڠي | Disayangi",
+            "دحرمتي | Dihormati",
+            "هينا اوليه اورغ لاءين | Hina oleh orang lain"
           ],
-          "correctAnswer": 1,
-          "explanation": "تيدق ماكن ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak makan dalam kereta adalah adab yang penting."
+          "correctAnswer": 6,
+          "explanation": "اورغ لاءين اكن ممندڠ هينا اورڠ يڠ تيدق برادب سماس ماكن. | Orang lain akan memandang hina orang yang tidak beradab semasa makan."
         }
       ]
     },
     {
       "id": "adab-tidur",
-      "name": "ادب تيدور | Adab Tidur",
+      "name": "ڤلاجرن كدوا: ادب تيدور | Pelajaran Kedua: Adab Tidur",
       "description": "Kuiz tentang adab-adab tidur",
       "questions": [
         {
           "id": "adab-tidur-q1",
-          "question": "اڤاكه ادب سبلوم تيدور؟ | Apakah adab sebelum tidur?",
+          "question": "سلاءين مغمبيل وضوء دان برڤاكاين برسيه، اڤاكه ادب يڠ ڤرلو دلاكوكن سبلوم تيدور؟ | Selain mengambil wuduk dan berpakaian bersih, apakah adab yang perlu dilakukan sebelum tidur?",
           "type": "mcq",
           "options": [
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "م كوسوق كيكي سبلوم تيدور | Menggosok gigi sebelum tidur",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "برنية اعتكاف | Berniat iktikaf",
+            "صلاة سنة تحية المسجد | Solat sunat Tahiyatul Masjid",
+            "تيدق منچونتيڠ اتاو مروسقكن | Tidak menconteng atau merosakkan",
+            "مماطوهي ڤراتورن جالن راي | Mematuhi peraturan jalan raya",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "مموهون معاف در قد كدوا دوا ايبو باق | Memohon maaf daripada kedua-dua ibu bapa",
+            "مينتا ايذين ڬورو | Minta izin guru"
           ],
-          "correctAnswer": 1,
-          "explanation": "م كوسوق كيكي سبلوم تيدور اداله ادب يغ ڤنتڠ سبلوم تيدور | Menggosok gigi sebelum tidur adalah adab yang penting sebelum tidur."
+          "correctAnswer": 5,
+          "explanation": "مموهون معاف در قد كدوا دوا ايبو باق اداله ادب يڠ دڬالقكن سبلوم تيدور. | Memohon maaf daripada kedua-dua ibu bapa adalah adab yang digalakkan sebelum tidur."
         },
         {
           "id": "adab-tidur-q2",
-          "question": "اڤاكه ادب سلفس باغون تيدور؟ | Apakah adab selepas bangun tidur?",
+          "question": "سلاءين مندي دان برسوچي، صلاح ساتو ادب يڠ ڤرلو دلاكوكن سلفس باغون تيدور اياله... | Selain mandi dan bersuci, salah satu adab yang perlu dilakukan selepas bangun tidur ialah...",
           "type": "mcq",
           "options": [
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "كوسوق كيكي | Gosok gigi",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
+            "كم سكن بيليق تيدور | Mengemas bilik tidur",
+            "برنية اعتكاف | Berniat iktikaf",
+            "ملغكه ماسوق كدالم كندراغن دغن كاكي كانن | Melangkah masuk ke dalam kenderaan dengan kaki kanan",
+            "برفاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat",
+            "تيدق برڬوراو كتيك ددالم كندراغن | Tidak bergurau ketika di dalam kenderaan",
+            "برتيمبڠ راس دغن ڤغڬونا يغ لاءين | Bertimbang rasa dengan pengguna yang lain"
           ],
-          "correctAnswer": 3,
-          "explanation": "كوسوق كيكي اداله ادب يغ ڤنتڠ سلفس باغون تيدور | Gosok gigi adalah adab yang penting selepas bangun tidur."
+          "correctAnswer": 1,
+          "explanation": "كم سكن بيليق تيدور اداله ادب سلفس باغون تيدور اونتوق منجاڬ كبرسيهن. | Mengemas bilik tidur adalah adab selepas bangun tidur untuk menjaga kebersihan."
         },
         {
           "id": "adab-tidur-q3",
-          "question": "اڤاكه فضيلة برادب سبلوم تيدور؟ | Apakah fadhilat beradab sebelum tidur?",
+          "question": "اڤابيلا كيت تيدق برادب سبلوم دان سلفس باغون تيدور، كيت اكن راس... | Apabila kita tidak beradab sebelum dan selepas bangun tidur, kita akan rasa...",
           "type": "mcq",
           "options": [
-            "راس معنتوق | Rasa mengantuk",
-            "موده منداقت پاكيت | Mudah mendapat penyakit",
-            "هيلغ راس ديسيفلين | Hilang rasa disiplin",
-            "داقت مغعملكن سنة ٢ نبي محمد | Dapat mengamalkan sunnah-sunnah Nabi Muhammad",
-            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
-            "هيلغ سليرا ماكن | Hilang selera makan",
-            "تيدق دسايڠي | Tidak disayangi"
+            "فيكيرن سنتياس چركس دان چردس | Fikiran sentiasa cergas dan cerdas",
+            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan",
+            "راس معنتوق كتيك بلاجر | Rasa mengantuk ketika belajar",
+            "دسايڠي اوليه كلوارك دان مشاركت | Disayangi oleh keluarga dan masyarakat",
+            "جيوا تنع دان تنترم | Jiwa tenang dan tenteram",
+            "براوليه كتنغن جيوا | Beroleh ketenangan jiwa",
+            "علمو يغ دفلاجري دبركتي الله | Ilmu yang dipelajari diberkati Allah"
           ],
-          "correctAnswer": 3,
-          "explanation": "داقت مغعملكن سنة ٢ نبي محمد اداله فضيلة يغ ڤالڠ بسر برادب سبلوم تيدور | Dapat mengamalkan sunnah-sunnah Nabi Muhammad adalah fadhilat yang paling besar beradab sebelum tidur."
+          "correctAnswer": 2,
+          "explanation": "راس معنتوق كتيك بلاجر اياله عاقبة تيدق برادب كتيك تيدور. | Rasa mengantuk ketika belajar ialah akibat tidak beradab ketika tidur."
         },
         {
           "id": "adab-tidur-q4",
-          "question": "اڤاكه عاقبة تيدق برادب سبلوم تيدور؟ | Apakah akibat tidak beradab sebelum tidur?",
+          "question": "سلاءين مموهون معاف، ادب لاءين سبلوم تيدور اياله... | Selain memohon maaf, adab lain sebelum tidur ialah...",
           "type": "mcq",
           "options": [
-            "داقت مغعملكن سنة ٢ نبي محمد | Dapat mengamalkan sunnah-sunnah Nabi Muhammad",
-            "داقت منجاك كصيحتن | Dapat menjaga kesihatan",
-            "ملاتيه ديري برديسيفلين | Melatih diri berdisiplin",
-            "راس معنتوق كتيك بلاجر | Rasa mengantuk ketika belajar",
-            "فيكيرن چركس دان چردس | Fikiran cergas dan cerdas",
-            "دسايڠي كلوارك | Disayangi keluarga",
-            "تيدق منداڤتكن ڤڽاكيت | Tidak mendatangkan penyakit"
+            "مغمبيل وضوء | Mengambil wuduk",
+            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
+            "برادب سوڤن كتيك كلوار دري مسجد | Beradab sopan ketika keluar dari masjid",
+            "ممباوا دغن ڤنوه حرمت | Membawa dengan penuh hormat",
+            "ملاڤورکن کروسقن كڤد ڤيهق يغ برتڠڬوڠجواب | Melaporkan kerosakan kepada pihak yang bertanggungjawab",
+            "تيدق مغمبيل بارغ ميليق اورغ لاءين | Tidak mengambil barang milik orang lain",
+            "برپاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat"
           ],
-          "correctAnswer": 3,
-          "explanation": "راس معنتوق كتيك بلاجر اداله عاقبة يغ ڤالڠ بسر تيدق برادب سبلوم تيدور | Rasa mengantuk ketika belajar adalah akibat yang paling besar tidak beradab sebelum tidur."
+          "correctAnswer": 0,
+          "explanation": "مغمبيل وضوء اداله ادب يڠ ڤنتڠ سبلوم تيدور. | Mengambil wuduk adalah adab yang penting sebelum tidur."
         },
         {
           "id": "adab-tidur-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور؟ | Apakah adab yang penting sebelum tidur?",
+          "question": "اڤاكه يڠ هيلغ جك كيت تيدق برادب سبلوم دان سلفس باغون تيدور؟ | Apakah yang hilang jika kita tidak beradab sebelum dan selepas bangun tidur?",
           "type": "mcq",
           "options": [
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "مموهون معاف در قد كدوا دوا ايبو باق | Memohon maaf daripada kedua-dua ibu bapa",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "ڤريبادي يغ موليا | Peribadi yang mulia",
+            "فضيلة | Fadhilat",
+            "علمو يغ دبركتي | Ilmu yang diberkati",
+            "هيلغ راس ديسيفلين ديري | Hilang rasa disiplin diri",
+            "كسسقن جالن راي | Kesesakan jalan raya",
+            "كأيمانن ديري | Keimanan diri",
+            "كبركتن هيجلوف | Keberkatan hidup"
           ],
-          "correctAnswer": 1,
-          "explanation": "مموهون معاف در قد كدوا دوا ايبو باق اداله ادب يغ ڤنتڠ سبلوم تيدور | Memohon maaf daripada kedua-dua ibu bapa adalah adab yang penting sebelum tidur."
+          "correctAnswer": 3,
+          "explanation": "عاقبة تيدق برادب تيدور بوليه مثببكن هيلغ راس ديسيفلين ديري. | Akibat tidak beradab tidur boleh menyebabkan hilang rasa disiplin diri."
         },
         {
           "id": "adab-tidur-q6",
-          "question": "اڤاكه ادب يغ ڤنتڠ سلفس باغون تيدور؟ | Apakah adab yang penting selepas bangun tidur?",
+          "question": "جك كيت مغعملكن ادب تيدور، كيت ملاتيه ديري سوڤايا سنتياس... | Jika kita mengamalkan adab tidur, kita melatih diri supaya sentiasa...",
           "type": "mcq",
           "options": [
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "کمسكن بيليق تيدور | Kemaskan bilik tidur",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "مغنتوق | Mengantuk",
+            "لتيه | Letih",
+            "مغمبيل وضوء | Mengambil wuduk",
+            "برفاكاين برسيه | Berpakaian bersih",
+            "سوڤن | Sopan",
+            "برديسيفلين | Berdisiplin",
+            "تيدق منچونتيڠ | Tidak menconteng"
           ],
-          "correctAnswer": 1,
-          "explanation": "کمسكن بيليق تيدور اداله ادب يغ ڤنتڠ سلفس باغون تيدور | Kemaskan bilik tidur adalah adab yang penting selepas bangun tidur."
+          "correctAnswer": 5,
+          "explanation": "مغعملكن ادب تيدور ملاتيه ديري سوڤايا سنتياس برديسيفلين. | Mengamalkan adab tidur melatih diri supaya sentiasa berdisiplin."
         },
         {
           "id": "adab-tidur-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك تيدور؟ | Apakah adab yang penting ketika tidur?",
+          "question": "اڤاكه يڠ اكن برلاكو كڤد فيكيران كيت جك كيت برادب تيدور؟ | Apakah yang akan berlaku kepada fikiran kita jika kita beradab tidur?",
           "type": "mcq",
           "options": [
-            "تيدق برفاكاين | Tidak berpakaian",
-            "برفاكاين برسيه | Berpakaian bersih",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق كوسوق كيكي | Tidak gosok gigi"
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
+            "موداه منداقت ڤڽاكيت | Mudah mendapat penyakit",
+            "منيمبولكن كماراهن ڤغڬونا | Menimbulkan kemarahan pengguna",
+            "هيلغ سليرا ماكن | Hilang selera makan",
+            "سنتياس چركس دان چردس | Sentiasa cergas dan cerdas",
+            "مروسقكن كأيمانن ديري | Merosakkan keimanan diri",
+            "لمبت سمڤاي | Lambat sampai"
           ],
-          "correctAnswer": 1,
-          "explanation": "برفاكاين برسيه اداله ادب يغ ڤنتڠ كتيك تيدور | Berpakaian bersih adalah adab yang penting ketika tidur."
+          "correctAnswer": 4,
+          "explanation": "جك برادب تيدور، فيكيران اكن سنتياس چركس دان چردس. | Jika beradab tidur, fikiran akan sentiasa cergas dan cerdas."
         },
         {
           "id": "adab-tidur-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ سلفس تيدور؟ | Apakah adab yang penting selepas tidur?",
+          "question": "سلاءين مڠمس بيليق، ادب سلفس باغون تيدور اياله... | Selain mengemas bilik, adab selepas bangun tidur ialah...",
           "type": "mcq",
           "options": [
-            "تيدق مندي | Tidak mandi",
+            "تيدق بربوال بوال كتيك ڬورو مڠاجر | Tidak berbual-bual ketika guru mengajar",
+            "طاعة دان ڤاتوه ارهن ڬورو | Taat dan patuh arahan guru",
             "مندي دان برسوچي | Mandi dan bersuci",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "برنية اعتكاف | Berniat iktikaf",
+            "دو دوق دغن ترتيب | Duduk dengan tertib",
+            "برپاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat",
+            "مماطوهي ڤراتورن جالن راي | Mematuhi peraturan jalan raya"
           ],
-          "correctAnswer": 1,
-          "explanation": "مندي دان برسوچي اداله ادب يغ ڤنتڠ سلفس تيدور | Mandi dan bersuci adalah adab yang penting selepas tidur."
+          "correctAnswer": 2,
+          "explanation": "مندي دان برسوچي اداله ڤرلو سلفس باغون تيدور. | Mandi dan bersuci adalah perlu selepas bangun tidur."
         },
         {
           "id": "adab-tidur-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم كر؟ | Apakah adab yang penting sebelum tidur dalam kereta?",
+          "question": "جك كيت مغعملكن ادب تيدور، كيت داڤت مغعملكن... | Jika kita mengamalkan adab tidur, kita dapat mengamalkan...",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم كر | Tidak tidur dalam kereta",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "سنة ٢ نبي محمد ﷺ | Sunnah-sunnah Nabi Muhammad ﷺ",
+            "ڤراتورن جالن راي | Peraturan jalan raya",
+            "هرتا بندا عوام | Harta benda awam",
+            "صلة الرحم | Silaturrahim",
+            "كأيمانن | Keimanan",
+            "ڤمبذيرن | Pembaziran",
+            "عورة | Aurat"
           ],
           "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم كر اداله ادب يغ ڤنتڠ | Tidak tidur dalam kereta adalah adab yang penting."
+          "explanation": "مغعملكن ادب تيدور برمعنا مغعملكن سنة ٢ نبي محمد ﷺ. | Mengamalkan adab tidur bermakna mengamalkan sunnah-sunnah Nabi Muhammad ﷺ."
         },
         {
           "id": "adab-tidur-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم كلس؟ | Apakah adab yang penting sebelum tidur dalam kelas?",
+          "question": "اڤاكه يڠ ڤرلو دءوسهاكن (دبوات) كڤد ڬيڬي سبلوم تيدور؟ | Apakah yang perlu diusahakan (dibuat) kepada gigi sebelum tidur?",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم كلس | Tidak tidur dalam kelas",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
+            "م کوسوق کیکی سبلوم تیدور | Menggosok gigi sebelum tidur",
+            "ممباچ القرءان | Membaca Al-Quran",
+            "مندي دان برسوچي | Mandi dan bersuci",
+            "مغمبيل وضوء | Mengambil wuduk",
+            "مموهون معاف | Memohon maaf",
+            "كوسوق كيكي | Gosok gigi"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم كلس اداله ادب يغ ڤنتڠ | Tidak tidur dalam kelas adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "م كوسوق كيكي سبلوم تيدور اداله ادب اونتوق منجاڬ كبرسيهن. | Menggosok gigi sebelum tidur adalah adab untuk menjaga kebersihan."
         },
         {
           "id": "adab-tidur-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم كرتا؟ | Apakah adab yang penting sebelum tidur dalam kereta?",
+          "question": "انتارا عاقبة تيدق برادب تيدور اياله سوسه... | Antara akibat tidak beradab tidur ialah susah...",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم كرتا | Tidak tidur dalam kereta",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "دسايڠي اوليه كلوارك | Disayangi oleh keluarga",
+            "داقت منجاك كصيحتن | Dapat menjaga kesihatan",
+            "سنتياس برديسيفلين | Sentiasa berdisiplin",
+            "فيكيرن چركس | Fikiran cergas",
+            "مندراڤت كبركتن | Mendapat keberkatan",
+            "دافت شفاعة | Dapat syafaat",
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak tidur dalam kereta adalah adab yang penting."
+          "correctAnswer": 6,
+          "explanation": "ككورانڬن ادب تيدور بوليه مثببكن سوسه مشيئت فلاجرن. | Kekurangan adab tidur boleh menyebabkan susah menghayati pelajaran."
         },
         {
           "id": "adab-tidur-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم كرتا؟ | Apakah adab yang penting sebelum tidur dalam kereta?",
+          "question": "اڤاكه فضيلة جك كيت مغعملكن ادب تيدور؟ | Apakah fadhilat jika kita mengamalkan adab tidur?",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم كرتا | Tidak tidur dalam kereta",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "ملاهيركن مشاركت تيدق بردسيڤلين | Melahirkan masyarakat tidak berdisiplin",
+            "برلاكو كمالغن | Berlaku kemalangan",
+            "تيدق دافت دڬوناكن دڠن سمڤورنا | Tidak dapat digunakan dengan sempurna",
+            "منداتڠكن ڤڽاكيت | Mendatangkan penyakit",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "تيدق منيمبولكن كبنچين كڤد اورغ لاءين | Tidak menimbulkan kebencian kepada orang lain",
+            "داقت منجاك كصيحتن توبوه بادن | Dapat menjaga kesihatan tubuh badan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak tidur dalam kereta adalah adab yang penting."
+          "correctAnswer": 6,
+          "explanation": "ادب تيدور، سڤرتي مڠمس ديري، داڤت منجاك كصيحتن توبوه بادن. | Adab tidur, seperti mengemas diri, dapat menjaga kesihatan tubuh badan."
         },
         {
-          "id": "adab-tidur-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم تيدور؟ | Apakah adab yang penting sebelum tidur dalam tidur?",
+          "id": "adاب-tidur-q13",
+          "question": "جك كيت تيدق برادب سبلوم دان سلفس باغون تيدور، كيت اكن موده منداڤت... | Jika kita tidak beradab sebelum dan selepas bangun tidur, kita akan mudah mendapat...",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم تيدور | Tidak tidur dalam tidur",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "ڤهالا | Pahala",
+            "شفاعة | Syafaat",
+            "كأيمانن | Keimanan",
+            "ڤڽاكيت | Penyakit",
+            "كبركتن | Keberkatan",
+            "ڤريبادي | Peribadi",
+            "ديسيفلين | Disiplin"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak tidur dalam tidur adalah adab yang penting."
+          "correctAnswer": 3,
+          "explanation": "تيدق برادب، سڤرتي تيدق منجاڬ كبرسيهن، بوليه مثببكن موده منداڤت ڤڽاكيت. | Tidak beradab, seperti tidak menjaga kebersihan, boleh menyebabkan mudah mendapat penyakit."
         },
         {
           "id": "adab-tidur-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم ماكن؟ | Apakah adab yang penting sebelum tidur dalam makan?",
+          "question": "سلفس باغون تيدور، كيت ڤرلو برڤاكاين... | Selepas bangun tidur, kita perlu berpakaian...",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم ماكن | Tidak tidur dalam makan",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "برتجويد دان برترنم | Bertajwid dan bertaranum",
+            "سوچي | Suci",
+            "برسيه دان كمس | Bersih dan kemas",
+            "سوڤن | Sopan",
+            "اعتكاف | Iktikaf",
+            "ڤنوه حرمت | Penuh hormat",
+            "سسواي | Sesuai"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak tidur dalam makan adalah adab yang penting."
+          "correctAnswer": 2,
+          "explanation": "ادب سلفس باغون تيدور اياله برڤاكاين برسيه دان كمس. | Adab selepas bangun tidur ialah berpakaian bersih dan kemas."
         },
         {
           "id": "adab-tidur-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ سبلوم تيدور ددالم مينوم؟ | Apakah adab yang penting sebelum tidur dalam minum?",
+          "question": "اڤابيلا كيت مغعملكن ادب تيدور، كيت اكن دسايڠي اوليه سياڤا؟ | Apabila kita mengamalkan adab tidur, kita akan disayangi oleh siapa?",
           "type": "mcq",
           "options": [
-            "تيدق تيدور ددالم مينوم | Tidak tidur dalam minum",
-            "تيدق كوسوق كيكي | Tidak gosok gigi",
-            "ماكن ددالم تيدور | Makan dalam tidur",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برووضوء | Tidak berwuduk",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق برفاكاين | Tidak berpakaian"
+            "جماعه مسجد | Jemaah masjid",
+            "کلوارک دان مشارکت | Keluarga dan masyarakat",
+            "اورغ يغ مملوكن | Orang yang memerlukan",
+            "اورغ يغ لاءين | Orang yang lain",
+            "ڤيهق يغ برتڠڬوڠجواب | Pihak yang bertanggungjawab",
+            "ڤغڬونا جالن راي | Pengguna jalan raya",
+            "ڬورو | Guru"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم مينوم اداله ادب يغ ڤنتڠ | Tidak tidur dalam minum adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "اورڠ يڠ برادب تيدور اكن دسايڠي اوليه كلوارك دان مشاركت. | Orang yang beradab tidur akan disayangi oleh keluarga dan masyarakat."
         }
       ]
     },
     {
       "id": "adab-berkenderaan",
-      "name": "ادب بركندراغن | Adab Berkenderaan",
+      "name": "ڤلاجرن كتيک: ادب بركندراغن | Pelajaran Ketiga: Adab Berkenderaan",
       "description": "Kuiz tentang adab-adab berkenderaan",
       "questions": [
         {
           "id": "adab-berkenderaan-q1",
-          "question": "اڤاكه ادب كتيك مناءيقي كندراغن؟ | Apakah adab ketika menaiki kenderaan?",
+          "question": "كندراغن يڠ دڬوناكن مستيله بركأدأن... | Kenderaan yang digunakan mestilah berkeadaan...",
           "type": "mcq",
           "options": [
-            "تيدق براتور | Tidak beratur",
-            "براتور دان مندهولوكن يغ لبيه توا | Beratur dan mendahulukan yang lebih tua",
-            "برڬوراو كتيك ددالم كندراغن | Bergurau ketika di dalam kenderaan",
-            "تيدق مماطوهي ڤراتورن | Tidak mematuhi peraturan",
-            "ملغكه دغن كاكي كيري | Melangkah dengan kaki kiri",
-            "كندراغن تيدق سلامت | Kenderaan tidak selamat",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan"
+            "برسيه دان سوچي | Bersih dan suci",
+            "سلامت دان سمڤورنا | Selamat dan sempurna",
+            "سوڤن دان چركس | Sopan dan cergas",
+            "تنع دان تنترم | Tenang dan tenteram",
+            "دڠن ڤنوه حرمت | Dengan penuh hormat",
+            "دتمڤت يغ سسواي | Di tempat yang sesuai",
+            "برتجويد دان برترنم | Bertajwid dan bertaranum"
           ],
           "correctAnswer": 1,
-          "explanation": "براتور دان مندهولوكن يغ لبيه توا اداله ادب يغ ڤنتڠ كتيك مناءيقي كندراغن | Beratur dan mendahulukan yang lebih tua adalah adab yang penting ketika menaiki kenderaan."
+          "explanation": "كندراغن مستيله سلامت دان سمڤورنا سبلوم دڬوناكن. | Kenderaan mestilah selamat dan sempurna sebelum digunakan."
         },
         {
           "id": "adab-berkenderaan-q2",
           "question": "اڤاكه فضيلة برادب كتيك مناءيقي كندراغن؟ | Apakah fadhilat beradab ketika menaiki kenderaan?",
           "type": "mcq",
           "options": [
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "ملاهيركن ڤرموسوهن | Melahirkan permusuhan",
             "منيمبولكن كماراهن | Menimbulkan kemarahan",
-            "برلاكو كمالغن | Berlaku kemalangan",
-            "لمبت سمڤاي | Lambat sampai",
-            "مندافت ڬنجرن ڤهالا درڤد الله | Mendapat ganjaran pahala daripada Allah",
-            "كسسقن لالولينتس | Kesesakan lalu lintas",
-            "تيدق سلامت | Tidak selamat",
-            "ممبيسكن كسسقن | Menyebabkan kesesakan"
+            "هيلغ راس ديسيفلين ديري | Hilang rasa disiplin diri",
+            "سوسه اونتوق ممهمي ڤلاجرن | Susah untuk memahami pelajaran",
+            "مرو سقكن كأيمانن ديري | Merosakkan keimanan diri"
           ],
-          "correctAnswer": 3,
-          "explanation": "مندافت ڬنجرن ڤهالا درڤد الله اداله فضيلة يغ ڤالڠ بسر برادب كتيك مناءيقي كندراغن | Mendapat ganjaran pahala daripada Allah adalah fadhilat yang paling besar beradab ketika menaiki kenderaan."
+          "correctAnswer": 0,
+          "explanation": "برادب كتيك بركندراغن بوليه ممبنتو كورغ كسسقن لالولينتس. | Beradab ketika berkenderaan boleh membantu mengurangkan kesesakan lalu lintas."
         },
         {
           "id": "adab-berkenderaan-q3",
-          "question": "اڤاكه عاقبة تيدق برادب كتيك مناءيقي كندراغن؟ | Apakah akibat tidak beradab ketika menaiki kenderaan?",
+          "question": "اڤابيلا ماسوق كدالم كندراغن، كيت ڤرلو ملغكه مغڬوناكن كاكي مانا؟ | Apabila masuk ke dalam kenderaan, kita perlu melangkah menggunakan kaki mana?",
           "type": "mcq",
           "options": [
-            "مندافت ڬنجرن ڤهالا | Mendapat ganjaran pahala",
-            "كورغ كسسقن | Kurang kesesakan",
-            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan",
-            "منيمبولكن كماراهن ڤغڬونا جالن راي | Menimbulkan kemarahan pengguna jalan raya",
-            "موده سمڤاي | Mudah sampai",
-            "برديسيفلين | Berdisiplin",
-            "ممبنتو كلنچرن | Membantu kelancaran"
+            "كاكي كيري | Kaki kiri",
+            "تاغن كانن | Tangan kanan",
+            "تاغن كيري | Tangan kiri",
+            "كاكي كانن | Kaki kanan",
+            "كفالا | Kepala",
+            "تاغن | Tangan",
+            "وضوء | Wuduk"
           ],
           "correctAnswer": 3,
-          "explanation": "منيمبولكن كماراهن ڤغڬونا جالن راي اداله عاقبة يغ ڤالڠ بسر تيدق برادب كتيك مناءيقي كندراغن | Menimbulkan kemarahan pengguna jalan raya adalah akibat yang paling besar tidak beradab ketika menaiki kenderaan."
+          "explanation": "ادب ماسوق كدالم كندراغن اياله مغڬوناكن كاكي كانن دهولو. | Adab masuk ke dalam kenderaan ialah menggunakan kaki kanan dahulu."
         },
         {
           "id": "adab-berkenderaan-q4",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن؟ | Apakah adab yang penting ketika menaiki kenderaan?",
+          "question": "صلاح ساتو ادب ددالم كندراغن اياله... | Salah satu adab di dalam kenderaan ialah...",
           "type": "mcq",
           "options": [
-            "تيدق مماطوهي ڤراتورن | Tidak mematuhi peraturan",
-            "برڬوراو كتيك ددالم كندراغن | Bergurau ketika di dalam kenderaan",
-            "ملغكه دغن كاكي كيري | Melangkah dengan kaki kiri",
-            "ملغكه ماسوق دغن كاكي كانن | Melangkah masuk dengan kaki kanan",
-            "كندراغن تيدق سلامت | Kenderaan tidak selamat",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "تيدق براتور | Tidak beratur"
+            "صلاة سنة تحية المسجد | Solat sunat Tahiyatul Masjid",
+            "طاعة دان ڤاتوه ارهن ڬورو | Taat dan patuh arahan guru",
+            "برنية اعتكاف | Berniat iktikaf",
+            "مندي دان برسوچي | Mandi dan bersuci",
+            "مموهون معاف در قد كدوا دوا ايبو باق | Memohon maaf daripada kedua-dua ibu bapa",
+            "تيدق برڬوراو كتيك ددالم كندراغن | Tidak bergurau ketika di dalam kenderaan",
+            "كوسوق كيكي سبلوم تیدور | Gosok gigi sebelum tidur"
           ],
-          "correctAnswer": 3,
-          "explanation": "ملغكه ماسوق دغن كاكي كانن اداله ادب يغ ڤنتڠ كتيك مناءيقي كندراغن | Melangkah masuk dengan kaki kanan adalah adab yang penting ketika menaiki kenderaan."
+          "correctAnswer": 5,
+          "explanation": "تيدق برڬوراو كتيك ددالم كندراغن اداله اونتوق منجاڬ كسلاۏمتن. | Tidak bergurau ketika di dalam kenderaan adalah untuk menjaga keselamatan."
         },
         {
           "id": "adab-berkenderaan-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم كندراغن؟ | Apakah adab yang penting ketika di dalam kenderaan?",
+          "question": "اڤاكه فضيلة برادب يڠ بركاءيتن دڠن ڤرجالنن كيت؟ | Apakah fadhilat beradab yang berkaitan dengan perjalanan kita?",
           "type": "mcq",
           "options": [
-            "برڬوراو | Bergurau",
-            "تيدق برڬوراو | Tidak bergurau",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "دافت مغرتكن صلة الرحم | Dapat mengeratkan silaturrahim",
+            "تيدق دسو كاءي اوليه كاون ٢ | Tidak disukai oleh kawan-kawan",
+            "ملاهيركن مشاركت تيدق بردسيڤلين | Melahirkan masyarakat tidak berdisiplin",
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
+            "مندراڤت شفاعة | Mendapat syafaat",
+            "برادب سوڤن كتيك كلوار دري مسجد | Beradab sopan ketika keluar dari masjid",
+            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan"
           ],
-          "correctAnswer": 1,
-          "explanation": "تيدق برڬوراو اداله ادب يغ ڤنتڠ كتيك ددالم كندراغن | Tidak bergurau adalah adab yang penting ketika di dalam kenderaan."
+          "correctAnswer": 6,
+          "explanation": "فضيلة برادب كتيك بركندراغن اياله سلامت دالم ڤرجالنن. | Fadhilat beradab ketika berkenderaan ialah selamat dalam perjalanan."
         },
         {
           "id": "adab-berkenderaan-q6",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك كلوار كندراغن؟ | Apakah adab yang penting ketika keluar kenderaan?",
+          "question": "كيت مستي مندهولوكن اورغ يڠ لبيه توا دان اورغ يڠ... | Kita mesti mendahulukan orang yang lebih tua dan orang yang...",
           "type": "mcq",
           "options": [
-            "ملغكه دغن كاكي كانن | Melangkah dengan kaki kanan",
-            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "كلوارك | Keluarga",
+            "ڬورو | Guru",
+            "عذور | Uzur",
+            "اورغ راماي | Orang ramai",
+            "ڤغڬونا يغ لاءين | Pengguna yang lain",
+            "موريد | Murid",
+            "جماعة | Jemaah"
           ],
-          "correctAnswer": 1,
-          "explanation": "ملغكه كلوار دغن كاكي كيري اداله ادب يغ ڤنتڠ كتيك كلوار كندراغن | Melangkah keluar dengan kaki kiri adalah adab yang penting ketika keluar kenderaan."
+          "correctAnswer": 2,
+          "explanation": "ادب بركندراغن اياله مغوتاماكن اورڠ يڠ لبيه توا دان عذور. | Adab berkenderaan ialah mengutamakan orang yang lebih tua dan uzur."
         },
         {
           "id": "adab-berkenderaan-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كر؟ | Apakah adab yang penting ketika menaiki kereta?",
+          "question": "اڤاكه عاقبة جك كيت تيدق برادب كتيك مناءيقي كندراغن؟ | Apakah akibat jika kita tidak beradab ketika menaiki kenderaan?",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كر | Tidak menaiki kereta",
-            "مناءيقي كر دغن برهاتي-هاتي | Menaiki kereta dengan berhati-hati",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "مندراڤت كبركتن هيجلوف | Mendapat keberkatan hidup",
+            "فيكيران سنتياس چركس | Fikiran sentiasa cergas",
+            "مندراڤت ڬنجرن ڤهالا | Mendapat ganjaran pahala",
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "برلاكو كمالغن | Berlaku kemalangan",
+            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan",
+            "علمو يغ دفلاجري دبركتي الله | Ilmu yang dipelajari diberkati Allah"
           ],
-          "correctAnswer": 1,
-          "explanation": "مناءيقي كر دغن برهاتي-هاتي اداله ادب يغ ڤنتڠ | Menaiki kereta dengan berhati-hati adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "عاقبة تيدق برادب كتيك بركندراغن اياله برلاكو كمالغن. | Akibat tidak beradab ketika berkenderaan ialah berlaku kemalangan."
         },
         {
           "id": "adab-berkenderaan-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كرتا؟ | Apakah adab yang penting ketika menaiki kereta?",
+          "question": "اڤاكه يڠ ڤرلو دڤاتوهي كتيك بركندراغن؟ | Apakah yang perlu dipatuhi ketika berkenderaan?",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كرتا | Tidak menaiki kereta",
-            "مناءيقي كرتا دغن برهاتي-هاتي | Menaiki kereta dengan berhati-hati",
-            "ماكن ددالم كرتا | Makan dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ڤراتورن هرتا بندا عوام | Peraturan harta benda awam",
+            "ڤراتورن تيدور | Peraturan tidur",
+            "ارهن ڬورو | Arahan guru",
+            "ادب ممباچ القرءان | Adab membaca Al-Quran",
+            "ڤراتورن جالن راي | Peraturan jalan raya",
+            "ادب ماسوق مسجد | Adab masuk masjid",
+            "ادب ماكن | Adab makan"
           ],
-          "correctAnswer": 1,
-          "explanation": "مناءيقي كرتا دغن برهاتي-هاتي اداله ادب يغ ڤنتڠ | Menaiki kereta dengan berhati-hati adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "كتيك بركندراغن، كيت ڤرلو مماطوهي ڤراتورن جالن راي. | Ketika berkenderaan, kita perlu mematuhi peraturan jalan raya."
         },
         {
           "id": "adab-berkenderaan-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كرتا؟ | Apakah adab yang penting ketika menaiki kereta?",
+          "question": "صلاح ساتو عاقبة تيدق برادب كتيك بركندراغن اياله منيمبولكن كماراهن... | Salah satu akibat tidak beradab ketika berkenderaan ialah menimbulkan kemarahan...",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كرتا | Tidak menaiki kereta",
-            "مناءيقي كرتا دغن برهاتي-هاتي | Menaiki kereta dengan berhati-hati",
-            "ماكن ددالم كرتا | Makan dalam kereta",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن ددالم كر | Makan dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ڬورو | Guru",
+            "جماعة مسجد | Jemaah masjid",
+            "كاون ٢ | Kawan-kawan",
+            "كلوارك | Keluarga",
+            "اورغ يغ مملوكن | Orang yang memerlukan",
+            "ڤغڬونا جالن راي | Pengguna jalan raya",
+            "ڤيهق يغ برتڠڬوڠجواب | Pihak yang bertanggungjawab"
           ],
-          "correctAnswer": 1,
-          "explanation": "مناءيقي كرتا دغن برهاتي-هاتي اداله ادب يغ ڤنتڠ | Menaiki kereta dengan berhati-hati adalah adab yang penting."
+          "correctAnswer": 5,
+          "explanation": "سيكڤ تيدق برادب اكن منيمبولكن كماراهن ڤغڬونا جالن راي لاءين. | Sikap tidak beradab akan menimbulkan kemarahan pengguna jalan raya lain."
         },
         {
           "id": "adab-berkenderaan-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن ددالم تيدور؟ | Apakah adab yang penting ketika menaiki kenderaan dalam tidur?",
+          "question": "برادب كتيك بركندراغن داڤت ممبنتو كلنچرن... | Beradab ketika berkenderaan dapat membantu kelancaran...",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كندراغن ددالم تيدور | Tidak menaiki kenderaan dalam tidur",
-            "مناءيقي كندراغن ددالم تيدور | Menaiki kenderaan dalam tidur",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ڤغڬونا هرتا بندا عوام | Pengguna harta benda awam",
+            "جماعة مسجد | Jemaah masjid",
+            "ڤلاجرن | Pelajaran",
+            "ايبو باق | Ibu bapa",
+            "ڤغڬونا جالن راي | Pengguna jalan raya",
+            "تيدور | Tidur",
+            "كلوارك | Keluarga"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مناءيقي كندراغن ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak menaiki kenderaan dalam tidur adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "برادب كتيك بركندراغن اكن ممبنتو كلنچرن ڤغڬونا جالن راي. | Beradab ketika berkenderaan akan membantu kelancaran pengguna jalan raya."
         },
         {
           "id": "adab-berkenderaan-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن ددالم ماكن؟ | Apakah adab yang penting ketika menaiki kenderaan dalam makan?",
+          "question": "جك تيدق برادب كتيك بركندراغن، كيت اكن مثببكن... | Jika tidak beradab ketika berkenderaan, kita akan menyebabkan...",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كندراغن ددالم ماكن | Tidak menaiki kenderaan dalam makan",
-            "مناءيقي كندراغن ددالم ماكن | Menaiki kenderaan dalam makan",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "كتنغن جيوا | Ketenangan jiwa",
+            "كسسقن جالن راي | Kesesakan jalan raya",
+            "كبركتن علمو | Keberkatan ilmu",
+            "صلة الرحم | Silaturrahim",
+            "كأيمانن | Keimanan",
+            "ڤهالا | Pahala",
+            "شفاعة | Syafaat"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مناءيقي كندراغن ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak menaiki kenderaan dalam makan adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "تيدق برادب كتيك بركندراغن بوليه مثببكن كسسقن جالن راي. | Tidak beradab ketika berkenderaan boleh menyebabkan kesesakan jalan raya."
         },
         {
           "id": "adab-berkenderaan-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن؟ | Apakah adab yang penting ketika menaiki kenderaan?",
+          "question": "سلاءين سلامت دالم ڤرجالنن، كيت جوڬ اكن موده سمڤاي كتمڤت يڠ... | Selain selamat dalam perjalanan, kita juga akan mudah sampai ke tempat yang...",
           "type": "mcq",
           "options": [
-            "برفاكاين كماس دان برسي | Berpakaian kemas dan bersih",
-            "برفاكاين سيمبڠ | Berpakaian sembarangan",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "برچاكب كوتور | Bercakap kotor",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur",
-            "برتيمبڠ راس دغن ڤنڬونا يغ لاءين | Bertimbang rasa dengan pengguna yang lain"
+            "دتتڤكن | Ditetapkan",
+            "دبركتي | Diberkati",
+            "دتوجو | Dituju",
+            "دڤيليه | Dipilih",
+            "دكهندقي | Dikehendaki",
+            "دسوكاءي | Disukai",
+            "دحرمتي | Dihormati"
           ],
-          "correctAnswer": 0,
-          "explanation": "برفاكاين كماس دان برسي اداله ادب يغ ڤنتڠ كتيك مناءيقي كندراغن | Berpakaian kemas dan bersih adalah adab yang penting ketika menaiki kenderaan."
+          "correctAnswer": 2,
+          "explanation": "فضيلة برادب كتيك بركندراغن اياله موده سمڤاي كتمڤت يڠ دتوجو. | Fadhilat beradab ketika berkenderaan ialah mudah sampai ke tempat yang dituju."
         },
         {
           "id": "adab-berkenderaan-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن ددالم كلس؟ | Apakah adab yang penting ketika menaiki kenderaan dalam kelas?",
+          "question": "اڤاكه توجوان اوتام (اوبجيكتيف) موريد دءاخير ڤلاجرن اين؟ | Apakah tujuan utama (objektif) murid di akhir pelajaran ini?",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كندراغن ددالم كلس | Tidak menaiki kenderaan dalam kelas",
-            "مناءيقي كندراغن ددالم كلس | Menaiki kenderaan dalam kelas",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "مغمبيل وضوء | Mengambil wuduk",
+            "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
+            "تيدق منچونتيڠ اتاو مروسقكن | Tidak menconteng atau merosakkan",
+            "مبا تاكن ادب ٢ كتيك مناءيقي كندراغن | Menyatakan adab-adab ketika menaiki kenderaan",
+            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
+            "مند هو لوکن کاکی کانن | Mendahulukan kaki kanan",
+            "كم سكن بيليق تيدور | Mengemas bilik tidur"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مناءيقي كندراغن ددالم كلس اداله ادب يغ ڤنتڠ | Tidak menaiki kenderaan dalam kelas adalah adab yang penting."
+          "correctAnswer": 3,
+          "explanation": "توجوان ڤلاجرن اين اياله مبا تاكن ادب ٢ كتيك مناءيقي كندراغن. | Tujuan pelajaran ini ialah menyatakan adab-adab ketika menaiki kenderaan."
         },
         {
           "id": "adab-berkenderaan-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن ددالم مسجد؟ | Apakah adab yang penting ketika menaiki kenderaan dalam masjid?",
+          "question": "تيندكن تيدق برادب يڠ اكن مثببكن كسسقن جالن راي اياله... | Tindakan tidak beradab yang akan menyebabkan kesesakan jalan raya ialah...",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كندراغن ددالم مسجد | Tidak menaiki kenderaan dalam masjid",
-            "مناءيقي كندراغن ددالم مسجد | Menaiki kenderaan dalam masjid",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "لمبت سمڤاي كتمڤت يڠ دتوجو | Lambat sampai ke tempat yang dituju",
+            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan",
+            "ممبنتو كلنچرن | Membantu kelancaran",
+            "دافت ڬنجرن ڤهالا | Dapat ganjaran pahala",
+            "ملاتي ديري سوڤايا بردسيڤلين | Melatih diri supaya berdisiplin",
+            "كورغ ڤمبذيرن | Kurang pembaziran"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مناءيقي كندراغن ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak menaiki kenderaan dalam masjid adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "عاقبة تيدق برادب، سڤرتي ممبواڠ ماس، اكن مثببكن لمبت سمڤاي كتمڤت يڠ دتوجو. | Akibat tidak beradab, seperti membuang masa, akan menyebabkan lambat sampai ke tempat yang dituju."
         },
         {
           "id": "adab-berkenderaan-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مناءيقي كندراغن ددالم بلاجر؟ | Apakah adab yang penting ketika menaiki kenderaan dalam belajar?",
+          "question": "فضيلة برادب دجالن راي اياله ملاتيه ديري سوڤايا... | Fadhilat beradab di jalan raya ialah melatih diri supaya...",
           "type": "mcq",
           "options": [
-            "تيدق مناءيقي كندراغن ددالم بلاجر | Tidak menaiki kenderaan dalam belajar",
-            "مناءيقي كندراغن ددالم بلاجر | Menaiki kenderaan dalam belajar",
-            "ماكن ددالم كندراغن | Makan dalam kenderaan",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "بردسيڤلين دجالن راي | Berdisiplin di jalan raya",
+            "برديسيفلين ددالم كلس | Berdisiplin di dalam kelas",
+            "برديسيفلين سبلوم تيدور | Berdisiplin sebelum tidur",
+            "سنتياس برديسيفلين | Sentiasa berdisiplin",
+            "برادب سوڤن | Beradab sopan",
+            "ممباوا دڠن ڤنوه حرمت | Membawa dengan penuh hormat",
+            "برتيمبڠ راس | Bertimbang rasa"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مناءيقي كندراغن ددالم بلاجر اداله ادب يغ ڤنتڠ | Tidak menaiki kenderaan dalam belajar adalah adab yang penting."
+          "correctAnswer": 3,
+          "explanation": "فضيلة برادب دجالن راي ملاتيه ديري سوڤايا سنتياس برديسيفلين. | Fadhilat beradab di jalan raya melatih diri supaya sentiasa berdisiplin."
         }
       ]
     },
     {
       "id": "adab-di-masjid",
-      "name": "ادب دمسجد | Adab di Masjid",
+      "name": "ڤلاجرن كأمفت: ادب دمسجد | Pelajaran Keempat: Adab di Masjid",
       "description": "Kuiz tentang adab-adab di masjid",
       "questions": [
         {
-          "id": "adab-di-masjid-q1",
-          "question": "اڤاكه ادب ماسوق مسجد؟ | Apakah adab masuk masjid?",
+          "id": "adab-masjid-q1",
+          "question": "ادب يڠ ڤرلو دهيندري (دءيلقكن) كتيك ددالم مسجد اياله... | Adab yang perlu dihindari (dielakkan) ketika di dalam masjid ialah...",
           "type": "mcq",
           "options": [
-            "تيدق برووضوء | Tidak berwuduk",
-            "بر كأداءن سوچي دان برسیه | Berkeadaan suci dan bersih",
-            "ملغكه دغن كاكي كيري | Melangkah dengan kaki kiri",
-            "بركوراو دان نمبوات بيسي | Bergurau dan membuat bising",
-            "تيدق صلاة سنة | Tidak solat sunat",
-            "تيدق برنية اعتكاف | Tidak berniat I'tikaf",
-            "تيدق بر ديكير | Tidak berzikir"
+            "تيدق بركوراو دان نمبوات بيسي | Tidak bergurau dan membuat bising",
+            "مماطوهي ڤراتورن جالن راي | Mematuhi peraturan jalan raya",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "ممباچ القرءان دالم كأدأن بروڬوء | Membaca Al-Quran dalam keadaan berwuduk",
+            "مغمبيل اعتبار درفد اية يغ دباچ | Mengambil iktibar daripada ayat yang dibaca",
+            "ممڤراوليه كجايا ان ددنيا | Memperoleh kejayaan di dunia",
+            "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua"
+          ],
+          "correctAnswer": 0,
+          "explanation": "ادب ددالم مسجد اياله تيدق بركوراو دان نمبوات بيسيڠ. | Adab di dalam masjid ialah tidak bergurau dan membuat bising."
+        },
+        {
+          "id": "adab-masjid-q2",
+          "question": "صلاة سنة اڤاكه يڠ ڤرلو كيت لاكوكن سلفس ماسوق مسجد؟ | Solat sunat apakah yang perlu kita lakukan selepas masuk masjid?",
+          "type": "mcq",
+          "options": [
+            "صلاة جمعة | Solat Jumaat",
+            "صلاة سنة تحية المسجد | Solat sunat Tahiyatul Masjid",
+            "صلاة فرض | Solat fardu",
+            "صلاة عيد الفطري | Solat Aidilfitri",
+            "صلاة تراويح | Solat Tarawih",
+            "صلاة جنازة | Solat jenazah",
+            "صلاة سنة مغمبيل وضوء | Solat sunat mengambil wuduk"
           ],
           "correctAnswer": 1,
-          "explanation": "بر كأداءن سوچي دان برسیه اداله ادب يغ ڤنتڠ ماسوق مسجد | Berkeadaan suci dan bersih adalah adab yang penting masuk masjid."
+          "explanation": "صلاة سنة تحية المسجد اداله صلاة يڠ دڬالقكن سلفس ماسوق مسجد. | Solat sunat Tahiyatul Masjid adalah solat yang digalakkan selepas masuk masjid."
         },
         {
-          "id": "adab-di-masjid-q2",
-          "question": "اڤاكه ادب كلوار مسجد؟ | Apakah adab keluar masjid?",
+          "id": "adab-masjid-q3",
+          "question": "كتيك كلوار دري مسجد، كاكي مانا يڠ ڤرلو ددهولوكن؟ | Ketika keluar dari masjid, kaki mana yang perlu didahulukan?",
           "type": "mcq",
           "options": [
-            "ملغكه دغن كاكي كانن | Melangkah dengan kaki kanan",
-            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
-            "تيدق برنية داتغ سمولا | Tidak berniat datang semula",
-            "تيدق برادب سوڤن | Tidak beradab sopan",
-            "مغمبيل بارغ ميليق اورغ لاءين | Mengambil barang milik orang lain",
-            "بركوراو | Bergurau",
-            "نمبوات بيسي | Membuat bising"
+            "كاكي كانن | Kaki kanan",
+            "تاغن كانن | Tangan kanan",
+            "تاغن كيري | Tangan kiri",
+            "كفالا | Kepala",
+            "تاغن | Tangan",
+            "بادن | Badan",
+            "كاكي كيري | Kaki kiri"
           ],
-          "correctAnswer": 1,
-          "explanation": "ملغكه كلوار دغن كاكي كيري اداله ادب يغ ڤنتڠ كلوار مسجد | Melangkah keluar dengan kaki kiri adalah adab yang penting keluar masjid."
+          "correctAnswer": 6,
+          "explanation": "ادب كلوار دري مسجد اياله مغڬوناكن كاكي كيري. | Adab keluar dari masjid ialah menggunakan kaki kiri."
         },
         {
-          "id": "adab-di-masjid-q3",
-          "question": "اڤاكه فضيلة برادب دمسجد؟ | Apakah fadhilat beradab di masjid?",
+          "id": "adab-masjid-q4",
+          "question": "جك كيت برادب دمسجد، كيت داڤت مغرتكن... | Jika kita beradab di masjid, kita dapat mengeratkan...",
           "type": "mcq",
           "options": [
-            "مرو سقكن كأيمانن | Merosakkan keimanan",
-            "منيمبولكن كمارهن | Menimbulkan kemarahan",
-            "تيدق دحرمتي | Tidak dihormati",
-            "دافات منيڠكتكن كأيمانن كڤد الله | Dapat meningkatkan keimanan kepada Allah",
-            "بردو سا | Berdosa",
-            "تيدق درحمتي | Tidak dirahmati",
-            "تيدق دافات ڬنجرن | Tidak dapat ganjaran"
+            "ڤراتورن جالن راي | Peraturan jalan raya",
+            "ڤغڬونا جالن راي | Pengguna jalan raya",
+            "هرتا بندا عوام | Harta benda awam",
+            "ديسيفلين ديري | Disiplin diri",
+            "صلة الرحم انتارا جماعة | Silaturrahim antara jemaah",
+            "كبرسيهن توبوه بادن | Kebersihan tubuh badan",
+            "ڤريبادي يغ موليا | Peribadi yang mulia"
           ],
-          "correctAnswer": 3,
-          "explanation": "دافات منيڠكتكن كأيمانن كڤد الله اداله فضيلة يغ ڤالڠ بسر برادب دمسجد | Dapat meningkatkan keimanan kepada Allah adalah fadhilat yang paling besar beradab di masjid."
+          "correctAnswer": 4,
+          "explanation": "برادب دمسجد داڤت مغرتكن صلة الرحم انتارا جماعة. | Beradab di masjid dapat mengeratkan silaturrahim antara jemaah."
         },
         {
-          "id": "adab-di-masjid-q4",
-          "question": "اڤاكه عاقبة تيدق برادب دمسجد؟ | Apakah akibat tidak beradab di masjid?",
+          "id": "adab-masjid-q5",
+          "question": "اڤاكه عاقبة جك تيدق برادب دمسجد؟ | Apakah akibat jika tidak beradab di masjid?",
           "type": "mcq",
           "options": [
-            "دافات منيڠكتكن كأيمانن | Dapat meningkatkan keimanan",
-            "دافات مغرتكن صلة الرحم | Dapat mengeratkan silaturrahim",
-            "براوليه كتنغن جيوا | Beroleh ketenangan jiwa",
+            "دافت منيڠكتكن كأيمانن | Dapat meningkatkan keimanan",
+            "دافت مغرتكن صلة الرحم | Dapat mengeratkan silaturrahim",
             "مرو سقكن كأيمانن ديري | Merosakkan keimanan diri",
-            "دافات ڬنجرن ڤهالا | Dapat ganjaran pahala",
-            "درحمتي اوليه اورغ لاءين | Dirahmati oleh orang lain",
-            "دافات برڬاول دغن كاون يغ باءيق | Dapat bergaul dengan kawan yang baik"
+            "براوليه كتنغن جيوا | Beroleh ketenangan jiwa",
+            "دافت ڬنجرن ڤهالا | Dapat ganjaran pahala",
+            "دافت برڬاول دغن كاون ٢ يغ باءيق | Dapat bergaul dengan kawan-kawan yang baik",
+            "درحمتي اوليه اورغ لاءين | Dirahmati oleh orang lain"
+          ],
+          "correctAnswer": 2,
+          "explanation": "عاقبة تيدق برادب دمسجد اياله مرو سقكن كأيمانن ديري. | Akibat tidak beradab di masjid ialah merosakkan keimanan diri."
+        },
+        {
+          "id": "adab-masjid-q6",
+          "question": "سلاءين صلاة، اڤاكه اكتيۏيتي لاءين يڠ ايلوق دلاكوكن ددالم مسجد؟ | Selain solat, apakah aktiviti lain yang elok dilakukan di dalam masjid?",
+          "type": "mcq",
+          "options": [
+            "ماكن دان مينوم | Makan dan minum",
+            "برڬوراو | Bergurau",
+            "bertepuk tangan | Bertepuk tangan",
+            "ممبوات بيسيڠ | Membuat bising",
+            "بر ديكير دان ممباج القرءان | Berzikir dan membaca Al-Quran",
+            "بربوال بوال | Berbual-bual",
+            "berlari | Berlari"
+          ],
+          "correctAnswer": 4,
+          "explanation": "بر ديكير دان ممباچ القرءان اداله اكتيۏيتي يڠ ايلوق دلاكوكن دمسجد. | Berzikir dan membaca Al-Quran adalah aktiviti yang elok dilakukan di masjid."
+        },
+        {
+          "id": "adab-masjid-q7",
+          "question": "سلاءين برادب سوڤن، اڤاكه يڠ تيدق بوليه دأمبيل كتيك كلوار دري مسجد؟ | Selain beradab sopan, apakah yang tidak boleh diambil ketika keluar dari masjid?",
+          "type": "mcq",
+          "options": [
+            "ڤهالا | Pahala",
+            "بارغ ميليق اورغ لاءين | Barang milik orang lain",
+            "وضوء | Wuduk",
+            "بيليق تيدور | Bilik tidur",
+            "ڤراتورن | Peraturan",
+            "ارهن | Arahan",
+            "ڤلاجرن | Pelajaran"
+          ],
+          "correctAnswer": 1,
+          "explanation": "ادب كتيك دمسجد اياله تيدق مغمبيل بارغ ميليق اورغ لاءين. | Adab ketika di masjid ialah tidak mengambil barang milik orang lain."
+        },
+        {
+          "id": "adab-masjid-q8",
+          "question": "سبلوم ماسوق مسجد، كأدأن كيت مستيله... | Sebelum masuk masjid, keadaan kita mestilah...",
+          "type": "mcq",
+          "options": [
+            "راس معنتوق | Rasa mengantuk",
+            "موداه منداقت ڤڽاكيت | Mudah mendapat penyakit",
+            "هيلغ سليرا ماكن | Hilang selera makan",
+            "بر كأداءن سوچي دان برسیه | Berkeadaan suci dan bersih",
+            "هيلغ راس ديسيفلين ديري | Hilang rasa disiplin diri",
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
+            "لمبت سمڤاي كتمڤت يغ دتوجو | Lambat sampai ke tempat yang dituju"
           ],
           "correctAnswer": 3,
-          "explanation": "مرو سقكن كأيمانن ديري اداله عاقبة يغ ڤالڠ بسر تيدق برادب دمسجد | Merosakkan keimanan diri adalah akibat yang paling besar tidak beradab di masjid."
+          "explanation": "سبلوم ماسوق مسجد، كيت مستيله بركأداءن سوچي دان برسيه. | Sebelum masuk masjid, kita mestilah berkeadaan suci dan bersih."
         },
         {
-          "id": "adab-di-masjid-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ ماسوق مسجد؟ | Apakah adab yang penting masuk masjid?",
+          "id": "adab-masjid-q9",
+          "question": "جك كيت برادب دمسجد، كيت اكن ممڤراوليه... | Jika kita beradab di masjid, kita akan memperoleh...",
           "type": "mcq",
           "options": [
-            "تيدق برووضوء | Tidak berwuduk",
-            "صلاة سنة تحية المسجد | Solat Sunat Tahiyatul Masjid",
-            "ملغكه دغن كاكي كيري | Melangkah dengan kaki kiri",
-            "بركوراو دان نمبوات بيسي | Bergurau dan membuat bising",
-            "تيدق برنية اعتكاف | Tidak berniat I'tikaf",
-            "تيدق بر ديكير | Tidak berzikir",
-            "ماكن ددالم مسجد | Makan dalam masjid"
+            "كماراهن جماعة | Kemarahan jemaah",
+            "ڤمبذيرن | Pembaziran",
+            "كبنچين | Kebencian",
+            "ڤرموسوهن | Permusuhan",
+            "ڤڽاكيت | Penyakit",
+            "براوليه كتنغن جيوا | Beroleh ketenangan jiwa",
+            "كمالغن | Kemalangan"
+          ],
+          "correctAnswer": 5,
+          "explanation": "برادب دمسجد اكن ممباوا كڤد كتنغن جيوا. | Beradab di masjid akan membawa kepada ketenangan jiwa."
+        },
+        {
+          "id": "adab-masjid-q10",
+          "question": "اڤاكه عاقبة تيدق برادب دمسجد يڠ ڤالڠ بسر؟ | Apakah akibat tidak beradab di masjid yang paling besar?",
+          "type": "mcq",
+          "options": [
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
+            "موداه منداقت ڤڽاكيت | Mudah mendapat penyakit",
+            "هيلغ سليرا ماكن | Hilang selera makan",
+            "بر دو سا | Berdosa",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "برلاكو كمالغن | Berlaku kemalangan",
+            "لمبت سمڤاي | Lambat sampai"
+          ],
+          "correctAnswer": 3,
+          "explanation": "عاقبة ڤالڠ بسر تيدق برادب دمسجد اياله بر دو سا. | Akibat paling besar tidak beradab di masjid ialah berdosa."
+        },
+        {
+          "id": "adab-masjid-q11",
+          "question": "صلاح ساتو ادب سبلوم كلوار دري مسجد اياله برنية اونتوق... | Salah satu adab sebelum keluar dari masjid ialah berniat untuk...",
+          "type": "mcq",
+          "options": [
+            "مموهون معاف | Memohon maaf",
+            "مغمبيل وضوء | Mengambil wuduk",
+            "ممباسوه تاغن | Membasuh tangan",
+            "داتغ سمولا | Datang semula",
+            "برديسيفلين | Berdisiplin",
+            "مغحياتي اية | Menghayati ayat",
+            "مغڬوناكن دڠن چرمت | Menggunakan dengan cermat"
+          ],
+          "correctAnswer": 3,
+          "explanation": "ادب سبلوم كلوار مسجد اياله برنية اونتوق داتغ سمولا كمسجد. | Adab sebelum keluar masjid ialah berniat untuk datang semula ke masjid."
+        },
+        {
+          "id": "adab-masjid-q12",
+          "question": "ادب ماسوق مسجد يڠ بركاءيتن دڠن نية اياله برنية... | Adab masuk masjid yang berkaitan dengan niat ialah berniat...",
+          "type": "mcq",
+          "options": [
+            "وضوء | Wuduk",
+            "ماكن | Makan",
+            "بلنجا | Belanja",
+            "تيدور | Tidur",
+            "اعتكاف | Iktikaf",
+            "بركندراغن | Berkenderaan",
+            "ممليهارا هرتا | Memelihara harta"
+          ],
+          "correctAnswer": 4,
+          "explanation": "نية ماسوق مسجد يڠ دڬالقكن اياله برنية اعتكاف. | Niat masuk masjid yang digalakkan ialah berniat iktikaf."
+        },
+        {
+          "id": "adab-masjid-q13",
+          "question": "جك تيدق برادب دمسجد، كيت اكن منيمبولكن... | Jika tidak beradab di masjid, kita akan menimbulkan...",
+          "type": "mcq",
+          "options": [
+            "كسايڠن ڬورو | Kasih sayang guru",
+            "كبركتن علمو | Keberkatan ilmu",
+            "كتنغن جيوا | Ketenangan jiwa",
+            "صلة الرحم | Silaturrahim",
+            "ڤريبادي يغ موليا | Peribadi yang mulia",
+            "كماراهن جماعه مسجد | Kemarahan jemaah masjid",
+            "ڬنجرن ڤهالا | Ganjaran pahala"
+          ],
+          "correctAnswer": 5,
+          "explanation": "سيكڤ تيدق برادب دمسجد اكن منيمبولكن كماراهن جماعه مسجد. | Sikap tidak beradab di masjid akan menimbulkan kemarahan jemaah masjid."
+        },
+        {
+          "id": "adab-masjid-q14",
+          "question": "اڤاكه يڠ ڤرلو ددهولوكن كتيك ملغكه ماسوق كمسجد؟ | Apakah yang perlu didahulukan ketika melangkah masuk ke masjid?",
+          "type": "mcq",
+          "options": [
+            "كاكي كيري | Kaki kiri",
+            "تاغن كانن | Tangan kanan",
+            "كاكي كانن | Kaki kanan",
+            "تاغن كيري | Tangan kiri",
+            "كفالا | Kepala",
+            "تاغن | Tangan",
+            "وضوء | Wuduk"
+          ],
+          "correctAnswer": 2,
+          "explanation": "ادب ماسوق مسجد اياله مغڬوناكن كاكي كانن. | Adab masuk masjid ialah menggunakan kaki kanan."
+        },
+        {
+          "id": "adab-masjid-q15",
+          "question": "جك كيت برادب دمسجد، كيت اكن درحمتي اوليه سياڤا؟ | Jika kita beradab di masjid, kita akan dirahmati oleh siapa?",
+          "type": "mcq",
+          "options": [
+            "اورغ لاءين | Orang lain",
+            "الله | Allah",
+            "رسول الله | Rasulullah",
+            "كلوارك | Keluarga",
+            "ڬورو | Guru",
+            "ڤغڬونا جالن راي | Pengguna jalan raya",
+            "ڤيهق يغ برتڠڬوڠجواب | Pihak yang bertanggungjawab"
           ],
           "correctAnswer": 1,
-          "explanation": "صلاة سنة تحية المسجد اداله ادب يغ ڤنتڠ ماسوق مسجد | Solat Sunat Tahiyatul Masjid adalah adab yang penting masuk masjid."
-        },
-        {
-          "id": "adab-di-masjid-q6",
-          "question": "اڤاكه ادب يغ ڤنتڠ كلوار مسجد؟ | Apakah adab yang penting keluar masjid?",
-          "type": "mcq",
-          "options": [
-            "ملغكه دغن كاكي كانن | Melangkah dengan kaki kanan",
-            "برنية اونتوق داتغ سمولا | Berniat untuk datang semula",
-            "ماكن ددالم مسجد | Makan dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 1,
-          "explanation": "برنية اونتوق داتغ سمولا اداله ادب يغ ڤنتڠ كلوار مسجد | Berniat untuk datang semula adalah adab yang penting keluar masjid."
-        },
-        {
-          "id": "adab-di-masjid-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ ددالم مسجد؟ | Apakah adab yang penting di dalam masjid?",
-          "type": "mcq",
-          "options": [
-            "بركوراو | Bergurau",
-            "تيدق بركوراو | Tidak bergurau",
-            "ماكن ددالم مسجد | Makan dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 1,
-          "explanation": "تيدق بركوراو اداله ادب يغ ڤنتڠ ددالم مسجد | Tidak bergurau adalah adab yang penting di dalam masjid."
-        },
-        {
-          "id": "adab-di-masjid-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم تيدور؟ | Apakah adab yang penting ketika di dalam masjid dalam tidur?",
-          "type": "mcq",
-          "options": [
-            "تيدق تيدور ددالم مسجد | Tidak tidur dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "ماكن ددالم مسجد | Makan dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق تيدور ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak tidur dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم ماكن؟ | Apakah adab yang penting ketika di dalam masjid dalam makan?",
-          "type": "mcq",
-          "options": [
-            "تيدق ماكن ددالم مسجد | Tidak makan dalam masjid",
-            "ماكن ددالم مسجد | Makan dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ماكن ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak makan dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم مينوم؟ | Apakah adab yang penting ketika di dalam masjid dalam minum?",
-          "type": "mcq",
-          "options": [
-            "تيدق مينوم ددالم مسجد | Tidak minum dalam masjid",
-            "مينوم ددالم مسجد | Minum dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مينوم ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak minum dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم كلس؟ | Apakah adab yang penting ketika di dalam masjid dalam kelas?",
-          "type": "mcq",
-          "options": [
-            "تيدق ددالم كلس ددالم مسجد | Tidak dalam kelas dalam masjid",
-            "ددالم كلس ددالم مسجد | Dalam kelas dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ددالم كلس ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak dalam kelas dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم بلاجر؟ | Apakah adab yang penting ketika di dalam masjid dalam belajar?",
-          "type": "mcq",
-          "options": [
-            "تيدق بلاجر ددالم مسجد | Tidak belajar dalam masjid",
-            "بلاجر ددالم مسجد | Belajar dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak belajar dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم كر؟ | Apakah adab yang penting ketika di dalam masjid dalam kereta?",
-          "type": "mcq",
-          "options": [
-            "تيدق ددالم كر ددالم مسجد | Tidak dalam kereta dalam masjid",
-            "ددالم كر ددالم مسجد | Dalam kereta dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ددالم كر ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak dalam kereta dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم كرتا؟ | Apakah adab yang penting ketika di dalam masjid dalam kereta?",
-          "type": "mcq",
-          "options": [
-            "تيدق ددالم كرتا ددالم مسجد | Tidak dalam kereta dalam masjid",
-            "ددالم كرتا ددالم مسجد | Dalam kereta dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ددالم كرتا ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak dalam kereta dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-di-masjid-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ددالم مسجد ددالم كرتا؟ | Apakah adab yang penting ketika di dalam masjid dalam kereta?",
-          "type": "mcq",
-          "options": [
-            "تيدق ددالم كرتا ددالم مسجد | Tidak dalam kereta dalam masjid",
-            "ددالم كرتا ددالم مسجد | Dalam kereta dalam masjid",
-            "تيدور ددالم مسجد | Tidur dalam masjid",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ددالم كرتا ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak dalam kereta dalam masjid adalah adab yang penting."
+          "explanation": "برادب دمسجد اكن منداڤت رحمٰة درڤد الله. | Beradab di masjid akan mendapat rahmat daripada Allah."
         }
       ]
     },
     {
       "id": "adab-belajar",
-      "name": "ادب بلاجر | Adab Belajar",
+      "name": "ڤلاجرن كليم: ادب بلاجر | Pelajaran Kelima: Adab Belajar",
       "description": "Kuiz tentang adab-adab belajar",
       "questions": [
         {
           "id": "adab-belajar-q1",
-          "question": "اڤاكه ادب كتيك بلاجر؟ | Apakah adab ketika belajar?",
+          "question": "اڤاكه ادب يڠ بركاءيتن دڠن كڤاتوهن كيت كڤد ڬورو؟ | Apakah adab yang berkaitan dengan kepatuhan kita kepada guru?",
           "type": "mcq",
           "options": [
-            "تيدق ممبري تومڤوان | Tidak memberi tumpuan",
-            "ممبري تومڤوان كتيك ڬورو مڠاجر | Memberi tumpuan ketika guru mengajar",
-            "تيدق دودوق دڠن سوڤن | Tidak duduk dengan sopan",
-            "بربوال بوال كتيك ڬورو مڠاجر | Berbual-bual ketika guru mengajar",
-            "تيدق طاعة ارهن ڬورو | Tidak taat arahan guru",
-            "تيدق مينتا ايذين | Tidak minta izin",
-            "ماكن ددالم كلس | Makan dalam kelas"
+            "مغمبيل وضوء | Mengambil wuduk",
+            "طاعة دان ڤاتوه ارهن ڬورو | Taat dan patuh arahan guru",
+            "جاغن كلوحوه كتيك ماكن | Jangan gelojoh ketika makan",
+            "برپاكاين برسيه دان منوتوف عورة | Berpakaian bersih dan menutup aurat",
+            "ملغكه ماسوق كدالم كندراغن دغن كاكي كانن | Melangkah masuk ke dalam kenderaan dengan kaki kanan",
+            "منجاك كبرسيهن ڤرسكيترن | Menjaga kebersihan persekitaran",
+            "منچاچي ماكنن | Mencaci makanan"
           ],
           "correctAnswer": 1,
-          "explanation": "ممبري تومڤوان كتيك ڬورو مڠاجر اداله ادب يغ ڤنتڠ كتيك بلاجر | Memberi tumpuan ketika guru mengajar adalah adab yang penting ketika belajar."
+          "explanation": "ادب بلاجر يڠ ڤنتڠ اياله طاعة دان ڤاتوه ارهن ڬورو. | Adab belajar yang penting ialah taat dan patuh arahan guru."
         },
         {
           "id": "adab-belajar-q2",
-          "question": "اڤاكه فضيلة برادب كتيك بلاجر؟ | Apakah fadhilat beradab ketika belajar?",
+          "question": "جك كيت برادب، كيت اكن موده... | Jika kita beradab, kita akan mudah...",
           "type": "mcq",
           "options": [
-            "تيدق دسو كاءي | Tidak disukai",
-            "تيدق دسايڠي ڬورو | Tidak disayangi guru",
-            "سوسه ممهمي ڤلاجرن | Susah memahami pelajaran",
-            "ممبنتوق ڤريبادي دان اخلاق يغ موليا | Membentuk peribadi dan akhlak yang mulia",
-            "علمو تيدق دبركتي الله | Ilmu tidak diberkati Allah",
-            "تيدق ممڤراوليه كجايا | Tidak memperoleh kejayaan",
-            "تيدق موده ايغت | Tidak mudah ingat"
+            "ايغت دان فهم ڤلاجرن ڬورو | Ingat dan faham pelajaran guru",
+            "راس معنتوق كتيك بلاجر | Rasa mengantuk ketika belajar",
+            "موده منداقت ڤڽاكيت | Mudah mendapat penyakit",
+            "هيلغ سليرا ماكن | Hilang selera makan",
+            "هيلغ راس ديسيفلين ديري | Hilang rasa disiplin diri",
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
+            "دفندغ هينا | Dipandang hina"
           ],
-          "correctAnswer": 3,
-          "explanation": "ممبنتوق ڤريبادي دان اخلاق يغ موليا اداله فضيلة يغ ڤالڠ بسر برادب كتيك بلاجر | Membentuk peribadi dan akhlak yang mulia adalah fadhilat yang paling besar beradab ketika belajar."
+          "correctAnswer": 0,
+          "explanation": "فضيلة برادب كتيك بلاجر اياله موده ايغت دان فهم ڤلاجرن ڬورو. | Fadhilat beradab ketika belajar ialah mudah ingat dan faham pelajaran guru."
         },
         {
           "id": "adab-belajar-q3",
-          "question": "اڤاكه عاقبة تيدق برادب كتيك بلاجر؟ | Apakah akibat tidak beradab ketika belajar?",
+          "question": "جك ادا كڤرلوان اونتوق كلوار كلس، كيت مستي... | Jika ada keperluan untuk keluar kelas, kita mesti...",
           "type": "mcq",
           "options": [
-            "ممبنتوق ڤريبادي موليا | Membentuk peribadi mulia",
-            "ممڤراوليه كجايا | Memperoleh kejayaan",
-            "علمو دبركتي الله | Ilmu diberkati Allah",
-            "تيدق دسو كاءي اوليه كاون ٢ | Tidak disukai oleh kawan-kawan",
-            "موده ايغت دان فهم | Mudah ingat dan faham",
-            "منداڤت كبركتن علمو | Mendapat keberkatan ilmu",
-            "دسايڠي ڬورو | Disayangi guru"
+            "طاعة دان ڤاتوه ارهن ڬورو | Taat dan patuh arahan guru",
+            "تيدق بربوال بوال | Tidak berbual-bual",
+            "ممبري تومڤوان | Memberi tumpuan",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "تيدق منچونتيڠ | Tidak menconteng",
+            "مينتا ايذين ڬورو | Minta izin guru",
+            "ملتفكن دتمڤت يغ سسواي | Meletakkan di tempat yang sesuai"
           ],
-          "correctAnswer": 3,
-          "explanation": "تيدق دسو كاءي اوليه كاون ٢ اداله عاقبة يغ ڤالڠ بسر تيدق برادب كتيك بلاجر | Tidak disukai oleh kawan-kawan adalah akibat yang paling besar tidak beradab ketika belajar."
+          "correctAnswer": 5,
+          "explanation": "ادب كلوار كلس اياله مينتا ايذين ڬورو. | Adab keluar kelas ialah meminta izin guru."
         },
         {
           "id": "adab-belajar-q4",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر؟ | Apakah adab yang penting ketika belajar?",
+          "question": "اڤابيلا تيدق برادب، اڤاكه عاقبتڽ يڠ بركاءيتن دڠن كاون-كاون؟ | Apabila tidak beradab, apakah akibatnya yang berkaitan dengan kawan-kawan?",
           "type": "mcq",
           "options": [
-            "تيدق دودوق دڠن سوڤن | Tidak duduk dengan sopan",
-            "دودوق دڠن سوڤن | Duduk dengan sopan",
-            "بربوال بوال | Berbual-bual",
-            "تيدق طاعة ارهن | Tidak taat arahan",
-            "تيدق مينتا ايذين | Tidak minta izin",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "تيدق ممبري تومڤوان | Tidak memberi tumpuan"
+            "مندراڤت كبركتن هيجلوف | Mendapat keberkatan hidup",
+            "دافت منيڠكتكن كأيمانن | Dapat meningkatkan keimanan",
+            "تيدق دسو كاءي اوليه كاون ٢ | Tidak disukai oleh kawan-kawan",
+            "كورغ كسسقن لالولينتس | Kurang kesesakan lalu lintas",
+            "سلامت دالم ڤرجالنن | Selamat dalam perjalanan",
+            "جيوا تنع دان تنترم | Jiwa tenang dan tenteram",
+            "دافت ڬنجرن ڤهالا | Dapat ganjaran pahala"
           ],
-          "correctAnswer": 1,
-          "explanation": "دودوق دڠن سوڤن اداله ادب يغ ڤنتڠ كتيك بلاجر | Duduk dengan sopan adalah adab yang penting ketika belajar."
+          "correctAnswer": 2,
+          "explanation": "اورڠ يڠ تيدق برادب كتيك بلاجر اكن تيدق دسو كاءي اوليه كاون ٢. | Orang yang tidak beradab ketika belajar akan tidak disukai oleh kawan-kawan."
         },
         {
           "id": "adab-belajar-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم تيدور؟ | Apakah adab yang penting ketika belajar dalam tidur?",
+          "question": "ادب كتيك دودوق ددالم كلس اياله... | Adab ketika duduk di dalam kelas ialah...",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم تيدور | Tidak belajar dalam tidur",
-            "بلاجر ددالم تيدور | Belajar dalam tidur",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "برتجويد دان برترنم | Bertajwid dan bertaranum",
+            "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
+            "براتور دان مندهولوكن يغ لبيه توا | Beratur dan mendahulukan yang lebih tua",
+            "برتيمبڠ راس دغن ڤغڬونا يغ لاءين | Bertimbang rasa dengan pengguna yang lain",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "دڠن ڤنوه حرمت | Dengan penuh hormat",
+            "ممباوا دغن چرمت | Membawa dengan cermat"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak belajar dalam tidur adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "ادب دودوق ددالم كلس اياله دودوق دڠن سوڤن. | Adab duduk di dalam kelas ialah duduk dengan sopan."
         },
         {
           "id": "adab-belajar-q6",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم ماكن؟ | Apakah adab yang penting ketika belajar dalam makan?",
+          "question": "اڤاكه يڠ تربنتوق جك كيت برادب كتيك بلاجر؟ | Apakah yang terbentuk jika kita beradab ketika belajar?",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم ماكن | Tidak belajar dalam makan",
-            "بلاجر ددالم ماكن | Belajar dalam makan",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ڤرموسوهن | Permusuhan",
+            "ڤريبادي دان اخلاق يغ موليا | Peribadi dan akhlak yang mulia",
+            "كبنچين | Kebencian",
+            "ڤمبذيرن | Pembaziran",
+            "كمالغن | Kemalangan",
+            "ڤڽاكيت | Penyakit",
+            "ڤراتورن | Peraturan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak belajar dalam makan adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "فضيلة برادب كتيك بلاجر اياله ممبنتوق ڤريبادي دان اخلاق يغ موليا. | Fadhilat beradab ketika belajar ialah membentuk peribadi dan akhlak yang mulia."
         },
         {
           "id": "adab-belajar-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم مينوم؟ | Apakah adab yang penting ketika belajar dalam minum?",
+          "question": "اڤاكه عاقبة جك علمو يڠ دڤلاجري تيدق دبركتي الله؟ | Apakah akibat jika ilmu yang dipelajari tidak diberkati Allah?",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم مينوم | Tidak belajar dalam minum",
-            "بلاجر ددالم مينوم | Belajar dalam minum",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "علمو تيدق دبركتي الله | Ilmu tidak diberkati Allah",
+            "ممبري تومڤوان | Memberi tumpuan",
+            "طاعة دان ڤاتوه ارهن ڬورو | Taat dan patuh arahan guru",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "مينتا ايذين ڬورو | Minta izin guru",
+            "تيدق بربوال بوال | Tidak berbual-bual",
+            "تيدق دسايڠي ڬورو | Tidak disayangi guru"
           ],
           "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم مينوم اداله ادب يغ ڤنتڠ | Tidak belajar dalam minum adalah adab yang penting."
+          "explanation": "عاقبة تيدق برادب كتيك بلاجر اياله علمو تيدق دبركتي الله. | Akibat tidak beradab ketika belajar ialah ilmu tidak diberkati Allah."
         },
         {
           "id": "adab-belajar-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم كر؟ | Apakah adab yang penting ketika belajar dalam kereta?",
+          "question": "جك كيت تيدق برادب كتيك بلاجر، سياڤاكه يڠ تيدق مپايڠي كيت؟ | Jika kita tidak beradab ketika belajar, siapakah yang tidak menyayangi kita?",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم كر | Tidak belajar dalam kereta",
-            "بلاجر ددالم كر | Belajar dalam kereta",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "الله | Allah",
+            "رسول الله | Rasulullah",
+            "كلوارك | Keluarga",
+            "ڬورو | Guru",
+            "كاون ٢ | Kawan-kawan",
+            "اورغ راماي | Orang ramai",
+            "جماعه مسجد | Jemaah masjid"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم كر اداله ادب يغ ڤنتڠ | Tidak belajar dalam kereta adalah adab yang penting."
+          "correctAnswer": 3,
+          "explanation": "اورڠ يڠ تيدق برادب ددالم كلس اكن تيدق دسايڠي اوليه ڬورو. | Orang yang tidak beradab di dalam kelas akan tidak disayangi oleh guru."
         },
         {
           "id": "adab-belajar-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم كرتا؟ | Apakah adab yang penting ketika belajar dalam kereta?",
+          "question": "صلاح ساتو ادب يڠ مستي دجاڬ سماس ڬورو مڠاجر اياله... | Salah satu adab yang mesti dijaga semasa guru mengajar ialah...",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم كرتا | Tidak belajar dalam kereta",
-            "بلاجر ددالم كرتا | Belajar dalam kereta",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
+            "ممباوا دغن ڤنوه حرمت | Membawa dengan penuh hormat",
+            "تيدق بربوال بوال | Tidak berbual-bual",
+            "برنية اعتكاف | Berniat iktikaf",
+            "ملغكه ماسوق كدالم كندراغن | Melangkah masuk ke dalam kenderaan",
+            "برفاكاين برسيه دان كمس | Berpakaian bersih dan kemas",
+            "منجاك كبرسيهن ڤرسكيترن | Menjaga kebersihan persekitaran"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak belajar dalam kereta adalah adab yang penting."
+          "correctAnswer": 2,
+          "explanation": "ادب سماس ڬورو مڠاجر اياله تيدق بربوال بوال. | Adab semasa guru mengajar ialah tidak berbual-bual."
         },
         {
           "id": "adab-belajar-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم كرتا؟ | Apakah adab yang penting ketika belajar dalam kereta?",
+          "question": "اڤاكه فضيلة يڠ دڤراوليه درڤد ڬورو؟ | Apakah fadhilat yang diperolehi daripada guru?",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم كرتا | Tidak belajar dalam kereta",
-            "بلاجر ددالم كرتا | Belajar dalam kereta",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ڤريبادي يغ موليا | Peribadi yang mulia",
+            "صلة الرحم | Silaturrahim",
+            "كتنغن جيوا | Ketenangan jiwa",
+            "شفاعة | Syafaat",
+            "ڬنجرن ڤهالا | Ganjaran pahala",
+            "كبركتن علمو درڤد ڬورو | Keberkatan ilmu daripada guru",
+            "كسسقن جالن راي | Kesesakan jalan raya"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak belajar dalam kereta adalah adab yang penting."
+          "correctAnswer": 5,
+          "explanation": "برادب كتيك بلاجر اكن منداڤت كبركتن علمو درڤد ڬورو. | Beradab ketika belajar akan mendapat keberkatan ilmu daripada guru."
         },
         {
           "id": "adab-belajar-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم مسجد؟ | Apakah adab yang penting ketika belajar dalam masjid?",
+          "question": "جك تيدق برادب كتيك بلاجر، كيت اكن سوسه اونتوق... | Jika tidak beradab ketika belajar, kita akan susah untuk...",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم مسجد | Tidak belajar dalam masjid",
-            "بلاجر ددالم مسجد | Belajar dalam masjid",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "منيمبولكن كماراهن | Menimbulkan kemarahan",
+            "ممهمي ڤلاجرن | Memahami pelajaran",
+            "برلاكو كمالغن | Berlaku kemalangan",
+            "منداتڠكن ڤڽاكيت | Mendatangkan penyakit",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "هيلغ سليرا ماكن | Hilang selera makan",
+            "مروسقكن كأيمانن | Merosakkan keimanan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak belajar dalam masjid adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "تيدق برادب سماس بلاجر بوليه مثببكن سوسه اونتوق ممهمي ڤلاجرن. | Tidak beradab semasa belajar boleh menyebabkan susah untuk memahami pelajaran."
         },
         {
           "id": "adab-belajar-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم كلس؟ | Apakah adab yang penting ketika belajar dalam kelas?",
+          "question": "سماس ڬورو مڠاجر، اڤاكه ادب يڠ ڤرلو دلاكوكن؟ | Semasa guru mengajar, apakah adab yang perlu dilakukan?",
           "type": "mcq",
           "options": [
-            "بلاجر ددالم كلس | Belajar dalam kelas",
-            "تيدق بلاجر ددالم كلس | Tidak belajar dalam kelas",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "تيدق بربوال بوال | Tidak berbual-bual",
+            "تيدق مغمبيل بارغ ميليق اورغ لاءين | Tidak mengambil barang milik orang lain",
+            "مڠيکوت ڤراتورن يڠ تله دتتفكن | Mengikut peraturan yang telah ditetapkan",
+            "ملغكه كلوار دغن كاكي كيري | Melangkah keluar dengan kaki kiri",
+            "برنية اعتكاف | Berniat iktikaf",
+            "كوسوق كيكي | Gosok gigi",
+            "ممبري تومڤوان | Memberi tumpuan"
           ],
-          "correctAnswer": 0,
-          "explanation": "بلاجر ددالم كلس اداله ادب يغ ڤنتڠ | Belajar dalam kelas adalah adab yang penting."
+          "correctAnswer": 6,
+          "explanation": "ادب سماس ڬورو مڠاجر اياله ممبري تومڤوان. | Adab semasa guru mengajar ialah memberi tumpuan."
         },
         {
           "id": "adab-belajar-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم تيدور؟ | Apakah adab yang penting ketika belajar dalam tidur?",
+          "question": "اڤاكه فضيلة برادب كتيك بلاجر؟ | Apakah fadhilat beradab ketika belajar?",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم تيدور | Tidak belajar dalam tidur",
-            "بلاجر ددالم تيدور | Belajar dalam tidur",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ممڤراوليه كجايا ان ددنيا دان دأخيرة | Memperoleh kejayaan di dunia dan di akhirat",
+            "تيدق دسايڠي ڬورو | Tidak disayangi guru",
+            "تيدق دسو كاءي اوليه كاون ٢ | Tidak disukai oleh kawan-kawan",
+            "سوسه اونتوق ممهمي ڤلاجرن | Susah untuk memahami pelajaran",
+            "علمو تيدق دبركتي الله | Ilmu tidak diberkati Allah",
+            "مرو سقكن كأيمانن ديري | Merosakkan keimanan diri",
+            "لمبت سمڤاي كتمڤت يغ دتوجو | Lambat sampai ke tempat yang dituju"
           ],
           "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak belajar dalam tidur adalah adab yang penting."
+          "explanation": "فضيلة ڤالڠ بسر برادب كتيك بلاجر اياله ممڤراوليه كجايا ان ددنيا دان دأخيرة. | Fadhilat paling besar beradab ketika belajar ialah memperoleh kejayaan di dunia dan di akhirat."
         },
         {
           "id": "adab-belajar-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم ماكن؟ | Apakah adab yang penting ketika belajar dalam makan?",
+          "question": "برادب كتيك بلاجر جوڬ ممباوا كيت اونتوق ممڤراوليه... | Beradab ketika belajar juga membawa kita untuk memperoleh...",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم ماكن | Tidak belajar dalam makan",
-            "بلاجر ددالم ماكن | Belajar dalam makan",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "كمالغن | Kemalangan",
+            "كبنچين | Kebencian",
+            "ڤرموسوهن | Permusuhan",
+            "ڤڽاكيت | Penyakit",
+            "كجايا ان | Kejayaan",
+            "كماراهن | Kemarahan",
+            "بيسيڠ | Bising"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak belajar dalam makan adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "تujuan برادب كتيك بلاجر اياله اونتوق ممڤراوليه كجايا ان. | Tujuan beradab ketika belajar ialah untuk memperoleh kejayaan."
         },
         {
           "id": "adab-belajar-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك بلاجر ددالم مينوم؟ | Apakah adab yang penting ketika belajar dalam minum?",
+          "question": "جك كيت برادب كتيك بلاجر، كيت اكن ممڤراوليه كجايا ان ددنيا دان... | Jika kita beradab ketika belajar, kita akan memperoleh kejayaan di dunia dan...",
           "type": "mcq",
           "options": [
-            "تيدق بلاجر ددالم مينوم | Tidak belajar dalam minum",
-            "بلاجر ددالم مينوم | Belajar dalam minum",
-            "ماكن ددالم كلس | Makan dalam kelas",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "دمسجد | Di masjid",
+            "دكندراغن | Di kenderaan",
+            "دكلس | Di kelas",
+            "دبيتولمال | Di Baitulmal",
+            "دجالن راي | Di jalan raya",
+            "دأخيرة | Di akhirat",
+            "دكجاءوهن | Di kejauhan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق بلاجر ددالم مينوم اداله ادب يغ ڤنتڠ | Tidak belajar dalam minum adalah adab yang penting."
+          "correctAnswer": 5,
+          "explanation": "برادب كتيك بلاجر اكن ممباوا كجايا ان ددنيا دان دأخيرة. | Beradab ketika belajar akan membawa kejayaan di dunia dan di akhirat."
         }
       ]
     },
     {
-      "id": "adab-dengan-al-quran",
-      "name": "ادب دغن مصحف القرءان | Adab dengan Mushaf Al-Quran",
-      "description": "Kuiz tentang adab-adab dengan Al-Quran",
+      "id": "adab-mushaf-alquran",
+      "name": "ڤلاجرن كأنم: ادب دغن مصحف القرءان | Pelajaran Keenam: Adab dengan Mushaf Al-Quran",
+      "description": "Kuiz tentang adab-adab dengan Mushaf Al-Quran",
       "questions": [
         {
-          "id": "adab-dengan-al-quran-q1",
-          "question": "اڤاكه ادب ممباوا مصحف القرءان؟ | Apakah adab membawa Mushaf Al-Quran?",
+          "id": "adab-mushaf-q1",
+          "question": "ادب ڤرتام يڠ ڤرلو دلاكوكن سبلوم ممڬڠ القرءان اياله... | Adab pertama yang perlu dilakukan sebelum memegang Al-Quran ialah...",
           "type": "mcq",
           "options": [
-            "تيدق برووضوء | Tidak berwuduk",
+            "صلاة سنة تحية المسجد | Solat sunat Tahiyatul Masjid",
+            "مماطوهي ڤراتورن | Mematuhi peraturan",
+            "برو وضوء | Berwuduk",
+            "دودوق دڠن سوڤن | Duduk dengan sopan",
+            "مموهون معاف در قد ايبو باق | Memohon maaf daripada ibu bapa",
+            "ممباسوه تاغن | Membasuh tangan",
+            "كوسوق كيكي | Gosok gigi"
+          ],
+          "correctAnswer": 2,
+          "explanation": "ممڬڠ القرءان مستي دالم كأدأن سوچي ايلاءيتو برو وضوء. | Memegang Al-Quran mesti dalam keadaan suci iaitu berwuduk."
+        },
+        {
+          "id": "adab-mushaf-q2",
+          "question": "كتيك ممباچ القرءان، كيت ڤرلو ممبري... | Ketika membaca Al-Quran, kita perlu memberi...",
+          "type": "mcq",
+          "options": [
+            "ڤمبذيرن | Pembaziran",
+            "كماراهن | Kemarahan",
+            "كمالغن | Kemalangan",
+            "تومڤوان | Tumpuan",
+            "كبنچين | Kebencian",
+            "كصيحتن | Kesihatan",
+            "كسسقن | Kesesakan"
+          ],
+          "correctAnswer": 3,
+          "explanation": "ادب ممباچ القرءان اياله ممبري تومڤوان. | Adab membaca Al-Quran ialah memberi tumpuan."
+        },
+        {
+          "id": "adab-mushaf-q3",
+          "question": "كتيك ممباوا مصحف القرءان، كيت ڤرلو ممڬڠڽ دڠن تاغن... | Ketika membawa Mushaf Al-Quran, kita perlu memegangnya dengan tangan...",
+          "type": "mcq",
+          "options": [
+            "كيري | Kiri",
+            "كانن دان كيري | Kanan dan kiri",
+            "ڤنوه حرمت | Penuh hormat",
+            "چرمت | Cermat",
+            "سوچي | Suci",
+            "كانن | Kanan",
+            "برڤاكاين برسيه | Berpakaian bersih"
+          ],
+          "correctAnswer": 5,
+          "explanation": "سنة كتيك ممباوا مصحف اياله مغڬوناكن تاغن كانن. | Sunnah ketika membawa Mushaf ialah menggunakan tangan kanan."
+        },
+        {
+          "id": "adab-mushaf-q4",
+          "question": "سلفس ممباچ اية يڠ دسونتكن سجود، كيت ڤرلو ملاكوكن... | Selepas membaca ayat yang disunatkan sujud, kita perlu melakukan...",
+          "type": "mcq",
+          "options": [
+            "سجود سهوي | Sujud sahwi",
+            "سجود شكر | Sujud syukur",
+            "صلاة سنة تحية المسجد | Solat sunat Tahiyatul Masjid",
+            "صلاة فرض | Solat fardu",
+            "سجود تلاوة | Sujud tilawah",
+            "صلاة عيد | Solat Aidilfitri",
+            "صلاة جنادة | Solat jenazah"
+          ],
+          "correctAnswer": 4,
+          "explanation": "سجود تلاوة دلاكوكن سلفس ممباچ اية يڠ دسونتكن سجود. | Sujud tilawah dilakukan selepas membaca ayat yang disunatkan sujud."
+        },
+        {
+          "id": "adab-mushaf-q5",
+          "question": "فضيلة برادب دڠن القرءان يڠ بركاءيتن دڠن هاتي اياله... | Fadhilat beradab dengan Al-Quran yang berkaitan dengan hati ialah...",
+          "type": "mcq",
+          "options": [
+            "جيوا تنع دان تنترم | Jiwa tenang dan tenteram",
+            "سوسه مشيئت فلاجرن | Susah menghayati pelajaran",
+            "موداه منداقت ڤڽاكيت | Mudah mendapat penyakit",
+            "هيلغ راس ديسيفلين | Hilang rasa disiplin",
+            "لمبت سمڤاي | Lambat sampai",
+            "منيمبولكن كماراهن | Menimbulkan kemarahan",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan"
+          ],
+          "correctAnswer": 0,
+          "explanation": "ممباچ القرءان دڠن ادب بوليه ممباوا كڤد جيوا تنع دان تنترم. | Membaca Al-Quran dengan adab boleh membawa kepada jiwa tenang dan tenteram."
+        },
+        {
+          "id": "adab-mushaf-q6",
+          "question": "كتيك ممباچ القرءان، كيت هندقله ممباچڽ دڠن برتجويد دان... | Ketika membaca Al-Quran, kita hendaklah membacanya dengan bertajwid dan...",
+          "type": "mcq",
+          "options": [
+            "سوڤن | Sopan",
+            "ڤنوه حرمت | Penuh hormat",
+            "چرمت | Cermat",
+            "برسيه | Bersih",
+            "برادب | Beradab",
+            "دڠن تنغ | Dengan tenang",
+            "برترنم | Bertaranum"
+          ],
+          "correctAnswer": 6,
+          "explanation": "ممباچ القرءان هندقله دڠن برتجويد دان برترنم. | Membaca Al-Quran hendaklah dengan bertajwid dan bertaranum."
+        },
+        {
+          "id": "adab-mushaf-q7",
+          "question": "كتيك مپيمڤن مصحف، ادبڽ اياله ممباواڽ دڠن ڤنوه... | Ketika menyimpan Mushaf, adabnya ialah membawanya dengan penuh...",
+          "type": "mcq",
+          "options": [
+            "چرمت | Cermat",
+            "ڤراتورن | Peraturan",
+            "حرمت | Hormat",
+            "ديسيفلين | Disiplin",
+            "تومڤوان | Tumpuan",
+            "سوچي | Suci",
+            "برتجويد | Bertajwid"
+          ],
+          "correctAnswer": 2,
+          "explanation": "مصخف القرءان مستي دباوا دڠن ڤنوه حرمت. | Mushaf Al-Quran mesti dibawa dengan penuh hormat."
+        },
+        {
+          "id": "adab-mushaf-q8",
+          "question": "فضيلة برادب دڠن القرءان يڠ بركاءيتن دڠن ڬنجرن اياله منداڤت... | Fadhilat beradab dengan Al-Quran yang berkaitan dengan ganjaran ialah mendapat...",
+          "type": "mcq",
+          "options": [
+            "مرو سقكن كأيمانن ديري | Merosakkan keimanan diri",
+            "برلاكو كمالغن | Berlaku kemalangan",
+            "منيمبولكن كماراهن | Menimbulkan kemarahan",
+            "ممبيسكن ڤمبذيرن | Menghabiskan pembaziran",
+            "تيدق دسو كاءي اوليه كاون ٢ | Tidak disukai oleh kawan-kawan",
+            "مندراڤت ڬنجرن ڤهالا | Mendapat ganjaran pahala",
+            "سوسه اونتوق ممهمي ڤلاجرن | Susah untuk memahami pelajaran"
+          ],
+          "correctAnswer": 5,
+          "explanation": "فضيلة ممباچ القرءان دڠن ادب اياله منداڤت ڬنجرن ڤهالا. | Fadhilat membaca Al-Quran dengan adab ialah mendapat ganjaran pahala."
+        },
+        {
+          "id": "adab-mushaf-q9",
+          "question": "فضيلة برادب دڠن القرءان يڠ بركاءيتن دڠن رزقي اياله منداڤت... | Fadhilat beradab dengan Al-Quran yang berkaitan dengan rezeki ialah mendapat...",
+          "type": "mcq",
+          "options": [
+            "كبركتن هيجلوف | Keberkatan hidup",
+            "كبركتن علمو درڤد ڬورو | Keberkatan ilmu daripada guru",
+            "فضيلة برادب | Fadhilat beradab",
+            "صلة الرحم | Silaturrahim",
+            "كتنغن جيوا | Ketenangan jiwa",
+            "كسسقن جالن راي | Kesesakan jalan raya",
+            "كصيحتن توبوه بادن | Kesihatan tubuh badan"
+          ],
+          "correctAnswer": 0,
+          "explanation": "برادب دڠن القرءان اكن منداڤت كبركتن هيجلوف. | Beradab dengan Al-Quran akan mendapat keberkatan hidup."
+        },
+        {
+          "id": "adab-mushaf-q10",
+          "question": "كتيك ممباوا مصحف القرءان، سكورڠ-كورڠڽ اي داڠكت سڤاراس... | Ketika membawa Mushaf Al-Quran, sekurang-kurangnya ia diangkat separas...",
+          "type": "mcq",
+          "options": [
+            "كفالا | Kepala",
+            "دادا | Dada",
+            "تاغن | Tangan",
+            "ڤوچوق رامبوت | Pucuk rambut",
+            "ڤينڠڬڠ | Pinggang",
+            "سيكو | Siku",
+            "باهو | Bahu"
+          ],
+          "correctAnswer": 1,
+          "explanation": "مصحف مستي دباوا سكورڠ-كورڠڽ سڤاراس دادا سباڬاي تندا حرمت. | Mushaf mesti dibawa sekurang-kurangnya separas dada sebagai tanda hormat."
+        },
+        {
+          "id": "adab-mushaf-q11",
+          "question": "فضيلة برادب دڠن القرءان جوڬ اكن ممبوات كيت منداڤت... | Fadhilat beradab dengan Al-Quran juga akan membuat kita mendapat...",
+          "type": "mcq",
+          "options": [
+            "كبركتن علمو درڤد ڬورو | Keberkatan ilmu daripada guru",
+            "شفاعة | Syafaat",
+            "صلة الرحم | Silaturrahim",
+            "ڤريبادي يغ موليا | Peribadi yang mulia",
+            "كتنغن جيوا | Ketenangan jiwa",
+            "كسسقن لالولينتس | Kesesakan lalu lintas",
+            "كصيحتن توبوه بادن | Kesihatan tubuh badan"
+          ],
+          "correctAnswer": 1,
+          "explanation": "ممباچ القرءان دڠن ادب داڤت ممڤراوليه شفاعة. | Membaca Al-Quran dengan adab dapat memperoleh syafaat."
+        },
+        {
+          "id": "adab-mushaf-q12",
+          "question": "كتيك مپيمڤن مصحف القرءان، كيت تيدق بوليه ملقكن سسواتو بندا... | Ketika menyimpan Mushaf Al-Quran, kita tidak boleh meletakkan sesuatu benda...",
+          "type": "mcq",
+          "options": [
+            "دتمڤت يغ سسواي | Di tempat yang sesuai",
+            "دباوه | Di bawah",
+            "دتاس ڤلاجرن | Di atas pelajaran",
+            "دأتس تاغن | Di atas tangan",
+            "دسودوت | Di sudut",
+            "ددالم كمس | Di dalam kemas",
+            "دأتس مصحف | Di atas Mushaf"
+          ],
+          "correctAnswer": 6,
+          "explanation": "مصحف القرءان ڤرلو دحرمتي دڠن تيدق ملقكن سسواتو بندا دأتسڽ. | Mushaf Al-Quran perlu dihormati dengan tidak meletakkan sesuatu benda di atasnya."
+        },
+        {
+          "id": "adab-mushaf-q13",
+          "question": "س تله سلساءي ممباچ القرءان، اڤاكه يڠ ڤرلو كيت لاكوكن كڤد مصحف؟ | Setelah selesai membaca Al-Quran, apakah yang perlu kita lakukan kepada Mushaf?",
+          "type": "mcq",
+          "options": [
+            "ملتفكن دتمڤت يغ سسواي | Meletakkan di tempat yang sesuai",
             "برووضوء | Berwuduk",
-            "ممڬغ دغن تاغن كيري | Memegang dengan tangan kiri",
-            "مغككت دتحت ڤروت | Mengangkat di bawah perut",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "تيدق منوتوف عورة | Tidak menutup aurat",
-            "تيدق منجاك دغن چرمت | Tidak menjaga dengan cermat"
-          ],
-          "correctAnswer": 1,
-          "explanation": "برووضوء اداله ادب يغ ڤنتڠ ممباوا مصحف القرءان | Berwuduk adalah adab yang penting membawa Mushaf Al-Quran."
-        },
-        {
-          "id": "adab-dengan-al-quran-q2",
-          "question": "اڤاكه ادب ممباچ القرءان؟ | Apakah adab membaca Al-Quran?",
-          "type": "mcq",
-          "options": [
-            "تيدق برووضوء | Tidak berwuduk",
-            "تيدق منوتوف عورة | Tidak menutup aurat",
-            "تيدق ممبري تومڤوان | Tidak memberi tumpuan",
-            "ممباچ دغن برتجويد دان برترنم | Membaca dengan bertajwid dan bertarannum",
-            "تيدق سجود تلاوة | Tidak sujud tilawah",
-            "تيدق مغمبيل اعتبار | Tidak mengambil iktibar",
-            "ماكن ددالم ممباچ | Makan dalam membaca"
+            "ممڬغ مصحف | Memegang Mushaf",
+            "منوتوڤ مصحف القرءان | Menutup Mushaf Al-Quran",
+            "مغحياتي اية | Menghayati ayat",
+            "برفاكاين برسيه | Berpakaian bersih",
+            "تيدق ملتفكن سسواوتو بندا دأتس مصحف | Tidak meletakkan sesuatu benda di atas Mushaf"
           ],
           "correctAnswer": 3,
-          "explanation": "ممباچ دغن برتجويد دان برترنم اداله ادب يغ ڤنتڠ ممباچ القرءان | Membaca dengan bertajwid dan bertarannum adalah adab yang penting membaca Al-Quran."
+          "explanation": "ادب سلفس ممباچ القرءان اياله منوتوڤ مصحف القرءان. | Adab selepas membaca Al-Quran ialah menutup Mushaf Al-Quran."
         },
         {
-          "id": "adab-dengan-al-quran-q3",
-          "question": "اڤاكه ادب ميمڤن مصحف القرءان؟ | Apakah adab menyimpan Mushaf Al-Quran?",
+          "id": "adab-mushaf-q14",
+          "question": "ادب ممباچ القرءان جوڬ ترماسوق مغمبيل... | Adab membaca Al-Quran juga termasuk mengambil...",
           "type": "mcq",
           "options": [
-            "تيدق ممباوا دغن ڤنوه حرمت | Tidak membawa dengan penuh hormat",
-            "ممباوا دغن ڤنوه حرمت | Membawa dengan penuh hormat",
-            "ملتفكن دتمڤت يغ تيدق سسواي | Meletakkan di tempat yang tidak sesuai",
-            "تيدق منوتوڤ سلفس ممباچ | Tidak menutup selepas membaca",
-            "ملتفكن بندا دأتس مصحف | Meletakkan benda di atas Mushaf",
-            "تيدق منجاك دغن چرمت | Tidak menjaga dengan cermat",
-            "ماكن ددالم مصحف | Makan dalam Mushaf"
+            "سجود تلاوة | Sujud tilawah",
+            "برترنم | Bertaranum",
+            "اعتبار درفد اية يغ دباچ | Iktibar daripada ayat yang dibaca",
+            "تومڤوان | Tumpuan",
+            "برووضوء | Berwuduk",
+            "منوتوف عورة | Menutup aurat",
+            "برتجويد | Bertajwid"
           ],
-          "correctAnswer": 1,
-          "explanation": "ممباوا دغن ڤنوه حرمت اداله ادب يغ ڤنتڠ ميمڤن مصحف القرءان | Membawa dengan penuh hormat adalah adab yang penting menyimpan Mushaf Al-Quran."
+          "correctAnswer": 2,
+          "explanation": "ممباچ القرءان مستي دسرتاي دڠن مغمبيل اعتبار درفد اية يغ دباچ. | Membaca Al-Quran mesti disertai dengan mengambil iktibar daripada ayat yang dibaca."
         },
         {
-          "id": "adab-dengan-al-quran-q4",
-          "question": "اڤاكه فضيلة برادب دغن مصحف القرءان؟ | Apakah fadhilat beradab dengan Mushaf Al-Quran?",
+          "id": "adab-mushaf-q15",
+          "question": "كتيك ممباوا مصحف القرءان، كيت ڤرلو برڤاكاين برسيه دان... | Ketika membawa Mushaf Al-Quran, kita perlu berpakaian bersih dan...",
           "type": "mcq",
           "options": [
-            "تيدق دافات كبركتن | Tidak dapat keberkatan",
-            "جيوا تيدق تنع | Jiwa tidak tenang",
-            "تيدق ممهمي اية | Tidak memahami ayat",
-            "منداڤت كبركتن هيجلوف | Mendapat keberkatan hidup",
-            "تيدق دافات شفاعة | Tidak dapat syafaat",
-            "تيدق دافات ڬنجرن | Tidak dapat ganjaran",
-            "تيدق منجاك دغن چرمت | Tidak menjaga dengan cermat"
+            "برسيه دان كمس | Bersih dan kemas",
+            "سوچي | Suci",
+            "برادب سوڤن | Beradab sopan",
+            "برديسيفلين | Berdisiplin",
+            "منوتوف عورة | Menutup aurat",
+            "برتيمبڠ راس | Bertimbang rasa",
+            "برتجويد | Bertajwid"
           ],
-          "correctAnswer": 3,
-          "explanation": "منداڤت كبركتن هيجلوف اداله فضيلة يغ ڤالڠ بسر برادب دغن مصحف القرءان | Mendapat keberkatan hidup adalah fadhilat yang paling besar beradab dengan Mushaf Al-Quran."
-        },
-        {
-          "id": "adab-dengan-al-quran-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم تيدور؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam tidur?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم تيدور | Tidak membawa Mushaf Al-Quran dalam tidur",
-            "ممباوا مصحف القرءان ددالم تيدور | Membawa Mushaf Al-Quran dalam tidur",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam tidur adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q6",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم ماكن؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam makan?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم ماكن | Tidak membawa Mushaf Al-Quran dalam makan",
-            "ممباوا مصحف القرءان ددالم ماكن | Membawa Mushaf Al-Quran dalam makan",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam makan adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم مينوم؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam minum?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم مينوم | Tidak membawa Mushaf Al-Quran dalam minum",
-            "ممباوا مصحف القرءان ددالم مينوم | Membawa Mushaf Al-Quran dalam minum",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم مينوم اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam minum adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم كر؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam kereta?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم كر | Tidak membawa Mushaf Al-Quran dalam kereta",
-            "ممباوا مصحف القرءان ددالم كر | Membawa Mushaf Al-Quran dalam kereta",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم كر اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam kereta adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم كرتا؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam kereta?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم كرتا | Tidak membawa Mushaf Al-Quran dalam kereta",
-            "ممباوا مصحف القرءان ددالم كرتا | Membawa Mushaf Al-Quran dalam kereta",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam kereta adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم كرتا؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam kereta?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم كرتا | Tidak membawa Mushaf Al-Quran dalam kereta",
-            "ممباوا مصحف القرءان ددالم كرتا | Membawa Mushaf Al-Quran dalam kereta",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam kereta adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم مسجد؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam masjid?",
-          "type": "mcq",
-          "options": [
-            "ممباوا مصحف القرءان ددالم مسجد | Membawa Mushaf Al-Quran dalam masjid",
-            "تيدق ممباوا مصحف القرءان ددالم مسجد | Tidak membawa Mushaf Al-Quran dalam masjid",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "ممباوا مصحف القرءان ددالم مسجد اداله ادب يغ ڤنتڠ | Membawa Mushaf Al-Quran dalam masjid adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم كلس؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam kelas?",
-          "type": "mcq",
-          "options": [
-            "ممباوا مصحف القرءان ددالم كلس | Membawa Mushaf Al-Quran dalam kelas",
-            "تيدق ممباوا مصحف القرءان ددالم كلس | Tidak membawa Mushaf Al-Quran dalam kelas",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "ممباوا مصحف القرءان ددالم كلس اداله ادب يغ ڤنتڠ | Membawa Mushaf Al-Quran dalam kelas adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم بلاجر؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam belajar?",
-          "type": "mcq",
-          "options": [
-            "ممباوا مصحف القرءان ددالم بلاجر | Membawa Mushaf Al-Quran dalam belajar",
-            "تيدق ممباوا مصحف القرءان ددالم بلاجر | Tidak membawa Mushaf Al-Quran dalam belajar",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "ممباوا مصحف القرءان ددالم بلاجر اداله ادب يغ ڤنتڠ | Membawa Mushaf Al-Quran dalam belajar adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم تيدور؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam tidur?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم تيدور | Tidak membawa Mushaf Al-Quran dalam tidur",
-            "ممباوا مصحف القرءان ددالم تيدور | Membawa Mushaf Al-Quran dalam tidur",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam tidur adalah adab yang penting."
-        },
-        {
-          "id": "adab-dengan-al-quran-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك ممباوا مصحف القرءان ددالم ماكن؟ | Apakah adab yang penting ketika membawa Mushaf Al-Quran dalam makan?",
-          "type": "mcq",
-          "options": [
-            "تيدق ممباوا مصحف القرءان ددالم ماكن | Tidak membawa Mushaf Al-Quran dalam makan",
-            "ممباوا مصحف القرءان ددالم ماكن | Membawa Mushaf Al-Quran dalam makan",
-            "ماكن ددالم مصحف | Makan dalam Mushaf",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق ممباوا مصحف القرءان ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak membawa Mushaf Al-Quran dalam makan adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "ادب ممباوا مصحف القرءان اياله برڤاكاين برسيه دان منوتوف عورة. | Adab membawa Mushaf Al-Quran ialah berpakaian bersih dan menutup aurat."
         }
       ]
     },
     {
-      "id": "adab-memelihara-harta-awam",
-      "name": "ادب ممليهارا هرتا بندا عوام | Adab Memelihara Harta Benda Awam",
+      "id": "adab-harta-benda-awam",
+      "name": "ڤلاجرن كتوجوه: ادب ممليهارا هرتا بندا عوام | Pelajaran Ketujuh: Adab Memelihara Harta Benda Awam",
       "description": "Kuiz tentang adab-adab memelihara harta benda awam",
       "questions": [
         {
-          "id": "adab-memelihara-harta-awam-q1",
-          "question": "اڤاكه هرتا بندا عوام؟ | Apakah harta benda awam?",
+          "id": "adab-harta-awam-q1",
+          "question": "ماناكه چونتوه هرتا بندا عوام؟ | Manakah contoh harta benda awam?",
           "type": "mcq",
           "options": [
-            "كمودهن يغ دسدياكن اونتوق كڬوناءن اورغ راماي | Kemudahan yang disediakan untuk kegunaan orang ramai",
-            "كمودهن يغ دسدياكن اونتوق كڬوناءن ديري سنديري | Kemudahan yang disediakan untuk kegunaan diri sendiri",
-            "كمودهن يغ تيدق دسدياكن | Kemudahan yang tidak disediakan",
-            "كمودهن يغ تيدق اونتوق كڬوناءن | Kemudahan yang tidak untuk kegunaan",
-            "كمودهن يغ دسدياكن اونتوق كڬوناءن كلوارك | Kemudahan yang disediakan untuk kegunaan keluarga",
-            "كمودهن يغ دسدياكن اونتوق كڬوناءن راكان | Kemudahan yang disediakan untuk kegunaan rakan",
-            "كمودهن يغ دسدياكن اونتوق كڬوناءن ڬورو | Kemudahan yang disediakan untuk kegunaan guru"
+            "بيليق تيدور | Bilik tidur",
+            "كندراغن ڤريبادي | Kenderaan peribadi",
+            "مصحف القرءان | Mushaf Al-Quran",
+            "ڤوندوق منوڠڬو بس | Pondok menunggu bas",
+            "ڤاكاين | Pakaian",
+            "جالن راي | Jalan raya",
+            "ماكنن | Makanan"
           ],
-          "correctAnswer": 0,
-          "explanation": "هرتا بندا عوام اياله كمودهن يغ دسدياكن اونتوق كڬوناءن اورغ راماي | Harta benda awam ialah kemudahan yang disediakan untuk kegunaan orang ramai."
+          "correctAnswer": 3,
+          "explanation": "ڤوندوق منوڠڬو بس اداله صلاح ساتو چونتوه هرتا بندا عوام. | Pondok menunggu bas adalah salah satu contoh harta benda awam."
         },
         {
-          "id": "adab-memelihara-harta-awam-q2",
-          "question": "اڤاكه ادب مغڬوناكن هرتا بندا عوام؟ | Apakah adab menggunakan harta benda awam?",
+          "id": "adab-harta-awam-q2",
+          "question": "هرتا بندا عوام ڤرلو دڬوناكن دڠن... | Harta benda awam perlu digunakan dengan...",
           "type": "mcq",
           "options": [
-            "تيدق مڠيکوت ڤراتورن | Tidak mengikut peraturan",
-            "مڠيکوت ڤراتورن يغ تله دتتفكن | Mengikut peraturan yang telah ditetapkan",
-            "تيدق برتيمبڠ راس | Tidak bertimbang rasa",
-            "تيدق مڠڬوناكن دڠن چرمت | Tidak menggunakan dengan cermat",
-            "منچونتيڠ اتاو مروسقكن | Menconteng atau merosakkan",
-            "تيدق منجاك كبرسيهن | Tidak menjaga kebersihan",
-            "تيدق منجاك كسلاۏمتن | Tidak menjaga keselamatan"
+            "ڤنوه حرمت | Penuh hormat",
+            "دڠن سوڤن | Dengan sopan",
+            "دڠن بانيق | Dengan banyak",
+            "دڠن چركس | Dengan cergas",
+            "دڠن تنغ | Dengan tenang",
+            "دڠن ڤانتس | Dengan pantas",
+            "چرمت دان برهاتي-هاتي | Cermat dan berhati-hati"
           ],
-          "correctAnswer": 1,
-          "explanation": "مڠيکوت ڤراتورن يغ تله دتتفكن اداله ادب يغ ڤنتڠ مغڬوناكن هرتا بندا عوام | Mengikut peraturan yang telah ditetapkan adalah adab yang penting menggunakan harta benda awam."
+          "correctAnswer": 6,
+          "explanation": "هرتا بندا عوام ڤرلو دڬوناكن دڠن چرمت دان برهاتي-هاتي. | Harta benda awam perlu digunakan dengan cermat dan berhati-hati."
         },
         {
-          "id": "adab-memelihara-harta-awam-q3",
-          "question": "اڤاكه فضيلة برادب مغڬوناكن هرتا بندا عوام؟ | Apakah fadhilat beradab menggunakan harta benda awam?",
+          "id": "adab-harta-awam-q3",
+          "question": "اڤاكه عاقبة جك تيدق ممليهارا هرتا بندا عوام؟ | Apakah akibat jika tidak memelihara harta benda awam?",
           "type": "mcq",
           "options": [
-            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
-            "تيدق منچمركن ڤمندڠن | Tidak mencemarkan pemandangan",
-            "مموسهكن اورغ يغ مملوكن | Menyusahkan orang yang memerlukan",
-            "تيدق ممودهكن اورغ يغ مملوكن | Tidak memudahkan orang yang memerlukan",
-            "برلاكو ڤمبذيرن | Berlaku pembaziran",
-            "تيدق دافت دڬوناكن دڠن سمڤورنا | Tidak dapat digunakan dengan sempurna",
-            "ملاهيركن مشاركت تيدق بردسيڤلين | Melahirkan masyarakat tidak berdisiplin"
-          ],
-          "correctAnswer": 1,
-          "explanation": "تيدق منچمركن ڤمندڠن اداله فضيلة يغ ڤالڠ بسر برادب مغڬوناكن هرتا بندا عوام | Tidak mencemarkan pemandangan adalah fadhilat yang paling besar beradab menggunakan harta benda awam."
-        },
-        {
-          "id": "adab-memelihara-harta-awam-q4",
-          "question": "اڤاكه عاقبة تيدق ممليهارا هرتا بندا عوام؟ | Apakah akibat tidak memelihara harta benda awam?",
-          "type": "mcq",
-          "options": [
+            "جيوا تنع دان تنترم | Jiwa tenang dan tenteram",
+            "دافت دڬوناكن دالم جڠك ماس يغ لاما | Dapat digunakan dalam jangka masa yang lama",
+            "تيدق برلاكو ڤمبذيرن | Tidak berlaku pembaziran",
             "ممودهكن اورغ يغ مملوكن | Memudahkan orang yang memerlukan",
-            "مپوسهكن اورغ يغ مملوكن | Menyusahkan orang yang memerlukan",
-            "دافت دڬوناكن دڠن سمڤورنا | Dapat digunakan dengan sempurna",
-            "ملاهيركن مشاركت بردسيڤلين | Melahirkan masyarakat berdisiplin",
-            "تيدق منچمركن ڤمندڠن | Tidak mencemarkan pemandangan",
-            "دافات دڬوناكن دالم جڠك ماس يغ لاما | Dapat digunakan dalam jangka masa yang lama",
-            "سباڬاي تندا شكور | Sebagai tanda syukur"
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "دافت ڬنجرن ڤهالا | Dapat ganjaran pahala",
+            "تيدق منچمركن ڤمندڠن | Tidak mencemarkan pemandangan"
+          ],
+          "correctAnswer": 4,
+          "explanation": "تيدق ممليهارا هرتا بندا عوام بوليه منچمركن ڤمندڠن. | Tidak memelihara harta benda awam boleh mencemarkan pemandangan."
+        },
+        {
+          "id": "adab-harta-awam-q4",
+          "question": "جك كيت برادب مغڬوناكن هرتا بندا عوام، كيت داڤت ممودهكنڽ كڤد اورغ يڠ... | Jika kita beradab menggunakan harta benda awam, kita dapat memudahkannya kepada orang yang...",
+          "type": "mcq",
+          "options": [
+            "مملوكن | Memerlukan",
+            "لبيه توا | Lebih tua",
+            "برتڠڬوڠجواب | Bertanggungjawab",
+            "برادب | Beradab",
+            "موريد | Murid",
+            "ڬورو | Guru",
+            "برديسيفلين | Berdisiplin"
+          ],
+          "correctAnswer": 0,
+          "explanation": "برادب مغڬوناكن هرتا بندا عوام داڤت ممودهكن اورغ يڠ مملوكن. | Beradab menggunakan harta benda awam dapat memudahkan orang yang memerlukan."
+        },
+        {
+          "id": "adab-harta-awam-q5",
+          "question": "ادب مغڬوناكن هرتا بندا عوام يڠ ڤنتڠ اياله برتيمبڠ راس دڠن... | Adab menggunakan harta benda awam yang penting ialah bertimbang rasa dengan...",
+          "type": "mcq",
+          "options": [
+            "ايبو باق | Ibu bapa",
+            "ڬورو | Guru",
+            "جماعه مسجد | Jemaah masjid",
+            "اية القرءان | Ayat Al-Quran",
+            "ڤيهق يغ برتڠڬوڠجواب | Pihak yang bertanggungjawab",
+            "ڤغڬونا يغ لاءين | Pengguna yang lain",
+            "كلوارك | Keluarga"
+          ],
+          "correctAnswer": 5,
+          "explanation": "كيت ڤرلو برتيمبڠ راس دڠن ڤغڬونا يڠ لاءين كتيك مغڬوناكن هرتا بندا عوام. | Kita perlu bertimbang rasa dengan pengguna yang lain ketika menggunakan harta benda awam."
+        },
+        {
+          "id": "adab-harta-awam-q6",
+          "question": "اڤاكه مقصود هرتا بندا عوام؟ | Apakah maksud harta benda awam?",
+          "type": "mcq",
+          "options": [
+            "كمودهن يغ دسدياكن اونتوق كڬوناءن ڤريبادي | Kemudahan yang disediakan untuk kegunaan peribadi",
+            "كمودهن يغ دسدياكن اونتوق كڬوناءن اورغ راماي | Kemudahan yang disediakan untuk kegunaan orang ramai",
+            "كمودهن يغ دسدياكن اونتوق كڬوناءن ڬورو | Kemudahan yang disediakan untuk kegunaan guru",
+            "كمودهن يغ دسدياكن اونتوق كڬوناءن جماعة مسجد | Kemudahan yang disediakan untuk kegunaan jemaah masjid",
+            "كمودهن يغ دسدياكن اونتوق ڤغڬونا جالن راي | Kemudahan yang disediakan untuk pengguna jalan raya",
+            "كمودهن يغ دسدياكن اونتوق ايبو باق | Kemudahan yang disediakan untuk ibu bapa",
+            "كمودهن يغ دسدياكن اونتوق كلوارك | Kemudahan yang disediakan untuk keluarga"
           ],
           "correctAnswer": 1,
-          "explanation": "مپوسهكن اورغ يغ مملوكن اداله عاقبة يغ ڤالڠ بسر تيدق ممليهارا هرتا بندا عوام | Menyusahkan orang yang memerlukan adalah akibat yang paling besar tidak memelihara harta benda awam."
+          "explanation": "هرتا بندا عوام اياله كمودهن يڠ دسدياكن اونتوق كڬوناءن اورغ راماي. | Harta benda awam ialah kemudahan yang disediakan untuk kegunaan orang ramai."
         },
         {
-          "id": "adab-memelihara-harta-awam-q5",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم تيدور؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam tidur?",
+          "id": "adab-harta-awam-q7",
+          "question": "اڤاكه يڠ ڤرلو دلاكوكن جك كيت منداڤتي ادا كروسقن ڤد هرتا بندا عوام؟ | Apakah yang perlu dilakukan jika kita mendapati ada kerosakan pada harta benda awam?",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم تيدور | Tidak menggunakan harta benda awam dalam tidur",
-            "مغڬوناكن هرتا بندا عوام ددالم تيدور | Menggunakan harta benda awam dalam tidur",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "تيدق منچونتيڠ اتاو مروسقكن | Tidak menconteng atau merosakkan",
+            "تيدق مغمبيل بارغ ميليق اورغ لاءين | Tidak mengambil barang milik orang lain",
+            "ملاڤورکن کروسقن كڤد ڤيهق يغ برتڠڬوڠجواب | Melaporkan kerosakan kepada pihak yang bertanggungjawab",
+            "منجاك كبرسيهن ڤرسكيترن | Menjaga kebersihan persekitaran",
+            "برتيمبڠ راس دغن ڤغڬونا يغ لاءين | Bertimbang rasa dengan pengguna yang lain",
+            "مڠيکوت ڤراتورن يڠ تله دتتفكن | Mengikut peraturan yang telah ditetapkan",
+            "منجاك كسلاۏمتن | Menjaga keselamatan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam tidur adalah adab yang penting."
+          "correctAnswer": 2,
+          "explanation": "جك ترداڤت كروسقن ڤد هرتا بندا عوام، كيت ڤرلو ملاڤورکنڽ كڤد ڤيهق يڠ برتڠڬوڠجواب. | Jika terdapat kerosakan pada harta benda awam, kita perlu melaporkannya kepada pihak yang bertanggungjawab."
         },
         {
-          "id": "adab-memelihara-harta-awam-q6",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم ماكن؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam makan?",
+          "id": "adab-harta-awam-q8",
+          "question": "مغڬوناكن هرتا بندا عوام دڠن برادب اكن مغيلقكن... | Menggunakan harta benda awam dengan beradab akan mengelakkan...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم ماكن | Tidak menggunakan harta benda awam dalam makan",
-            "مغڬوناكن هرتا بندا عوام ددالم ماكن | Menggunakan harta benda awam dalam makan",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "شفاعة | Syafaat",
+            "ڤمبذيرن | Pembaziran",
+            "ڬنجرن ڤهالا | Ganjaran pahala",
+            "كبركتن هيجلوف | Keberkatan hidup",
+            "كتنغن جيوا | Ketenangan jiwa",
+            "كأيمانن | Keimanan",
+            "كصيحتن | Kesihatan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam makan adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "برادب مغڬوناكن هرتا بندا عوام اكن مغيلقكن ڤمبذيرن. | Beradab menggunakan harta benda awam akan mengelakkan pembaziran."
         },
         {
-          "id": "adab-memelihara-harta-awam-q7",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم مينوم؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam minum?",
+          "id": "adab-harta-awam-q9",
+          "question": "صلاح ساتو ادب مغڬوناكن هرتا بندا عوام اياله كيت تيدق بوليه منچونتيڠ اتاو... | Salah satu adab menggunakan harta benda awam ialah kita tidak boleh menconteng atau...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم مينوم | Tidak menggunakan harta benda awam dalam minum",
-            "مغڬوناكن هرتا بندا عوام ددالم مينوم | Menggunakan harta benda awam dalam minum",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "مملوكن | Memerlukan",
+            "ممودهكن | Memudahkan",
+            "مروسقكن | Merosakkan",
+            "ملاهيركن | Melahirkan",
+            "مغڬوناكن | Menggunakan",
+            "ممليهارا | Memelihara",
+            "ميليق | Milik"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم مينوم اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam minum adalah adab yang penting."
+          "correctAnswer": 2,
+          "explanation": "كيت مستي تيدق منچونتيڠ اتاو مروسقكن هرتا بندا عوام. | Kita mesti tidak menconteng atau merosakkan harta benda awam."
         },
         {
-          "id": "adab-memelihara-harta-awam-q8",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم كر؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam kereta?",
+          "id": "adab-harta-awam-q10",
+          "question": "عاقبة تيدق ممليهارا هرتا بندا عوام اياله ملاهيركن مشاركت يڠ تيدق... | Akibat tidak memelihara harta benda awam ialah melahirkan masyarakat yang tidak...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم كر | Tidak menggunakan harta benda awam dalam kereta",
-            "مغڬوناكن هرتا بندا عوام ددالم كر | Menggunakan harta benda awam dalam kereta",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "چركس | Cergas",
+            "سوڤن | Sopan",
+            "سوچي | Suci",
+            "برحرمت | Berhormat",
+            "بردسيڤلين | Berdisiplin",
+            "برتيمبڠ راس | Bertimbang rasa",
+            "برادب | Beradab"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم كر اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam kereta adalah adab yang penting."
+          "correctAnswer": 4,
+          "explanation": "تيدق ممليهارا هرتا بندا عوام ملاهيركن مشاركت يڠ تيدق بردسيڤلين. | Tidak memelihara harta benda awam melahirkan masyarakat yang tidak berdisiplin."
         },
         {
-          "id": "adab-memelihara-harta-awam-q9",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم كرتا؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam kereta?",
+          "id": "adab-harta-awam-q11",
+          "question": "صلاح ساتو ادب مغڬوناكن هرتا بندا عوام اياله مڠيكوت... | Salah satu adab menggunakan harta benda awam ialah mengikut...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم كرتا | Tidak menggunakan harta benda awam dalam kereta",
-            "مغڬوناكن هرتا بندا عوام ددالم كرتا | Menggunakan harta benda awam dalam kereta",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "صلة الرحم | Silaturrahim",
+            "سنة ٢ نبي محمد | Sunnah-sunnah Nabi Muhammad",
+            "سجود تلاوة | Sujud tilawah",
+            "كبركتن علمو | Keberkatan ilmu",
+            "كأيمانن | Keimanan",
+            "ڤراتورن يغ تله دتتفكن | Peraturan yang telah ditetapkan",
+            "ڤريبادي دان اخلاق يغ موليا | Peribadi dan akhlak yang mulia"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam kereta adalah adab yang penting."
+          "correctAnswer": 5,
+          "explanation": "مغڬوناكن هرتا بندا عوام مستي مڠيكوت ڤراتورن يڠ تله دتتفكن. | Menggunakan harta benda awam mesti mengikut peraturan yang telah ditetapkan."
         },
         {
-          "id": "adab-memelihara-harta-awam-q10",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم كرتا؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam kereta?",
+          "id": "adab-harta-awam-q12",
+          "question": "مغڬوناكن هرتا بندا عوام دڠن برادب اداله سباڬاي تندا... | Menggunakan harta benda awam dengan beradab adalah sebagai tanda...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم كرتا | Tidak menggunakan harta benda awam dalam kereta",
-            "مغڬوناكن هرتا بندا عوام ددالم كرتا | Menggunakan harta benda awam dalam kereta",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "ڤرموسوهن | Permusuhan",
+            "كبنچين | Kebencian",
+            "ڤمبذيرن | Pembaziran",
+            "شكور اتاو تريما كاسيه | Syukur atau terima kasih",
+            "كسسقن | Kesesakan",
+            "كمالغن | Kemalangan",
+            "ڤڽاكيت | Penyakit"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم كرتا اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam kereta adalah adab yang penting."
+          "correctAnswer": 3,
+          "explanation": "برادب مغڬوناكن هرتا بندا عوام اداله تندا شكور اتاو تريما كاسيه. | Beradab menggunakan harta benda awam adalah tanda syukur atau terima kasih."
         },
         {
-          "id": "adab-memelihara-harta-awam-q11",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم مسجد؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam masjid?",
+          "id": "adab-harta-awam-q13",
+          "question": "جك هرتا بندا عوام تيدق دڤليهارا، اي تيدق داڤت دڬوناكن دڠن... | Jika harta benda awam tidak dipelihara, ia tidak dapat digunakan dengan...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم مسجد | Tidak menggunakan harta benda awam dalam masjid",
-            "مغڬوناكن هرتا بندا عوام ددالم مسجد | Menggunakan harta benda awam dalam masjid",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "چرمت | Cermat",
+            "سمڤورنا | Sempurna",
+            "سوڤن | Sopan",
+            "چركس | Cergas",
+            "سوچي | Suci",
+            "موليا | Mulia",
+            "لاما | Lama"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم مسجد اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam masjid adalah adab yang penting."
+          "correctAnswer": 1,
+          "explanation": "هرتا بندا عوام يڠ تيدق دڤليهارا اكن تيدق داڤت دڬوناكن دڠن سمڤورنا. | Harta benda awam yang tidak dipelihara akan tidak dapat digunakan dengan sempurna."
         },
         {
-          "id": "adab-memelihara-harta-awam-q12",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم كلس؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam kelas?",
+          "id": "adab-harta-awam-q14",
+          "question": "جك تيدق ممليهارا هرتا بندا عوام، اي اكن مپوسهكن اورغ يڠ... | Jika tidak memelihara harta benda awam, ia akan menyusahkan orang yang...",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم كلس | Tidak menggunakan harta benda awam dalam kelas",
-            "مغڬوناكن هرتا بندا عوام ددالم كلس | Menggunakan harta benda awam dalam kelas",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "برتڠڬوڠجواب | Bertanggungjawab",
+            "برديسيفلين | Berdisiplin",
+            "برادب | Beradab",
+            "سوچي | Suci",
+            "چركس | Cergas",
+            "كمس | Kemas",
+            "مملوكن | Memerlukan"
           ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم كلس اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam kelas adalah adab yang penting."
+          "correctAnswer": 6,
+          "explanation": "تيدق ممليهارا هرتا بندا عوام اكن مپوسهكن اورغ يڠ مملوكن. | Tidak memelihara harta benda awam akan menyusahkan orang yang memerlukan."
         },
         {
-          "id": "adab-memelihara-harta-awam-q13",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم بلاجر؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam belajar?",
+          "id": "adab-harta-awam-q15",
+          "question": "اڤاكه فضيلة برادب يڠ بركاءيتن دڠن جڠك ماس ڤڠڬوناءن؟ | Apakah fadhilat beradab yang berkaitan dengan jangka masa penggunaan?",
           "type": "mcq",
           "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم بلاجر | Tidak menggunakan harta benda awam dalam belajar",
-            "مغڬوناكن هرتا بندا عوام ددالم بلاجر | Menggunakan harta benda awam dalam belajar",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
+            "دافت دڬوناكن دالم جڠك ماس يغ لاما | Dapat digunakan dalam jangka masa yang lama",
+            "تيدق دافت دڬوناكن دڠن سمڤورنا | Tidak dapat digunakan dengan sempurna",
+            "منچمركن ڤمندڠن | Mencemarkan pemandangan",
+            "ملاهيركن مشاركت تيدق بردسيڤلين | Melahirkan masyarakat tidak berdisiplin",
+            "منيمبولكن ڤرموسوهن | Menimbulkan permusuhan",
+            "مپوسهكن اورغ يغ مملوكن | Menyusahkan orang yang memerlukan",
+            "برلاكو ڤمبذيرن | Berlaku pembaziran"
           ],
           "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم بلاجر اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam belajar adalah adab yang penting."
-        },
-        {
-          "id": "adab-memelihara-harta-awam-q14",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم تيدور؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam tidur?",
-          "type": "mcq",
-          "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم تيدور | Tidak menggunakan harta benda awam dalam tidur",
-            "مغڬوناكن هرتا بندا عوام ددالم تيدور | Menggunakan harta benda awam dalam tidur",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم تيدور اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam tidur adalah adab yang penting."
-        },
-        {
-          "id": "adab-memelihara-harta-awam-q15",
-          "question": "اڤاكه ادب يغ ڤنتڠ كتيك مغڬوناكن هرتا بندا عوام ددالم ماكن؟ | Apakah adab yang penting ketika menggunakan harta benda awam dalam makan?",
-          "type": "mcq",
-          "options": [
-            "تيدق مغڬوناكن هرتا بندا عوام ددالم ماكن | Tidak menggunakan harta benda awam dalam makan",
-            "مغڬوناكن هرتا بندا عوام ددالم ماكن | Menggunakan harta benda awam dalam makan",
-            "ماكن ددالم هرتا بندا عوام | Makan dalam harta benda awam",
-            "برچاكب كوتور | Bercakap kotor",
-            "تيدق برفاكاين | Tidak berpakaian",
-            "ماكن د دالم كرتا | Makan di dalam kereta",
-            "تيدق براتور | Tidak beratur"
-          ],
-          "correctAnswer": 0,
-          "explanation": "تيدق مغڬوناكن هرتا بندا عوام ددالم ماكن اداله ادب يغ ڤنتڠ | Tidak menggunakan harta benda awam dalam makan adalah adab yang penting."
+          "explanation": "فضيلة ممليهارا هرتا بندا عوام اياله دافت دڬوناكن دالم جڠك ماس يغ لاما. | Fadhilat memelihara harta benda awam ialah dapat digunakan dalam jangka masa yang lama."
         }
       ]
     }

@@ -12,6 +12,7 @@ import QuestionCard from '../components/QuestionCard'
 import QuizResults from '../components/QuizResults'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import BackToMenuButton from '../components/BackToMenuButton'
 import { QuizResult } from '../components/QuizResults'
 
 const QuizMode: React.FC = () => {
@@ -185,13 +186,14 @@ const QuizMode: React.FC = () => {
                 Ralat Memuatkan Kandungan
               </h1>
               <p className="text-lg text-gray-600 mb-8">{contentError}</p>
-              <Button
-                onClick={handleBackToMenu}
-                variant="primary"
-                className="mt-6"
-              >
-                Kembali ke Menu Utama
-              </Button>
+              <div className="mt-6">
+                <BackToMenuButton
+                  onClick={handleBackToMenu}
+                  variant="primary"
+                  size="lg"
+                  position="center"
+                />
+              </div>
             </Card>
           </div>
         </div>

@@ -12,6 +12,7 @@ Aplikasi web interaktif untuk pembelajaran Akhlak Tahun Dua mengikut sukatan KSR
 - **Deployment**: Vercel
 - **Audio**: Web Audio API untuk kesan bunyi
 - **State Management**: React Context + Custom Hooks
+- **Architecture**: Modular Component System dengan Type-Safe Interfaces
 
 ## Ciri-ciri Utama
 
@@ -21,6 +22,8 @@ Aplikasi web interaktif untuk pembelajaran Akhlak Tahun Dua mengikut sukatan KSR
 - 🏆 **Papan Markah**: Rekod pencapaian pelajar
 - 🔊 **Audio & Animasi**: Kesan bunyi dan animasi yang menarik
 - 📱 **Responsif**: Berfungsi di semua peranti
+- 🧩 **Modular**: Sistem komponen yang boleh digunakan semula dan mudah diselenggara
+- 🎯 **Type-Safe**: TypeScript untuk keselamatan jenis dan pengalaman pembangun yang lebih baik
 
 ## Persediaan Pembangunan
 
@@ -63,10 +66,15 @@ Aplikasi web interaktif untuk pembelajaran Akhlak Tahun Dua mengikut sukatan KSR
 src/
 ├── components/           # Komponen UI yang boleh digunakan semula
 │   ├── __tests__/       # Ujian unit untuk komponen
+│   ├── ui/              # Komponen UI asas (Input, Select, Checkbox, Alert)
+│   ├── layout/          # Komponen susun atur (Page, Section, Container)
+│   ├── navigation/      # Komponen navigasi (NavButton, Breadcrumb)
+│   ├── content/         # Komponen kandungan (Question, Answer, Progress)
+│   ├── feedback/        # Komponen maklum balas (Toast, Modal)
 │   ├── AnswerOption.tsx # Komponen pilihan jawapan
 │   ├── QuestionCard.tsx # Komponen kad soalan
 │   ├── QuizResults.tsx  # Komponen keputusan kuiz
-│   └── ...              # Komponen lain
+│   └── index.ts         # Eksport terpusat untuk semua komponen
 ├── pages/               # Halaman aplikasi utama
 │   ├── __tests__/       # Ujian unit untuk halaman
 │   ├── MainMenu.tsx     # Menu utama
@@ -77,17 +85,25 @@ src/
 │   ├── __tests__/       # Ujian unit untuk hooks
 │   ├── useQuizMode.ts   # Hook untuk mod kuiz
 │   ├── useTestMode.ts   # Hook untuk mod ujian
-│   └── useAudio.ts      # Hook untuk audio
+│   ├── useAudio.ts      # Hook untuk audio
+│   ├── useToast.ts      # Hook untuk pengurusan notifikasi
+│   ├── useLocalState.ts # Hook untuk state tempatan dengan persistensi
+│   └── useDebounce.ts   # Hook untuk debouncing nilai
 ├── utils/               # Fungsi utiliti
 │   ├── __tests__/       # Ujian unit untuk utiliti
 │   ├── audio.ts         # Pengurusan audio
 │   ├── localStorage.ts  # Pengurusan penyimpanan
-│   └── shuffleOptions.ts # Fungsi untuk mengacak pilihan
+│   ├── shuffleOptions.ts # Fungsi untuk mengacak pilihan
+│   ├── validation.ts    # Fungsi pengesahan form
+│   └── format.ts        # Fungsi pemformatan data
 ├── contexts/            # React Context providers
 │   ├── UserContext.tsx  # Konteks pengguna
 │   └── BilingualContext.tsx # Konteks dwibahasa
 ├── types/               # Definisi TypeScript
 │   └── index.ts         # Semua jenis data
+├── constants/           # Pemalar dan konfigurasi
+│   ├── text.ts         # Teks dalam Bahasa Melayu
+│   └── components.ts   # Pemalar komponen
 ├── data/                # Data dan kandungan
 │   ├── akhlak_db.json   # Pangkalan data soalan
 │   └── akhlak.txt       # Kandungan asal
@@ -140,6 +156,59 @@ Projek ini dibahagikan kepada 13 fasa:
 - **Context API**: Pengurusan state global dengan React Context
 - **Utility Functions**: Fungsi utiliti yang tulen dan boleh diuji
 - **Error Handling**: Pengendalian ralat yang komprehensif
+- **Modular Design**: Sistem komponen yang teratur dan mudah diselenggara
+
+### Sistem Komponen Modular
+
+Aplikasi menggunakan sistem komponen yang teratur dengan kategori berikut:
+
+#### 🎨 UI Components (`src/components/ui/`)
+- **Input**: Komponen input form dengan pengesahan
+- **Select**: Komponen dropdown dengan pilihan
+- **Checkbox**: Komponen checkbox dengan label
+- **Alert**: Komponen mesej amaran dan maklumat
+- **Button**: Komponen butang dengan pelbagai varian
+- **Card**: Komponen kontena untuk kandungan
+
+#### 📐 Layout Components (`src/components/layout/`)
+- **Page**: Pembungkus halaman dengan latar belakang
+- **Section**: Pembungkus bahagian dengan tajuk
+- **Container**: Pembungkus kandungan dengan saiz yang konsisten
+- **Layout**: Susun atur utama aplikasi
+- **Header**: Header dengan maklumat pengguna
+
+#### 🧭 Navigation Components (`src/components/navigation/`)
+- **NavButton**: Butang navigasi dengan varian
+- **Breadcrumb**: Navigasi hierarki
+- **BilingualToggle**: Togol bahasa Jawi/Rumi
+- **BackToMenuButton**: Butang kembali ke menu
+
+#### 📄 Content Components (`src/components/content/`)
+- **Question**: Paparan soalan untuk kuiz
+- **Answer**: Pilihan jawapan dengan keadaan pilihan
+- **Progress**: Penunjuk kemajuan (bar, bulat, langkah)
+- **QuestionCard**: Kad soalan lengkap
+- **StudyCard**: Kad pembelajaran
+
+#### 💬 Feedback Components (`src/components/feedback/`)
+- **Toast**: Notifikasi toast dengan kuy
+- **Alert**: Mesej amaran dan maklumat
+- **Modal**: Dialog dan popup
+- **CelebrationMessage**: Mesej perayaan
+
+### Custom Hooks
+
+#### State Management
+- **useToast**: Pengurusan notifikasi toast
+- **useLocalState**: State tempatan dengan persistensi
+- **useDebounce**: Debouncing nilai untuk carian
+
+#### Existing Hooks
+- **useQuizMode**: Logik mod kuiz
+- **useTestMode**: Logik mod ujian
+- **useAudio**: Pengurusan audio
+- **useUsers**: Pengurusan pengguna
+- **useScores**: Pengurusan skor
 
 ### Pola Reka Bentuk
 

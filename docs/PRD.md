@@ -95,12 +95,20 @@ This document outlines the requirements for the "Akhlak Tahun Dua KSRI Interacti
 
 ### 6. Technical Requirements
 
-- **Platform:** Web Application (HTML, CSS, JavaScript).
+- **Platform:** Web Application (React + TypeScript + Vite).
 - **Data Structure:** A JSON format will be used to structure the syllabus content.
 - **State Management:** The app will use browser `localStorage` to persist:
   - A list of user profiles (names).
   - A list of all scores, with each entry containing `{userName, quizId, score, timestamp}`.
 - **Responsiveness:** Use of media queries and flexible layout techniques is mandatory.
+- **Modular Architecture:** The application uses a comprehensive modular component system with:
+  - Reusable UI components (Button, Card, Input, Select, Checkbox, Alert)
+  - Layout components (Page, Section, Container)
+  - Navigation components (NavButton, Breadcrumb)
+  - Content components (Question, Answer, Progress)
+  - Feedback components (Toast, Modal)
+  - Custom hooks for state management and utilities
+  - Type-safe interfaces and comprehensive documentation
 
 ### 7. Out of Scope for Version 1.3
 

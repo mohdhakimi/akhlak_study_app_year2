@@ -4,6 +4,7 @@ import { useBilingual } from '../contexts/BilingualContext'
 import { TEXT } from '../constants/text'
 import Card from './Card'
 import Button from './Button'
+import BackToMenuButton from './BackToMenuButton'
 import { cn } from '../utils/cn'
 
 export interface StudyCardProps {
@@ -35,26 +36,29 @@ const StudyCard: React.FC<StudyCardProps> = ({
         return <br key={index} />
       }
 
+      // Format the line through bilingual context
+      const formattedLine = formatText(line)
+
       // Check if line starts with a number or bullet point
-      if (/^\d+\./.test(line.trim())) {
+      if (/^\d+\./.test(formattedLine.trim())) {
         return (
           <div key={index} className="flex items-start mb-2">
             <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
-              {line.match(/^\d+/)?.[0]}
+              {formattedLine.match(/^\d+/)?.[0]}
             </span>
             <span className="text-gray-700 leading-relaxed">
-              {line.replace(/^\d+\.\s*/, '')}
+              {formatText(formattedLine.replace(/^\d+\.\s*/, ''))}
             </span>
           </div>
         )
       }
 
-      if (/^•/.test(line.trim())) {
+      if (/^•/.test(formattedLine.trim())) {
         return (
           <div key={index} className="flex items-start mb-2">
             <span className="flex-shrink-0 w-2 h-2 bg-primary-500 rounded-full mr-3 mt-3"></span>
             <span className="text-gray-700 leading-relaxed">
-              {line.replace(/^•\s*/, '')}
+              {formatText(formattedLine.replace(/^•\s*/, ''))}
             </span>
           </div>
         )
@@ -62,7 +66,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
 
       return (
         <p key={index} className="text-gray-700 leading-relaxed mb-3">
-          {line}
+          {formattedLine}
         </p>
       )
     })
@@ -110,7 +114,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
       </Card>
 
       {/* Navigation Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
         {/* Previous Button */}
         <Button
           onClick={onPrevious}
@@ -135,24 +139,6 @@ const StudyCard: React.FC<StudyCardProps> = ({
             />
           </svg>
           {TEXT.PREVIOUS}
-        </Button>
-
-        {/* Back to Menu Button */}
-        <Button onClick={onBack} variant="secondary" className="min-w-[160px]">
-          <svg
-            className="w-4 h-4 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          {TEXT.BACK_TO_MENU}
         </Button>
 
         {/* Next Button */}

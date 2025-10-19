@@ -10,6 +10,7 @@ import TopicSelector from '../components/TopicSelector'
 import StudyCard from '../components/StudyCard'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import BackToMenuButton from '../components/BackToMenuButton'
 
 const StudyMode: React.FC = () => {
   const navigate = useNavigate()
@@ -81,13 +82,14 @@ const StudyMode: React.FC = () => {
                 Ralat Memuatkan Kandungan
               </h1>
               <p className="text-lg text-gray-600 mb-8">{contentError}</p>
-              <Button
-                onClick={handleBackToMenu}
-                variant="primary"
-                className="mt-6"
-              >
-                Kembali ke Menu Utama
-              </Button>
+              <div className="mt-6">
+                <BackToMenuButton
+                  onClick={handleBackToMenu}
+                  variant="primary"
+                  size="lg"
+                  position="center"
+                />
+              </div>
             </Card>
           </div>
         </div>
@@ -107,6 +109,8 @@ const StudyMode: React.FC = () => {
         onUserClick={() => navigate('/')}
         showUser={true}
         showBilingualToggle={true}
+        showKeluarButton={true}
+        onKeluarClick={handleBackToTopics}
       >
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,16 +132,18 @@ const StudyMode: React.FC = () => {
 
   // Show topic selector
   return (
-    <Layout
-      title={formatText(TEXT.STUDY_MODE)}
-      subtitle={formatText(
-        'مود بلاجر - باچ دان ڤلاجري | Mod Belajar - Baca dan Pelajari'
-      )}
-      currentUser={currentUser?.name}
-      onUserClick={() => navigate('/')}
-      showUser={true}
-      showBilingualToggle={true}
-    >
+      <Layout
+        title={formatText(TEXT.STUDY_MODE)}
+        subtitle={formatText(
+          'مود بلاجر - باچ دان ڤلاجري | Mod Belajar - Baca dan Pelajari'
+        )}
+        currentUser={currentUser?.name}
+        onUserClick={() => navigate('/')}
+        showUser={true}
+        showBilingualToggle={true}
+        showKeluarButton={true}
+        onKeluarClick={handleBackToMenu}
+      >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <TopicSelector

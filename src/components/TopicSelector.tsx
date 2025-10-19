@@ -1,8 +1,10 @@
 import React from 'react'
 import { StudyTopic } from '../types'
+import { useBilingual } from '../contexts/BilingualContext'
 import { TEXT } from '../constants/text'
 import Card from './Card'
 import Button from './Button'
+import BackToMenuButton from './BackToMenuButton'
 import { cn } from '../utils/cn'
 
 export interface TopicSelectorProps {
@@ -18,6 +20,7 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
   onBack,
   loading = false,
 }) => {
+  const { formatText } = useBilingual()
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
@@ -37,9 +40,11 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
         <p className="text-gray-600 mb-6">
           Maaf, tiada topik pembelajaran yang tersedia pada masa ini.
         </p>
-        <Button onClick={onBack} variant="outline">
-          Kembali ke Menu
-        </Button>
+        <BackToMenuButton
+          onClick={onBack}
+          variant="outline"
+          size="md"
+        />
       </div>
     )
   }
@@ -84,11 +89,11 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
                 </div>
 
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-100 transition-colors">
-                  {topic.name}
+                  {formatText(topic.name)}
                 </h3>
 
                 <p className="text-blue-100 text-sm leading-relaxed mb-4">
-                  {topic.description}
+                  {formatText(topic.description)}
                 </p>
 
                 <div className="flex items-center text-blue-100 text-sm">
@@ -116,25 +121,6 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
         ))}
       </div>
 
-      {/* Back Button */}
-      <div className="flex justify-center pt-6">
-        <Button onClick={onBack} variant="outline" className="min-w-[200px]">
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          {TEXT.BACK_TO_MENU}
-        </Button>
-      </div>
     </div>
   )
 }

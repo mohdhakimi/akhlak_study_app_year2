@@ -11,6 +11,7 @@ import QuestionCard from '../components/QuestionCard'
 import TestResults from '../components/TestResults'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import BackToMenuButton from '../components/BackToMenuButton'
 import { TestResult } from '../components/TestResults'
 
 const TestMode: React.FC = () => {
@@ -182,13 +183,14 @@ const TestMode: React.FC = () => {
                 Ralat Memuatkan Kandungan
               </h1>
               <p className="text-lg text-gray-600 mb-8">{contentError}</p>
-              <Button
-                onClick={handleBackToMenu}
-                variant="primary"
-                className="mt-6"
-              >
-                Kembali ke Menu Utama
-              </Button>
+              <div className="mt-6">
+                <BackToMenuButton
+                  onClick={handleBackToMenu}
+                  variant="primary"
+                  size="lg"
+                  position="center"
+                />
+              </div>
             </Card>
           </div>
         </div>
@@ -270,6 +272,8 @@ const TestMode: React.FC = () => {
       onUserClick={() => navigate('/')}
       showUser={true}
       showBilingualToggle={true}
+      showKeluarButton={true}
+      onKeluarClick={handleBackToMenu}
     >
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,7 +348,7 @@ const TestMode: React.FC = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button
                 onClick={handleStartTest}
                 variant="primary"
@@ -352,13 +356,6 @@ const TestMode: React.FC = () => {
                 disabled={quizCategories.length === 0}
               >
                 Mula Ujian
-              </Button>
-              <Button
-                onClick={handleBackToMenu}
-                variant="outline"
-                className="px-8 py-3 text-lg"
-              >
-                Kembali ke Menu
               </Button>
             </div>
 
