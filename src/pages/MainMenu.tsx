@@ -118,17 +118,20 @@ const MainMenu: React.FC = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="relative z-10 text-center">
+                  <div className="relative z-20 text-center">
                     <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
                     </div>
-                    <h3 className="text-lg font-semibold mb-1">
+                    <h2 className="text-lg font-black mb-1 text-white drop-shadow-2xl">
                       {item.title}
-                    </h3>
-                    <p className="text-sm opacity-90">
+                    </h2>
+                    <p className="text-sm text-white font-bold drop-shadow-lg">
                       {item.description}
                     </p>
                   </div>
+                  
+                  {/* Dark overlay for better contrast */}
+                  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
                   {/* Hover Effect */}
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>

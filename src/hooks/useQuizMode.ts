@@ -105,26 +105,32 @@ export function useQuizMode(): UseQuizModeReturn {
   }, [quizState.isAnswered, quizState.currentQuestionIndex])
 
   const goToNext = useCallback(() => {
-    if (!quizState.canGoNext) return
+    setQuizState(prev => {
+      // Check if we can go to next
+      if (prev.currentQuestionIndex >= questions.length - 1) return prev
 
-    setQuizState(prev => ({
-      ...prev,
-      currentQuestionIndex: prev.currentQuestionIndex + 1,
-      isAnswered: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
-      isRevealed: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null
-    }))
-  }, [quizState.canGoNext])
+      return {
+        ...prev,
+        currentQuestionIndex: prev.currentQuestionIndex + 1,
+        isAnswered: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
+        isRevealed: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null
+      }
+    })
+  }, [questions.length])
 
   const goToPrevious = useCallback(() => {
-    if (!quizState.canGoPrevious) return
+    setQuizState(prev => {
+      // Check if we can go to previous
+      if (prev.currentQuestionIndex <= 0) return prev
 
-    setQuizState(prev => ({
-      ...prev,
-      currentQuestionIndex: prev.currentQuestionIndex - 1,
-      isAnswered: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
-      isRevealed: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null
-    }))
-  }, [quizState.canGoPrevious])
+      return {
+        ...prev,
+        currentQuestionIndex: prev.currentQuestionIndex - 1,
+        isAnswered: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
+        isRevealed: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null
+      }
+    })
+  }, [])
 
   const finishQuiz = useCallback((): QuizResult[] => {
     if (!questions.length || !category) {
@@ -142,7 +148,7 @@ export function useQuizMode(): UseQuizModeReturn {
 
       return {
         question,
-        userAnswer: userAnswer || -1,
+        userAnswer: userAnswer !== null && userAnswer !== undefined ? userAnswer : -1,
         correctAnswer,
         isCorrect,
         shuffledOptions: shuffledOptions[index] || [],
@@ -179,8 +185,8 @@ export function useQuizMode(): UseQuizModeReturn {
   
   const progress = totalQuestions > 0 ? (quizState.currentQuestionIndex + 1) / totalQuestions : 0
   
-  const score = quizState.selectedAnswers.reduce((acc, answer, index) => {
-    if (answer === correctAnswers[index]) {
+  const score = quizState.selectedAnswers.reduce((acc: number, answer, index) => {
+    if (answer !== null && answer === correctAnswers[index]) {
       return acc + 1
     }
     return acc
@@ -197,7 +203,7 @@ export function useQuizMode(): UseQuizModeReturn {
     isAnswered: quizState.isAnswered,
     isRevealed: quizState.isRevealed,
     score,
-    timeSpent,
+    timeSpent: timeSpent || 0,
     isComplete,
     
     // Actions

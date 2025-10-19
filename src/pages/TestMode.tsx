@@ -36,7 +36,7 @@ const TestMode: React.FC = () => {
     resetTest,
     canGoNext,
     canGoPrevious,
-    progress
+    // progress
   } = useTestMode()
 
   const [testResults, setTestResults] = useState<TestResult[]>([])

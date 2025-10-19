@@ -76,7 +76,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
 
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <Card
               key={category.id}
               className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 border-2 hover:border-primary-300"
@@ -86,7 +86,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
                 {/* Category Icon */}
                 <div className="text-center mb-4">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
-                    {category.icon || '📝'}
+                    {'📝'}
                   </div>
                 </div>
 

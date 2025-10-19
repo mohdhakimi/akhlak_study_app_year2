@@ -111,26 +111,32 @@ export function useTestMode(): UseTestModeReturn {
   }, [testState.isAnswered, testState.currentQuestionIndex])
 
   const goToNext = useCallback(() => {
-    if (!testState.canGoNext) return
+    setTestState(prev => {
+      // Check if we can go to next
+      if (prev.currentQuestionIndex >= questions.length - 1) return prev
 
-    setTestState(prev => ({
-      ...prev,
-      currentQuestionIndex: prev.currentQuestionIndex + 1,
-      isAnswered: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
-      isRevealed: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null
-    }))
-  }, [testState.canGoNext])
+      return {
+        ...prev,
+        currentQuestionIndex: prev.currentQuestionIndex + 1,
+        isAnswered: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
+        isRevealed: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null
+      }
+    })
+  }, [questions.length])
 
   const goToPrevious = useCallback(() => {
-    if (!testState.canGoPrevious) return
+    setTestState(prev => {
+      // Check if we can go to previous
+      if (prev.currentQuestionIndex <= 0) return prev
 
-    setTestState(prev => ({
-      ...prev,
-      currentQuestionIndex: prev.currentQuestionIndex - 1,
-      isAnswered: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
-      isRevealed: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null
-    }))
-  }, [testState.canGoPrevious])
+      return {
+        ...prev,
+        currentQuestionIndex: prev.currentQuestionIndex - 1,
+        isAnswered: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
+        isRevealed: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null
+      }
+    })
+  }, [])
 
   const finishTest = useCallback((): QuizResult[] => {
     if (!questions.length) {
@@ -148,7 +154,7 @@ export function useTestMode(): UseTestModeReturn {
 
       return {
         question,
-        userAnswer: userAnswer || -1,
+        userAnswer: userAnswer !== null && userAnswer !== undefined ? userAnswer : -1,
         correctAnswer,
         isCorrect,
         shuffledOptions: shuffledOptions[index] || [],
@@ -184,8 +190,8 @@ export function useTestMode(): UseTestModeReturn {
   
   const progress = totalQuestions > 0 ? (testState.currentQuestionIndex + 1) / totalQuestions : 0
   
-  const score = testState.selectedAnswers.reduce((acc, answer, index) => {
-    if (answer === correctAnswers[index]) {
+  const score = testState.selectedAnswers.reduce((acc: number, answer, index) => {
+    if (answer !== null && answer === correctAnswers[index]) {
       return acc + 1
     }
     return acc
@@ -202,7 +208,7 @@ export function useTestMode(): UseTestModeReturn {
     isAnswered: testState.isAnswered,
     isRevealed: testState.isRevealed,
     score,
-    timeSpent,
+    timeSpent: timeSpent || 0,
     isComplete,
     
     // Actions

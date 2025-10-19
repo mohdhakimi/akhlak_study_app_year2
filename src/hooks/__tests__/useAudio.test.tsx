@@ -10,17 +10,22 @@ import {
 import * as audioUtils from '../../utils/audio'
 
 // Mock the audio utils
-vi.mock('../../utils/audio', () => ({
-  playSound: vi.fn(),
-  getAudioSettings: vi.fn(() => ({
+vi.mock('../../utils/audio', () => {
+  const mockPlaySound = vi.fn()
+  const mockGetAudioSettings = vi.fn(() => ({
     soundEnabled: true,
     musicEnabled: false,
     volume: 0.7
-  })),
-  setSoundEnabled: vi.fn(),
-  setMusicEnabled: vi.fn(),
-  setVolume: vi.fn()
-}))
+  }))
+  
+  return {
+    playSound: mockPlaySound,
+    getAudioSettings: mockGetAudioSettings,
+    setSoundEnabled: vi.fn(),
+    setMusicEnabled: vi.fn(),
+    setVolume: vi.fn()
+  }
+})
 
 describe('useAudio', () => {
   beforeEach(() => {
@@ -101,8 +106,11 @@ describe('useSoundEffect', () => {
       volume: 0.7
     })
 
-    renderHook(() => useSoundEffect('click', true))
+    const { result } = renderHook(() => useSoundEffect('click', true))
 
+    // Debug: check what was called
+    console.log('playSound calls:', vi.mocked(audioUtils.playSound).mock.calls)
+    
     expect(audioUtils.playSound).not.toHaveBeenCalled()
   })
 })

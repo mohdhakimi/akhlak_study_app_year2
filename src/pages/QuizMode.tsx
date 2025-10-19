@@ -37,7 +37,7 @@ const QuizMode: React.FC = () => {
     resetQuiz,
     canGoNext,
     canGoPrevious,
-    progress
+    // progress
   } = useQuizMode()
 
   const [quizResults, setQuizResults] = useState<QuizResult[]>([])

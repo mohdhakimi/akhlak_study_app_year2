@@ -13,14 +13,12 @@ import './App.css'
 const AppContent: React.FC = () => {
   const {
     users,
-    currentUser,
     loading,
     error,
     addUser,
     selectUser,
     clearError,
     showUserSelectionModal,
-    openUserSelectionModal,
     closeUserSelectionModal
   } = useUserContext()
 
