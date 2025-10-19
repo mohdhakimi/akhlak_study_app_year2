@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
 import { useQuizMode } from '../hooks/useQuizMode'
 import { useScores } from '../hooks/useScores'
+import { useAnalytics } from '../hooks/useAnalytics'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import CategorySelector from '../components/CategorySelector'
@@ -25,6 +26,7 @@ const QuizMode: React.FC = () => {
     error: contentError,
   } = useContentData()
   const { saveScore } = useScores()
+  const { trackPageView, trackQuizStart, trackQuizComplete } = useAnalytics(currentUser?.name)
 
   const {
     currentQuestion,
@@ -52,6 +54,14 @@ const QuizMode: React.FC = () => {
   const [quizResults, setQuizResults] = useState<QuizResult[]>([])
   const [showResults, setShowResults] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<any>(null)
+
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('quiz_mode', {
+      user: currentUser?.name,
+      timestamp: Date.now()
+    })
+  }, [trackPageView, currentUser?.name])
 
   const handleBackToMenu = () => {
     resetQuiz()
@@ -91,6 +101,14 @@ const QuizMode: React.FC = () => {
       startQuiz(category)
       setSelectedCategory(category)
       setShowResults(false)
+      
+      // Track quiz start
+      trackQuizStart(category.id, {
+        categoryName: category.name,
+        totalQuestions: category.questions?.length || 0,
+        user: currentUser?.name,
+        timestamp: Date.now()
+      })
     } catch (error) {
       console.error('Error starting quiz:', error)
       // Handle error - could show a toast or error message
@@ -107,6 +125,16 @@ const QuizMode: React.FC = () => {
       const results = finishQuiz()
       setQuizResults(results)
       setShowResults(true)
+
+      // Track quiz completion
+      if (selectedCategory) {
+        trackQuizComplete(selectedCategory.id, score + 1, totalQuestions, {
+          categoryName: selectedCategory.name,
+          user: currentUser?.name,
+          timestamp: Date.now(),
+          results: results
+        })
+      }
 
       // Save score to localStorage
       if (currentUser && selectedCategory) {

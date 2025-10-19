@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
 import { useStudyMode } from '../hooks/useStudyMode'
+import { useAnalytics } from '../hooks/useAnalytics'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import TopicSelector from '../components/TopicSelector'
@@ -30,6 +31,40 @@ const StudyMode: React.FC = () => {
     totalNotes,
     actions: { startStudying, goToNext, goToPrevious, resetStudy, setError },
   } = useStudyMode()
+  const { trackPageView, trackStudySession } = useAnalytics(currentUser?.name)
+
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('study_mode', {
+      user: currentUser?.name,
+      timestamp: Date.now()
+    })
+  }, [trackPageView, currentUser?.name])
+
+  // Track study session when topic is selected
+  useEffect(() => {
+    if (currentTopic && isStudying) {
+      const startTime = Date.now()
+      
+      // Track study session start
+      trackStudySession(currentTopic.name, 0, {
+        topicId: currentTopic.id,
+        user: currentUser?.name,
+        timestamp: startTime
+      })
+
+      // Track study session end when component unmounts or topic changes
+      return () => {
+        const duration = Date.now() - startTime
+        trackStudySession(currentTopic.name, duration, {
+          topicId: currentTopic.id,
+          user: currentUser?.name,
+          timestamp: Date.now(),
+          duration: duration
+        })
+      }
+    }
+  }, [currentTopic, isStudying, trackStudySession, currentUser?.name])
 
   const handleBackToMenu = () => {
     resetStudy()

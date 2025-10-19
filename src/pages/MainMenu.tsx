@@ -12,10 +12,11 @@
  * - Bilingual text support (Jawi/Rumi)
  */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
+import { useAnalytics } from '../hooks/useAnalytics'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import Card from '../components/Card'
@@ -35,8 +36,19 @@ const MainMenu: React.FC = () => {
   // Bilingual context for text formatting
   const { formatText } = useBilingual()
   
+  // Analytics hook for tracking user interactions
+  const { trackPageView, trackEvent } = useAnalytics(currentUser?.name)
+  
   // Local state for sound settings modal visibility
   const [showSoundSettings, setShowSoundSettings] = useState(false)
+
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('main_menu', {
+      user: currentUser?.name,
+      timestamp: Date.now()
+    })
+  }, [trackPageView, currentUser?.name])
 
   /**
    * Menu items configuration for the main navigation cards
@@ -88,6 +100,11 @@ const MainMenu: React.FC = () => {
    * @param route - The route to navigate to
    */
   const handleMenuClick = (route: string) => {
+    // Track navigation event
+    trackEvent('user_action', 'navigation', 'menu_click', route, undefined, {
+      user: currentUser?.name,
+      timestamp: Date.now()
+    })
     navigate(route)
   }
 
@@ -207,6 +224,27 @@ const MainMenu: React.FC = () => {
                 />
               </svg>
               {currentUser ? TEXT.SWITCH_USER : TEXT.SELECT_USER}
+            </Button>
+
+            <Button
+              onClick={() => handleMenuClick('/analytics')}
+              variant="outline"
+              className="min-w-[200px]"
+            >
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+              Analytics
             </Button>
 
             <Button

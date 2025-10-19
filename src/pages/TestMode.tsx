@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
 import { useTestMode } from '../hooks/useTestMode'
 import { useScores } from '../hooks/useScores'
+import { useAnalytics } from '../hooks/useAnalytics'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import QuestionCard from '../components/QuestionCard'
@@ -24,6 +25,7 @@ const TestMode: React.FC = () => {
     error: contentError,
   } = useContentData()
   const { saveScore } = useScores()
+  const { trackPageView, trackTestStart, trackTestComplete } = useAnalytics(currentUser?.name)
 
   const {
     currentQuestion,
@@ -51,6 +53,14 @@ const TestMode: React.FC = () => {
   const [testResults, setTestResults] = useState<TestResult[]>([])
   const [showResults, setShowResults] = useState(false)
   const [testStarted, setTestStarted] = useState(false)
+
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('test_mode', {
+      user: currentUser?.name,
+      timestamp: Date.now()
+    })
+  }, [trackPageView, currentUser?.name])
 
   const handleBackToMenu = () => {
     resetTest()
@@ -90,6 +100,13 @@ const TestMode: React.FC = () => {
       startTest(quizCategories)
       setTestStarted(true)
       setShowResults(false)
+      
+      // Track test start
+      trackTestStart({
+        totalQuestions: quizCategories.reduce((sum, cat) => sum + (cat.questions?.length || 0), 0),
+        user: currentUser?.name,
+        timestamp: Date.now()
+      })
     } catch (error) {
       console.error('Error starting test:', error)
       // Handle error - could show a toast or error message
@@ -106,6 +123,13 @@ const TestMode: React.FC = () => {
       const results = finishTest()
       setTestResults(results)
       setShowResults(true)
+
+      // Track test completion
+      trackTestComplete(score + 1, totalQuestions, {
+        user: currentUser?.name,
+        timestamp: Date.now(),
+        results: results
+      })
 
       // Save score to localStorage
       if (currentUser) {

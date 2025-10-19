@@ -1,7 +1,8 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useScores } from '../hooks/useScores'
+import { useAnalytics } from '../hooks/useAnalytics'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import LeaderboardTable from '../components/LeaderboardTable'
@@ -16,7 +17,16 @@ const Leaderboard: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
   const { scores, loading, error } = useScores()
+  const { trackPageView } = useAnalytics(currentUser?.name)
   const [filter, setFilter] = useState<FilterType>('all')
+
+  // Track page view on component mount
+  useEffect(() => {
+    trackPageView('leaderboard', {
+      user: currentUser?.name,
+      timestamp: Date.now()
+    })
+  }, [trackPageView, currentUser?.name])
 
   const handleBackToMenu = () => {
     navigate('/')

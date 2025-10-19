@@ -29,6 +29,7 @@ import StudyMode from './pages/StudyMode'
 import QuizMode from './pages/QuizMode'
 import TestMode from './pages/TestMode'
 import Leaderboard from './pages/Leaderboard'
+import Analytics from './pages/Analytics'
 import { TEXT } from './constants/text'
 import './App.css'
 
@@ -106,6 +107,9 @@ const AppContent: React.FC = () => {
           
           {/* Leaderboard - Score tracking and user rankings */}
           <Route path="/leaderboard" element={<Leaderboard />} />
+          
+          {/* Analytics - Usage monitoring and performance dashboard */}
+          <Route path="/analytics" element={<Analytics />} />
           
           {/* Catch-all route - redirect unknown paths to main menu */}
           <Route path="*" element={<Navigate to="/" replace />} />
