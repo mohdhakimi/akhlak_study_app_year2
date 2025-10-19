@@ -1,0 +1,486 @@
+{
+  "adab-makan-minum": [
+    {
+      "id": "adab-makan-minum-q1",
+      "question": "اڤاكه ادب ٢ سبلوم ماكن دان مينوم؟ | Apakah adab-adab sebelum makan dan minum?",
+      "type": "mcq",
+      "options": [
+        "ممباسوه تاغن هیشک برسیه | Membasuh tangan hingga bersih",
+        "تيدق ممباسوه تاغن | Tidak membasuh tangan",
+        "ماكن دغن تاغن كيري | Makan dengan tangan kiri",
+        "برچاكب كوتور كتيك ماكن | Bercakap kotor ketika makan",
+        "ماكن ددالم كر | Makan dalam kereta",
+        "تيدق برفاكاين | Tidak berpakaian",
+        "دودوق ددالم بيلك | Duduk dalam bilik"
+      ],
+      "correctAnswer": 0,
+      "explanation": "ممباسوه تاغن هیشک برسیه اداله ادب يغ ڤرتام سبلوم ماكن | Membasuh tangan hingga bersih adalah adab yang pertama sebelum makan"
+    },
+    {
+      "id": "adab-makan-minum-q2",
+      "question": "اڤاكه يغ ڤرتام كالي ددولوكن كتيك ماكن؟ | Apakah yang pertama kali didahulukan ketika makan?",
+      "type": "mcq",
+      "options": [
+        "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
+        "ماكن سنديري داهولو | Makan sendiri dahulu",
+        "ماكن يغ ليبيه سيدق | Makan yang lebih sedap",
+        "ماكن يغ ليبيه بانياك | Makan yang lebih banyak",
+        "ماكن يغ ليبيه براس | Makan yang lebih mahal",
+        "ماكن يغ ليبيه سيجق | Makan yang lebih segar",
+        "ماكن يغ ليبيه ڤاناس | Makan yang lebih panas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مغوتاماكن اورغ يغ لبيه توا اداله ادب يغ ڤنتڠ كتيك ماكن | Mengutamakan orang yang lebih tua adalah adab yang penting ketika makan"
+    },
+    {
+      "id": "adab-makan-minum-q3",
+      "question": "تاغن يغ مان يغ ڤاتوت دڬوناكن كتيك ماكن؟ | Tangan yang mana yang patut digunakan ketika makan?",
+      "type": "mcq",
+      "options": [
+        "تاغن كانن | Tangan kanan",
+        "تاغن كيري | Tangan kiri",
+        "كيدوا-دوا تاغن | Kedua-dua tangan",
+        "تاغن يغ ليبيه كوت | Tangan yang lebih kuat",
+        "تاغن يغ ليبيه بسر | Tangan yang lebih besar",
+        "تاغن يغ ليبيه سيجق | Tangan yang lebih segar",
+        "تاغن يغ ليبيه برسيه | Tangan yang lebih bersih"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مغڬوناكن تاغن كانن كتيك ماكن اداله سنة رسول الله | Menggunakan tangan kanan ketika makan adalah sunnah Rasulullah"
+    },
+    {
+      "id": "adab-makan-minum-q4",
+      "question": "اڤاكه يغ تيدق ڤاتوت دچاكاب كتيك ماكن؟ | Apakah yang tidak patut dicakap ketika makan?",
+      "type": "mcq",
+      "options": [
+        "فركارا ٢ تيدق ايلوق، كوتور دان جيجيق | Perkara-perkara tidak elok, kotor dan jijik",
+        "فركارا يغ باءيق | Perkara yang baik",
+        "فركارا يغ مناريق | Perkara yang menarik",
+        "فركارا يغ منجيك | Perkara yang menyeronokkan",
+        "فركارا يغ منداتڠكن | Perkara yang mendatangkan",
+        "فركارا يغ منمباهكن | Perkara yang menambah",
+        "فركارا يغ منڬاسكن | Perkara yang mengasaskan"
+      ],
+      "correctAnswer": 0,
+      "explanation": "جاغن برچاكب فركارا ٢ تيدق ايلوق، كوتور دان جيجيق كتيك ماكن | Jangan bercakap perkara-perkara tidak elok, kotor dan jijik ketika makan"
+    },
+    {
+      "id": "adab-makan-minum-q5",
+      "question": "اڤاكه فضيلة برادب سماس ماكن؟ | Apakah fadhilat beradab semasa makan?",
+      "type": "mcq",
+      "options": [
+        "مندافت كريضاءن الله دان رسول الله | Mendapat keredhaan Allah dan Rasulullah",
+        "مندافت كمارهن الله | Mendapat kemarahan Allah",
+        "تيدق دسايڠي اوليه اورغ | Tidak disayangi oleh orang",
+        "دفندغ هينا اوليه اورغ | Dipandang hina oleh orang",
+        "منداڤتكن ڤڽاكيت | Mendatangkan penyakit",
+        "ممبيسكن ڤمبذيرن | Menyebabkan pembaziran",
+        "هيلغ كبرسيهن | Hilang kebersihan"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مندافت كريضاءن الله دان رسول الله اداله فضيلة يغ ڤلينڬ | Mendapat keredhaan Allah dan Rasulullah adalah fadhilat yang paling utama"
+    },
+    {
+      "id": "adab-makan-minum-q6",
+      "question": "اڤاكه عاقبة تيدق برادب سماس ماكن؟ | Apakah akibat tidak beradab semasa makan?",
+      "type": "mcq",
+      "options": [
+        "تيدق دسايڠي اوليه الله دان رسول الله | Tidak disayangi oleh Allah dan Rasulullah",
+        "دسايڠي اوليه الله دان رسول الله | Disayangi oleh Allah dan Rasulullah",
+        "دفندغ موليا اوليه اورغ | Dipandang mulia oleh orang",
+        "تيدق منيمبولكن كبنچين | Tidak menimbulkan kebencian",
+        "مغيلقكن ڤمبذيرن | Mengelakkan pembaziran",
+        "دافات كصيحتن | Dapat kesihatan",
+        "دافات كبرسيهن | Dapat kebersihan"
+      ],
+      "correctAnswer": 0,
+      "explanation": "تيدق دسايڠي اوليه الله دان رسول الله اداله عاقبة يغ ڤلينڬ باهايا | Tidak disayangi oleh Allah dan Rasulullah adalah akibat yang paling bahaya"
+    },
+    {
+      "id": "adab-makan-minum-q7",
+      "question": "اڤاكه يغ ڤاتوت داهولوكن كتيك مغمبيل ماكنن؟ | Apakah yang patut didahulukan ketika mengambil makanan?",
+      "type": "mcq",
+      "options": [
+        "ماكنن يغ تردكت | Makanan yang terdekat",
+        "ماكنن يغ ليبيه سيدق | Makanan yang lebih sedap",
+        "ماكنن يغ ليبيه بانياك | Makanan yang lebih banyak",
+        "ماكنن يغ ليبيه براس | Makanan yang lebih mahal",
+        "ماكنن يغ ليبيه سيجق | Makanan yang lebih segar",
+        "ماكنن يغ ليبيه ڤاناس | Makanan yang lebih panas",
+        "ماكنن يغ ليبيه كوت | Makanan yang lebih kuat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "دهولوكن مغمبيل ماكنن يغ تردكت اداله ادب يغ ڤنتڠ | Dahulukan mengambil makanan yang terdekat adalah adab yang penting"
+    },
+    {
+      "id": "adab-makan-minum-q8",
+      "question": "اڤاكه يغ تيدق ڤاتوت دچاچي؟ | Apakah yang tidak patut dicaci?",
+      "type": "mcq",
+      "options": [
+        "ماكنن يغ دهيدغكن | Makanan yang dihidangkan",
+        "ماكنن يغ كوتور | Makanan yang kotor",
+        "ماكنن يغ جيجيق | Makanan yang jijik",
+        "ماكنن يغ تيدق سيدق | Makanan yang tidak sedap",
+        "ماكنن يغ تيدق برسيه | Makanan yang tidak bersih",
+        "ماكنن يغ تيدق سيجق | Makanan yang tidak segar",
+        "ماكنن يغ تيدق ڤاناس | Makanan yang tidak panas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "جاغن منچاچي ماكنن يغ دهيدغكن اداله ادب يغ ڤنتڠ | Jangan mencaci makanan yang dihidangkan adalah adab yang penting"
+    },
+    {
+      "id": "adab-makan-minum-q9",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن كتيك دودوق كتيك ماكن؟ | Apakah yang patut digunakan ketika duduk ketika makan?",
+      "type": "mcq",
+      "options": [
+        "ترتیب دان معهادف ماكنن دغن تنغ | Tertib dan menghadap makanan dengan tenang",
+        "تيدق ترتیب | Tidak tertib",
+        "تيدق معهادف ماكنن | Tidak menghadap makanan",
+        "تيدق تنغ | Tidak tenang",
+        "برڬوراو | Bergurau",
+        "برچاكب بانياك | Bercakap banyak",
+        "برسورو | Bersorak"
+      ],
+      "correctAnswer": 0,
+      "explanation": "دودوق دغن ترتیب دان معهادف ماكنن دغن تنغ اداله ادب يغ ڤنتڠ | Duduk dengan tertib dan menghadap makanan dengan tenang adalah adab yang penting"
+    },
+    {
+      "id": "adab-makan-minum-q10",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن كتيك برفاكاين سبلوم ماكن؟ | Apakah yang patut digunakan ketika berpakaian sebelum makan?",
+      "type": "mcq",
+      "options": [
+        "برفاكاين برسيه دان كمس | Berpakaian bersih dan kemas",
+        "برفاكاين كوتور | Berpakaian kotor",
+        "تيدق برفاكاين | Tidak berpakaian",
+        "برفاكاين يغ لوس | Berpakaian yang lusuh",
+        "برفاكاين يغ كوس | Berpakaian yang kusut",
+        "برفاكاين يغ تيدق سيسواي | Berpakaian yang tidak sesuai",
+        "برفاكاين يغ تيدق كمس | Berpakaian yang tidak kemas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "برفاكاين برسيه دان كمس اداله ادب يغ ڤنتڠ سبلوم ماكن | Berpakaian bersih dan kemas adalah adab yang penting sebelum makan"
+    },
+    {
+      "id": "adab-makan-minum-q11",
+      "question": "اڤاكه يغ ڤاتوت داهولوكن كتيك ماكن؟ | Apakah yang patut didahulukan ketika makan?",
+      "type": "mcq",
+      "options": [
+        "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
+        "ماكن سنديري داهولو | Makan sendiri dahulu",
+        "ماكن يغ ليبيه سيدق | Makan yang lebih sedap",
+        "ماكن يغ ليبيه بانياك | Makan yang lebih banyak",
+        "ماكن يغ ليبيه براس | Makan yang lebih mahal",
+        "ماكن يغ ليبيه سيجق | Makan yang lebih segar",
+        "ماكن يغ ليبيه ڤاناس | Makan yang lebih panas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مغوتاماكن اورغ يغ لبيه توا اداله ادب يغ ڤنتڠ كتيك ماكن | Mengutamakan orang yang lebih tua adalah adab yang penting ketika makan"
+    },
+    {
+      "id": "adab-makan-minum-q12",
+      "question": "اڤاكه يغ تيدق ڤاتوت دڬوناكن كتيك ماكن؟ | Apakah yang tidak patut digunakan ketika makan?",
+      "type": "mcq",
+      "options": [
+        "تاغن كيري | Tangan kiri",
+        "تاغن كانن | Tangan kanan",
+        "كيدوا-دوا تاغن | Kedua-dua tangan",
+        "تاغن يغ ليبيه كوت | Tangan yang lebih kuat",
+        "تاغن يغ ليبيه بسر | Tangan yang lebih besar",
+        "تاغن يغ ليبيه سيجق | Tangan yang lebih segar",
+        "تاغن يغ ليبيه برسيه | Tangan yang lebih bersih"
+      ],
+      "correctAnswer": 0,
+      "explanation": "تاغن كيري تيدق ڤاتوت دڬوناكن كتيك ماكن | Tangan kiri tidak patut digunakan ketika makan"
+    },
+    {
+      "id": "adab-makan-minum-q13",
+      "question": "اڤاكه يغ ڤاتوت داهولوكن كتيك مغمبيل ماكنن؟ | Apakah yang patut didahulukan ketika mengambil makanan?",
+      "type": "mcq",
+      "options": [
+        "ماكنن يغ تردكت | Makanan yang terdekat",
+        "ماكنن يغ ليبيه سيدق | Makanan yang lebih sedap",
+        "ماكنن يغ ليبيه بانياك | Makanan yang lebih banyak",
+        "ماكنن يغ ليبيه براس | Makanan yang lebih mahal",
+        "ماكنن يغ ليبيه سيجق | Makanan yang lebih segar",
+        "ماكنن يغ ليبيه ڤاناس | Makanan yang lebih panas",
+        "ماكنن يغ ليبيه كوت | Makanan yang lebih kuat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "دهولوكن مغمبيل ماكنن يغ تردكت اداله ادب يغ ڤنتڠ | Dahulukan mengambil makanan yang terdekat adalah adab yang penting"
+    },
+    {
+      "id": "adab-makan-minum-q14",
+      "question": "اڤاكه يغ ڤاتوت داهولوكن كتيك ماكن؟ | Apakah yang patut didahulukan ketika makan?",
+      "type": "mcq",
+      "options": [
+        "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
+        "ماكن سنديري داهولو | Makan sendiri dahulu",
+        "ماكن يغ ليبيه سيدق | Makan yang lebih sedap",
+        "ماكن يغ ليبيه بانياك | Makan yang lebih banyak",
+        "ماكن يغ ليبيه براس | Makan yang lebih mahal",
+        "ماكن يغ ليبيه سيجق | Makan yang lebih segar",
+        "ماكن يغ ليبيه ڤاناس | Makan yang lebih panas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مغوتاماكن اورغ يغ لبيه توا اداله ادب يغ ڤنتڠ كتيك ماكن | Mengutamakan orang yang lebih tua adalah adab yang penting ketika makan"
+    },
+    {
+      "id": "adab-makan-minum-q15",
+      "question": "اڤاكه يغ ڤاتوت داهولوكن كتيك ماكن؟ | Apakah yang patut didahulukan ketika makan?",
+      "type": "mcq",
+      "options": [
+        "مغوتاماكن اورغ يغ لبيه توا | Mengutamakan orang yang lebih tua",
+        "ماكن سنديري داهولو | Makan sendiri dahulu",
+        "ماكن يغ ليبيه سيدق | Makan yang lebih sedap",
+        "ماكن يغ ليبيه بانياك | Makan yang lebih banyak",
+        "ماكن يغ ليبيه براس | Makan yang lebih mahal",
+        "ماكن يغ ليبيه سيجق | Makan yang lebih segar",
+        "ماكن يغ ليبيه ڤاناس | Makan yang lebih panas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مغوتاماكن اورغ يغ لبيه توا اداله ادب يغ ڤنتڠ كتيك ماكن | Mengutamakan orang yang lebih tua adalah adab yang penting ketika makan"
+    }
+  ],
+  "adab-tidur": [
+    {
+      "id": "adab-tidur-q1",
+      "question": "اڤاكه ادب ٢ سبلوم تيدور؟ | Apakah adab-adab sebelum tidur?",
+      "type": "mcq",
+      "options": [
+        "م كوسوق كيكي سبلوم تيدور | Menggosok gigi sebelum tidur",
+        "تيدق كوسوق كيكي | Tidak gosok gigi",
+        "ماكن ددالم تيدور | Makan dalam tidur",
+        "برچاكب كوتور | Bercakap kotor",
+        "تيدق برووضوء | Tidak berwuduk",
+        "برفاكاين كوتور | Berpakaian kotor",
+        "تيدق برفاكاين | Tidak berpakaian"
+      ],
+      "correctAnswer": 0,
+      "explanation": "م كوسوق كيكي سبلوم تيدور اداله ادب يغ ڤنتڠ | Menggosok gigi sebelum tidur adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q2",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن سبلوم تيدور؟ | Apakah yang patut digunakan sebelum tidur?",
+      "type": "mcq",
+      "options": [
+        "مغمبيل وضوء | Mengambil wuduk",
+        "تيدق برووضوء | Tidak berwuduk",
+        "ماكن بانياك | Makan banyak",
+        "برچاكب بانياك | Bercakap banyak",
+        "برڬوراو | Bergurau",
+        "برسورو | Bersorak",
+        "تيدق برفاكاين | Tidak berpakaian"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مغمبيل وضوء سبلوم تيدور اداله ادب يغ ڤنتڠ | Mengambil wuduk sebelum tidur adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q3",
+      "question": "اڤاكه يغ ڤاتوت دموهون سبلوم تيدور؟ | Apakah yang patut dimohon sebelum tidur?",
+      "type": "mcq",
+      "options": [
+        "معاف در قد كدوا دوا ايبو باق | Maaf daripada kedua-dua ibu bapa",
+        "معاف در كاون | Maaf daripada kawan",
+        "معاف در ڬورو | Maaf daripada guru",
+        "معاف در جيران | Maaf daripada jiran",
+        "معاف در سودارا | Maaf daripada saudara",
+        "معاف در سودارا مارا | Maaf daripada saudara mara",
+        "معاف در اورغ لاءين | Maaf daripada orang lain"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مموهون معاف در قد كدوا دوا ايبو باق سبلوم تيدور اداله ادب يغ ڤنتڠ | Memohon maaf daripada kedua-dua ibu bapa sebelum tidur adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q4",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن سلفس باغون تيدور؟ | Apakah yang patut digunakan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "كوسوق كيكي | Gosok gigi",
+        "تيدق كوسوق كيكي | Tidak gosok gigi",
+        "ماكن بانياك | Makan banyak",
+        "برچاكب بانياك | Bercakap banyak",
+        "برڬوراو | Bergurau",
+        "برسورو | Bersorak",
+        "تيدق برفاكاين | Tidak berpakaian"
+      ],
+      "correctAnswer": 0,
+      "explanation": "كوسوق كيكي سلفس باغون تيدور اداله ادب يغ ڤنتڠ | Gosok gigi selepas bangun tidur adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q5",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن سلفس باغون تيدور؟ | Apakah yang patut digunakan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "کمسكن بيليق تيدور | Kemaskan bilik tidur",
+        "تيدق کمسكن بيليق | Tidak kemaskan bilik",
+        "تيدق برفاكاين | Tidak berpakaian",
+        "برفاكاين كوتور | Berpakaian kotor",
+        "برچاكب كوتور | Bercakap kotor",
+        "برڬوراو | Bergurau",
+        "برسورو | Bersorak"
+      ],
+      "correctAnswer": 0,
+      "explanation": "کمسكن بيليق تيدور سلفس باغون اداله ادب يغ ڤنتڠ | Kemaskan bilik tidur selepas bangun adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q6",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن سلفس باغون تيدور؟ | Apakah yang patut digunakan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "مندي دان برسوچي | Mandi dan bersuci",
+        "تيدق مندي | Tidak mandi",
+        "تيدق برسوچي | Tidak bersuci",
+        "برفاكاين كوتور | Berpakaian kotor",
+        "برچاكب كوتور | Bercakap kotor",
+        "برڬوراو | Bergurau",
+        "برسورو | Bersorak"
+      ],
+      "correctAnswer": 0,
+      "explanation": "مندي دان برسوچي سلفس باغون تيدور اداله ادب يغ ڤنتڠ | Mandi dan bersuci selepas bangun tidur adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q7",
+      "question": "اڤاكه يغ ڤاتوت دڬوناكن سلفس باغون تيدور؟ | Apakah yang patut digunakan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "برفاكاين برسيه دان كمس | Berpakaian bersih dan kemas",
+        "برفاكاين كوتور | Berpakaian kotor",
+        "تيدق برفاكاين | Tidak berpakaian",
+        "برفاكاين يغ لوس | Berpakaian yang lusuh",
+        "برفاكاين يغ كوس | Berpakaian yang kusut",
+        "برفاكاين يغ تيدق سيسواي | Berpakaian yang tidak sesuai",
+        "برفاكاين يغ تيدق كمس | Berpakaian yang tidak kemas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "برفاكاين برسيه دان كمس سلفس باغون تيدور اداله ادب يغ ڤنتڠ | Berpakaian bersih dan kemas selepas bangun tidur adalah adab yang penting"
+    },
+    {
+      "id": "adab-tidur-q8",
+      "question": "اڤاكه فضيلة مغعملكن ادب ٢ سبلوم دان سلفس باغون تيدور؟ | Apakah fadhilat mengamalkan adab-adab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "داقت مغعملكن سنة ٢ نبي محمد | Dapat mengamalkan sunnah-sunnah Nabi Muhammad",
+        "تيدق داقت مغعملكن سنة | Tidak dapat mengamalkan sunnah",
+        "هيلغ سنة | Hilang sunnah",
+        "تيدق داقت منجاك كصيحتن | Tidak dapat menjaga kesihatan",
+        "تيدق داقت ملاتيه ديري | Tidak dapat melatih diri",
+        "تيدق داقت برديسيفلين | Tidak dapat berdisiplin",
+        "تيدق دسايڠي اوليه كلوارك | Tidak disayangi oleh keluarga"
+      ],
+      "correctAnswer": 0,
+      "explanation": "داقت مغعملكن سنة ٢ نبي محمد اداله فضيلة يغ ڤلينڬ | Dapat mengamalkan sunnah-sunnah Nabi Muhammad adalah fadhilat yang paling utama"
+    },
+    {
+      "id": "adab-tidur-q9",
+      "question": "اڤاكه فضيلة مغعملكن ادب ٢ سبلوم دان سلفس باغون تيدور؟ | Apakah fadhilat mengamalkan adab-adab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "داقت منجاك كصيحتن توبوه بادن | Dapat menjaga kesihatan tubuh badan",
+        "تيدق داقت منجاك كصيحتن | Tidak dapat menjaga kesihatan",
+        "هيلغ كصيحتن | Hilang kesihatan",
+        "تيدق داقت ملاتيه ديري | Tidak dapat melatih diri",
+        "تيدق داقت برديسيفلين | Tidak dapat berdisiplin",
+        "تيدق دسايڠي اوليه كلوارك | Tidak disayangi oleh keluarga",
+        "تيدق دسايڠي اوليه مشاركت | Tidak disayangi oleh masyarakat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "داقت منجاك كصيحتن توبوه بادن اداله فضيلة يغ ڤنتڠ | Dapat menjaga kesihatan tubuh badan adalah fadhilat yang penting"
+    },
+    {
+      "id": "adab-tidur-q10",
+      "question": "اڤاكه فضيلة مغعملكن ادب ٢ سبلوم دان سلفس باغون تيدور؟ | Apakah fadhilat mengamalkan adab-adab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "ملاتيه ديري سوفايا سنتياس برديسيفلين | Melatih diri supaya sentiasa berdisiplin",
+        "تيدق داقت ملاتيه ديري | Tidak dapat melatih diri",
+        "هيلغ برديسيفلين | Hilang berdisiplin",
+        "تيدق داقت منجاك كصيحتن | Tidak dapat menjaga kesihatan",
+        "تيدق دسايڠي اوليه كلوارك | Tidak disayangi oleh keluarga",
+        "تيدق دسايڠي اوليه مشاركت | Tidak disayangi oleh masyarakat",
+        "تيدق داقت مغعملكن سنة | Tidak dapat mengamalkan sunnah"
+      ],
+      "correctAnswer": 0,
+      "explanation": "ملاتيه ديري سوفايا سنتياس برديسيفلين اداله فضيلة يغ ڤنتڠ | Melatih diri supaya sentiasa berdisiplin adalah fadhilat yang penting"
+    },
+    {
+      "id": "adab-tidur-q11",
+      "question": "اڤاكه فضيلة مغعملكن ادب ٢ سبلوم دان سلفس باغون تيدور؟ | Apakah fadhilat mengamalkan adab-adab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "تيدق راس مغنتوق دان لتيه كتيك بلاجر | Tidak rasa mengantuk dan letih ketika belajar",
+        "راس مغنتوق كتيك بلاجر | Rasa mengantuk ketika belajar",
+        "لتيه كتيك بلاجر | Letih ketika belajar",
+        "تيدق داقت منجاك كصيحتن | Tidak dapat menjaga kesihatan",
+        "تيدق داقت ملاتيه ديري | Tidak dapat melatih diri",
+        "تيدق داقت برديسيفلين | Tidak dapat berdisiplin",
+        "تيدق دسايڠي اوليه كلوارك | Tidak disayangi oleh keluarga"
+      ],
+      "correctAnswer": 0,
+      "explanation": "تيدق راس مغنتوق دان لتيه كتيك بلاجر اداله فضيلة يغ ڤنتڠ | Tidak rasa mengantuk dan letih ketika belajar adalah fadhilat yang penting"
+    },
+    {
+      "id": "adab-tidur-q12",
+      "question": "اڤاكه فضيلة مغعملكن ادب ٢ سبلوم دان سلفس باغون تيدور؟ | Apakah fadhilat mengamalkan adab-adab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "فيكيرن سنتياس چركس دان چردس | Fikiran sentiasa cergas dan cerdas",
+        "فيكيرن تيدق چركس | Fikiran tidak cergas",
+        "فيكيرن تيدق چردس | Fikiran tidak cerdas",
+        "تيدق داقت منجاك كصيحتن | Tidak dapat menjaga kesihatan",
+        "تيدق داقت ملاتيه ديري | Tidak dapat melatih diri",
+        "تيدق داقت برديسيفلين | Tidak dapat berdisiplin",
+        "تيدق دسايڠي اوليه كلوارك | Tidak disayangi oleh keluarga"
+      ],
+      "correctAnswer": 0,
+      "explanation": "فيكيرن سنتياس چركس دان چردس اداله فضيلة يغ ڤنتڠ | Fikiran sentiasa cergas dan cerdas adalah fadhilat yang penting"
+    },
+    {
+      "id": "adab-tidur-q13",
+      "question": "اڤاكه فضيلة مغعملكن ادب ٢ سبلوم دان سلفس باغون تيدور؟ | Apakah fadhilat mengamalkan adab-adab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "د سایغی اولیه کلوارک دان مشارکت | Disayangi oleh keluarga dan masyarakat",
+        "تيدق دسايڠي اوليه كلوارك | Tidak disayangi oleh keluarga",
+        "تيدق دسايڠي اوليه مشاركت | Tidak disayangi oleh masyarakat",
+        "تيدق داقت منجاك كصيحتن | Tidak dapat menjaga kesihatan",
+        "تيدق داقت ملاتيه ديري | Tidak dapat melatih diri",
+        "تيدق داقت برديسيفلين | Tidak dapat berdisiplin",
+        "تيدق داقت مغعملكن سنة | Tidak dapat mengamalkan sunnah"
+      ],
+      "correctAnswer": 0,
+      "explanation": "د سایغی اولیه کلوارک دان مشارکت اداله فضيلة يغ ڤنتڠ | Disayangi oleh keluarga dan masyarakat adalah fadhilat yang penting"
+    },
+    {
+      "id": "adab-tidur-q14",
+      "question": "اڤاكه عاقبة تيدق برادب سبلوم دان سلفس باغون تيدور؟ | Apakah akibat tidak beradab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "راس معنتوق كتيك بلاجر | Rasa mengantuk ketika belajar",
+        "تيدق راس مغنتوق | Tidak rasa mengantuk",
+        "تيدق لتيه كتيك بلاجر | Tidak letih ketika belajar",
+        "داقت منجاك كصيحتن | Dapat menjaga kesihatan",
+        "داقت ملاتيه ديري | Dapat melatih diri",
+        "داقت برديسيفلين | Dapat berdisiplin",
+        "دسايڠي اوليه كلوارك | Disayangi oleh keluarga"
+      ],
+      "correctAnswer": 0,
+      "explanation": "راس معنتوق كتيك بلاجر اداله عاقبة يغ باهايا | Rasa mengantuk ketika belajar adalah akibat yang bahaya"
+    },
+    {
+      "id": "adab-tidur-q15",
+      "question": "اڤاكه عاقبة تيدق برادب سبلوم دان سلفس باغون تيدور؟ | Apakah akibat tidak beradab sebelum dan selepas bangun tidur?",
+      "type": "mcq",
+      "options": [
+        "موده منداقت پاکيت | Mudah mendapat penyakit",
+        "تيدق موده منداقت پاكيت | Tidak mudah mendapat penyakit",
+        "داقت منجاك كصيحتن | Dapat menjaga kesihatan",
+        "داقت ملاتيه ديري | Dapat melatih diri",
+        "داقت برديسيفلين | Dapat berdisiplin",
+        "دسايڠي اوليه كلوارك | Disayangi oleh keluarga",
+        "دسايڠي اوليه مشاركت | Disayangi oleh masyarakat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "موده منداقت پاکيت اداله عاقبة يغ باهايا | Mudah mendapat penyakit adalah akibat yang bahaya"
+    }
+  ]
+}

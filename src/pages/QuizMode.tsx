@@ -31,6 +31,8 @@ const QuizMode: React.FC = () => {
     score,
     timeSpent,
     isComplete,
+    currentCorrectAnswer,
+    currentShuffledOptions,
     startQuiz,
     selectAnswer,
     goToNext,
@@ -241,7 +243,8 @@ const QuizMode: React.FC = () => {
               questionNumber={currentQuestionIndex + 1}
               totalQuestions={totalQuestions}
               selectedAnswer={selectedAnswers[currentQuestionIndex]}
-              correctAnswer={0} // This will be handled by the QuestionCard component
+              correctAnswer={currentCorrectAnswer}
+              shuffledOptions={currentShuffledOptions}
               isAnswered={isAnswered}
               isRevealed={isRevealed}
               onAnswerSelect={handleAnswerSelect}

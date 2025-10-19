@@ -2,8 +2,6 @@ import React from 'react'
 import { Question } from '../types'
 import { useBilingual } from '../contexts/BilingualContext'
 import AnswerOption from './AnswerOption'
-import TrueFalseQuestion from './TrueFalseQuestion'
-import FillBlankQuestion from './FillBlankQuestion'
 import { shuffleQuizOptions } from '../utils/shuffleOptions'
 import { cn } from '../utils/cn'
 
@@ -11,12 +9,12 @@ export interface QuestionCardProps {
   question: Question
   questionNumber: number
   totalQuestions: number
-  selectedAnswer: number | null | string
+  selectedAnswer: number | null
   correctAnswer: number
+  shuffledOptions?: string[]
   isAnswered: boolean
   isRevealed: boolean
   onAnswerSelect: (answerIndex: number) => void
-  onAnswerChange?: (answer: string) => void
   onNext: () => void
   onPrevious: () => void
   canGoNext: boolean
@@ -30,10 +28,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   totalQuestions,
   selectedAnswer,
   correctAnswer,
+  shuffledOptions: providedShuffledOptions,
   isAnswered,
   isRevealed,
   onAnswerSelect,
-  onAnswerChange,
   onNext,
   onPrevious,
   canGoNext,
@@ -42,16 +40,19 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 }) => {
   const { formatText } = useBilingual()
   
-  // Determine question type (default to MCQ for backward compatibility)
-  const questionType = question.type || 'mcq'
+  // All questions are MCQ
+  const questionType = 'mcq'
   
-  // Shuffle options on component mount or when question changes (only for MCQ)
+  // Use provided shuffled options or fallback to shuffling (for backward compatibility)
   const { shuffledOptions, newCorrectIndex } = React.useMemo(() => {
-    if (questionType === 'mcq') {
+    if (providedShuffledOptions && providedShuffledOptions.length > 0) {
+      // Use provided shuffled options
+      return { shuffledOptions: providedShuffledOptions, newCorrectIndex: correctAnswer }
+    } else {
+      // Fallback to shuffling (for backward compatibility)
       return shuffleQuizOptions(question.options, correctAnswer)
     }
-    return { shuffledOptions: question.options, newCorrectIndex: correctAnswer }
-  }, [question.options, correctAnswer, questionType])
+  }, [providedShuffledOptions, question.options, correctAnswer])
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (!isAnswered) {
@@ -59,16 +60,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     }
   }
 
-  const handleAnswerChange = (answer: string) => {
-    if (onAnswerChange) {
-      onAnswerChange(answer)
-    }
-  }
-
-  const isCorrect = questionType === 'fill_blank' 
-    ? selectedAnswer === question.correctText
-    : selectedAnswer === newCorrectIndex
-  const isIncorrect = selectedAnswer !== null && selectedAnswer !== newCorrectIndex && questionType !== 'fill_blank'
+  const isCorrect = selectedAnswer === newCorrectIndex
+  const isIncorrect = selectedAnswer !== null && selectedAnswer !== newCorrectIndex
 
   return (
     <div className={cn('w-full max-w-4xl mx-auto', className)}>
@@ -101,43 +94,21 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
         {/* Answer Options */}
         <div className="p-6">
-          {questionType === 'mcq' && (
-            <div className="space-y-3">
-              {shuffledOptions.map((option, index) => (
-                <AnswerOption
-                  key={index}
-                  option={option}
-                  index={index}
-                  isSelected={selectedAnswer === index}
-                  isCorrect={index === newCorrectIndex}
-                  isIncorrect={isIncorrect && selectedAnswer === index}
-                  isRevealed={isRevealed}
-                  onClick={() => handleAnswerSelect(index)}
-                  disabled={isAnswered}
-                />
-              ))}
-            </div>
-          )}
-          
-          {questionType === 'true_false' && (
-            <TrueFalseQuestion
-              question={question}
-              selectedAnswer={selectedAnswer as number | null}
-              onAnswerSelect={handleAnswerSelect}
-              isRevealed={isRevealed}
-              correctAnswer={newCorrectIndex}
-            />
-          )}
-          
-          {questionType === 'fill_blank' && (
-            <FillBlankQuestion
-              question={question}
-              selectedAnswer={selectedAnswer as string}
-              onAnswerChange={handleAnswerChange}
-              isRevealed={isRevealed}
-              correctText={question.correctText || ''}
-            />
-          )}
+          <div className="space-y-3">
+            {shuffledOptions.map((option, index) => (
+              <AnswerOption
+                key={index}
+                option={option}
+                index={index}
+                isSelected={selectedAnswer === index}
+                isCorrect={index === newCorrectIndex}
+                isIncorrect={isIncorrect && selectedAnswer === index}
+                isRevealed={isRevealed}
+                onClick={() => handleAnswerSelect(index)}
+                disabled={isAnswered}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Feedback Section */}
@@ -156,10 +127,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                   <>
                     <span className="text-2xl">💡</span>
                     <span className="text-red-700 font-semibold">
-                      {questionType === 'fill_blank' 
-                        ? formatText('تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah') + ` "${question.correctText}"`
-                        : formatText('تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah') + ` ${String.fromCharCode(65 + newCorrectIndex)}.`
-                      }
+                      {formatText('تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah') + ` ${String.fromCharCode(65 + newCorrectIndex)}.`}
                     </span>
                   </>
                 )}
@@ -187,11 +155,11 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
             <button
               onClick={onNext}
-              disabled={!canGoNext || !isAnswered}
+              disabled={questionNumber === totalQuestions ? !isAnswered : (!canGoNext || !isAnswered)}
               className={cn(
                 'px-6 py-2 rounded-lg font-medium transition-all duration-200',
                 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
-                canGoNext && isAnswered
+                (questionNumber === totalQuestions ? isAnswered : (canGoNext && isAnswered))
                   ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
               )}

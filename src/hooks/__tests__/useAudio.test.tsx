@@ -10,22 +10,17 @@ import {
 import * as audioUtils from '../../utils/audio'
 
 // Mock the audio utils
-vi.mock('../../utils/audio', () => {
-  const mockPlaySound = vi.fn()
-  const mockGetAudioSettings = vi.fn(() => ({
+vi.mock('../../utils/audio', () => ({
+  playSound: vi.fn(),
+  getAudioSettings: vi.fn(() => ({
     soundEnabled: true,
     musicEnabled: false,
     volume: 0.7
-  }))
-  
-  return {
-    playSound: mockPlaySound,
-    getAudioSettings: mockGetAudioSettings,
-    setSoundEnabled: vi.fn(),
-    setMusicEnabled: vi.fn(),
-    setVolume: vi.fn()
-  }
-})
+  })),
+  setSoundEnabled: vi.fn(),
+  setMusicEnabled: vi.fn(),
+  setVolume: vi.fn()
+}))
 
 describe('useAudio', () => {
   beforeEach(() => {
@@ -86,6 +81,10 @@ describe('useAudio', () => {
 })
 
 describe('useSoundEffect', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
   it('should play sound when trigger becomes true', () => {
     const { rerender } = renderHook(
       ({ trigger }) => useSoundEffect('click', trigger),
@@ -116,6 +115,16 @@ describe('useSoundEffect', () => {
 })
 
 describe('useButtonSound', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+    // Reset the mock implementation
+    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+      soundEnabled: true,
+      musicEnabled: false,
+      volume: 0.7
+    })
+  })
+
   it('should return click and hover sound functions', () => {
     const { result } = renderHook(() => useButtonSound())
 
@@ -130,6 +139,7 @@ describe('useButtonSound', () => {
       result.current.playClickSound()
     })
 
+    console.log('playSound calls:', vi.mocked(audioUtils.playSound).mock.calls)
     expect(audioUtils.playSound).toHaveBeenCalledWith('click')
   })
 
@@ -145,6 +155,15 @@ describe('useButtonSound', () => {
 })
 
 describe('useQuizAudio', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+      soundEnabled: true,
+      musicEnabled: false,
+      volume: 0.7
+    })
+  })
+
   it('should return quiz-specific sound functions', () => {
     const { result } = renderHook(() => useQuizAudio())
 
@@ -207,6 +226,15 @@ describe('useQuizAudio', () => {
 })
 
 describe('usePageTransitionAudio', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+      soundEnabled: true,
+      musicEnabled: false,
+      volume: 0.7
+    })
+  })
+
   it('should return page transition sound function', () => {
     const { result } = renderHook(() => usePageTransitionAudio())
 

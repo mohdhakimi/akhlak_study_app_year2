@@ -28,7 +28,9 @@ export function useContentData(): UseContentDataReturn {
         throw new Error('Invalid content data structure')
       }
       
-      setContentData(data.default)
+      // Data loaded successfully
+      
+      setContentData(data.default as unknown as ContentData)
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load content data'
       setError(errorMessage)
@@ -46,10 +48,18 @@ export function useContentData(): UseContentDataReturn {
     loadContentData()
   }, [loadContentData])
 
+  // Use quizCategories directly from the data, or transform topics if not available
+  const quizCategories: QuizCategory[] = (contentData as any)?.quizCategories || contentData?.topics?.map(topic => ({
+    id: topic.id,
+    name: topic.name,
+    description: topic.description,
+    questions: topic.questions || []
+  })) || []
+
   return {
     contentData,
     topics: contentData?.topics || [],
-    quizCategories: contentData?.quizCategories || [],
+    quizCategories,
     loading,
     error,
     refetch

@@ -1,17 +1,28 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { renderHook, act } from '@testing-library/react'
+import { renderHook, act, waitFor } from '@testing-library/react'
+
+// Create hoisted mock functions
+const { mockGetUsers, mockSaveUser, mockDeleteUser, mockGetCurrentUser, mockSetCurrentUser, mockIsValidUser } = vi.hoisted(() => ({
+  mockGetUsers: vi.fn(() => []),
+  mockSaveUser: vi.fn(() => true),
+  mockDeleteUser: vi.fn(() => true),
+  mockGetCurrentUser: vi.fn(() => null),
+  mockSetCurrentUser: vi.fn(() => true),
+  mockIsValidUser: vi.fn(() => true)
+}))
+
+// Mock the localStorage utilities BEFORE importing the hook
+vi.mock('../../utils/localStorage', () => ({
+  getUsers: mockGetUsers,
+  saveUser: mockSaveUser,
+  deleteUser: mockDeleteUser,
+  getCurrentUser: mockGetCurrentUser,
+  setCurrentUser: mockSetCurrentUser,
+  isValidUser: mockIsValidUser
+}))
+
 import { useUsers } from '../useUsers'
 import * as localStorageUtils from '../../utils/localStorage'
-
-// Mock the localStorage utilities
-vi.mock('../../utils/localStorage', () => ({
-  getUsers: vi.fn(),
-  saveUser: vi.fn(),
-  deleteUser: vi.fn(),
-  getCurrentUser: vi.fn(),
-  setCurrentUser: vi.fn(),
-  isValidUser: vi.fn()
-}))
 
 const mockUser: localStorageUtils.User = {
   id: 'user1',
@@ -22,9 +33,9 @@ const mockUser: localStorageUtils.User = {
 describe('useUsers', () => {
   beforeEach(() => {
     vi.clearAllMocks()
-    vi.mocked(localStorageUtils.getUsers).mockReturnValue([])
-    vi.mocked(localStorageUtils.getCurrentUser).mockReturnValue(null)
-    vi.mocked(localStorageUtils.isValidUser).mockReturnValue(true)
+    mockGetUsers.mockReturnValue([])
+    mockGetCurrentUser.mockReturnValue(null)
+    mockIsValidUser.mockReturnValue(true)
   })
 
   it('should initialize with empty state', () => {
@@ -36,19 +47,25 @@ describe('useUsers', () => {
     expect(result.current.error).toBeNull()
   })
 
-  it('should load users and current user on mount', () => {
+  it('should load users and current user on mount', async () => {
     const mockUsers = [mockUser]
-    vi.mocked(localStorageUtils.getUsers).mockReturnValue(mockUsers)
-    vi.mocked(localStorageUtils.getCurrentUser).mockReturnValue(mockUser)
-    
+    mockGetUsers.mockReturnValue(mockUsers)
+    mockGetCurrentUser.mockReturnValue(mockUser)
+
     const { result } = renderHook(() => useUsers())
-    
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false)
+    })
+
+    expect(mockGetUsers).toHaveBeenCalled()
+    expect(mockGetCurrentUser).toHaveBeenCalled()
     expect(result.current.users).toEqual(mockUsers)
     expect(result.current.currentUser).toEqual(mockUser)
   })
 
   it('should add a new user successfully', async () => {
-    vi.mocked(localStorageUtils.saveUser).mockReturnValue(true)
+    mockSaveUser.mockReturnValue(true)
     
     const { result } = renderHook(() => useUsers())
     
@@ -58,7 +75,7 @@ describe('useUsers', () => {
       expect(newUser?.name).toBe('New User')
     })
     
-    expect(localStorageUtils.saveUser).toHaveBeenCalled()
+    expect(mockSaveUser).toHaveBeenCalled()
     expect(result.current.users).toHaveLength(1)
     expect(result.current.error).toBeNull()
   })
@@ -75,7 +92,7 @@ describe('useUsers', () => {
   })
 
   it('should handle adding duplicate user', async () => {
-    vi.mocked(localStorageUtils.getUsers).mockReturnValue([mockUser])
+    mockGetUsers.mockReturnValue([mockUser])
     
     const { result } = renderHook(() => useUsers())
     
@@ -88,8 +105,8 @@ describe('useUsers', () => {
   })
 
   it('should update user successfully', async () => {
-    vi.mocked(localStorageUtils.saveUser).mockReturnValue(true)
-    vi.mocked(localStorageUtils.getUsers).mockReturnValue([mockUser])
+    mockSaveUser.mockReturnValue(true)
+    mockGetUsers.mockReturnValue([mockUser])
     
     const { result } = renderHook(() => useUsers())
     
@@ -100,14 +117,14 @@ describe('useUsers', () => {
       expect(success).toBe(true)
     })
     
-    expect(localStorageUtils.saveUser).toHaveBeenCalledWith(updatedUser)
+    expect(mockSaveUser).toHaveBeenCalledWith(updatedUser)
     expect(result.current.error).toBeNull()
   })
 
   it('should delete user successfully', async () => {
-    vi.mocked(localStorageUtils.deleteUser).mockReturnValue(true)
-    vi.mocked(localStorageUtils.getUsers).mockReturnValue([mockUser])
-    vi.mocked(localStorageUtils.getCurrentUser).mockReturnValue(mockUser)
+    mockDeleteUser.mockReturnValue(true)
+    mockGetUsers.mockReturnValue([mockUser])
+    mockGetCurrentUser.mockReturnValue(mockUser)
     
     const { result } = renderHook(() => useUsers())
     
@@ -116,13 +133,13 @@ describe('useUsers', () => {
       expect(success).toBe(true)
     })
     
-    expect(localStorageUtils.deleteUser).toHaveBeenCalledWith('user1')
+    expect(mockDeleteUser).toHaveBeenCalledWith('user1')
     expect(result.current.users).toHaveLength(0)
     expect(result.current.currentUser).toBeNull()
   })
 
   it('should select user successfully', async () => {
-    vi.mocked(localStorageUtils.setCurrentUser).mockReturnValue(true)
+    mockSetCurrentUser.mockReturnValue(true)
     
     const { result } = renderHook(() => useUsers())
     
@@ -131,7 +148,7 @@ describe('useUsers', () => {
       expect(success).toBe(true)
     })
     
-    expect(localStorageUtils.setCurrentUser).toHaveBeenCalledWith(mockUser)
+    expect(mockSetCurrentUser).toHaveBeenCalledWith(mockUser)
     expect(result.current.currentUser).toEqual(mockUser)
   })
 
@@ -154,7 +171,7 @@ describe('useUsers', () => {
   })
 
   it('should handle localStorage errors', async () => {
-    vi.mocked(localStorageUtils.getUsers).mockImplementation(() => {
+    mockGetUsers.mockImplementation(() => {
       throw new Error('Storage error')
     })
     

@@ -30,9 +30,10 @@ const TestMode: React.FC = () => {
     score,
     timeSpent,
     isComplete,
+    currentCorrectAnswer,
+    currentShuffledOptions,
     startTest,
     selectAnswer,
-    changeAnswer,
     goToNext,
     goToPrevious,
     finishTest,
@@ -238,11 +239,11 @@ const TestMode: React.FC = () => {
               questionNumber={currentQuestionIndex + 1}
               totalQuestions={totalQuestions}
               selectedAnswer={selectedAnswers[currentQuestionIndex]}
-              correctAnswer={0} // This will be handled by the QuestionCard component
+              correctAnswer={currentCorrectAnswer}
+              shuffledOptions={currentShuffledOptions}
               isAnswered={isAnswered}
               isRevealed={isRevealed}
               onAnswerSelect={handleAnswerSelect}
-              onAnswerChange={changeAnswer}
               onNext={handleNext}
               onPrevious={handlePrevious}
               canGoNext={canGoNext}
@@ -296,7 +297,7 @@ const TestMode: React.FC = () => {
             {/* Instructions */}
             <div className="text-left bg-gray-50 rounded-lg p-6 mb-8">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                📋 Arahan Ujian
+                📋 {formatText('أراهن اوجيان | Arahan Ujian')}
               </h3>
               <ul className="text-gray-700 space-y-2 text-sm">
                 <li className="flex items-start space-x-2">

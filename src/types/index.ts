@@ -38,6 +38,7 @@ export interface StudyTopic {
   name: string
   description: string
   notes: StudyNote[]
+  questions: Question[] // Required for the actual data structure
 }
 
 // Score and leaderboard types
@@ -57,7 +58,7 @@ export interface ScoreRecord {
 
 export interface QuizResult {
   question: Question
-  userAnswer: number
+  userAnswer: number | string
   correctAnswer: number
   isCorrect: boolean
   shuffledOptions: string[]
@@ -66,7 +67,7 @@ export interface QuizResult {
 
 export interface TestResult {
   question: Question
-  userAnswer: number
+  userAnswer: number | string
   correctAnswer: number
   isCorrect: boolean
   shuffledOptions: string[]
@@ -75,7 +76,7 @@ export interface TestResult {
 
 export interface AnswerRecord {
   questionId: string
-  userAnswer: number
+  userAnswer: number | string
   correctAnswer: number
   isCorrect: boolean
 }
@@ -99,7 +100,6 @@ export interface AppState {
 // Content structure type
 export interface ContentData {
   topics: StudyTopic[]
-  quizCategories: QuizCategory[]
   version: string
   lastUpdated: string
 }

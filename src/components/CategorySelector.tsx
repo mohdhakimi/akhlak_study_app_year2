@@ -102,7 +102,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
                   {/* Question Count */}
                   <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
                     <span className="font-medium">
-                      {category.questions?.length || 0} Soalan
+                      10 Soalan
                     </span>
                     <span>•</span>
                     <span>10 minit</span>

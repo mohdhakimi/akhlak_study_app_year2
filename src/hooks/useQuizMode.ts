@@ -22,6 +22,8 @@ export interface UseQuizModeReturn {
   score: number
   timeSpent: number | null
   isComplete: boolean
+  currentCorrectAnswer: number
+  currentShuffledOptions: string[]
   
   // Actions
   startQuiz: (category: QuizCategory) => void
@@ -59,8 +61,11 @@ export function useQuizMode(): UseQuizModeReturn {
       throw new Error('No questions available for this category')
     }
 
-    // Select 10 random questions from the category
-    const selectedQuestions = randomSelect(selectedCategory.questions, 10)
+    // Select 10 random questions from the chosen category only
+    const maxQuestions = Math.min(selectedCategory.questions.length, 10)
+    const selectedQuestions = randomSelect(selectedCategory.questions, maxQuestions)
+    
+    // Questions selected successfully
     
     // Prepare 4 selected options and correct answers for each question
     const optionsData = selectedQuestions.map(question => {
@@ -184,6 +189,9 @@ export function useQuizMode(): UseQuizModeReturn {
   
   const progress = totalQuestions > 0 ? (quizState.currentQuestionIndex + 1) / totalQuestions : 0
   
+  const currentCorrectAnswer = correctAnswers[quizState.currentQuestionIndex] || 0
+  const currentShuffledOptions = shuffledOptions[quizState.currentQuestionIndex] || []
+  
   const score = quizState.selectedAnswers.reduce((acc: number, answer, index) => {
     if (answer !== null && answer === correctAnswers[index]) {
       return acc + 1
@@ -204,6 +212,8 @@ export function useQuizMode(): UseQuizModeReturn {
     score,
     timeSpent: timeSpent || 0,
     isComplete,
+    currentCorrectAnswer,
+    currentShuffledOptions,
     
     // Actions
     startQuiz,

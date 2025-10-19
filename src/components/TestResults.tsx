@@ -8,7 +8,7 @@ import { useBilingual } from '../contexts/BilingualContext'
 
 export interface TestResult {
   question: Question
-  userAnswer: number
+  userAnswer: number | string
   correctAnswer: number
   isCorrect: boolean
   shuffledOptions: string[]
@@ -295,14 +295,14 @@ const TestResults: React.FC<TestResultsProps> = ({
                           <>
                             <span className="text-green-600 font-semibold">✓ {formatText('بتول | Betul')}</span>
                             <span className="text-sm text-gray-500">
-                              {formatText('جوابن اندا | Jawapan anda')}: {String.fromCharCode(65 + result.userAnswer)}
+                              {formatText('جوابن اندا | Jawapan anda')}: {typeof result.userAnswer === 'number' ? String.fromCharCode(65 + result.userAnswer) : result.userAnswer}
                             </span>
                           </>
                         ) : (
                           <>
                             <span className="text-red-600 font-semibold">✗ {formatText('ساله | Salah')}</span>
                             <span className="text-sm text-gray-500">
-                              {formatText('جوابن اندا | Jawapan anda')}: {String.fromCharCode(65 + result.userAnswer)} | 
+                              {formatText('جوابن اندا | Jawapan anda')}: {typeof result.userAnswer === 'number' ? String.fromCharCode(65 + result.userAnswer) : result.userAnswer} | 
                               {formatText('جوابن بتول | Jawapan betul')}: {String.fromCharCode(65 + result.newCorrectIndex)}
                             </span>
                           </>
