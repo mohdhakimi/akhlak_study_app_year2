@@ -1,6 +1,32 @@
+/**
+ * =============================================================================
+ * LOCAL STORAGE UTILITY FUNCTIONS
+ * =============================================================================
+ * This module provides comprehensive localStorage management for the Akhlak
+ * Flashcard application. It handles data persistence, validation, and error
+ * recovery for all application data stored in the browser's localStorage.
+ * 
+ * Features:
+ * - Type-safe data serialization/deserialization
+ * - Error handling and fallback values
+ * - Data validation and integrity checks
+ * - Storage usage monitoring
+ * - Bulk data operations
+ */
+
 import { User, ScoreRecord, AppSettings, STORAGE_KEYS } from '../types'
 
-// Generic localStorage helper functions
+// =============================================================================
+// CORE STORAGE FUNCTIONS
+// =============================================================================
+
+/**
+ * Generic function to safely retrieve data from localStorage
+ * @param key - The localStorage key to retrieve
+ * @param defaultValue - Default value to return if key doesn't exist or parsing fails
+ * @returns The parsed data or default value
+ * @template T - Type of data being retrieved
+ */
 const getFromStorage = <T>(key: string, defaultValue: T): T => {
   try {
     const item = localStorage.getItem(key)
@@ -11,6 +37,13 @@ const getFromStorage = <T>(key: string, defaultValue: T): T => {
   }
 }
 
+/**
+ * Generic function to safely save data to localStorage
+ * @param key - The localStorage key to save to
+ * @param value - The data to save
+ * @returns True if save was successful, false otherwise
+ * @template T - Type of data being saved
+ */
 const saveToStorage = <T>(key: string, value: T): boolean => {
   try {
     localStorage.setItem(key, JSON.stringify(value))

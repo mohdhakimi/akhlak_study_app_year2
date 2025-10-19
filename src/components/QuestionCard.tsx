@@ -1,3 +1,20 @@
+/**
+ * =============================================================================
+ * QUESTION CARD COMPONENT
+ * =============================================================================
+ * This component renders a single quiz question with answer options, navigation
+ * controls, and feedback. It provides a complete question interface for both
+ * quiz and test modes.
+ * 
+ * Features:
+ * - Bilingual text support
+ * - Answer option selection
+ * - Progress tracking
+ * - Navigation controls
+ * - Immediate feedback
+ * - Accessibility support
+ */
+
 import React from 'react'
 import { Question } from '../types'
 import { useBilingual } from '../contexts/BilingualContext'
@@ -5,23 +22,55 @@ import AnswerOption from './AnswerOption'
 import { shuffleQuizOptions } from '../utils/shuffleOptions'
 import { cn } from '../utils/cn'
 
+// =============================================================================
+// COMPONENT PROPS INTERFACE
+// =============================================================================
+
+/**
+ * Props for the QuestionCard component
+ * @interface QuestionCardProps
+ */
 export interface QuestionCardProps {
+  /** The question data to display */
   question: Question
+  /** Current question number (1-based) */
   questionNumber: number
+  /** Total number of questions in the quiz */
   totalQuestions: number
+  /** Currently selected answer index (null if not answered) */
   selectedAnswer: number | null
+  /** Index of the correct answer (after shuffling) */
   correctAnswer: number
+  /** Pre-shuffled options (optional, will shuffle if not provided) */
   shuffledOptions?: string[]
+  /** Whether the question has been answered */
   isAnswered: boolean
+  /** Whether the correct answer has been revealed */
   isRevealed: boolean
+  /** Callback when an answer is selected */
   onAnswerSelect: (answerIndex: number) => void
+  /** Callback to navigate to next question */
   onNext: () => void
+  /** Callback to navigate to previous question */
   onPrevious: () => void
+  /** Whether navigation to next question is allowed */
   canGoNext: boolean
+  /** Whether navigation to previous question is allowed */
   canGoPrevious: boolean
+  /** Additional CSS classes */
   className?: string
 }
 
+/**
+ * QuestionCard component for displaying quiz questions
+ * 
+ * This component renders a complete question interface including the question text,
+ * answer options, navigation controls, and feedback. It supports both pre-shuffled
+ * options and dynamic shuffling for backward compatibility.
+ * 
+ * @param props - Component props
+ * @returns JSX element representing the question card
+ */
 const QuestionCard: React.FC<QuestionCardProps> = ({
   question,
   questionNumber,
@@ -38,18 +87,30 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   canGoPrevious,
   className
 }) => {
+  // =============================================================================
+  // HOOKS AND CONTEXT
+  // =============================================================================
+  
+  /** Bilingual context for text formatting */
   const { formatText } = useBilingual()
   
-  // All questions are MCQ
+  // =============================================================================
+  // COMPUTED VALUES
+  // =============================================================================
+  
+  /** All questions in this app are MCQ type */
   const questionType = 'mcq'
   
-  // Use provided shuffled options or fallback to shuffling (for backward compatibility)
+  /**
+   * Memoized shuffled options and correct answer index
+   * Uses provided options if available, otherwise shuffles dynamically
+   */
   const { shuffledOptions, newCorrectIndex } = React.useMemo(() => {
     if (providedShuffledOptions && providedShuffledOptions.length > 0) {
-      // Use provided shuffled options
+      // Use pre-shuffled options (preferred for performance)
       return { shuffledOptions: providedShuffledOptions, newCorrectIndex: correctAnswer }
     } else {
-      // Fallback to shuffling (for backward compatibility)
+      // Fallback to dynamic shuffling (for backward compatibility)
       return shuffleQuizOptions(question.options, correctAnswer)
     }
   }, [providedShuffledOptions, question.options, correctAnswer])

@@ -1,31 +1,81 @@
-// Audio utility for managing sound effects and music
+/**
+ * =============================================================================
+ * AUDIO MANAGEMENT UTILITY
+ * =============================================================================
+ * This module provides comprehensive audio management for the Akhlak Flashcard
+ * application, including sound effects, music, and audio settings management.
+ * 
+ * Features:
+ * - Synthetic sound generation using Web Audio API
+ * - Persistent audio settings via localStorage
+ * - Lazy initialization on user interaction
+ * - Volume control and sound toggling
+ * - Multiple sound effect types for different UI interactions
+ */
+
+// =============================================================================
+// AUDIO TYPES AND INTERFACES
+// =============================================================================
+
+/**
+ * Configuration settings for audio management
+ * @interface AudioSettings
+ */
 export interface AudioSettings {
+  /** Whether sound effects are enabled */
   soundEnabled: boolean
+  /** Whether background music is enabled */
   musicEnabled: boolean
+  /** Volume level (0.0 to 1.0) */
   volume: number
 }
 
+/**
+ * Available sound effects in the application
+ * @type SoundEffect
+ */
 export type SoundEffect = 
-  | 'click' 
-  | 'correct' 
-  | 'incorrect' 
-  | 'celebration' 
-  | 'notification'
-  | 'pageTransition'
-  | 'buttonHover'
-  | 'quizComplete'
-  | 'testComplete'
+  | 'click'           // General click interactions
+  | 'correct'         // Correct answer feedback
+  | 'incorrect'       // Incorrect answer feedback
+  | 'celebration'     // Achievement celebrations
+  | 'notification'    // System notifications
+  | 'pageTransition'  // Page navigation sounds
+  | 'buttonHover'     // Button hover effects
+  | 'quizComplete'    // Quiz completion sound
+  | 'testComplete'    // Test completion sound
 
+// =============================================================================
+// AUDIO MANAGER CLASS
+// =============================================================================
+
+/**
+ * Centralized audio management class for handling all audio operations
+ * @class AudioManager
+ */
 class AudioManager {
+  /** Current audio settings */
   private settings: AudioSettings
+  /** Web Audio API context for sound generation */
   private audioContext: AudioContext | null = null
+  /** Cache of pre-generated sound buffers */
   private sounds: Map<SoundEffect, AudioBuffer> = new Map()
+  /** Whether the audio system has been initialized */
   private isInitialized = false
 
+  /**
+   * Creates a new AudioManager instance
+   * Loads settings from localStorage on initialization
+   */
   constructor() {
     this.settings = this.loadSettings()
   }
 
+  /**
+   * Loads audio settings from localStorage
+   * @private
+   * @returns {AudioSettings} The loaded settings or default values
+   */
   private loadSettings(): AudioSettings {
     try {
       const stored = localStorage.getItem('audioSettings')
@@ -36,6 +86,7 @@ class AudioManager {
       console.warn('Failed to load audio settings:', error)
     }
     
+    // Return default settings if loading fails
     return {
       soundEnabled: true,
       musicEnabled: false,
@@ -43,6 +94,10 @@ class AudioManager {
     }
   }
 
+  /**
+   * Saves current audio settings to localStorage
+   * @private
+   */
   private saveSettings(): void {
     try {
       localStorage.setItem('audioSettings', JSON.stringify(this.settings))
@@ -51,10 +106,16 @@ class AudioManager {
     }
   }
 
+  /**
+   * Initializes the audio system and loads all sound effects
+   * @public
+   * @returns {Promise<void>} Promise that resolves when initialization is complete
+   */
   async initialize(): Promise<void> {
     if (this.isInitialized) return
 
     try {
+      // Create audio context with fallback for webkit browsers
       this.audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
       await this.loadSounds()
       this.isInitialized = true
@@ -277,7 +338,14 @@ class AudioManager {
     return buffer
   }
 
+  /**
+   * Plays a sound effect if audio is enabled
+   * @public
+   * @param {SoundEffect} effect - The sound effect to play
+   * @returns {Promise<void>} Promise that resolves when sound starts playing
+   */
   async playSound(effect: SoundEffect): Promise<void> {
+    // Early return if audio is disabled or not initialized
     if (!this.settings.soundEnabled || !this.isInitialized || !this.audioContext) {
       return
     }
@@ -289,12 +357,14 @@ class AudioManager {
         return
       }
 
+      // Create audio source and gain node for volume control
       const source = this.audioContext.createBufferSource()
       const gainNode = this.audioContext.createGain()
       
       source.buffer = buffer
       gainNode.gain.value = this.settings.volume
       
+      // Connect audio nodes and start playback
       source.connect(gainNode)
       gainNode.connect(this.audioContext.destination)
       

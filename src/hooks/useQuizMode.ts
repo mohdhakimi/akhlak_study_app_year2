@@ -1,45 +1,144 @@
+/**
+ * =============================================================================
+ * QUIZ MODE CUSTOM HOOK
+ * =============================================================================
+ * This hook manages the complete quiz experience including question navigation,
+ * answer selection, scoring, and result generation. It provides a clean API
+ * for quiz components to interact with quiz state and logic.
+ * 
+ * Features:
+ * - Question navigation (next/previous)
+ * - Answer selection and validation
+ * - Real-time scoring calculation
+ * - Option shuffling for fair presentation
+ * - Progress tracking and completion detection
+ * - Time tracking for performance metrics
+ */
+
 import { useState, useCallback, useRef } from 'react'
 import { Question, QuizCategory, QuizResult } from '../types'
 import { shuffleArray, selectQuizOptions, randomSelect } from '../utils/shuffleOptions'
 
+// =============================================================================
+// QUIZ STATE INTERFACES
+// =============================================================================
+
+/**
+ * Internal state structure for quiz management
+ * @interface QuizState
+ */
 export interface QuizState {
+  /** Current question index (0-based) */
   currentQuestionIndex: number
+  /** Array of selected answers for each question (null if not answered) */
   selectedAnswers: (number | null)[]
+  /** Whether the current question has been answered */
   isAnswered: boolean
+  /** Whether the correct answer has been revealed */
   isRevealed: boolean
+  /** Timestamp when quiz started */
   startTime: number | null
+  /** Timestamp when quiz ended */
   endTime: number | null
 }
 
+/**
+ * Return type for the useQuizMode hook
+ * @interface UseQuizModeReturn
+ */
 export interface UseQuizModeReturn {
-  // State
+  // =============================================================================
+  // STATE VALUES
+  // =============================================================================
+  
+  /** Current question being displayed */
   currentQuestion: Question | null
+  /** Index of the current question (0-based) */
   currentQuestionIndex: number
+  /** Total number of questions in the quiz */
   totalQuestions: number
+  /** Array of selected answers for all questions */
   selectedAnswers: (number | null)[]
+  /** Whether the current question has been answered */
   isAnswered: boolean
+  /** Whether the correct answer has been revealed */
   isRevealed: boolean
+  /** Current score (number of correct answers) */
   score: number
+  /** Time spent on quiz in seconds */
   timeSpent: number | null
+  /** Whether the quiz is complete */
   isComplete: boolean
+  /** Correct answer index for current question (after shuffling) */
   currentCorrectAnswer: number
+  /** Shuffled options for current question */
   currentShuffledOptions: string[]
   
-  // Actions
+  // =============================================================================
+  // ACTION FUNCTIONS
+  // =============================================================================
+  
+  /** Starts a new quiz with the specified category */
   startQuiz: (category: QuizCategory) => void
+  /** Selects an answer for the current question */
   selectAnswer: (answerIndex: number) => void
+  /** Navigates to the next question */
   goToNext: () => void
+  /** Navigates to the previous question */
   goToPrevious: () => void
+  /** Finishes the quiz and returns results */
   finishQuiz: () => QuizResult[]
+  /** Resets the quiz to initial state */
   resetQuiz: () => void
   
-  // Navigation
+  // =============================================================================
+  // NAVIGATION HELPERS
+  // =============================================================================
+  
+  /** Whether user can navigate to next question */
   canGoNext: boolean
+  /** Whether user can navigate to previous question */
   canGoPrevious: boolean
+  /** Progress percentage (0-1) */
   progress: number
 }
 
+/**
+ * Custom hook for managing quiz mode functionality
+ * 
+ * This hook provides a complete quiz experience with question navigation,
+ * answer selection, scoring, and result generation. It handles the complex
+ * state management required for a smooth quiz experience.
+ * 
+ * @returns {UseQuizModeReturn} Object containing quiz state and control functions
+ * 
+ * @example
+ * ```tsx
+ * const {
+ *   currentQuestion,
+ *   selectAnswer,
+ *   goToNext,
+ *   startQuiz,
+ *   score,
+ *   isComplete
+ * } = useQuizMode()
+ * 
+ * // Start a quiz
+ * startQuiz(selectedCategory)
+ * 
+ * // Select an answer
+ * selectAnswer(2)
+ * 
+ * // Navigate to next question
+ * goToNext()
+ * ```
+ */
 export function useQuizMode(): UseQuizModeReturn {
+  // =============================================================================
+  // STATE MANAGEMENT
+  // =============================================================================
+  
+  /** Core quiz state including navigation and answer tracking */
   const [quizState, setQuizState] = useState<QuizState>({
     currentQuestionIndex: 0,
     selectedAnswers: [],
@@ -49,11 +148,16 @@ export function useQuizMode(): UseQuizModeReturn {
     endTime: null
   })
   
+  /** Array of questions for the current quiz */
   const [questions, setQuestions] = useState<Question[]>([])
+  /** Currently selected quiz category */
   const [category, setCategory] = useState<QuizCategory | null>(null)
+  /** Shuffled options for each question (for fair presentation) */
   const [shuffledOptions, setShuffledOptions] = useState<string[][]>([])
+  /** Correct answer indices after shuffling */
   const [correctAnswers, setCorrectAnswers] = useState<number[]>([])
   
+  /** Reference to track quiz start time for performance metrics */
   const startTimeRef = useRef<number | null>(null)
 
   const startQuiz = useCallback((selectedCategory: QuizCategory) => {
