@@ -1,3 +1,22 @@
+/**
+ * =============================================================================
+ * TEST MODE CUSTOM HOOK
+ * =============================================================================
+ * This hook manages the comprehensive test experience with 30 questions selected
+ * randomly from all categories. It provides complete test functionality including
+ * question navigation, answer selection, scoring, and result generation.
+ *
+ * Features:
+ * - 30-question comprehensive test across all topics
+ * - Random question selection with no duplicates
+ * - Question navigation (next/previous)
+ * - Answer selection and validation
+ * - Real-time scoring calculation
+ * - Option shuffling for fair presentation
+ * - Progress tracking and completion detection
+ * - Time tracking for performance metrics
+ */
+
 import { useState, useCallback, useRef } from 'react'
 import { Question, QuizCategory, QuizResult } from '../types'
 import {
@@ -6,41 +25,50 @@ import {
   selectQuizOptions,
 } from '../utils/shuffleOptions'
 
+/**
+ * Internal state structure for test management
+ * @interface TestState
+ */
 export interface TestState {
-  currentQuestionIndex: number
-  selectedAnswers: (number | null)[]
-  isAnswered: boolean
-  isRevealed: boolean
-  startTime: number | null
-  endTime: number | null
+  currentQuestionIndex: number    // Current question index (0-based)
+  selectedAnswers: (number | null)[]  // Array of selected answers for each question
+  isAnswered: boolean             // Whether the current question has been answered
+  isRevealed: boolean             // Whether the correct answer has been revealed
+  startTime: number | null        // Timestamp when test started
+  endTime: number | null          // Timestamp when test ended
 }
 
+/**
+ * Return type for the useTestMode hook
+ * Provides all necessary state and functions for test management
+ * @interface UseTestModeReturn
+ */
 export interface UseTestModeReturn {
   // State
-  currentQuestion: Question | null
-  currentQuestionIndex: number
-  totalQuestions: number
-  selectedAnswers: (number | null)[]
-  isAnswered: boolean
-  isRevealed: boolean
-  score: number
-  timeSpent: number | null
-  isComplete: boolean
-  currentCorrectAnswer: number
-  currentShuffledOptions: string[]
+  currentQuestion: Question | null        // Current question being displayed
+  currentQuestionIndex: number           // Index of current question (0-based)
+  totalQuestions: number                 // Total number of questions in test (30)
+  selectedAnswers: (number | null)[]     // Array of user's selected answers
+  isAnswered: boolean                    // Whether current question is answered
+  isRevealed: boolean                    // Whether correct answer is revealed
+  score: number                          // Current score (correct answers)
+  timeSpent: number | null               // Time spent on test in milliseconds
+  isComplete: boolean                    // Whether test is completed
+  currentCorrectAnswer: number           // Index of correct answer for current question
+  currentShuffledOptions: string[]       // Shuffled answer options for current question
 
   // Actions
-  startTest: (allCategories: QuizCategory[]) => void
-  selectAnswer: (answerIndex: number) => void
-  goToNext: () => void
-  goToPrevious: () => void
-  finishTest: () => QuizResult[]
-  resetTest: () => void
+  startTest: (allCategories: QuizCategory[]) => void  // Initialize test with random questions
+  selectAnswer: (answerIndex: number) => void         // Select an answer for current question
+  goToNext: () => void                               // Navigate to next question
+  goToPrevious: () => void                           // Navigate to previous question
+  finishTest: () => QuizResult[]                     // Complete test and return results
+  resetTest: () => void                              // Reset test to initial state
 
   // Navigation
-  canGoNext: boolean
-  canGoPrevious: boolean
-  progress: number
+  canGoNext: boolean                    // Whether user can navigate to next question
+  canGoPrevious: boolean               // Whether user can navigate to previous question
+  progress: number                     // Progress percentage (0-100)
 }
 
 export function useTestMode(): UseTestModeReturn {

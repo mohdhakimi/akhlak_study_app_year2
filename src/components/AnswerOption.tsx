@@ -1,20 +1,46 @@
+/**
+ * =============================================================================
+ * ANSWER OPTION COMPONENT
+ * =============================================================================
+ * This component renders a single answer option for quiz questions. It provides
+ * visual feedback, sound effects, and interactive states for answer selection.
+ *
+ * Features:
+ * - Visual state management (selected, correct, incorrect, revealed)
+ * - Sound effects for correct/incorrect answers
+ * - Bilingual text support
+ * - Accessibility features
+ * - Disabled state handling
+ * - Custom styling support
+ */
+
 import React from 'react'
 import { cn } from '../utils/cn'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useQuizAudio } from '../hooks/useAudio'
 
+/**
+ * Props for the AnswerOption component
+ * @interface AnswerOptionProps
+ */
 export interface AnswerOptionProps {
-  option: string
-  index: number
-  isSelected: boolean
-  isCorrect: boolean
-  isIncorrect: boolean
-  isRevealed: boolean
-  onClick: () => void
-  disabled?: boolean
-  className?: string
+  option: string              // The answer text to display
+  index: number              // Index of the option (0-based)
+  isSelected: boolean        // Whether this option is currently selected
+  isCorrect: boolean         // Whether this is the correct answer
+  isIncorrect: boolean       // Whether this is an incorrect answer
+  isRevealed: boolean        // Whether the correct answer has been revealed
+  onClick: () => void        // Callback when option is clicked
+  disabled?: boolean         // Whether the option is disabled
+  className?: string         // Additional CSS classes
 }
 
+/**
+ * AnswerOption Component
+ * 
+ * Renders a single answer option with appropriate styling and behavior
+ * based on the current state (selected, correct, incorrect, revealed).
+ */
 const AnswerOption: React.FC<AnswerOptionProps> = ({
   option,
   index,
@@ -26,9 +52,16 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
   disabled = false,
   className,
 }) => {
+  // Bilingual context for text formatting
   const { formatText } = useBilingual()
+  
+  // Audio hooks for sound effects
   const { playCorrectSound, playIncorrectSound } = useQuizAudio()
 
+  /**
+   * Handle option click with sound effects
+   * Plays appropriate sound based on correctness when answer is revealed
+   */
   const handleClick = () => {
     if (!disabled) {
       // Play sound based on correctness (if revealed)
@@ -42,6 +75,12 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
       onClick()
     }
   }
+
+  /**
+   * Get the option letter (A, B, C, D) based on index
+   * @param index - The 0-based index of the option
+   * @returns The corresponding letter (A=0, B=1, C=2, D=3)
+   */
   const getOptionLetter = (index: number): string => {
     return String.fromCharCode(65 + index) // A, B, C, D
   }

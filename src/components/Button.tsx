@@ -1,17 +1,44 @@
+/**
+ * =============================================================================
+ * BUTTON COMPONENT
+ * =============================================================================
+ * This component provides a reusable button with multiple variants, sizes,
+ * and interactive features including sound effects and loading states.
+ *
+ * Features:
+ * - Multiple visual variants (primary, secondary, success, danger, outline, ghost)
+ * - Three size options (sm, md, lg)
+ * - Loading state with spinner
+ * - Sound effects on click and hover
+ * - Full width option
+ * - Accessibility support
+ * - Custom styling support
+ */
+
 import React from 'react'
 import { cn } from '../utils/cn'
 import { useButtonSound } from '../hooks/useAudio'
 
+/**
+ * Props for the Button component
+ * @interface ButtonProps
+ */
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'outline' | 'ghost'
-  size?: 'sm' | 'md' | 'lg'
-  loading?: boolean
-  fullWidth?: boolean
-  enableSound?: boolean
-  children: React.ReactNode
+  variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'outline' | 'ghost'  // Visual style variant
+  size?: 'sm' | 'md' | 'lg'                                                      // Button size
+  loading?: boolean                                                               // Whether button is in loading state
+  fullWidth?: boolean                                                             // Whether button should take full width
+  enableSound?: boolean                                                           // Whether to play sound effects
+  children: React.ReactNode                                                      // Button content
 }
 
+/**
+ * Button Component
+ * 
+ * A versatile button component with multiple variants, sizes, and interactive features.
+ * Supports sound effects, loading states, and full accessibility compliance.
+ */
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -29,8 +56,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
+    // Audio hooks for button sound effects
     const { playClickSound, playHoverSound } = useButtonSound()
 
+    /**
+     * Handle button click with sound effect
+     * @param e - Mouse event
+     */
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       if (enableSound && !disabled && !loading) {
         playClickSound()
@@ -38,6 +70,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       onClick?.(e)
     }
 
+    /**
+     * Handle mouse enter with hover sound effect
+     * @param e - Mouse event
+     */
     const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
       if (enableSound && !disabled && !loading) {
         playHoverSound()

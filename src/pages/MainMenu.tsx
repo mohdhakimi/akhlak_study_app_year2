@@ -1,3 +1,17 @@
+/**
+ * Main Menu Component - Application Entry Point
+ * 
+ * This is the main navigation hub of the Akhlak Flashcard application.
+ * It provides access to all learning modes and user management features.
+ * 
+ * Features:
+ * - Four main learning mode cards (Study, Quiz, Test, Leaderboard)
+ * - User information display and switching
+ * - Sound settings toggle
+ * - Responsive design with animated mascot
+ * - Bilingual text support (Jawi/Rumi)
+ */
+
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
@@ -12,21 +26,32 @@ import PageTransition from '../components/PageTransition'
 import { cn } from '../utils/cn'
 
 const MainMenu: React.FC = () => {
+  // Navigation hook for routing between pages
   const navigate = useNavigate()
+  
+  // User context for current user and user management
   const { currentUser, openUserSelectionModal } = useUserContext()
+  
+  // Bilingual context for text formatting
   const { formatText } = useBilingual()
+  
+  // Local state for sound settings modal visibility
   const [showSoundSettings, setShowSoundSettings] = useState(false)
 
+  /**
+   * Menu items configuration for the main navigation cards
+   * Each item defines a learning mode with its visual properties and routing
+   */
   const menuItems = [
     {
-      id: 'study',
-      title: TEXT.STUDY_MODE,
-      description:
+      id: 'study',                    // Unique identifier
+      title: TEXT.STUDY_MODE,         // Display title from constants
+      description:                    // Bilingual description (Jawi | Rumi)
         'باچ دان ڤلاجري نوتا-نوتا ڤنتڠ | Baca dan pelajari nota-nota penting',
-      icon: '📚',
-      color: 'bg-blue-500',
-      hoverColor: 'hover:bg-blue-600',
-      route: '/study',
+      icon: '📚',                     // Emoji icon for visual appeal
+      color: 'bg-blue-500',           // Base background color
+      hoverColor: 'hover:bg-blue-600', // Hover state color
+      route: '/study',                // Navigation route
     },
     {
       id: 'quiz',
@@ -58,10 +83,18 @@ const MainMenu: React.FC = () => {
     },
   ]
 
+  /**
+   * Handle menu item click navigation
+   * @param route - The route to navigate to
+   */
   const handleMenuClick = (route: string) => {
     navigate(route)
   }
 
+  /**
+   * Handle user click to open user selection modal
+   * Allows users to switch between different user accounts
+   */
   const handleUserClick = () => {
     openUserSelectionModal()
   }

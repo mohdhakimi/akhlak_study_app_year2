@@ -1,25 +1,52 @@
+/**
+ * =============================================================================
+ * LAYOUT COMPONENT
+ * =============================================================================
+ * This component provides the main layout structure for all pages in the
+ * application. It includes a header with navigation controls and a main content
+ * area with optional bilingual toggle.
+ *
+ * Features:
+ * - Consistent page layout across the application
+ * - Configurable header with user info and controls
+ * - Optional bilingual toggle for language switching
+ * - Flexible content area for page-specific content
+ * - Responsive design support
+ * - Customizable styling through props
+ */
+
 import React from 'react'
 import { cn } from '../utils/cn'
 import Header from './Header'
 import BilingualToggle from './BilingualToggle'
 
+/**
+ * Props for the Layout component
+ * @interface LayoutProps
+ */
 export interface LayoutProps {
-  children: React.ReactNode
-  title?: string
-  subtitle?: string
-  currentUser?: string
-  onUserClick?: () => void
-  onSoundSettingsClick?: () => void
-  onKeluarClick?: () => void
-  showUser?: boolean
-  showSoundSettings?: boolean
-  showBilingualToggle?: boolean
-  showKeluarButton?: boolean
-  className?: string
-  headerClassName?: string
-  mainClassName?: string
+  children: React.ReactNode        // Main content to display
+  title?: string                   // Page title for header
+  subtitle?: string                // Page subtitle for header
+  currentUser?: string             // Current user name for display
+  onUserClick?: () => void         // Callback when user info is clicked
+  onSoundSettingsClick?: () => void // Callback when sound settings is clicked
+  onKeluarClick?: () => void       // Callback when exit button is clicked
+  showUser?: boolean               // Whether to show user information
+  showSoundSettings?: boolean      // Whether to show sound settings button
+  showBilingualToggle?: boolean    // Whether to show bilingual toggle
+  showKeluarButton?: boolean       // Whether to show exit button
+  className?: string               // Additional CSS classes for container
+  headerClassName?: string         // Additional CSS classes for header
+  mainClassName?: string           // Additional CSS classes for main content
 }
 
+/**
+ * Layout Component
+ * 
+ * Provides the main layout structure with header and content area.
+ * All pages in the application use this component for consistency.
+ */
 const Layout: React.FC<LayoutProps> = ({
   children,
   title,
