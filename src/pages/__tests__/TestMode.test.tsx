@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import TestMode from '../TestMode'
 import { UserProvider } from '../../contexts/UserContext'
+import { BilingualProvider } from '../../contexts/BilingualContext'
 import { useContentData } from '../../hooks/useContentData'
 import { useScores } from '../../hooks/useScores'
 
@@ -21,33 +22,23 @@ const mockQuizCategories = [
     id: '1',
     name: 'Akhlak Terpuji',
     description: 'Mengenali dan mempraktikkan akhlak yang terpuji',
-    questions: [
-      {
-        id: 'q1',
-        question: 'Apakah akhlak terpuji yang pertama?',
-        options: ['Jujur', 'Bohong', 'Menipu', 'Curang'],
-        correctAnswer: 0
-      },
-      {
-        id: 'q2',
-        question: 'Apakah akhlak terpuji yang kedua?',
-        options: ['Sombong', 'Rendah diri', 'Bongkak', 'Angkuh'],
-        correctAnswer: 1
-      }
-    ]
+    questions: Array.from({ length: 20 }, (_, i) => ({
+      id: `q${i + 1}`,
+      question: `Apakah akhlak terpuji yang ke-${i + 1}?`,
+      options: ['Jujur', 'Bohong', 'Menipu', 'Curang', 'Sombong', 'Rendah diri', 'Bongkak'],
+      correctAnswer: i % 7
+    }))
   },
   {
     id: '2',
     name: 'Akhlak Terhadap Ibu Bapa',
     description: 'Cara menghormati dan berbuat baik kepada ibu bapa',
-    questions: [
-      {
-        id: 'q3',
-        question: 'Apakah yang perlu dilakukan apabila ibu bapa memberikan nasihat?',
-        options: ['Mengabaikan', 'Mematuhi', 'Menolak', 'Membantah'],
-        correctAnswer: 1
-      }
-    ]
+    questions: Array.from({ length: 20 }, (_, i) => ({
+      id: `q${i + 21}`,
+      question: `Apakah yang perlu dilakukan apabila ibu bapa memberikan nasihat ke-${i + 1}?`,
+      options: ['Mengabaikan', 'Mematuhi', 'Menolak', 'Membantah', 'Mendengar', 'Mengikut', 'Menghormati'],
+      correctAnswer: i % 7
+    }))
   }
 ]
 
@@ -64,7 +55,9 @@ const mockUseScores = {
 const TestModeWrapper = () => (
   <BrowserRouter>
     <UserProvider>
-      <TestMode />
+      <BilingualProvider>
+        <TestMode />
+      </BilingualProvider>
     </UserProvider>
   </BrowserRouter>
 )
@@ -98,7 +91,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
   })
 
@@ -131,7 +124,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
     
     // Answer first question
@@ -145,7 +138,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Seterusnya →'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 2 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
     })
     
     // Answer second question
@@ -159,7 +152,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Seterusnya →'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 3 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 3 دري 30 | Soalan 3 dari 30')).toBeInTheDocument()
     })
     
     // Answer third question
@@ -184,7 +177,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Jujur'))
@@ -194,7 +187,7 @@ describe('TestMode Integration', () => {
     })
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 2 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Rendah diri'))
@@ -204,7 +197,7 @@ describe('TestMode Integration', () => {
     })
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 3 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 3 دري 30 | Soalan 3 dari 30')).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Mematuhi'))
@@ -234,7 +227,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
     
     // Answer first question
@@ -245,14 +238,14 @@ describe('TestMode Integration', () => {
     })
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 2 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
     })
     
     // Go back to previous question
     fireEvent.click(screen.getByText('← Sebelum'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
   })
 
@@ -263,7 +256,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Jujur'))
@@ -273,7 +266,7 @@ describe('TestMode Integration', () => {
     })
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 2 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Rendah diri'))
@@ -283,7 +276,7 @@ describe('TestMode Integration', () => {
     })
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 3 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 3 دري 30 | Soalan 3 dari 30')).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Mematuhi'))
@@ -304,7 +297,7 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 3')).toBeInTheDocument()
+      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
     })
     
     // Go back to menu

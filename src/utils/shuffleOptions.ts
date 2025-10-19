@@ -73,3 +73,42 @@ export function randomSelect<T>(array: T[], count: number): T[] {
   const shuffled = shuffleArray(array)
   return shuffled.slice(0, count)
 }
+
+/**
+ * Selects 4 random options from 7 (1 correct + 3 distractors)
+ * @param options - Array of 7 options
+ * @param correctIndex - Index of the correct answer
+ * @returns Object with 4 selected options and new correct index
+ */
+export function selectQuizOptions(
+  options: string[],
+  correctIndex: number
+): { selectedOptions: string[]; newCorrectIndex: number } {
+  if (options.length !== 7) {
+    throw new Error('Expected exactly 7 options')
+  }
+
+  if (correctIndex < 0 || correctIndex >= 7) {
+    throw new Error('Invalid correct index')
+  }
+
+  // Get the correct answer
+  const correctAnswer = options[correctIndex]
+  
+  // Get all distractors (all options except the correct one)
+  const distractors = options.filter((_, index) => index !== correctIndex)
+  
+  // Select 3 random distractors
+  const selectedDistractors = randomSelect(distractors, 3)
+  
+  // Combine correct answer with selected distractors
+  const allSelected = [correctAnswer, ...selectedDistractors]
+  
+  // Shuffle the final 4 options
+  const shuffled = shuffleArray(allSelected)
+  
+  // Find the new position of the correct answer
+  const newCorrectIndex = shuffled.findIndex(option => option === correctAnswer)
+  
+  return { selectedOptions: shuffled, newCorrectIndex }
+}

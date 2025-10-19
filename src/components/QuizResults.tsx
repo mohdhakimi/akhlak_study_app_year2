@@ -4,6 +4,7 @@ import Card from './Card'
 import Button from './Button'
 import { cn } from '../utils/cn'
 import { useQuizAudio } from '../hooks/useAudio'
+import { useBilingual } from '../contexts/BilingualContext'
 
 export interface QuizResult {
   question: Question
@@ -38,6 +39,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
   className
 }) => {
   const { playQuizCompleteSound, playCelebrationSound } = useQuizAudio()
+  const { formatText } = useBilingual()
   
   const percentage = Math.round((score / totalQuestions) * 100)
   const isPerfect = score === totalQuestions
@@ -56,8 +58,8 @@ const QuizResults: React.FC<QuizResultsProps> = ({
   const getPerformanceMessage = () => {
     if (isPerfect) {
       return {
-        message: 'Sempurna! 🎉',
-        description: 'Anda mendapat markah penuh! Tahniah!',
+        message: formatText('سيمڤورنا! 🎉 | Sempurna! 🎉'),
+        description: formatText('اندا ميندافت مارکاه ڤنوه! تحنيه! | Anda mendapat markah penuh! Tahniah!'),
         color: 'text-green-600',
         bgColor: 'bg-green-50',
         borderColor: 'border-green-200'
@@ -65,8 +67,8 @@ const QuizResults: React.FC<QuizResultsProps> = ({
     }
     if (isGood) {
       return {
-        message: 'Cemerlang! 🌟',
-        description: 'Prestasi yang sangat baik!',
+        message: formatText('چميرلڠ! 🌟 | Cemerlang! 🌟'),
+        description: formatText('ڤرستاسي يڠ ساڠت بايق! | Prestasi yang sangat baik!'),
         color: 'text-blue-600',
         bgColor: 'bg-blue-50',
         borderColor: 'border-blue-200'
@@ -74,16 +76,16 @@ const QuizResults: React.FC<QuizResultsProps> = ({
     }
     if (isPassing) {
       return {
-        message: 'Bagus! 👍',
-        description: 'Prestasi yang memuaskan!',
+        message: formatText('باݢوس! 👍 | Bagus! 👍'),
+        description: formatText('ڤرستاسي يڠ ممواسکن! | Prestasi yang memuaskan!'),
         color: 'text-yellow-600',
         bgColor: 'bg-yellow-50',
         borderColor: 'border-yellow-200'
       }
     }
     return {
-      message: 'Cuba Lagi! 💪',
-      description: 'Jangan berputus asa, teruskan berusaha!',
+      message: formatText('چوبا لاݢي! 💪 | Cuba Lagi! 💪'),
+      description: formatText('جڠن برڤوتس اسا، تروسکن بروسها! | Jangan berputus asa, teruskan berusaha!'),
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
       borderColor: 'border-orange-200'
@@ -104,10 +106,10 @@ const QuizResults: React.FC<QuizResultsProps> = ({
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Keputusan Kuiz
+            {formatText('کڤوتوسان کويز | Keputusan Kuiz')}
           </h1>
           <p className="text-lg text-gray-600">
-            {categoryName}
+            {formatText(categoryName)}
           </p>
         </div>
 
@@ -130,20 +132,20 @@ const QuizResults: React.FC<QuizResultsProps> = ({
                 <div className="text-4xl font-bold text-gray-800">
                   {score}/{totalQuestions}
                 </div>
-                <div className="text-sm text-gray-600">Markah</div>
+                <div className="text-sm text-gray-600">{formatText('مارکاه | Markah')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800">
                   {percentage}%
                 </div>
-                <div className="text-sm text-gray-600">Peratusan</div>
+                <div className="text-sm text-gray-600">{formatText('ڤراتوسن | Peratusan')}</div>
               </div>
               {timeSpent && (
                 <div className="text-center">
                   <div className="text-4xl font-bold text-gray-800">
                     {formatTime(timeSpent)}
                   </div>
-                  <div className="text-sm text-gray-600">Masa</div>
+                  <div className="text-sm text-gray-600">{formatText('ماسا | Masa')}</div>
                 </div>
               )}
             </div>
@@ -155,21 +157,21 @@ const QuizResults: React.FC<QuizResultsProps> = ({
                 variant="primary"
                 className="px-8 py-3"
               >
-                Ambil Kuiz Lagi
+                {formatText('امبيل کويز لاݢي | Ambil Kuiz Lagi')}
               </Button>
               <Button
                 onClick={onViewLeaderboard}
                 variant="secondary"
                 className="px-8 py-3"
               >
-                Lihat Papan Markah
+                {formatText('ليهت ڤان مارکاه | Lihat Papan Markah')}
               </Button>
               <Button
                 onClick={onBackToMenu}
                 variant="outline"
                 className="px-8 py-3"
               >
-                Kembali ke Menu
+                {formatText('کمبالي ک منو | Kembali ke Menu')}
               </Button>
             </div>
           </div>
@@ -179,7 +181,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
         <Card className="mb-8">
           <div className="p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-6">
-              📋 Semakan Terperinci
+              📋 {formatText('سمکن ترڤرينچي | Semakan Terperinci')}
             </h3>
             <div className="space-y-6">
               {results.map((result, index) => (
@@ -201,7 +203,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
                     {/* Question Content */}
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-gray-800 mb-3">
-                        {result.question.question}
+                        {formatText(result.question.question)}
                       </h4>
 
                       {/* Options */}
@@ -226,7 +228,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({
                               <div className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-semibold">
                                 {letter}
                               </div>
-                              <span className="text-sm">{option}</span>
+                              <span className="text-sm">{formatText(option)}</span>
                               <div className="flex-shrink-0">
                                 {isCorrectAnswer && '✅'}
                                 {isUserAnswer && !result.isCorrect && '❌'}
@@ -240,17 +242,17 @@ const QuizResults: React.FC<QuizResultsProps> = ({
                       <div className="mt-3 flex items-center space-x-2">
                         {result.isCorrect ? (
                           <>
-                            <span className="text-green-600 font-semibold">✓ Betul</span>
+                            <span className="text-green-600 font-semibold">✓ {formatText('بتول | Betul')}</span>
                             <span className="text-sm text-gray-500">
-                              Jawapan anda: {String.fromCharCode(65 + result.userAnswer)}
+                              {formatText('جوابن اندا | Jawapan anda')}: {String.fromCharCode(65 + result.userAnswer)}
                             </span>
                           </>
                         ) : (
                           <>
-                            <span className="text-red-600 font-semibold">✗ Salah</span>
+                            <span className="text-red-600 font-semibold">✗ {formatText('ساله | Salah')}</span>
                             <span className="text-sm text-gray-500">
-                              Jawapan anda: {String.fromCharCode(65 + result.userAnswer)} | 
-                              Jawapan betul: {String.fromCharCode(65 + result.newCorrectIndex)}
+                              {formatText('جوابن اندا | Jawapan anda')}: {String.fromCharCode(65 + result.userAnswer)} | 
+                              {formatText('جوابن بتول | Jawapan betul')}: {String.fromCharCode(65 + result.newCorrectIndex)}
                             </span>
                           </>
                         )}

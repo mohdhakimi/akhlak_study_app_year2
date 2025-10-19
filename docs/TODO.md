@@ -73,7 +73,7 @@ Phased development plan with testing gates. Each phase must pass all tests befor
 ### Tasks
 
 - [x] Define TypeScript interfaces/types (`User`, `Question`, `QuizCategory`, `StudyNote`, `LeaderboardEntry`, `ScoreRecord`)
-- [x] Create `data/content-structure.json` with placeholder content (at least 2 topics, 15 questions each)
+- [x] Create `data/akhlak_db.json` with comprehensive content (7 topics, 4 questions each with bilingual Jawi/Rumi)
 - [x] Implement `utils/localStorage.ts` with functions: `getUsers()`, `saveUser()`, `getCurrentUser()`, `setCurrentUser()`, `getScores()`, `saveScore()`
 - [x] Create custom hooks: `useLocalStorage.ts`, `useUsers.ts`, `useScores.ts`
 - [x] Write unit tests for all localStorage utilities (100% coverage)

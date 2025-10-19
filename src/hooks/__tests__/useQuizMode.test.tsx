@@ -3,28 +3,33 @@ import { renderHook, act } from '@testing-library/react'
 import { useQuizMode } from '../useQuizMode'
 import { QuizCategory, Question } from '../../types'
 
-// Mock the shuffleArray function
+// Mock the shuffleArray, randomSelect, and selectQuizOptions functions
 vi.mock('../../utils/shuffleOptions', () => ({
-  shuffleArray: vi.fn((arr) => [...arr]) // Return array as-is for predictable testing
+  shuffleArray: vi.fn((arr) => [...arr]), // Return array as-is for predictable testing
+  randomSelect: vi.fn((arr, count) => arr.slice(0, count)), // Return first N items for predictable testing
+  selectQuizOptions: vi.fn((options, correctIndex) => ({
+    selectedOptions: options.slice(0, 4), // Return first 4 options
+    newCorrectIndex: correctIndex < 4 ? correctIndex : 0 // Keep correct index if within first 4
+  }))
 }))
 
 const mockQuestions: Question[] = [
   {
     id: 'q1',
     question: 'What is the first question?',
-    options: ['Option A', 'Option B', 'Option C', 'Option D'],
+    options: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F', 'Option G'],
     correctAnswer: 0
   },
   {
     id: 'q2',
     question: 'What is the second question?',
-    options: ['Option A', 'Option B', 'Option C', 'Option D'],
+    options: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F', 'Option G'],
     correctAnswer: 1
   },
   {
     id: 'q3',
     question: 'What is the third question?',
-    options: ['Option A', 'Option B', 'Option C', 'Option D'],
+    options: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F', 'Option G'],
     correctAnswer: 2
   }
 ]
@@ -311,8 +316,8 @@ describe('useQuizMode', () => {
   it('should track time spent', () => {
     const { result } = renderHook(() => useQuizMode())
     
-    // Before starting quiz, timeSpent should be null
-    expect(result.current.timeSpent).toBeNull()
+    // Before starting quiz, timeSpent should be 0
+    expect(result.current.timeSpent).toBe(0)
     
     act(() => {
       result.current.startQuiz(mockCategory)

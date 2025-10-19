@@ -1,6 +1,9 @@
 import React from 'react'
 import { Question } from '../types'
+import { useBilingual } from '../contexts/BilingualContext'
 import AnswerOption from './AnswerOption'
+import TrueFalseQuestion from './TrueFalseQuestion'
+import FillBlankQuestion from './FillBlankQuestion'
 import { shuffleQuizOptions } from '../utils/shuffleOptions'
 import { cn } from '../utils/cn'
 
@@ -8,11 +11,12 @@ export interface QuestionCardProps {
   question: Question
   questionNumber: number
   totalQuestions: number
-  selectedAnswer: number | null
+  selectedAnswer: number | null | string
   correctAnswer: number
   isAnswered: boolean
   isRevealed: boolean
   onAnswerSelect: (answerIndex: number) => void
+  onAnswerChange?: (answer: string) => void
   onNext: () => void
   onPrevious: () => void
   canGoNext: boolean
@@ -29,16 +33,25 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   isAnswered,
   isRevealed,
   onAnswerSelect,
+  onAnswerChange,
   onNext,
   onPrevious,
   canGoNext,
   canGoPrevious,
   className
 }) => {
-  // Shuffle options on component mount or when question changes
+  const { formatText } = useBilingual()
+  
+  // Determine question type (default to MCQ for backward compatibility)
+  const questionType = question.type || 'mcq'
+  
+  // Shuffle options on component mount or when question changes (only for MCQ)
   const { shuffledOptions, newCorrectIndex } = React.useMemo(() => {
-    return shuffleQuizOptions(question.options, correctAnswer)
-  }, [question.options, correctAnswer])
+    if (questionType === 'mcq') {
+      return shuffleQuizOptions(question.options, correctAnswer)
+    }
+    return { shuffledOptions: question.options, newCorrectIndex: correctAnswer }
+  }, [question.options, correctAnswer, questionType])
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (!isAnswered) {
@@ -46,8 +59,16 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     }
   }
 
-  const isCorrect = selectedAnswer === newCorrectIndex
-  const isIncorrect = selectedAnswer !== null && selectedAnswer !== newCorrectIndex
+  const handleAnswerChange = (answer: string) => {
+    if (onAnswerChange) {
+      onAnswerChange(answer)
+    }
+  }
+
+  const isCorrect = questionType === 'fill_blank' 
+    ? selectedAnswer === question.correctText
+    : selectedAnswer === newCorrectIndex
+  const isIncorrect = selectedAnswer !== null && selectedAnswer !== newCorrectIndex && questionType !== 'fill_blank'
 
   return (
     <div className={cn('w-full max-w-4xl mx-auto', className)}>
@@ -55,10 +76,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold text-gray-700">
-            Soalan {questionNumber} dari {totalQuestions}
+            {formatText(`سوالن ${questionNumber} دري ${totalQuestions} | Soalan ${questionNumber} dari ${totalQuestions}`)}
           </h2>
           <div className="text-sm text-gray-500">
-            {Math.round((questionNumber / totalQuestions) * 100)}% Selesai
+            {Math.round((questionNumber / totalQuestions) * 100)}% {formatText('سلساي | Selesai')}
           </div>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
@@ -74,27 +95,49 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         {/* Question Header */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 border-b border-gray-200">
           <h3 className="text-xl font-semibold text-gray-800 leading-relaxed">
-            {question.question}
+            {formatText(question.question)}
           </h3>
         </div>
 
         {/* Answer Options */}
         <div className="p-6">
-          <div className="space-y-3">
-            {shuffledOptions.map((option, index) => (
-              <AnswerOption
-                key={index}
-                option={option}
-                index={index}
-                isSelected={selectedAnswer === index}
-                isCorrect={index === newCorrectIndex}
-                isIncorrect={isIncorrect && selectedAnswer === index}
-                isRevealed={isRevealed}
-                onClick={() => handleAnswerSelect(index)}
-                disabled={isAnswered}
-              />
-            ))}
-          </div>
+          {questionType === 'mcq' && (
+            <div className="space-y-3">
+              {shuffledOptions.map((option, index) => (
+                <AnswerOption
+                  key={index}
+                  option={option}
+                  index={index}
+                  isSelected={selectedAnswer === index}
+                  isCorrect={index === newCorrectIndex}
+                  isIncorrect={isIncorrect && selectedAnswer === index}
+                  isRevealed={isRevealed}
+                  onClick={() => handleAnswerSelect(index)}
+                  disabled={isAnswered}
+                />
+              ))}
+            </div>
+          )}
+          
+          {questionType === 'true_false' && (
+            <TrueFalseQuestion
+              question={question}
+              selectedAnswer={selectedAnswer as number | null}
+              onAnswerSelect={handleAnswerSelect}
+              isRevealed={isRevealed}
+              correctAnswer={newCorrectIndex}
+            />
+          )}
+          
+          {questionType === 'fill_blank' && (
+            <FillBlankQuestion
+              question={question}
+              selectedAnswer={selectedAnswer as string}
+              onAnswerChange={handleAnswerChange}
+              isRevealed={isRevealed}
+              correctText={question.correctText || ''}
+            />
+          )}
         </div>
 
         {/* Feedback Section */}
@@ -106,14 +149,17 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                   <>
                     <span className="text-2xl">🎉</span>
                     <span className="text-green-700 font-semibold">
-                      Betul! Jawapan anda tepat.
+                      {formatText('بتول! جوابن اندا تيڤت | Betul! Jawapan anda tepat.')}
                     </span>
                   </>
                 ) : (
                   <>
                     <span className="text-2xl">💡</span>
                     <span className="text-red-700 font-semibold">
-                      Tidak tepat. Jawapan yang betul adalah {String.fromCharCode(65 + newCorrectIndex)}.
+                      {questionType === 'fill_blank' 
+                        ? formatText('تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah') + ` "${question.correctText}"`
+                        : formatText('تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah') + ` ${String.fromCharCode(65 + newCorrectIndex)}.`
+                      }
                     </span>
                   </>
                 )}
@@ -136,7 +182,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
               )}
             >
-              ← Sebelum
+              ← {formatText('سبلوم | Sebelum')}
             </button>
 
             <button
@@ -150,7 +196,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
               )}
             >
-              {questionNumber === totalQuestions ? 'Selesai' : 'Seterusnya →'}
+              {questionNumber === totalQuestions 
+                ? formatText('سلساي | Selesai') 
+                : formatText('ستروسڽا | Seterusnya') + ' →'
+              }
             </button>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { BrowserRouter } from 'react-router-dom'
 import MainMenu from '../MainMenu'
+import { BilingualProvider } from '../../contexts/BilingualContext'
 
 // Mock the UserContext
 const mockUseUserContext = vi.fn()
@@ -39,7 +40,9 @@ const defaultContextValue = {
 const renderWithRouter = (component: React.ReactElement) => {
   return render(
     <BrowserRouter>
-      {component}
+      <BilingualProvider>
+        {component}
+      </BilingualProvider>
     </BrowserRouter>
   )
 }
@@ -64,7 +67,7 @@ describe('MainMenu', () => {
   it('displays welcome message with user name when user is logged in', () => {
     renderWithRouter(<MainMenu />)
     
-    expect(screen.getByText('Selamat Datang, Ahmad!')).toBeInTheDocument()
+    expect(screen.getByText('سلامت داتڠ، Ahmad! | Selamat Datang, Ahmad!')).toBeInTheDocument()
   })
 
   it('displays generic welcome message when no user is logged in', () => {
@@ -107,7 +110,7 @@ describe('MainMenu', () => {
     const user = userEvent.setup()
     renderWithRouter(<MainMenu />)
     
-    const userButton = screen.getByText('Tukar Pengguna')
+    const userButton = screen.getByRole('button', { name: /Pengguna semasa: Ahmad/ })
     await user.click(userButton)
     
     expect(defaultContextValue.openUserSelectionModal).toHaveBeenCalled()
@@ -116,7 +119,7 @@ describe('MainMenu', () => {
   it('shows correct button text based on user state', () => {
     // Test with user logged in
     renderWithRouter(<MainMenu />)
-    expect(screen.getByText('Tukar Pengguna')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Pengguna semasa: Ahmad/ })).toBeInTheDocument()
     
     // Test without user logged in
     mockUseUserContext.mockReturnValue({
@@ -125,28 +128,33 @@ describe('MainMenu', () => {
     })
     
     renderWithRouter(<MainMenu />)
-    expect(screen.getByText('Pilih Pengguna')).toBeInTheDocument()
+    // There are multiple "Pilih Pengguna" buttons, so we'll check that at least one exists
+    expect(screen.getAllByRole('button', { name: /Pilih Pengguna/ })).toHaveLength(2)
   })
 
   it('displays menu item descriptions', () => {
     renderWithRouter(<MainMenu />)
     
-    expect(screen.getByText('Baca dan pelajari nota-nota penting')).toBeInTheDocument()
-    expect(screen.getByText('Uji pengetahuan dengan kuiz pendek')).toBeInTheDocument()
-    expect(screen.getByText('Ujian lengkap 30 soalan')).toBeInTheDocument()
-    expect(screen.getByText('Lihat markah tertinggi')).toBeInTheDocument()
+    expect(screen.getByText('باچ دان ڤلاجري نوتا-نوتا ڤنتڠ | Baca dan pelajari nota-nota penting')).toBeInTheDocument()
+    expect(screen.getByText('اوجي ڤنڬتاهوان دغن کویز ڤندق | Uji pengetahuan dengan kuiz pendek')).toBeInTheDocument()
+    expect(screen.getByText('اوجيان لڠکڤ 30 سوالن | Ujian lengkap 30 soalan')).toBeInTheDocument()
+    expect(screen.getByText('ليه ماره ترتيڠڬي | Lihat markah tertinggi')).toBeInTheDocument()
   })
 
   it('displays mascot and encouraging message', () => {
     renderWithRouter(<MainMenu />)
     
-    expect(screen.getByText('🐾')).toBeInTheDocument()
-    expect(screen.getByText('"Jom belajar bersama-sama! Pilih mod yang anda suka untuk mula belajar."')).toBeInTheDocument()
+    expect(screen.getAllByText('😊')).toHaveLength(2) // There are 2 mascots in the page
+    expect(screen.getByText('ماري بلاجر اخالق دغن چرا يغ منيرونوکن! ڤليه مود ڤمبلاچرن يغ اندا سوكا. | Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.')).toBeInTheDocument()
   })
 
   it('has refresh button that reloads the page', async () => {
     const user = userEvent.setup()
-    const reloadSpy = vi.spyOn(window.location, 'reload').mockImplementation(() => {})
+    // Mock window.location.reload by replacing the entire location object
+    const reloadSpy = vi.fn()
+    const originalLocation = window.location
+    delete (window as any).location
+    window.location = { ...originalLocation, reload: reloadSpy } as any
     
     renderWithRouter(<MainMenu />)
     
@@ -155,7 +163,8 @@ describe('MainMenu', () => {
     
     expect(reloadSpy).toHaveBeenCalled()
     
-    reloadSpy.mockRestore()
+    // Restore original location
+    window.location = originalLocation
   })
 
   it('renders all menu items with correct icons', () => {
@@ -170,7 +179,9 @@ describe('MainMenu', () => {
   it('has responsive grid layout classes', () => {
     renderWithRouter(<MainMenu />)
     
-    const gridContainer = screen.getByText('Mod Belajar').closest('div')?.parentElement
+    // Find the grid container by looking for the parent of the menu items
+    const studyCard = screen.getByText('Mod Belajar').closest('div')
+    const gridContainer = studyCard?.closest('.grid')
     expect(gridContainer).toHaveClass('grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-4')
   })
 })

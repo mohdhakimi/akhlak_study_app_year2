@@ -1,10 +1,10 @@
 import { useState, useCallback, useRef } from 'react'
 import { Question, QuizCategory, QuizResult } from '../types'
-import { shuffleArray, randomSelect } from '../utils/shuffleOptions'
+import { shuffleArray, randomSelect, selectQuizOptions } from '../utils/shuffleOptions'
 
 export interface TestState {
   currentQuestionIndex: number
-  selectedAnswers: (number | null)[]
+  selectedAnswers: (number | null | string)[]
   isAnswered: boolean
   isRevealed: boolean
   startTime: number | null
@@ -16,7 +16,7 @@ export interface UseTestModeReturn {
   currentQuestion: Question | null
   currentQuestionIndex: number
   totalQuestions: number
-  selectedAnswers: (number | null)[]
+  selectedAnswers: (number | null | string)[]
   isAnswered: boolean
   isRevealed: boolean
   score: number
@@ -26,6 +26,7 @@ export interface UseTestModeReturn {
   // Actions
   startTest: (allCategories: QuizCategory[]) => void
   selectAnswer: (answerIndex: number) => void
+  changeAnswer: (answer: string) => void
   goToNext: () => void
   goToPrevious: () => void
   finishTest: () => QuizResult[]
@@ -69,25 +70,59 @@ export function useTestMode(): UseTestModeReturn {
     // Select 30 random questions without duplicates
     const selectedQuestions = randomSelect(allQuestions, 30)
     
-    // Prepare shuffled options and correct answers for each question
-    const optionsData = selectedQuestions.map(question => {
-      const options = [...question.options]
-      const correctIndex = question.correctAnswer
+    // Create mixed question types: 70% MCQ, 15% True/False, 15% Fill in the blank
+    const mixedQuestions = selectedQuestions.map((question, index) => {
+      const questionType = index < 21 ? 'mcq' : index < 25 ? 'true_false' : 'fill_blank'
       
-      // Shuffle options while tracking correct answer position
-      const shuffled = shuffleArray(options)
-      const newCorrectIndex = shuffled.findIndex(option => option === question.options[correctIndex])
-      
-      return { shuffled, newCorrectIndex }
+      if (questionType === 'true_false') {
+        // Convert MCQ to True/False by taking first two options
+        return {
+          ...question,
+          type: 'true_false' as const,
+          options: question.options.slice(0, 2),
+          correctAnswer: question.correctAnswer < 2 ? question.correctAnswer : 0
+        }
+      } else if (questionType === 'fill_blank') {
+        // Convert MCQ to Fill in the blank
+        return {
+          ...question,
+          type: 'fill_blank' as const,
+          options: [],
+          correctText: question.options[question.correctAnswer],
+          correctAnswer: 0
+        }
+      } else {
+        // Keep as MCQ
+        return {
+          ...question,
+          type: 'mcq' as const
+        }
+      }
+    })
+    
+    // Prepare 4 selected options and correct answers for MCQ questions only
+    const optionsData = mixedQuestions.map(question => {
+      if (question.type === 'mcq') {
+        const options = [...question.options]
+        const correctIndex = question.correctAnswer
+        
+        // Select 4 options (1 correct + 3 random distractors)
+        const { selectedOptions, newCorrectIndex } = selectQuizOptions(options, correctIndex)
+        
+        return { selectedOptions, newCorrectIndex }
+      } else {
+        // For non-MCQ questions, return empty options and correct answer
+        return { selectedOptions: [], newCorrectIndex: question.correctAnswer }
+      }
     })
 
-    setQuestions(selectedQuestions)
-    setShuffledOptions(optionsData.map(data => data.shuffled))
+    setQuestions(mixedQuestions)
+    setShuffledOptions(optionsData.map(data => data.selectedOptions))
     setCorrectAnswers(optionsData.map(data => data.newCorrectIndex))
     
     setTestState({
       currentQuestionIndex: 0,
-      selectedAnswers: new Array(selectedQuestions.length).fill(null),
+      selectedAnswers: new Array(mixedQuestions.length).fill(null),
       isAnswered: false,
       isRevealed: false,
       startTime: Date.now(),
@@ -107,6 +142,19 @@ export function useTestMode(): UseTestModeReturn {
       ),
       isAnswered: true,
       isRevealed: true
+    }))
+  }, [testState.isAnswered, testState.currentQuestionIndex])
+
+  const changeAnswer = useCallback((answer: string) => {
+    if (testState.isAnswered) return
+
+    setTestState(prev => ({
+      ...prev,
+      selectedAnswers: prev.selectedAnswers.map((selectedAnswer, index) =>
+        index === prev.currentQuestionIndex ? answer : selectedAnswer
+      ),
+      isAnswered: answer.trim() !== '',
+      isRevealed: answer.trim() !== ''
     }))
   }, [testState.isAnswered, testState.currentQuestionIndex])
 
@@ -150,11 +198,23 @@ export function useTestMode(): UseTestModeReturn {
     const results: QuizResult[] = questions.map((question, index) => {
       const userAnswer = testState.selectedAnswers[index]
       const correctAnswer = correctAnswers[index]
-      const isCorrect = userAnswer === correctAnswer
+      
+      let isCorrect = false
+      let processedUserAnswer = userAnswer !== null && userAnswer !== undefined ? userAnswer : -1
+      
+      if (question.type === 'fill_blank') {
+        // For fill in the blank, compare text answers
+        isCorrect = typeof userAnswer === 'string' && 
+                   userAnswer.toLowerCase().trim() === (question.correctText || '').toLowerCase().trim()
+        processedUserAnswer = 0 // For compatibility with QuizResult interface
+      } else {
+        // For MCQ and True/False, compare indices
+        isCorrect = userAnswer === correctAnswer
+      }
 
       return {
         question,
-        userAnswer: userAnswer !== null && userAnswer !== undefined ? userAnswer : -1,
+        userAnswer: processedUserAnswer,
         correctAnswer,
         isCorrect,
         shuffledOptions: shuffledOptions[index] || [],
@@ -191,8 +251,19 @@ export function useTestMode(): UseTestModeReturn {
   const progress = totalQuestions > 0 ? (testState.currentQuestionIndex + 1) / totalQuestions : 0
   
   const score = testState.selectedAnswers.reduce((acc: number, answer, index) => {
-    if (answer !== null && answer === correctAnswers[index]) {
-      return acc + 1
+    const question = questions[index]
+    if (!question) return acc
+    
+    if (question.type === 'fill_blank') {
+      // For fill in the blank, compare text answers
+      if (typeof answer === 'string' && answer.toLowerCase().trim() === (question.correctText || '').toLowerCase().trim()) {
+        return acc + 1
+      }
+    } else {
+      // For MCQ and True/False, compare indices
+      if (answer !== null && answer === correctAnswers[index]) {
+        return acc + 1
+      }
     }
     return acc
   }, 0)
@@ -214,6 +285,7 @@ export function useTestMode(): UseTestModeReturn {
     // Actions
     startTest,
     selectAnswer,
+    changeAnswer,
     goToNext,
     goToPrevious,
     finishTest,

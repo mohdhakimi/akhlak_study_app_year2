@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
+import { useBilingual } from '../contexts/BilingualContext'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import Card from '../components/Card'
@@ -13,13 +14,14 @@ import { cn } from '../utils/cn'
 const MainMenu: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser, openUserSelectionModal } = useUserContext()
+  const { formatText } = useBilingual()
   const [showSoundSettings, setShowSoundSettings] = useState(false)
 
   const menuItems = [
     {
       id: 'study',
       title: TEXT.STUDY_MODE,
-      description: 'Baca dan pelajari nota-nota penting',
+      description: 'باچ دان ڤلاجري نوتا-نوتا ڤنتڠ | Baca dan pelajari nota-nota penting',
       icon: '📚',
       color: 'bg-blue-500',
       hoverColor: 'hover:bg-blue-600',
@@ -28,7 +30,7 @@ const MainMenu: React.FC = () => {
     {
       id: 'quiz',
       title: TEXT.QUIZ_MODE,
-      description: 'Uji pengetahuan dengan kuiz pendek',
+      description: 'اوجي ڤنڬتاهوان دغن کویز ڤندق | Uji pengetahuan dengan kuiz pendek',
       icon: '🧩',
       color: 'bg-green-500',
       hoverColor: 'hover:bg-green-600',
@@ -37,7 +39,7 @@ const MainMenu: React.FC = () => {
     {
       id: 'test',
       title: TEXT.TEST_MODE,
-      description: 'Ujian lengkap 30 soalan',
+      description: 'اوجيان لڠکڤ 30 سوالن | Ujian lengkap 30 soalan',
       icon: '📝',
       color: 'bg-purple-500',
       hoverColor: 'hover:bg-purple-600',
@@ -46,7 +48,7 @@ const MainMenu: React.FC = () => {
     {
       id: 'leaderboard',
       title: TEXT.LEADERBOARD,
-      description: 'Lihat markah tertinggi',
+      description: 'ليه ماره ترتيڠڬي | Lihat markah tertinggi',
       icon: '🏆',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600',
@@ -64,13 +66,14 @@ const MainMenu: React.FC = () => {
 
   return (
     <Layout
-      title={TEXT.APP_TITLE}
-      subtitle={TEXT.APP_SUBTITLE}
+      title={formatText(TEXT.APP_TITLE)}
+      subtitle={formatText(TEXT.APP_SUBTITLE)}
       currentUser={currentUser?.name}
       onUserClick={handleUserClick}
       onSoundSettingsClick={() => setShowSoundSettings(true)}
       showUser={true}
       showSoundSettings={true}
+      showBilingualToggle={true}
     >
       <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,10 +89,10 @@ const MainMenu: React.FC = () => {
                 />
               </div>
               <h1 className="text-4xl font-bold text-primary-800 mb-4 animate-slide-up">
-                {currentUser ? `Selamat Datang, ${currentUser.name}!` : TEXT.WELCOME}
+                {currentUser ? formatText(`سلامت داتڠ، ${currentUser.name}! | Selamat Datang, ${currentUser.name}!`) : formatText(TEXT.WELCOME)}
               </h1>
               <p className="text-xl text-primary-600 max-w-2xl mx-auto animate-slide-up">
-                Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.
+                {formatText('ماري بلاجر اخالق دغن چرا يغ منيرونوکن! ڤليه مود ڤمبلاچرن يغ اندا سوكا. | Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.')}
               </p>
             </div>
           </PageTransition>
@@ -123,10 +126,10 @@ const MainMenu: React.FC = () => {
                       {item.icon}
                     </div>
                     <h2 className="text-lg font-black mb-1 text-white drop-shadow-2xl">
-                      {item.title}
+                      {formatText(item.title)}
                     </h2>
                     <p className="text-sm text-white font-bold drop-shadow-lg">
-                      {item.description}
+                      {formatText(item.description)}
                     </p>
                   </div>
                   

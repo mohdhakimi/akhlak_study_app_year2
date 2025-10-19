@@ -25,6 +25,26 @@ const Leaderboard: React.FC = () => {
     setFilter(newFilter)
   }
 
+  const formatDate = (date: Date): string => {
+    const now = new Date()
+    const diffTime = Math.abs(now.getTime() - date.getTime())
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+
+    if (diffDays === 1) {
+      return 'Hari ini'
+    } else if (diffDays === 2) {
+      return 'Semalam'
+    } else if (diffDays <= 7) {
+      return `${diffDays - 1} hari lepas`
+    } else {
+      return date.toLocaleDateString('ms-MY', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      })
+    }
+  }
+
   // Process and sort scores
   const processedScores = useMemo(() => {
     if (!scores || scores.length === 0) return []
@@ -59,26 +79,6 @@ const Leaderboard: React.FC = () => {
       quizName: score.quizName
     }))
   }, [scores, filter])
-
-  const formatDate = (date: Date): string => {
-    const now = new Date()
-    const diffTime = Math.abs(now.getTime() - date.getTime())
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-
-    if (diffDays === 1) {
-      return 'Hari ini'
-    } else if (diffDays === 2) {
-      return 'Semalam'
-    } else if (diffDays <= 7) {
-      return `${diffDays - 1} hari lepas`
-    } else {
-      return date.toLocaleDateString('ms-MY', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      })
-    }
-  }
 
   const getFilterStats = () => {
     const totalScores = scores?.length || 0

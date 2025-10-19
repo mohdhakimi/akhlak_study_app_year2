@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
+import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
 import { useQuizMode } from '../hooks/useQuizMode'
 import { useScores } from '../hooks/useScores'
@@ -16,6 +17,7 @@ import { QuizResult } from '../components/QuizResults'
 const QuizMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { formatText } = useBilingual()
   const { quizCategories, loading: contentLoading, error: contentError } = useContentData()
   const { saveScore } = useScores()
   
@@ -50,6 +52,31 @@ const QuizMode: React.FC = () => {
     setShowResults(false)
     setSelectedCategory(null)
     navigate('/')
+  }
+
+  const handleKeluar = () => {
+    // Save current progress before exiting
+    if (currentUser && selectedCategory && score > 0) {
+      saveScore({
+        id: `quiz-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        userId: currentUser.id,
+        userName: currentUser.name,
+        quizId: selectedCategory.id,
+        quizName: selectedCategory.name,
+        score,
+        totalQuestions,
+        percentage: Math.round((score / totalQuestions) * 100),
+        timestamp: new Date().toISOString(),
+        type: 'quiz',
+        answers: [] // Partial progress
+      })
+    }
+    
+    resetQuiz()
+    setQuizResults([])
+    setShowResults(false)
+    setSelectedCategory(null)
+    navigate('/quiz') // Go back to category selection
   }
 
   const handleCategorySelect = (category: any) => {
@@ -198,11 +225,14 @@ const QuizMode: React.FC = () => {
   if (currentQuestion && totalQuestions > 0) {
     return (
       <Layout
-        title={TEXT.QUIZ_MODE}
-        subtitle={`${selectedCategory?.name || 'Kuiz'} - Soalan ${currentQuestionIndex + 1}`}
+        title={formatText(TEXT.QUIZ_MODE)}
+        subtitle={formatText(`${selectedCategory?.name || 'کویز | Kuiz'} - سوالن ${currentQuestionIndex + 1} | Soalan ${currentQuestionIndex + 1}`)}
         currentUser={currentUser?.name}
         onUserClick={() => navigate('/')}
         showUser={true}
+        showBilingualToggle={true}
+        showKeluarButton={true}
+        onKeluarClick={handleKeluar}
       >
         <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,11 +259,12 @@ const QuizMode: React.FC = () => {
   // Show category selector
   return (
     <Layout
-      title={TEXT.QUIZ_MODE}
-      subtitle="Mod Kuiz - Uji Pengetahuan Anda"
+      title={formatText(TEXT.QUIZ_MODE)}
+      subtitle={formatText("مود کویز - اوجي ڤنڬتاهوان اندا | Mod Kuiz - Uji Pengetahuan Anda")}
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}
+      showBilingualToggle={true}
     >
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100">
         <CategorySelector

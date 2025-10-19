@@ -1,5 +1,6 @@
 import React from 'react'
 import { StudyNote } from '../types'
+import { useBilingual } from '../contexts/BilingualContext'
 import { TEXT } from '../constants/text'
 import Card from './Card'
 import Button from './Button'
@@ -26,6 +27,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
   canGoNext,
   canGoPrevious
 }) => {
+  const { formatText } = useBilingual()
   // Format content with proper line breaks
   const formatContent = (content: string) => {
     return content.split('\n').map((line, index) => {
@@ -91,14 +93,14 @@ const StudyCard: React.FC<StudyCardProps> = ({
               <span className="text-2xl">📖</span>
             </div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              {note.title}
+              {formatText(note.title)}
             </h2>
             <div className="w-16 h-1 bg-primary-500 rounded-full mx-auto"></div>
           </div>
 
           {/* Note Content */}
           <div className="prose prose-lg max-w-none">
-            {formatContent(note.content)}
+            {formatContent(formatText(note.content))}
           </div>
         </div>
       </Card>

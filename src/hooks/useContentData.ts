@@ -21,7 +21,7 @@ export function useContentData(): UseContentDataReturn {
       setError(null)
       
       // Import the JSON data directly
-      const data = await import('../data/content-structure.json')
+      const data = await import('../data/akhlak_db.json')
       
       // Validate the data structure
       if (!data.default || !data.default.topics || !Array.isArray(data.default.topics)) {

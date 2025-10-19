@@ -3,6 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import QuizMode from '../QuizMode'
 import { UserProvider } from '../../contexts/UserContext'
+import { BilingualProvider } from '../../contexts/BilingualContext'
 import { useContentData } from '../../hooks/useContentData'
 import { useScores } from '../../hooks/useScores'
 
@@ -51,7 +52,9 @@ const mockUseScores = {
 const QuizModeWrapper = () => (
   <BrowserRouter>
     <UserProvider>
-      <QuizMode />
+      <BilingualProvider>
+        <QuizMode />
+      </BilingualProvider>
     </UserProvider>
   </BrowserRouter>
 )

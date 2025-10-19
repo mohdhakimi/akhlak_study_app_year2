@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { UserProvider, useUserContext } from './contexts/UserContext'
+import { BilingualProvider } from './contexts/BilingualContext'
 import UserSelectionModal from './components/UserSelectionModal'
 import MainMenu from './pages/MainMenu'
 import StudyMode from './pages/StudyMode'
@@ -71,7 +72,9 @@ const AppContent: React.FC = () => {
 function App() {
   return (
     <UserProvider>
-      <AppContent />
+      <BilingualProvider>
+        <AppContent />
+      </BilingualProvider>
     </UserProvider>
   )
 }

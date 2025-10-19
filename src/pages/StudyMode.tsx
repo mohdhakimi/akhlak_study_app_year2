@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
+import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
 import { useStudyMode } from '../hooks/useStudyMode'
 import { TEXT } from '../constants/text'
@@ -13,6 +14,7 @@ import Button from '../components/Button'
 const StudyMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { formatText } = useBilingual()
   const { topics, loading: contentLoading, error: contentError } = useContentData()
   const {
     currentTopic,
@@ -101,11 +103,12 @@ const StudyMode: React.FC = () => {
   if (isStudying && currentTopic && currentNote) {
     return (
       <Layout
-        title={TEXT.STUDY_MODE}
-        subtitle={`${currentTopic.name} - Nota ${currentNote.order}`}
+        title={formatText(TEXT.STUDY_MODE)}
+        subtitle={formatText(`${currentTopic.name} - نوتا ${currentNote.order} | Nota ${currentNote.order}`)}
         currentUser={currentUser?.name}
         onUserClick={() => navigate('/')}
         showUser={true}
+        showBilingualToggle={true}
       >
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,11 +131,12 @@ const StudyMode: React.FC = () => {
   // Show topic selector
   return (
     <Layout
-      title={TEXT.STUDY_MODE}
-      subtitle="Mod Belajar - Baca dan Pelajari"
+      title={formatText(TEXT.STUDY_MODE)}
+      subtitle={formatText("مود بلاجر - باچ دان ڤلاجري | Mod Belajar - Baca dan Pelajari")}
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}
+      showBilingualToggle={true}
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

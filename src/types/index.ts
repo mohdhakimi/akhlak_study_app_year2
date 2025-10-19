@@ -6,12 +6,16 @@ export interface User {
 }
 
 // Question and quiz types
+export type QuestionType = 'mcq' | 'true_false' | 'fill_blank'
+
 export interface Question {
   id: string
   question: string
   options: string[]
   correctAnswer: number // index of correct option (0-3)
   explanation?: string
+  type?: QuestionType // defaults to 'mcq' for backward compatibility
+  correctText?: string // for fill_blank questions
 }
 
 export interface QuizCategory {

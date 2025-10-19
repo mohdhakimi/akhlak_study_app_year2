@@ -1,5 +1,6 @@
 import React from 'react'
 import { cn } from '../utils/cn'
+import { useBilingual } from '../contexts/BilingualContext'
 import { useQuizAudio } from '../hooks/useAudio'
 
 export interface AnswerOptionProps {
@@ -25,6 +26,7 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
   disabled = false,
   className
 }) => {
+  const { formatText } = useBilingual()
   const { playCorrectSound, playIncorrectSound } = useQuizAudio()
 
   const handleClick = () => {
@@ -99,7 +101,7 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
           {getOptionLetter(index)}
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium break-words">{option}</p>
+          <p className="text-sm font-medium break-words">{formatText(option)}</p>
         </div>
         <div className="flex-shrink-0 text-lg">
           {getIcon()}

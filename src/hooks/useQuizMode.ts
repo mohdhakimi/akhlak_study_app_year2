@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef } from 'react'
 import { Question, QuizCategory, QuizResult } from '../types'
-import { shuffleArray } from '../utils/shuffleOptions'
+import { shuffleArray, selectQuizOptions, randomSelect } from '../utils/shuffleOptions'
 
 export interface QuizState {
   currentQuestionIndex: number
@@ -59,29 +59,28 @@ export function useQuizMode(): UseQuizModeReturn {
       throw new Error('No questions available for this category')
     }
 
-    // Shuffle questions to randomize order
-    const shuffledQuestions = shuffleArray(selectedCategory.questions)
+    // Select 10 random questions from the category
+    const selectedQuestions = randomSelect(selectedCategory.questions, 10)
     
-    // Prepare shuffled options and correct answers for each question
-    const optionsData = shuffledQuestions.map(question => {
+    // Prepare 4 selected options and correct answers for each question
+    const optionsData = selectedQuestions.map(question => {
       const options = [...question.options]
       const correctIndex = question.correctAnswer
       
-      // Shuffle options while tracking correct answer position
-      const shuffled = shuffleArray(options)
-      const newCorrectIndex = shuffled.findIndex(option => option === question.options[correctIndex])
+      // Select 4 options (1 correct + 3 random distractors)
+      const { selectedOptions, newCorrectIndex } = selectQuizOptions(options, correctIndex)
       
-      return { shuffled, newCorrectIndex }
+      return { selectedOptions, newCorrectIndex }
     })
 
-    setQuestions(shuffledQuestions)
+    setQuestions(selectedQuestions)
     setCategory(selectedCategory)
-    setShuffledOptions(optionsData.map(data => data.shuffled))
+    setShuffledOptions(optionsData.map(data => data.selectedOptions))
     setCorrectAnswers(optionsData.map(data => data.newCorrectIndex))
     
     setQuizState({
       currentQuestionIndex: 0,
-      selectedAnswers: new Array(shuffledQuestions.length).fill(null),
+      selectedAnswers: new Array(selectedQuestions.length).fill(null),
       isAnswered: false,
       isRevealed: false,
       startTime: Date.now(),

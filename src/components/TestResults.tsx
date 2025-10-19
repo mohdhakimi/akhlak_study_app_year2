@@ -4,6 +4,7 @@ import Card from './Card'
 import Button from './Button'
 import { cn } from '../utils/cn'
 import { useQuizAudio } from '../hooks/useAudio'
+import { useBilingual } from '../contexts/BilingualContext'
 
 export interface TestResult {
   question: Question
@@ -36,6 +37,7 @@ const TestResults: React.FC<TestResultsProps> = ({
   className
 }) => {
   const { playTestCompleteSound, playCelebrationSound } = useQuizAudio()
+  const { formatText } = useBilingual()
   
   const percentage = Math.round((score / totalQuestions) * 100)
   const isPerfect = score === totalQuestions
@@ -55,8 +57,8 @@ const TestResults: React.FC<TestResultsProps> = ({
   const getPerformanceMessage = () => {
     if (isPerfect) {
       return {
-        message: 'Sempurna! 🏆',
-        description: 'Anda mendapat markah penuh dalam ujian! Tahniah!',
+        message: formatText('سيمڤورنا! 🏆 | Sempurna! 🏆'),
+        description: formatText('اندا ميندافت مارکاه ڤنوه دالم اوجيان! تحنيه! | Anda mendapat markah penuh dalam ujian! Tahniah!'),
         color: 'text-green-600',
         bgColor: 'bg-green-50',
         borderColor: 'border-green-200'
@@ -64,8 +66,8 @@ const TestResults: React.FC<TestResultsProps> = ({
     }
     if (isExcellent) {
       return {
-        message: 'Cemerlang! 🌟',
-        description: 'Prestasi yang sangat cemerlang dalam ujian!',
+        message: formatText('چميرلڠ! 🌟 | Cemerlang! 🌟'),
+        description: formatText('ڤرستاسي يڠ ساڠت چميرلڠ دالم اوجيان! | Prestasi yang sangat cemerlang dalam ujian!'),
         color: 'text-blue-600',
         bgColor: 'bg-blue-50',
         borderColor: 'border-blue-200'
@@ -73,8 +75,8 @@ const TestResults: React.FC<TestResultsProps> = ({
     }
     if (isGood) {
       return {
-        message: 'Bagus! 👍',
-        description: 'Prestasi yang baik dalam ujian!',
+        message: formatText('باݢوس! 👍 | Bagus! 👍'),
+        description: formatText('ڤرستاسي يڠ بايق دالم اوجيان! | Prestasi yang baik dalam ujian!'),
         color: 'text-yellow-600',
         bgColor: 'bg-yellow-50',
         borderColor: 'border-yellow-200'
@@ -82,16 +84,16 @@ const TestResults: React.FC<TestResultsProps> = ({
     }
     if (isPassing) {
       return {
-        message: 'Lulus! ✅',
-        description: 'Anda telah lulus ujian dengan memuaskan!',
+        message: formatText('لولس! ✅ | Lulus! ✅'),
+        description: formatText('اندا تله لولس اوجيان دڠن ممواسکن! | Anda telah lulus ujian dengan memuaskan!'),
         color: 'text-orange-600',
         bgColor: 'bg-orange-50',
         borderColor: 'border-orange-200'
       }
     }
     return {
-      message: 'Cuba Lagi! 💪',
-      description: 'Jangan berputus asa, teruskan berusaha!',
+      message: formatText('چوبا لاݢي! 💪 | Cuba Lagi! 💪'),
+      description: formatText('جڠن برڤوتس اسا، تروسکن بروسها! | Jangan berputus asa, teruskan berusaha!'),
       color: 'text-red-600',
       bgColor: 'bg-red-50',
       borderColor: 'border-red-200'
@@ -122,10 +124,10 @@ const TestResults: React.FC<TestResultsProps> = ({
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Keputusan Ujian
+            {formatText('کڤوتوسان اوجيان | Keputusan Ujian')}
           </h1>
           <p className="text-lg text-gray-600">
-            Ujian Komprehensif - 30 Soalan
+            {formatText('اوجيان کومڤرهنسيف - 30 سوالن | Ujian Komprehensif - 30 Soalan')}
           </p>
         </div>
 
@@ -148,26 +150,26 @@ const TestResults: React.FC<TestResultsProps> = ({
                 <div className="text-4xl font-bold text-gray-800">
                   {score}/{totalQuestions}
                 </div>
-                <div className="text-sm text-gray-600">Markah</div>
+                <div className="text-sm text-gray-600">{formatText('مارکاه | Markah')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800">
                   {percentage}%
                 </div>
-                <div className="text-sm text-gray-600">Peratusan</div>
+                <div className="text-sm text-gray-600">{formatText('ڤراتوسن | Peratusan')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800">
                   {getGrade()}
                 </div>
-                <div className="text-sm text-gray-600">Gred</div>
+                <div className="text-sm text-gray-600">{formatText('ݢريد | Gred')}</div>
               </div>
               {timeSpent && (
                 <div className="text-center">
                   <div className="text-4xl font-bold text-gray-800">
                     {formatTime(timeSpent)}
                   </div>
-                  <div className="text-sm text-gray-600">Masa</div>
+                  <div className="text-sm text-gray-600">{formatText('ماسا | Masa')}</div>
                 </div>
               )}
             </div>
@@ -179,21 +181,21 @@ const TestResults: React.FC<TestResultsProps> = ({
                 variant="primary"
                 className="px-8 py-3"
               >
-                Ambil Ujian Lagi
+                {formatText('امبيل اوجيان لاݢي | Ambil Ujian Lagi')}
               </Button>
               <Button
                 onClick={onViewLeaderboard}
                 variant="secondary"
                 className="px-8 py-3"
               >
-                Lihat Papan Markah
+                {formatText('ليهت ڤان مارکاه | Lihat Papan Markah')}
               </Button>
               <Button
                 onClick={onBackToMenu}
                 variant="outline"
                 className="px-8 py-3"
               >
-                Kembali ke Menu
+                {formatText('کمبالي ک منو | Kembali ke Menu')}
               </Button>
             </div>
           </div>
@@ -203,24 +205,24 @@ const TestResults: React.FC<TestResultsProps> = ({
         <Card className="mb-8">
           <div className="p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
-              📊 Statistik Ujian
+              📊 {formatText('ستاتيستيک اوجيان | Statistik Ujian')}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <div className="text-2xl font-bold text-green-600">{score}</div>
-                <div className="text-sm text-green-700">Betul</div>
+                <div className="text-sm text-green-700">{formatText('بتول | Betul')}</div>
               </div>
               <div className="text-center p-4 bg-red-50 rounded-lg">
                 <div className="text-2xl font-bold text-red-600">{totalQuestions - score}</div>
-                <div className="text-sm text-red-700">Salah</div>
+                <div className="text-sm text-red-700">{formatText('ساله | Salah')}</div>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <div className="text-2xl font-bold text-blue-600">{totalQuestions}</div>
-                <div className="text-sm text-blue-700">Jumlah</div>
+                <div className="text-sm text-blue-700">{formatText('جومله | Jumlah')}</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
                 <div className="text-2xl font-bold text-purple-600">{getGrade()}</div>
-                <div className="text-sm text-purple-700">Gred</div>
+                <div className="text-sm text-purple-700">{formatText('ݢريد | Gred')}</div>
               </div>
             </div>
           </div>
@@ -230,7 +232,7 @@ const TestResults: React.FC<TestResultsProps> = ({
         <Card className="mb-8">
           <div className="p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-6">
-              📋 Semakan Terperinci
+              📋 {formatText('سمکن ترڤرينچي | Semakan Terperinci')}
             </h3>
             <div className="space-y-6">
               {results.map((result, index) => (
@@ -252,7 +254,7 @@ const TestResults: React.FC<TestResultsProps> = ({
                     {/* Question Content */}
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-gray-800 mb-3">
-                        {result.question.question}
+                        {formatText(result.question.question)}
                       </h4>
 
                       {/* Options */}
@@ -277,7 +279,7 @@ const TestResults: React.FC<TestResultsProps> = ({
                               <div className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-semibold">
                                 {letter}
                               </div>
-                              <span className="text-sm">{option}</span>
+                              <span className="text-sm">{formatText(option)}</span>
                               <div className="flex-shrink-0">
                                 {isCorrectAnswer && '✅'}
                                 {isUserAnswer && !result.isCorrect && '❌'}
@@ -291,17 +293,17 @@ const TestResults: React.FC<TestResultsProps> = ({
                       <div className="mt-3 flex items-center space-x-2">
                         {result.isCorrect ? (
                           <>
-                            <span className="text-green-600 font-semibold">✓ Betul</span>
+                            <span className="text-green-600 font-semibold">✓ {formatText('بتول | Betul')}</span>
                             <span className="text-sm text-gray-500">
-                              Jawapan anda: {String.fromCharCode(65 + result.userAnswer)}
+                              {formatText('جوابن اندا | Jawapan anda')}: {String.fromCharCode(65 + result.userAnswer)}
                             </span>
                           </>
                         ) : (
                           <>
-                            <span className="text-red-600 font-semibold">✗ Salah</span>
+                            <span className="text-red-600 font-semibold">✗ {formatText('ساله | Salah')}</span>
                             <span className="text-sm text-gray-500">
-                              Jawapan anda: {String.fromCharCode(65 + result.userAnswer)} | 
-                              Jawapan betul: {String.fromCharCode(65 + result.newCorrectIndex)}
+                              {formatText('جوابن اندا | Jawapan anda')}: {String.fromCharCode(65 + result.userAnswer)} | 
+                              {formatText('جوابن بتول | Jawapan betul')}: {String.fromCharCode(65 + result.newCorrectIndex)}
                             </span>
                           </>
                         )}

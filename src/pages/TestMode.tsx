@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
+import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
 import { useTestMode } from '../hooks/useTestMode'
 import { useScores } from '../hooks/useScores'
@@ -15,6 +16,7 @@ import { TestResult } from '../components/TestResults'
 const TestMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { formatText } = useBilingual()
   const { quizCategories, loading: contentLoading, error: contentError } = useContentData()
   const { saveScore } = useScores()
   
@@ -30,6 +32,7 @@ const TestMode: React.FC = () => {
     isComplete,
     startTest,
     selectAnswer,
+    changeAnswer,
     goToNext,
     goToPrevious,
     finishTest,
@@ -49,6 +52,31 @@ const TestMode: React.FC = () => {
     setShowResults(false)
     setTestStarted(false)
     navigate('/')
+  }
+
+  const handleKeluar = () => {
+    // Save current progress before exiting
+    if (currentUser && score > 0) {
+      saveScore({
+        id: `test-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        userId: currentUser.id,
+        userName: currentUser.name,
+        quizId: 'test-mode',
+        quizName: 'Ujian Menyeluruh',
+        score,
+        totalQuestions,
+        percentage: Math.round((score / totalQuestions) * 100),
+        timestamp: new Date().toISOString(),
+        type: 'test',
+        answers: [] // Partial progress
+      })
+    }
+    
+    resetTest()
+    setTestResults([])
+    setShowResults(false)
+    setTestStarted(false)
+    navigate('/test') // Go back to test start screen
   }
 
   const handleStartTest = () => {
@@ -194,11 +222,14 @@ const TestMode: React.FC = () => {
   if (testStarted && currentQuestion && totalQuestions > 0) {
     return (
       <Layout
-        title={TEXT.TEST_MODE}
-        subtitle={`Ujian Komprehensif - Soalan ${currentQuestionIndex + 1}`}
+        title={formatText(TEXT.TEST_MODE)}
+        subtitle={formatText(`اوجيان کومڤرهنسيف - سوالن ${currentQuestionIndex + 1} | Ujian Komprehensif - Soalan ${currentQuestionIndex + 1}`)}
         currentUser={currentUser?.name}
         onUserClick={() => navigate('/')}
         showUser={true}
+        showBilingualToggle={true}
+        showKeluarButton={true}
+        onKeluarClick={handleKeluar}
       >
         <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,6 +242,7 @@ const TestMode: React.FC = () => {
               isAnswered={isAnswered}
               isRevealed={isRevealed}
               onAnswerSelect={handleAnswerSelect}
+              onAnswerChange={changeAnswer}
               onNext={handleNext}
               onPrevious={handlePrevious}
               canGoNext={canGoNext}
@@ -225,11 +257,12 @@ const TestMode: React.FC = () => {
   // Show test introduction
   return (
     <Layout
-      title={TEXT.TEST_MODE}
-      subtitle="Mod Ujian - Ujian Komprehensif"
+      title={formatText(TEXT.TEST_MODE)}
+      subtitle={formatText("مود اوجيان - اوجيان کومڤرهنسيف | Mod Ujian - Ujian Komprehensif")}
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}
+      showBilingualToggle={true}
     >
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
