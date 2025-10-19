@@ -12,7 +12,6 @@
  */
 
 import { useState, useCallback, useEffect } from 'react'
-import { getFromStorage, saveToStorage } from '../utils/localStorage'
 
 export interface UseLocalStateOptions<T> {
   key?: string
@@ -43,7 +42,7 @@ export const useLocalState = <T>({
   useEffect(() => {
     if (persist && key) {
       try {
-        const stored = getFromStorage(key)
+        const stored = localStorage.getItem(key)
         if (stored) {
           const parsed = deserialize(stored)
           setState(parsed)
@@ -60,7 +59,7 @@ export const useLocalState = <T>({
   useEffect(() => {
     if (persist && key && !isLoading) {
       try {
-        saveToStorage(key, serialize(state))
+        localStorage.setItem(key, serialize(state))
       } catch (error) {
         console.warn(`Failed to save state for key "${key}":`, error)
       }

@@ -15,7 +15,7 @@
 import React from 'react'
 import { cn } from '../../utils/cn'
 import { useBilingual } from '../../contexts/BilingualContext'
-import Button from '../ui/Button'
+import Button from '../Button'
 
 export interface NavButtonProps {
   children: React.ReactNode

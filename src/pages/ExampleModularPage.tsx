@@ -16,7 +16,6 @@ import { useDebounce } from '../hooks/useDebounce'
 // Import modular components
 import {
   // Layout components
-  Layout,
   Page,
   Section,
   Container,
@@ -41,6 +40,7 @@ import {
   // Feedback components
   Toast
 } from '../components'
+import Layout from '../components/Layout'
 
 import { TEXT } from '../constants/text'
 import { COMPONENT_VARIANTS, QUESTION_TYPES } from '../constants/components'

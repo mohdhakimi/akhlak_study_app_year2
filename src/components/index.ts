@@ -9,7 +9,7 @@
 export * from './ui'
 
 // Layout Components
-export * from './layout'
+export * from './layout-components'
 
 // Navigation Components
 export * from './navigation'
@@ -48,5 +48,4 @@ export type { QuizResultsProps, QuizResult } from './QuizResults'
 export type { TestResultsProps, TestResult } from './TestResults'
 export type { LeaderboardTableProps } from './LeaderboardTable'
 export type { AnswerOptionProps } from './AnswerOption'
-export type { FillBlankQuestionProps } from './FillBlankQuestion'
-export type { TrueFalseQuestionProps } from './TrueFalseQuestion'
+// Note: FillBlankQuestionProps and TrueFalseQuestionProps are not exported from their respective components
