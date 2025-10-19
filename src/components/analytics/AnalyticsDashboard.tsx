@@ -14,6 +14,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { useAnalytics } from '../../hooks/useAnalytics'
+import { useAnalyticsAuth } from '../../hooks/useAnalyticsAuth'
 import { useBilingual } from '../../contexts/BilingualContext'
 import SimpleChart from './SimpleChart'
 import Card from '../Card'
@@ -26,9 +27,11 @@ export interface AnalyticsDashboardProps {
 
 const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className }) => {
   const { getAnalyticsData, exportData, clearData, isTracking } = useAnalytics()
+  const { logout, timeUntilExpiry } = useAnalyticsAuth()
   const { formatText } = useBilingual()
   const [analyticsData, setAnalyticsData] = useState(getAnalyticsData())
   const [selectedTimeRange, setSelectedTimeRange] = useState<'7d' | '30d' | 'all'>('30d')
+  const [sessionTime, setSessionTime] = useState(timeUntilExpiry)
 
   // Refresh data every 30 seconds
   useEffect(() => {
@@ -38,6 +41,15 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className }) =>
 
     return () => clearInterval(interval)
   }, [getAnalyticsData])
+
+  // Update session timer every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSessionTime(timeUntilExpiry)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [timeUntilExpiry])
 
   const handleExport = () => {
     const data = exportData()
@@ -63,6 +75,20 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className }) =>
     const minutes = Math.floor(ms / 60000)
     const seconds = Math.floor((ms % 60000) / 1000)
     return `${minutes}m ${seconds}s`
+  }
+
+  const formatSessionTime = (ms: number) => {
+    const hours = Math.floor(ms / 3600000)
+    const minutes = Math.floor((ms % 3600000) / 60000)
+    const seconds = Math.floor((ms % 60000) / 1000)
+    
+    if (hours > 0) {
+      return `${hours}h ${minutes}m ${seconds}s`
+    } else if (minutes > 0) {
+      return `${minutes}m ${seconds}s`
+    } else {
+      return `${seconds}s`
+    }
   }
 
   const getRecentEvents = () => {
@@ -132,11 +158,19 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ className }) =>
             }`}>
               {isTracking ? 'Tracking Active' : 'Tracking Disabled'}
             </div>
+            {sessionTime > 0 && (
+              <div className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                Session: {formatSessionTime(sessionTime)}
+              </div>
+            )}
             <Button onClick={handleExport} variant="outline" size="sm">
               Export Data
             </Button>
             <Button onClick={handleClearData} variant="danger" size="sm">
               Clear Data
+            </Button>
+            <Button onClick={logout} variant="outline" size="sm">
+              Logout
             </Button>
           </div>
         </div>
