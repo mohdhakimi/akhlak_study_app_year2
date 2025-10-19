@@ -5,7 +5,7 @@ import ScoreDisplay from '../ScoreDisplay'
 describe('ScoreDisplay', () => {
   it('renders with basic props', () => {
     render(<ScoreDisplay score={8} total={10} />)
-    
+
     expect(screen.getByText('8/10 (80%)')).toBeInTheDocument()
     expect(screen.getByText('80% betul')).toBeInTheDocument()
     expect(screen.getByText('Kemajuan yang hebat!')).toBeInTheDocument()
@@ -47,30 +47,42 @@ describe('ScoreDisplay', () => {
 
   it('hides percentage when showPercentage is false', () => {
     render(<ScoreDisplay score={8} total={10} showPercentage={false} />)
-    
+
     expect(screen.queryByText('80% betul')).not.toBeInTheDocument()
     expect(screen.getByText('8/10 (80%)')).toBeInTheDocument()
   })
 
   it('hides motivation when showMotivation is false', () => {
     render(<ScoreDisplay score={8} total={10} showMotivation={false} />)
-    
+
     expect(screen.queryByText('Hebat!')).not.toBeInTheDocument()
     expect(screen.getByText('8/10 (80%)')).toBeInTheDocument()
   })
 
   it('applies correct color classes based on score', () => {
     const { rerender } = render(<ScoreDisplay score={9} total={10} />)
-    expect(screen.getByText('9/10 (90%)').parentElement).toHaveClass('text-success-600', 'bg-success-50')
+    expect(screen.getByText('9/10 (90%)').parentElement).toHaveClass(
+      'text-success-600',
+      'bg-success-50'
+    )
 
     rerender(<ScoreDisplay score={8} total={10} />)
-    expect(screen.getByText('8/10 (80%)').parentElement).toHaveClass('text-primary-600', 'bg-primary-50')
+    expect(screen.getByText('8/10 (80%)').parentElement).toHaveClass(
+      'text-primary-600',
+      'bg-primary-50'
+    )
 
     rerender(<ScoreDisplay score={7} total={10} />)
-    expect(screen.getByText('7/10 (70%)').parentElement).toHaveClass('text-warning-600', 'bg-warning-50')
+    expect(screen.getByText('7/10 (70%)').parentElement).toHaveClass(
+      'text-warning-600',
+      'bg-warning-50'
+    )
 
     rerender(<ScoreDisplay score={5} total={10} />)
-    expect(screen.getByText('5/10 (50%)').parentElement).toHaveClass('text-danger-600', 'bg-danger-50')
+    expect(screen.getByText('5/10 (50%)').parentElement).toHaveClass(
+      'text-danger-600',
+      'bg-danger-50'
+    )
   })
 
   it('handles edge cases', () => {
@@ -83,7 +95,9 @@ describe('ScoreDisplay', () => {
 
   it('applies custom className', () => {
     render(<ScoreDisplay score={8} total={10} className="custom-class" />)
-    
-    expect(screen.getByText('8/10 (80%)').parentElement?.parentElement).toHaveClass('custom-class')
+
+    expect(
+      screen.getByText('8/10 (80%)').parentElement?.parentElement
+    ).toHaveClass('custom-class')
   })
 })

@@ -24,7 +24,7 @@ export function useStudyMode() {
     currentNoteIndex: 0,
     isStudying: false,
     loading: false,
-    error: null
+    error: null,
   })
 
   const startStudying = useCallback((topic: StudyTopic) => {
@@ -33,19 +33,19 @@ export function useStudyMode() {
       currentTopic: topic,
       currentNoteIndex: 0,
       isStudying: true,
-      error: null
+      error: null,
     }))
   }, [])
 
   const goToNext = useCallback(() => {
     setState(prev => {
       if (!prev.currentTopic) return prev
-      
+
       const maxIndex = prev.currentTopic.notes.length - 1
       if (prev.currentNoteIndex < maxIndex) {
         return {
           ...prev,
-          currentNoteIndex: prev.currentNoteIndex + 1
+          currentNoteIndex: prev.currentNoteIndex + 1,
         }
       }
       return prev
@@ -57,7 +57,7 @@ export function useStudyMode() {
       if (prev.currentNoteIndex > 0) {
         return {
           ...prev,
-          currentNoteIndex: prev.currentNoteIndex - 1
+          currentNoteIndex: prev.currentNoteIndex - 1,
         }
       }
       return prev
@@ -70,7 +70,7 @@ export function useStudyMode() {
       currentTopic: null,
       currentNoteIndex: 0,
       isStudying: false,
-      error: null
+      error: null,
     }))
   }, [])
 
@@ -84,10 +84,13 @@ export function useStudyMode() {
 
   // Computed values
   const currentNote = state.currentTopic?.notes[state.currentNoteIndex] || null
-  const canGoNext = state.currentTopic ? state.currentNoteIndex < state.currentTopic.notes.length - 1 : false
+  const canGoNext = state.currentTopic
+    ? state.currentNoteIndex < state.currentTopic.notes.length - 1
+    : false
   const canGoPrevious = state.currentNoteIndex > 0
   const totalNotes = state.currentTopic?.notes.length || 0
-  const progress = totalNotes > 0 ? ((state.currentNoteIndex + 1) / totalNotes) * 100 : 0
+  const progress =
+    totalNotes > 0 ? ((state.currentNoteIndex + 1) / totalNotes) * 100 : 0
 
   return {
     ...state,
@@ -102,7 +105,7 @@ export function useStudyMode() {
       goToPrevious,
       resetStudy,
       setError,
-      setLoading
-    }
+      setLoading,
+    },
   }
 }

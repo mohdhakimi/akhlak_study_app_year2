@@ -18,9 +18,13 @@ const QuizMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
   const { formatText } = useBilingual()
-  const { quizCategories, loading: contentLoading, error: contentError } = useContentData()
+  const {
+    quizCategories,
+    loading: contentLoading,
+    error: contentError,
+  } = useContentData()
   const { saveScore } = useScores()
-  
+
   const {
     currentQuestion,
     currentQuestionIndex,
@@ -70,10 +74,10 @@ const QuizMode: React.FC = () => {
         percentage: Math.round((score / totalQuestions) * 100),
         timestamp: new Date().toISOString(),
         type: 'quiz',
-        answers: [] // Partial progress
+        answers: [], // Partial progress
       })
     }
-    
+
     resetQuiz()
     setQuizResults([])
     setShowResults(false)
@@ -102,7 +106,7 @@ const QuizMode: React.FC = () => {
       const results = finishQuiz()
       setQuizResults(results)
       setShowResults(true)
-      
+
       // Save score to localStorage
       if (currentUser && selectedCategory) {
         saveScore({
@@ -120,8 +124,8 @@ const QuizMode: React.FC = () => {
             questionId: result.question.id,
             userAnswer: result.userAnswer,
             correctAnswer: result.correctAnswer,
-            isCorrect: result.isCorrect
-          }))
+            isCorrect: result.isCorrect,
+          })),
         })
       }
     } else {
@@ -180,9 +184,7 @@ const QuizMode: React.FC = () => {
               <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 Ralat Memuatkan Kandungan
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                {contentError}
-              </p>
+              <p className="text-lg text-gray-600 mb-8">{contentError}</p>
               <Button
                 onClick={handleBackToMenu}
                 variant="primary"
@@ -228,7 +230,9 @@ const QuizMode: React.FC = () => {
     return (
       <Layout
         title={formatText(TEXT.QUIZ_MODE)}
-        subtitle={formatText(`${selectedCategory?.name || 'کویز | Kuiz'} - سوالن ${currentQuestionIndex + 1} | Soalan ${currentQuestionIndex + 1}`)}
+        subtitle={formatText(
+          `${selectedCategory?.name || 'کویز | Kuiz'} - سوالن ${currentQuestionIndex + 1} | Soalan ${currentQuestionIndex + 1}`
+        )}
         currentUser={currentUser?.name}
         onUserClick={() => navigate('/')}
         showUser={true}
@@ -263,7 +267,9 @@ const QuizMode: React.FC = () => {
   return (
     <Layout
       title={formatText(TEXT.QUIZ_MODE)}
-      subtitle={formatText("مود کویز - اوجي ڤنڬتاهوان اندا | Mod Kuiz - Uji Pengetahuan Anda")}
+      subtitle={formatText(
+        'مود کویز - اوجي ڤنڬتاهوان اندا | Mod Kuiz - Uji Pengetahuan Anda'
+      )}
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}

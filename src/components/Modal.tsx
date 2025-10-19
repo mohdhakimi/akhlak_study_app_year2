@@ -22,7 +22,7 @@ const Modal: React.FC<ModalProps> = ({
   size = 'md',
   showCloseButton = true,
   closeOnOverlayClick = true,
-  className
+  className,
 }) => {
   // Handle escape key
   useEffect(() => {
@@ -50,7 +50,7 @@ const Modal: React.FC<ModalProps> = ({
     sm: 'max-w-sm',
     md: 'max-w-md',
     lg: 'max-w-lg',
-    xl: 'max-w-xl'
+    xl: 'max-w-xl',
   }
 
   const modalContent = (
@@ -61,7 +61,7 @@ const Modal: React.FC<ModalProps> = ({
         onClick={closeOnOverlayClick ? onClose : undefined}
         aria-hidden="true"
       />
-      
+
       {/* Modal */}
       <div
         className={cn(
@@ -77,7 +77,10 @@ const Modal: React.FC<ModalProps> = ({
         {(title || showCloseButton) && (
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
             {title && (
-              <h2 id="modal-title" className="text-xl font-semibold text-gray-900">
+              <h2
+                id="modal-title"
+                className="text-xl font-semibold text-gray-900"
+              >
                 {title}
               </h2>
             )}
@@ -104,11 +107,9 @@ const Modal: React.FC<ModalProps> = ({
             )}
           </div>
         )}
-        
+
         {/* Content */}
-        <div className="p-6">
-          {children}
-        </div>
+        <div className="p-6">{children}</div>
       </div>
     </div>
   )

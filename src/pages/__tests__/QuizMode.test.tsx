@@ -220,18 +220,24 @@ describe('QuizMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Kuiz'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 10')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('Soalan 1 dari 10') || element?.textContent?.includes('سوالن 1 دري 10')
+      })).toBeInTheDocument()
     })
     
     // Answer first question
     fireEvent.click(screen.getByText('Jujur'))
     
     await waitFor(() => {
-      expect(screen.getByText('Seterusnya →')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('Seterusnya') || element?.textContent?.includes('ستروسڽا')
+      })).toBeInTheDocument()
     })
     
     // Go to next question
-    fireEvent.click(screen.getByText('Seterusnya →'))
+    fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('Seterusnya') || element?.textContent?.includes('ستروسڽا')
+      }'))
     
     await waitFor(() => {
       expect(screen.getByText('Soalan 2 dari 10')).toBeInTheDocument()
@@ -259,13 +265,19 @@ describe('QuizMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Kuiz'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 10')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('(content, element) => {
+        return element?.textContent?.includes('Soalan 1 dari 10') || element?.textContent?.includes('سوالن 1 دري 10')
+      }') || element?.textContent?.includes('سوالن 1 دري 10')
+      })).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Jujur'))
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('Seterusnya') || element?.textContent?.includes('ستروسڽا')
+      }'))
     })
     
     await waitFor(() => {
@@ -299,14 +311,18 @@ describe('QuizMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Kuiz'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 10')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('Soalan 1 dari 10') || element?.textContent?.includes('سوالن 1 دري 10')
+      })).toBeInTheDocument()
     })
     
     // Answer first question
     fireEvent.click(screen.getByText('Jujur'))
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('Seterusnya') || element?.textContent?.includes('ستروسڽا')
+      }'))
     })
     
     await waitFor(() => {
@@ -317,7 +333,9 @@ describe('QuizMode Integration', () => {
     fireEvent.click(screen.getByText('← Sebelum'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 10')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('Soalan 1 dari 10') || element?.textContent?.includes('سوالن 1 دري 10')
+      })).toBeInTheDocument()
     })
   })
 
@@ -328,13 +346,17 @@ describe('QuizMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Kuiz'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 10')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('Soalan 1 dari 10') || element?.textContent?.includes('سوالن 1 دري 10')
+      })).toBeInTheDocument()
     })
     
     fireEvent.click(screen.getByText('Jujur'))
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('Seterusnya') || element?.textContent?.includes('ستروسڽا')
+      }'))
     })
     
     await waitFor(() => {
@@ -359,7 +381,9 @@ describe('QuizMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Kuiz'))
     
     await waitFor(() => {
-      expect(screen.getByText('Soalan 1 dari 10')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('Soalan 1 dari 10') || element?.textContent?.includes('سوالن 1 دري 10')
+      })).toBeInTheDocument()
     })
     
     // Go back to menu

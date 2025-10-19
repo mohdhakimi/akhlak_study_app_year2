@@ -5,7 +5,7 @@ import Button from '../Button'
 describe('Button', () => {
   it('renders with default props', () => {
     render(<Button>Click me</Button>)
-    
+
     const button = screen.getByRole('button', { name: 'Click me' })
     expect(button).toBeInTheDocument()
     expect(button).toHaveClass('bg-primary-600')
@@ -26,7 +26,10 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveClass('bg-danger-600')
 
     rerender(<Button variant="outline">Outline</Button>)
-    expect(screen.getByRole('button')).toHaveClass('border-2', 'border-primary-600')
+    expect(screen.getByRole('button')).toHaveClass(
+      'border-2',
+      'border-primary-600'
+    )
   })
 
   it('renders with different sizes', () => {
@@ -43,14 +46,14 @@ describe('Button', () => {
   it('handles click events', () => {
     const handleClick = vi.fn()
     render(<Button onClick={handleClick}>Click me</Button>)
-    
+
     fireEvent.click(screen.getByRole('button'))
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
 
   it('shows loading state', () => {
     render(<Button loading>Loading</Button>)
-    
+
     const button = screen.getByRole('button')
     expect(button).toBeDisabled()
     expect(button).toContainHTML('animate-spin')
@@ -58,7 +61,7 @@ describe('Button', () => {
 
   it('can be disabled', () => {
     render(<Button disabled>Disabled</Button>)
-    
+
     const button = screen.getByRole('button')
     expect(button).toBeDisabled()
     expect(button).toHaveClass('disabled:opacity-50')
@@ -66,20 +69,20 @@ describe('Button', () => {
 
   it('renders with full width', () => {
     render(<Button fullWidth>Full width</Button>)
-    
+
     expect(screen.getByRole('button')).toHaveClass('w-full')
   })
 
   it('applies custom className', () => {
     render(<Button className="custom-class">Custom</Button>)
-    
+
     expect(screen.getByRole('button')).toHaveClass('custom-class')
   })
 
   it('forwards ref correctly', () => {
     const ref = vi.fn()
     render(<Button ref={ref}>Ref test</Button>)
-    
+
     expect(ref).toHaveBeenCalled()
   })
 })

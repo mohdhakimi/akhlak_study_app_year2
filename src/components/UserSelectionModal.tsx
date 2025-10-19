@@ -25,7 +25,7 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({
   existingUsers,
   loading = false,
   error = null,
-  onClearError
+  onClearError,
 }) => {
   const [newUserName, setNewUserName] = useState('')
   const [isCreatingUser, setIsCreatingUser] = useState(false)
@@ -44,13 +44,13 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({
 
   const handleCreateUser = async () => {
     const trimmedName = newUserName.trim()
-    
+
     // Validation
     if (!trimmedName) {
       setValidationError(TEXT.NAME_REQUIRED)
       return
     }
-    
+
     if (trimmedName.length < 2) {
       setValidationError(TEXT.NAME_TOO_SHORT)
       return
@@ -60,7 +60,7 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({
     const userExists = existingUsers.some(
       user => user.name.toLowerCase() === trimmedName.toLowerCase()
     )
-    
+
     if (userExists) {
       setValidationError(TEXT.NAME_ALREADY_EXISTS)
       return
@@ -136,7 +136,7 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({
               {TEXT.SELECT_USER}
             </h3>
             <div className="space-y-2 max-h-60 overflow-y-auto">
-              {existingUsers.map((user) => (
+              {existingUsers.map(user => (
                 <Card
                   key={user.id}
                   className="p-4 hover:bg-gray-50 cursor-pointer transition-colors"
@@ -205,7 +205,7 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({
               <h3 className="text-lg font-medium text-gray-900">
                 {TEXT.CREATE_NEW_USER}
               </h3>
-              
+
               <div>
                 <label
                   htmlFor="user-name"
@@ -217,7 +217,7 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({
                   id="user-name"
                   type="text"
                   value={newUserName}
-                  onChange={(e) => setNewUserName(e.target.value)}
+                  onChange={e => setNewUserName(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder={TEXT.ENTER_YOUR_NAME}
                   className={cn(

@@ -13,7 +13,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({
   children,
   className,
   enableSound = true,
-  animation = 'fade'
+  animation = 'fade',
 }) => {
   const [isVisible, setIsVisible] = useState(false)
   const { playTransitionSound } = usePageTransitionAudio()
@@ -34,15 +34,12 @@ const PageTransition: React.FC<PageTransitionProps> = ({
 
   const getAnimationClasses = () => {
     if (animation === 'none') return ''
-    
+
     const baseClasses = 'transition-all duration-300 ease-in-out'
-    
+
     switch (animation) {
       case 'fade':
-        return cn(
-          baseClasses,
-          isVisible ? 'opacity-100' : 'opacity-0'
-        )
+        return cn(baseClasses, isVisible ? 'opacity-100' : 'opacity-0')
       case 'slide':
         return cn(
           baseClasses,
@@ -58,11 +55,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({
     }
   }
 
-  return (
-    <div className={cn(getAnimationClasses(), className)}>
-      {children}
-    </div>
-  )
+  return <div className={cn(getAnimationClasses(), className)}>{children}</div>
 }
 
 export default PageTransition

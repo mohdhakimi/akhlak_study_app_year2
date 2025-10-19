@@ -17,15 +17,17 @@ vi.mock('./contexts/UserContext', () => ({
     clearError: vi.fn(),
     showUserSelectionModal: false,
     openUserSelectionModal: vi.fn(),
-    closeUserSelectionModal: vi.fn()
-  })
+    closeUserSelectionModal: vi.fn(),
+  }),
 }))
 
 describe('App', () => {
   it('renders welcome message', () => {
     render(<App />)
     expect(screen.getByText('Akhlak Tahun Dua KSRI')).toBeInTheDocument()
-    expect(screen.getByText('Aplikasi Pembelajaran Interaktif')).toBeInTheDocument()
+    expect(
+      screen.getByText('Aplikasi Pembelajaran Interaktif')
+    ).toBeInTheDocument()
   })
 
   it('renders user selection button', () => {

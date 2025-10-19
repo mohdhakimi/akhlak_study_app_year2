@@ -21,20 +21,22 @@ const MainMenu: React.FC = () => {
     {
       id: 'study',
       title: TEXT.STUDY_MODE,
-      description: 'باچ دان ڤلاجري نوتا-نوتا ڤنتڠ | Baca dan pelajari nota-nota penting',
+      description:
+        'باچ دان ڤلاجري نوتا-نوتا ڤنتڠ | Baca dan pelajari nota-nota penting',
       icon: '📚',
       color: 'bg-blue-500',
       hoverColor: 'hover:bg-blue-600',
-      route: '/study'
+      route: '/study',
     },
     {
       id: 'quiz',
       title: TEXT.QUIZ_MODE,
-      description: 'اوجي ڤنڬتاهوان دغن کویز ڤندق | Uji pengetahuan dengan kuiz pendek',
+      description:
+        'اوجي ڤنڬتاهوان دغن کویز ڤندق | Uji pengetahuan dengan kuiz pendek',
       icon: '🧩',
       color: 'bg-green-500',
       hoverColor: 'hover:bg-green-600',
-      route: '/quiz'
+      route: '/quiz',
     },
     {
       id: 'test',
@@ -43,7 +45,7 @@ const MainMenu: React.FC = () => {
       icon: '📝',
       color: 'bg-purple-500',
       hoverColor: 'hover:bg-purple-600',
-      route: '/test'
+      route: '/test',
     },
     {
       id: 'leaderboard',
@@ -52,8 +54,8 @@ const MainMenu: React.FC = () => {
       icon: '🏆',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600',
-      route: '/leaderboard'
-    }
+      route: '/leaderboard',
+    },
   ]
 
   const handleMenuClick = (route: string) => {
@@ -81,25 +83,31 @@ const MainMenu: React.FC = () => {
           <PageTransition animation="fade">
             <div className="text-center mb-12">
               <div className="flex justify-center mb-6">
-                <Mascot 
-                  expression="happy" 
-                  size="lg" 
+                <Mascot
+                  expression="happy"
+                  size="lg"
                   animated={true}
                   className="animate-bounce-gentle"
                 />
               </div>
               <h1 className="text-4xl font-bold text-primary-800 mb-4 animate-slide-up">
-                {currentUser ? formatText(`سلامت داتڠ، ${currentUser.name}! | Selamat Datang, ${currentUser.name}!`) : formatText(TEXT.WELCOME)}
+                {currentUser
+                  ? formatText(
+                      `سلامت داتڠ، ${currentUser.name}! | Selamat Datang, ${currentUser.name}!`
+                    )
+                  : formatText(TEXT.WELCOME)}
               </h1>
               <p className="text-xl text-primary-600 max-w-2xl mx-auto animate-slide-up">
-                {formatText('ماري بلاجر اخالق دغن چرا يغ منيرونوکن! ڤليه مود ڤمبلاچرن يغ اندا سوكا. | Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.')}
+                {formatText(
+                  'ماري بلاجر اخالق دغن چرا يغ منيرونوکن! ڤليه مود ڤمبلاچرن يغ اندا سوكا. | Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.'
+                )}
               </p>
             </div>
           </PageTransition>
 
           {/* Menu Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <Card
                 key={item.id}
                 className={cn(
@@ -108,18 +116,20 @@ const MainMenu: React.FC = () => {
                 )}
                 onClick={() => handleMenuClick(item.route)}
               >
-                <div className={cn(
-                  'h-32 flex flex-col items-center justify-center text-white relative overflow-hidden',
-                  item.color,
-                  item.hoverColor
-                )}>
+                <div
+                  className={cn(
+                    'h-32 flex flex-col items-center justify-center text-white relative overflow-hidden',
+                    item.color,
+                    item.hoverColor
+                  )}
+                >
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-white opacity-20"></div>
                     <div className="absolute bottom-4 left-4 w-8 h-8 rounded-full bg-white opacity-30"></div>
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white opacity-10"></div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="relative z-20 text-center">
                     <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
@@ -132,7 +142,7 @@ const MainMenu: React.FC = () => {
                       {formatText(item.description)}
                     </p>
                   </div>
-                  
+
                   {/* Dark overlay for better contrast */}
                   <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
@@ -150,19 +160,39 @@ const MainMenu: React.FC = () => {
               variant="outline"
               className="min-w-[200px]"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
               </svg>
               {currentUser ? TEXT.SWITCH_USER : TEXT.SELECT_USER}
             </Button>
-            
+
             <Button
               onClick={() => window.location.reload()}
               variant="secondary"
               className="min-w-[200px]"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
               </svg>
               Muat Semula
             </Button>
@@ -173,7 +203,8 @@ const MainMenu: React.FC = () => {
             <div className="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
               <Mascot expression="encouraging" size="sm" className="mr-3" />
               <p className="text-gray-700 font-medium">
-                "Jom belajar bersama-sama! Pilih mod yang anda suka untuk mula belajar."
+                "Jom belajar bersama-sama! Pilih mod yang anda suka untuk mula
+                belajar."
               </p>
             </div>
           </div>

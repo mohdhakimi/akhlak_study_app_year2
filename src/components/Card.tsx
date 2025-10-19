@@ -8,23 +8,26 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant = 'default', padding = 'md', children, ...props }, ref) => {
+  (
+    { className, variant = 'default', padding = 'md', children, ...props },
+    ref
+  ) => {
     const baseClasses = 'rounded-xl transition-all duration-200'
-    
+
     const variantClasses = {
       default: 'bg-white shadow-sm border border-gray-200',
       elevated: 'bg-white shadow-lg border border-gray-200',
       outlined: 'bg-transparent border-2 border-gray-300',
-      filled: 'bg-gray-50 border border-gray-200'
+      filled: 'bg-gray-50 border border-gray-200',
     }
-    
+
     const paddingClasses = {
       none: 'p-0',
       sm: 'p-3',
       md: 'p-6',
-      lg: 'p-8'
+      lg: 'p-8',
     }
-    
+
     return (
       <div
         className={cn(

@@ -1,25 +1,32 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { renderHook, act } from '@testing-library/react'
-import { 
-  useAudio, 
-  useSoundEffect, 
-  useButtonSound, 
-  useQuizAudio, 
-  usePageTransitionAudio 
+import {
+  useAudio,
+  useSoundEffect,
+  useButtonSound,
+  useQuizAudio,
+  usePageTransitionAudio,
 } from '../useAudio'
 import * as audioUtils from '../../utils/audio'
 
+// Create mock functions
+const mockPlaySound = vi.fn()
+const mockGetAudioSettings = vi.fn(() => ({
+  soundEnabled: true,
+  musicEnabled: false,
+  volume: 0.7,
+}))
+const mockSetSoundEnabled = vi.fn()
+const mockSetMusicEnabled = vi.fn()
+const mockSetVolume = vi.fn()
+
 // Mock the audio utils
 vi.mock('../../utils/audio', () => ({
-  playSound: vi.fn(),
-  getAudioSettings: vi.fn(() => ({
-    soundEnabled: true,
-    musicEnabled: false,
-    volume: 0.7
-  })),
-  setSoundEnabled: vi.fn(),
-  setMusicEnabled: vi.fn(),
-  setVolume: vi.fn()
+  playSound: mockPlaySound,
+  getAudioSettings: mockGetAudioSettings,
+  setSoundEnabled: mockSetSoundEnabled,
+  setMusicEnabled: mockSetMusicEnabled,
+  setVolume: mockSetVolume,
 }))
 
 describe('useAudio', () => {
@@ -46,7 +53,7 @@ describe('useAudio', () => {
       await result.current.playSound('click')
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('click')
+    expect(mockPlaySound).toHaveBeenCalledWith('click')
   })
 
   it('should call setSoundEnabled when toggleSound is invoked', () => {
@@ -56,7 +63,7 @@ describe('useAudio', () => {
       result.current.toggleSound()
     })
 
-    expect(audioUtils.setSoundEnabled).toHaveBeenCalledWith(false)
+    expect(mockSetSoundEnabled).toHaveBeenCalledWith(false)
   })
 
   it('should call setMusicEnabled when toggleMusic is invoked', () => {
@@ -66,7 +73,7 @@ describe('useAudio', () => {
       result.current.toggleMusic()
     })
 
-    expect(audioUtils.setMusicEnabled).toHaveBeenCalledWith(true)
+    expect(mockSetMusicEnabled).toHaveBeenCalledWith(true)
   })
 
   it('should call setVolume when setVolumeLevel is invoked', () => {
@@ -76,7 +83,7 @@ describe('useAudio', () => {
       result.current.setVolumeLevel(0.5)
     })
 
-    expect(audioUtils.setVolume).toHaveBeenCalledWith(0.5)
+    expect(mockSetVolume).toHaveBeenCalledWith(0.5)
   })
 })
 
@@ -91,26 +98,26 @@ describe('useSoundEffect', () => {
       { initialProps: { trigger: false } }
     )
 
-    expect(audioUtils.playSound).not.toHaveBeenCalled()
+    expect(mockPlaySound).not.toHaveBeenCalled()
 
     rerender({ trigger: true })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('click')
+    expect(mockPlaySound).toHaveBeenCalledWith('click')
   })
 
   it('should not play sound when sound is disabled', () => {
-    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+    mockGetAudioSettings.mockReturnValue({
       soundEnabled: false,
       musicEnabled: false,
-      volume: 0.7
+      volume: 0.7,
     })
 
     const { result } = renderHook(() => useSoundEffect('click', true))
 
     // Debug: check what was called
-    console.log('playSound calls:', vi.mocked(audioUtils.playSound).mock.calls)
-    
-    expect(audioUtils.playSound).not.toHaveBeenCalled()
+    console.log('playSound calls:', mockPlaySound.mock.calls)
+
+    expect(mockPlaySound).not.toHaveBeenCalled()
   })
 })
 
@@ -118,10 +125,10 @@ describe('useButtonSound', () => {
   beforeEach(() => {
     vi.clearAllMocks()
     // Reset the mock implementation
-    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+    mockGetAudioSettings.mockReturnValue({
       soundEnabled: true,
       musicEnabled: false,
-      volume: 0.7
+      volume: 0.7,
     })
   })
 
@@ -139,8 +146,8 @@ describe('useButtonSound', () => {
       result.current.playClickSound()
     })
 
-    console.log('playSound calls:', vi.mocked(audioUtils.playSound).mock.calls)
-    expect(audioUtils.playSound).toHaveBeenCalledWith('click')
+    console.log('playSound calls:', mockPlaySound.mock.calls)
+    expect(mockPlaySound).toHaveBeenCalledWith('click')
   })
 
   it('should play hover sound when playHoverSound is called', () => {
@@ -150,17 +157,17 @@ describe('useButtonSound', () => {
       result.current.playHoverSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('buttonHover')
+    expect(mockPlaySound).toHaveBeenCalledWith('buttonHover')
   })
 })
 
 describe('useQuizAudio', () => {
   beforeEach(() => {
     vi.clearAllMocks()
-    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+    mockGetAudioSettings.mockReturnValue({
       soundEnabled: true,
       musicEnabled: false,
-      volume: 0.7
+      volume: 0.7,
     })
   })
 
@@ -181,7 +188,7 @@ describe('useQuizAudio', () => {
       result.current.playCorrectSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('correct')
+    expect(mockPlaySound).toHaveBeenCalledWith('correct')
   })
 
   it('should play incorrect sound when playIncorrectSound is called', () => {
@@ -191,7 +198,7 @@ describe('useQuizAudio', () => {
       result.current.playIncorrectSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('incorrect')
+    expect(mockPlaySound).toHaveBeenCalledWith('incorrect')
   })
 
   it('should play quiz complete sound when playQuizCompleteSound is called', () => {
@@ -201,7 +208,7 @@ describe('useQuizAudio', () => {
       result.current.playQuizCompleteSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('quizComplete')
+    expect(mockPlaySound).toHaveBeenCalledWith('quizComplete')
   })
 
   it('should play test complete sound when playTestCompleteSound is called', () => {
@@ -211,7 +218,7 @@ describe('useQuizAudio', () => {
       result.current.playTestCompleteSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('testComplete')
+    expect(mockPlaySound).toHaveBeenCalledWith('testComplete')
   })
 
   it('should play celebration sound when playCelebrationSound is called', () => {
@@ -221,17 +228,17 @@ describe('useQuizAudio', () => {
       result.current.playCelebrationSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('celebration')
+    expect(mockPlaySound).toHaveBeenCalledWith('celebration')
   })
 })
 
 describe('usePageTransitionAudio', () => {
   beforeEach(() => {
     vi.clearAllMocks()
-    vi.mocked(audioUtils.getAudioSettings).mockReturnValue({
+    mockGetAudioSettings.mockReturnValue({
       soundEnabled: true,
       musicEnabled: false,
-      volume: 0.7
+      volume: 0.7,
     })
   })
 
@@ -248,6 +255,6 @@ describe('usePageTransitionAudio', () => {
       result.current.playTransitionSound()
     })
 
-    expect(audioUtils.playSound).toHaveBeenCalledWith('pageTransition')
+    expect(mockPlaySound).toHaveBeenCalledWith('pageTransition')
   })
 })

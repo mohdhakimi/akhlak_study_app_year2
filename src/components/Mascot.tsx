@@ -12,7 +12,7 @@ const Mascot: React.FC<MascotProps> = ({
   expression = 'happy',
   size = 'md',
   className,
-  animated = true
+  animated = true,
 }) => {
   const getSizeClasses = () => {
     switch (size) {
@@ -42,7 +42,7 @@ const Mascot: React.FC<MascotProps> = ({
 
   const getAnimationClass = () => {
     if (!animated) return ''
-    
+
     switch (expression) {
       case 'excited':
         return 'animate-bounce'
@@ -66,9 +66,7 @@ const Mascot: React.FC<MascotProps> = ({
       role="img"
       aria-label={`Mascot dengan ekspresi ${expression}`}
     >
-      <div className="text-4xl">
-        {getExpressionEmoji()}
-      </div>
+      <div className="text-4xl">{getExpressionEmoji()}</div>
     </div>
   )
 }

@@ -9,7 +9,9 @@ interface BilingualContextType {
   formatText: (text: string) => string
 }
 
-const BilingualContext = createContext<BilingualContextType | undefined>(undefined)
+const BilingualContext = createContext<BilingualContextType | undefined>(
+  undefined
+)
 
 interface BilingualProviderProps {
   children: ReactNode

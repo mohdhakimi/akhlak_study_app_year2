@@ -22,10 +22,12 @@ const Header: React.FC<HeaderProps> = ({
   onSoundSettingsClick,
   showUser = true,
   showSoundSettings = true,
-  className
+  className,
 }) => {
   return (
-    <header className={cn('bg-white shadow-sm border-b border-gray-200', className)}>
+    <header
+      className={cn('bg-white shadow-sm border-b border-gray-200', className)}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo and title */}
@@ -63,8 +65,8 @@ const Header: React.FC<HeaderProps> = ({
             )}
 
             {/* User info */}
-            {showUser && (
-              currentUser ? (
+            {showUser &&
+              (currentUser ? (
                 <button
                   onClick={onUserClick}
                   className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors group"
@@ -121,8 +123,7 @@ const Header: React.FC<HeaderProps> = ({
                     {TEXT.SELECT_USER}
                   </span>
                 </button>
-              )
-            )}
+              ))}
           </div>
         </div>
       </div>

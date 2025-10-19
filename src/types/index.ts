@@ -284,7 +284,9 @@ export const STORAGE_KEYS = {
  * Utility type for creating a partial update of an object
  * @type PartialUpdate
  */
-export type PartialUpdate<T> = Partial<Omit<T, 'id' | 'createdAt' | 'timestamp'>>
+export type PartialUpdate<T> = Partial<
+  Omit<T, 'id' | 'createdAt' | 'timestamp'>
+>
 
 /**
  * Utility type for API response wrapper

@@ -11,8 +11,8 @@ const mockTopic: StudyTopic = {
   notes: [
     { id: 'note-1', title: 'Note 1', content: 'Content 1', order: 1 },
     { id: 'note-2', title: 'Note 2', content: 'Content 2', order: 2 },
-    { id: 'note-3', title: 'Note 3', content: 'Content 3', order: 3 }
-  ]
+    { id: 'note-3', title: 'Note 3', content: 'Content 3', order: 3 },
+  ],
 }
 
 describe('useStudyMode', () => {
@@ -22,7 +22,7 @@ describe('useStudyMode', () => {
 
   it('initializes with default state', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     expect(result.current.currentTopic).toBeNull()
     expect(result.current.currentNoteIndex).toBe(0)
     expect(result.current.isStudying).toBe(false)
@@ -37,11 +37,11 @@ describe('useStudyMode', () => {
 
   it('starts studying when topic is selected', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     expect(result.current.currentTopic).toBe(mockTopic)
     expect(result.current.currentNoteIndex).toBe(0)
     expect(result.current.isStudying).toBe(true)
@@ -54,15 +54,15 @@ describe('useStudyMode', () => {
 
   it('navigates to next note', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     expect(result.current.currentNoteIndex).toBe(1)
     expect(result.current.currentNote).toBe(mockTopic.notes[1])
     expect(result.current.canGoNext).toBe(true)
@@ -72,19 +72,19 @@ describe('useStudyMode', () => {
 
   it('navigates to previous note', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     act(() => {
       result.current.actions.goToPrevious()
     })
-    
+
     expect(result.current.currentNoteIndex).toBe(0)
     expect(result.current.currentNote).toBe(mockTopic.notes[0])
     expect(result.current.canGoNext).toBe(true)
@@ -93,64 +93,64 @@ describe('useStudyMode', () => {
 
   it('does not go beyond last note', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     // Go to last note
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     expect(result.current.currentNoteIndex).toBe(2)
     expect(result.current.canGoNext).toBe(false)
-    
+
     // Try to go beyond
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     expect(result.current.currentNoteIndex).toBe(2)
   })
 
   it('does not go before first note', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     expect(result.current.currentNoteIndex).toBe(0)
     expect(result.current.canGoPrevious).toBe(false)
-    
+
     // Try to go before first
     act(() => {
       result.current.actions.goToPrevious()
     })
-    
+
     expect(result.current.currentNoteIndex).toBe(0)
   })
 
   it('resets study state', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     act(() => {
       result.current.actions.resetStudy()
     })
-    
+
     expect(result.current.currentTopic).toBeNull()
     expect(result.current.currentNoteIndex).toBe(0)
     expect(result.current.isStudying).toBe(false)
@@ -159,45 +159,45 @@ describe('useStudyMode', () => {
 
   it('sets error state', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.setError('Test error')
     })
-    
+
     expect(result.current.error).toBe('Test error')
   })
 
   it('sets loading state', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.setLoading(true)
     })
-    
+
     expect(result.current.loading).toBe(true)
   })
 
   it('calculates progress correctly', () => {
     const { result } = renderHook(() => useStudyMode())
-    
+
     act(() => {
       result.current.actions.startStudying(mockTopic)
     })
-    
+
     // First note (index 0)
     expect(result.current.progress).toBeCloseTo(33.33, 1)
-    
+
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     // Second note (index 1)
     expect(result.current.progress).toBeCloseTo(66.67, 1)
-    
+
     act(() => {
       result.current.actions.goToNext()
     })
-    
+
     // Third note (index 2)
     expect(result.current.progress).toBeCloseTo(100, 1)
   })

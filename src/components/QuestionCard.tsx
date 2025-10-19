@@ -5,7 +5,7 @@
  * This component renders a single quiz question with answer options, navigation
  * controls, and feedback. It provides a complete question interface for both
  * quiz and test modes.
- * 
+ *
  * Features:
  * - Bilingual text support
  * - Answer option selection
@@ -63,11 +63,11 @@ export interface QuestionCardProps {
 
 /**
  * QuestionCard component for displaying quiz questions
- * 
+ *
  * This component renders a complete question interface including the question text,
  * answer options, navigation controls, and feedback. It supports both pre-shuffled
  * options and dynamic shuffling for backward compatibility.
- * 
+ *
  * @param props - Component props
  * @returns JSX element representing the question card
  */
@@ -85,22 +85,22 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   onPrevious,
   canGoNext,
   canGoPrevious,
-  className
+  className,
 }) => {
   // =============================================================================
   // HOOKS AND CONTEXT
   // =============================================================================
-  
+
   /** Bilingual context for text formatting */
   const { formatText } = useBilingual()
-  
+
   // =============================================================================
   // COMPUTED VALUES
   // =============================================================================
-  
+
   /** All questions in this app are MCQ type */
   const questionType = 'mcq'
-  
+
   /**
    * Memoized shuffled options and correct answer index
    * Uses provided options if available, otherwise shuffles dynamically
@@ -108,7 +108,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   const { shuffledOptions, newCorrectIndex } = React.useMemo(() => {
     if (providedShuffledOptions && providedShuffledOptions.length > 0) {
       // Use pre-shuffled options (preferred for performance)
-      return { shuffledOptions: providedShuffledOptions, newCorrectIndex: correctAnswer }
+      return {
+        shuffledOptions: providedShuffledOptions,
+        newCorrectIndex: correctAnswer,
+      }
     } else {
       // Fallback to dynamic shuffling (for backward compatibility)
       return shuffleQuizOptions(question.options, correctAnswer)
@@ -122,7 +125,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   }
 
   const isCorrect = selectedAnswer === newCorrectIndex
-  const isIncorrect = selectedAnswer !== null && selectedAnswer !== newCorrectIndex
+  const isIncorrect =
+    selectedAnswer !== null && selectedAnswer !== newCorrectIndex
 
   return (
     <div className={cn('w-full max-w-4xl mx-auto', className)}>
@@ -130,10 +134,13 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold text-gray-700">
-            {formatText(`سوالن ${questionNumber} دري ${totalQuestions} | Soalan ${questionNumber} dari ${totalQuestions}`)}
+            {formatText(
+              `سوالن ${questionNumber} دري ${totalQuestions} | Soalan ${questionNumber} dari ${totalQuestions}`
+            )}
           </h2>
           <div className="text-sm text-gray-500">
-            {Math.round((questionNumber / totalQuestions) * 100)}% {formatText('سلساي | Selesai')}
+            {Math.round((questionNumber / totalQuestions) * 100)}%{' '}
+            {formatText('سلساي | Selesai')}
           </div>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
@@ -181,14 +188,18 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
                   <>
                     <span className="text-2xl">🎉</span>
                     <span className="text-green-700 font-semibold">
-                      {formatText('بتول! جوابن اندا تيڤت | Betul! Jawapan anda tepat.')}
+                      {formatText(
+                        'بتول! جوابن اندا تيڤت | Betul! Jawapan anda tepat.'
+                      )}
                     </span>
                   </>
                 ) : (
                   <>
                     <span className="text-2xl">💡</span>
                     <span className="text-red-700 font-semibold">
-                      {formatText('تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah') + ` ${String.fromCharCode(65 + newCorrectIndex)}.`}
+                      {formatText(
+                        'تيدق تيڤت. جوابن يڠ بتول اداله | Tidak tepat. Jawapan yang betul adalah'
+                      ) + ` ${String.fromCharCode(65 + newCorrectIndex)}.`}
                     </span>
                   </>
                 )}
@@ -216,19 +227,26 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
             <button
               onClick={onNext}
-              disabled={questionNumber === totalQuestions ? !isAnswered : (!canGoNext || !isAnswered)}
+              disabled={
+                questionNumber === totalQuestions
+                  ? !isAnswered
+                  : !canGoNext || !isAnswered
+              }
               className={cn(
                 'px-6 py-2 rounded-lg font-medium transition-all duration-200',
                 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
-                (questionNumber === totalQuestions ? isAnswered : (canGoNext && isAnswered))
+                (
+                  questionNumber === totalQuestions
+                    ? isAnswered
+                    : canGoNext && isAnswered
+                )
                   ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
               )}
             >
-              {questionNumber === totalQuestions 
-                ? formatText('سلساي | Selesai') 
-                : formatText('ستروسڽا | Seterusnya') + ' →'
-              }
+              {questionNumber === totalQuestions
+                ? formatText('سلساي | Selesai')
+                : formatText('ستروسڽا | Seterusnya') + ' →'}
             </button>
           </div>
         </div>

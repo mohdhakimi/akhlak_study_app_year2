@@ -38,11 +38,12 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     updateUser,
     removeUser,
     selectUser,
-    clearError
+    clearError,
   } = useUsers()
 
   // User selection modal state
-  const [showUserSelectionModal, setShowUserSelectionModal] = React.useState(false)
+  const [showUserSelectionModal, setShowUserSelectionModal] =
+    React.useState(false)
 
   const openUserSelectionModal = () => {
     setShowUserSelectionModal(true)
@@ -77,13 +78,11 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     // User selection modal state
     showUserSelectionModal,
     openUserSelectionModal,
-    closeUserSelectionModal
+    closeUserSelectionModal,
   }
 
   return (
-    <UserContext.Provider value={contextValue}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   )
 }
 

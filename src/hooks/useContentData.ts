@@ -19,20 +19,25 @@ export function useContentData(): UseContentDataReturn {
     try {
       setLoading(true)
       setError(null)
-      
+
       // Import the JSON data directly
       const data = await import('../data/akhlak_db.json')
-      
+
       // Validate the data structure
-      if (!data.default || !data.default.topics || !Array.isArray(data.default.topics)) {
+      if (
+        !data.default ||
+        !data.default.topics ||
+        !Array.isArray(data.default.topics)
+      ) {
         throw new Error('Invalid content data structure')
       }
-      
+
       // Data loaded successfully
-      
+
       setContentData(data.default as unknown as ContentData)
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to load content data'
+      const errorMessage =
+        err instanceof Error ? err.message : 'Failed to load content data'
       setError(errorMessage)
       console.error('Error loading content data:', err)
     } finally {
@@ -49,12 +54,15 @@ export function useContentData(): UseContentDataReturn {
   }, [loadContentData])
 
   // Use quizCategories directly from the data, or transform topics if not available
-  const quizCategories: QuizCategory[] = (contentData as any)?.quizCategories || contentData?.topics?.map(topic => ({
-    id: topic.id,
-    name: topic.name,
-    description: topic.description,
-    questions: topic.questions || []
-  })) || []
+  const quizCategories: QuizCategory[] =
+    (contentData as any)?.quizCategories ||
+    contentData?.topics?.map(topic => ({
+      id: topic.id,
+      name: topic.name,
+      description: topic.description,
+      questions: topic.questions || [],
+    })) ||
+    []
 
   return {
     contentData,
@@ -62,6 +70,6 @@ export function useContentData(): UseContentDataReturn {
     quizCategories,
     loading,
     error,
-    refetch
+    refetch,
   }
 }

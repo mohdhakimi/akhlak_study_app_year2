@@ -16,7 +16,7 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
   currentUserName,
   type,
   loading = false,
-  className
+  className,
 }) => {
   const getRankIcon = (rank: number) => {
     if (rank === 1) return '🥇'
@@ -66,9 +66,7 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
         <p className="text-gray-600 mb-6">
           Cuba ambil kuiz atau ujian untuk melihat markah anda di sini!
         </p>
-        <div className="text-sm text-gray-500">
-          Kategori: {getTypeLabel()}
-        </div>
+        <div className="text-sm text-gray-500">Kategori: {getTypeLabel()}</div>
       </Card>
     )
   }
@@ -81,9 +79,7 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
           <h3 className="text-lg font-semibold text-primary-800">
             Papan Markah - {getTypeLabel()}
           </h3>
-          <div className="text-sm text-primary-600">
-            {entries.length} entri
-          </div>
+          <div className="text-sm text-primary-600">{entries.length} entri</div>
         </div>
       </div>
 
@@ -114,8 +110,9 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {entries.map((entry, index) => {
-              const isCurrentUser = currentUserName && entry.userName === currentUserName
-              
+              const isCurrentUser =
+                currentUserName && entry.userName === currentUserName
+
               return (
                 <tr
                   key={`${entry.userName}-${entry.quizId}-${index}`}
@@ -126,10 +123,12 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
                 >
                   {/* Rank */}
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className={cn(
-                      'flex items-center justify-center w-8 h-8 rounded-full border-2 font-bold text-sm',
-                      getRankColor(entry.rank)
-                    )}>
+                    <div
+                      className={cn(
+                        'flex items-center justify-center w-8 h-8 rounded-full border-2 font-bold text-sm',
+                        getRankColor(entry.rank)
+                      )}
+                    >
                       {getRankIcon(entry.rank)}
                     </div>
                   </td>
@@ -145,10 +144,12 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
                         </div>
                       </div>
                       <div className="ml-3">
-                        <div className={cn(
-                          'text-sm font-medium',
-                          isCurrentUser ? 'text-blue-700' : 'text-gray-900'
-                        )}>
+                        <div
+                          className={cn(
+                            'text-sm font-medium',
+                            isCurrentUser ? 'text-blue-700' : 'text-gray-900'
+                          )}
+                        >
                           {entry.userName}
                           {isCurrentUser && (
                             <span className="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
@@ -177,13 +178,19 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
                         <div
                           className={cn(
                             'h-2 rounded-full transition-all duration-300',
-                            entry.percentage >= 90 ? 'bg-green-500' :
-                            entry.percentage >= 80 ? 'bg-blue-500' :
-                            entry.percentage >= 70 ? 'bg-yellow-500' :
-                            entry.percentage >= 60 ? 'bg-orange-500' :
-                            'bg-red-500'
+                            entry.percentage >= 90
+                              ? 'bg-green-500'
+                              : entry.percentage >= 80
+                                ? 'bg-blue-500'
+                                : entry.percentage >= 70
+                                  ? 'bg-yellow-500'
+                                  : entry.percentage >= 60
+                                    ? 'bg-orange-500'
+                                    : 'bg-red-500'
                           )}
-                          style={{ width: `${Math.min(entry.percentage, 100)}%` }}
+                          style={{
+                            width: `${Math.min(entry.percentage, 100)}%`,
+                          }}
                         />
                       </div>
                     </div>
@@ -196,12 +203,14 @@ const LeaderboardTable: React.FC<LeaderboardTableProps> = ({
 
                   {/* Type */}
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={cn(
-                      'inline-flex px-2 py-1 text-xs font-semibold rounded-full',
-                      entry.quizId === 'test' 
-                        ? 'bg-purple-100 text-purple-800'
-                        : 'bg-green-100 text-green-800'
-                    )}>
+                    <span
+                      className={cn(
+                        'inline-flex px-2 py-1 text-xs font-semibold rounded-full',
+                        entry.quizId === 'test'
+                          ? 'bg-purple-100 text-purple-800'
+                          : 'bg-green-100 text-green-800'
+                      )}
+                    >
                       {entry.quizId === 'test' ? 'Ujian' : 'Kuiz'}
                     </span>
                   </td>

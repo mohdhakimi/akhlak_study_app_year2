@@ -15,7 +15,11 @@ const StudyMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
   const { formatText } = useBilingual()
-  const { topics, loading: contentLoading, error: contentError } = useContentData()
+  const {
+    topics,
+    loading: contentLoading,
+    error: contentError,
+  } = useContentData()
   const {
     currentTopic,
     currentNote,
@@ -23,13 +27,7 @@ const StudyMode: React.FC = () => {
     canGoNext,
     canGoPrevious,
     totalNotes,
-    actions: {
-      startStudying,
-      goToNext,
-      goToPrevious,
-      resetStudy,
-      setError
-    }
+    actions: { startStudying, goToNext, goToPrevious, resetStudy, setError },
   } = useStudyMode()
 
   const handleBackToMenu = () => {
@@ -82,9 +80,7 @@ const StudyMode: React.FC = () => {
               <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 Ralat Memuatkan Kandungan
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                {contentError}
-              </p>
+              <p className="text-lg text-gray-600 mb-8">{contentError}</p>
               <Button
                 onClick={handleBackToMenu}
                 variant="primary"
@@ -104,7 +100,9 @@ const StudyMode: React.FC = () => {
     return (
       <Layout
         title={formatText(TEXT.STUDY_MODE)}
-        subtitle={formatText(`${currentTopic.name} - نوتا ${currentNote.order} | Nota ${currentNote.order}`)}
+        subtitle={formatText(
+          `${currentTopic.name} - نوتا ${currentNote.order} | Nota ${currentNote.order}`
+        )}
         currentUser={currentUser?.name}
         onUserClick={() => navigate('/')}
         showUser={true}
@@ -132,7 +130,9 @@ const StudyMode: React.FC = () => {
   return (
     <Layout
       title={formatText(TEXT.STUDY_MODE)}
-      subtitle={formatText("مود بلاجر - باچ دان ڤلاجري | Mod Belajar - Baca dan Pelajari")}
+      subtitle={formatText(
+        'مود بلاجر - باچ دان ڤلاجري | Mod Belajar - Baca dan Pelajari'
+      )}
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}

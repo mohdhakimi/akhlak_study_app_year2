@@ -8,9 +8,7 @@ import { render, RenderOptions } from '@testing-library/react'
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <UserProvider>
-      <BilingualProvider>
-        {children}
-      </BilingualProvider>
+      <BilingualProvider>{children}</BilingualProvider>
     </UserProvider>
   )
 }

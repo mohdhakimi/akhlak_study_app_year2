@@ -14,7 +14,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   lines = 1,
   height = 'h-4',
   width = 'w-full',
-  rounded = true
+  rounded = true,
 }) => {
   return (
     <div className={cn('animate-pulse', className)}>

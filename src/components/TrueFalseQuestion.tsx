@@ -18,13 +18,13 @@ const TrueFalseQuestion: React.FC<TrueFalseQuestionProps> = ({
   onAnswerSelect,
   isRevealed,
   correctAnswer,
-  className
+  className,
 }) => {
   const { formatText } = useBilingual()
 
   const trueFalseOptions = [
     formatText('بتول | Betul'),
-    formatText('ساله | Salah')
+    formatText('ساله | Salah'),
   ]
 
   return (
@@ -55,9 +55,7 @@ const TrueFalseQuestion: React.FC<TrueFalseQuestionProps> = ({
                 isRevealed && isCorrect
                   ? 'border-green-500 bg-green-50 text-green-700'
                   : '',
-                isWrong
-                  ? 'border-red-500 bg-red-50 text-red-700'
-                  : '',
+                isWrong ? 'border-red-500 bg-red-50 text-red-700' : '',
                 isRevealed && !isSelected && !isCorrect
                   ? 'border-gray-200 bg-gray-50 text-gray-500'
                   : ''
@@ -65,18 +63,18 @@ const TrueFalseQuestion: React.FC<TrueFalseQuestionProps> = ({
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className={cn(
-                    'w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold',
-                    isSelected
-                      ? 'border-primary-500 bg-primary-500 text-white'
-                      : 'border-gray-300',
-                    isRevealed && isCorrect
-                      ? 'border-green-500 bg-green-500 text-white'
-                      : '',
-                    isWrong
-                      ? 'border-red-500 bg-red-500 text-white'
-                      : ''
-                  )}>
+                  <div
+                    className={cn(
+                      'w-6 h-6 rounded-full border-2 flex items-center justify-center text-sm font-semibold',
+                      isSelected
+                        ? 'border-primary-500 bg-primary-500 text-white'
+                        : 'border-gray-300',
+                      isRevealed && isCorrect
+                        ? 'border-green-500 bg-green-500 text-white'
+                        : '',
+                      isWrong ? 'border-red-500 bg-red-500 text-white' : ''
+                    )}
+                  >
                     {isSelected && '✓'}
                   </div>
                   <span className="text-lg font-medium">{option}</span>

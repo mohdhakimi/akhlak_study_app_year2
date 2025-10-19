@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({
   showKeluarButton = false,
   className,
   headerClassName,
-  mainClassName
+  mainClassName,
 }) => {
   return (
     <div className={cn('min-h-screen bg-gray-50', className)}>
@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({
         showSoundSettings={showSoundSettings}
         className={headerClassName}
       />
-      
+
       <main className={cn('flex-1', mainClassName)}>
         {/* Bilingual Toggle and Keluar Button */}
         {(showBilingualToggle || showKeluarButton) && (
@@ -69,15 +69,18 @@ const Layout: React.FC<LayoutProps> = ({
             </div>
           </div>
         )}
-        
+
         {children}
       </main>
-      
+
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-sm text-gray-500">
-            <p>© 2025 Akhlak Tahun Dua KSRI. Dibangunkan untuk pembelajaran interaktif.</p>
+            <p>
+              © 2025 Akhlak Tahun Dua KSRI. Dibangunkan untuk pembelajaran
+              interaktif.
+            </p>
           </div>
         </div>
       </footer>

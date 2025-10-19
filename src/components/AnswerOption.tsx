@@ -24,7 +24,7 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
   isRevealed,
   onClick,
   disabled = false,
-  className
+  className,
 }) => {
   const { formatText } = useBilingual()
   const { playCorrectSound, playIncorrectSound } = useQuizAudio()
@@ -101,11 +101,11 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
           {getOptionLetter(index)}
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium break-words">{formatText(option)}</p>
+          <p className="text-sm font-medium break-words">
+            {formatText(option)}
+          </p>
         </div>
-        <div className="flex-shrink-0 text-lg">
-          {getIcon()}
-        </div>
+        <div className="flex-shrink-0 text-lg">{getIcon()}</div>
       </div>
     </button>
   )

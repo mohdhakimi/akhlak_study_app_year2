@@ -18,7 +18,7 @@ const FillBlankQuestion: React.FC<FillBlankQuestionProps> = ({
   onAnswerChange,
   isRevealed,
   correctText,
-  className
+  className,
 }) => {
   const { formatText } = useBilingual()
   const [inputValue, setInputValue] = useState(selectedAnswer || '')
@@ -33,7 +33,8 @@ const FillBlankQuestion: React.FC<FillBlankQuestionProps> = ({
     onAnswerChange(value)
   }
 
-  const isCorrect = selectedAnswer.toLowerCase().trim() === correctText.toLowerCase().trim()
+  const isCorrect =
+    selectedAnswer.toLowerCase().trim() === correctText.toLowerCase().trim()
   const isWrong = selectedAnswer && !isCorrect && isRevealed
 
   return (
@@ -51,7 +52,9 @@ const FillBlankQuestion: React.FC<FillBlankQuestionProps> = ({
             value={inputValue}
             onChange={handleInputChange}
             disabled={isRevealed}
-            placeholder={formatText('توليس جوابن اندا د سني | Tulis jawapan anda di sini')}
+            placeholder={formatText(
+              'توليس جوابن اندا د سني | Tulis jawapan anda di sini'
+            )}
             className={cn(
               'w-full p-4 text-lg border-2 rounded-lg transition-all duration-200',
               'focus:outline-none focus:ring-2 focus:ring-primary-500',

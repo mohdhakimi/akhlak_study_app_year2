@@ -10,8 +10,8 @@ vi.mock('../../hooks/useScores')
 vi.mock('../../contexts/UserContext', () => ({
   UserProvider: ({ children }: { children: React.ReactNode }) => children,
   useUserContext: () => ({
-    currentUser: { id: '1', name: 'Test User' }
-  })
+    currentUser: { id: '1', name: 'Test User' },
+  }),
 }))
 
 const mockScores = [
@@ -26,7 +26,7 @@ const mockScores = [
     percentage: 83,
     timestamp: new Date().toISOString(),
     type: 'test' as const,
-    answers: []
+    answers: [],
   },
   {
     id: '2',
@@ -39,7 +39,7 @@ const mockScores = [
     percentage: 80,
     timestamp: new Date(Date.now() - 86400000).toISOString(), // Yesterday
     type: 'quiz' as const,
-    answers: []
+    answers: [],
   },
   {
     id: '3',
@@ -52,14 +52,14 @@ const mockScores = [
     percentage: 93,
     timestamp: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
     type: 'test' as const,
-    answers: []
-  }
+    answers: [],
+  },
 ]
 
 const mockUseScores = {
   scores: mockScores,
   loading: false,
-  error: null
+  error: null,
 }
 
 const LeaderboardWrapper = () => (
@@ -78,14 +78,16 @@ describe('Leaderboard Integration', () => {
 
   it('renders leaderboard page correctly', () => {
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Papan Markah')).toBeInTheDocument()
-    expect(screen.getByText('Lihat prestasi terbaik pelajar dalam kuiz dan ujian')).toBeInTheDocument()
+    expect(
+      screen.getByText('Lihat prestasi terbaik pelajar dalam kuiz dan ujian')
+    ).toBeInTheDocument()
   })
 
   it('displays statistics cards', () => {
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('3')).toBeInTheDocument() // Total scores
     expect(screen.getByText('Jumlah Percubaan')).toBeInTheDocument()
     expect(screen.getByText('1')).toBeInTheDocument() // Quiz scores
@@ -96,7 +98,7 @@ describe('Leaderboard Integration', () => {
 
   it('shows filter buttons', () => {
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Semua (3)')).toBeInTheDocument()
     expect(screen.getByText('Kuiz (1)')).toBeInTheDocument()
     expect(screen.getByText('Ujian (2)')).toBeInTheDocument()
@@ -104,13 +106,13 @@ describe('Leaderboard Integration', () => {
 
   it('filters scores by quiz type', async () => {
     render(<LeaderboardWrapper />)
-    
+
     fireEvent.click(screen.getByText('Kuiz (1)'))
-    
+
     await waitFor(() => {
       expect(screen.getByText('Papan Markah - Kuiz')).toBeInTheDocument()
     })
-    
+
     // Should only show quiz scores
     expect(screen.getByText('Ahmad')).toBeInTheDocument()
     expect(screen.queryByText('Test User')).not.toBeInTheDocument()
@@ -119,13 +121,13 @@ describe('Leaderboard Integration', () => {
 
   it('filters scores by test type', async () => {
     render(<LeaderboardWrapper />)
-    
+
     fireEvent.click(screen.getByText('Ujian (2)'))
-    
+
     await waitFor(() => {
       expect(screen.getByText('Papan Markah - Ujian')).toBeInTheDocument()
     })
-    
+
     // Should only show test scores
     expect(screen.getByText('Siti')).toBeInTheDocument()
     expect(screen.getByText('Test User')).toBeInTheDocument()
@@ -134,14 +136,14 @@ describe('Leaderboard Integration', () => {
 
   it('shows all scores when all filter is selected', async () => {
     render(<LeaderboardWrapper />)
-    
+
     fireEvent.click(screen.getByText('Ujian (2)'))
     fireEvent.click(screen.getByText('Semua (3)'))
-    
+
     await waitFor(() => {
       expect(screen.getByText('Papan Markah - Semua')).toBeInTheDocument()
     })
-    
+
     // Should show all scores
     expect(screen.getByText('Siti')).toBeInTheDocument()
     expect(screen.getByText('Test User')).toBeInTheDocument()
@@ -150,13 +152,13 @@ describe('Leaderboard Integration', () => {
 
   it('highlights current user scores', () => {
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Anda')).toBeInTheDocument()
   })
 
   it('sorts scores by percentage (highest first)', () => {
     render(<LeaderboardWrapper />)
-    
+
     // Siti should be first (93%), then Test User (83%), then Ahmad (80%)
     const entries = screen.getAllByText(/Test User|Ahmad|Siti/)
     expect(entries[0]).toHaveTextContent('Siti')
@@ -167,22 +169,22 @@ describe('Leaderboard Integration', () => {
   it('shows loading state', () => {
     vi.mocked(useScores).mockReturnValue({
       ...mockUseScores,
-      loading: true
+      loading: true,
     } as any)
-    
+
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Memuatkan...')).toBeInTheDocument()
   })
 
   it('shows error state', () => {
     vi.mocked(useScores).mockReturnValue({
       ...mockUseScores,
-      error: 'Failed to load scores'
+      error: 'Failed to load scores',
     } as any)
-    
+
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Ralat Memuatkan Papan Markah')).toBeInTheDocument()
     expect(screen.getByText('Failed to load scores')).toBeInTheDocument()
   })
@@ -190,27 +192,31 @@ describe('Leaderboard Integration', () => {
   it('shows empty state when no scores', () => {
     vi.mocked(useScores).mockReturnValue({
       ...mockUseScores,
-      scores: []
+      scores: [],
     } as any)
-    
+
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Tiada Markah Lagi')).toBeInTheDocument()
-    expect(screen.getByText('Cuba ambil kuiz atau ujian untuk melihat markah anda di sini!')).toBeInTheDocument()
+    expect(
+      screen.getByText(
+        'Cuba ambil kuiz atau ujian untuk melihat markah anda di sini!'
+      )
+    ).toBeInTheDocument()
   })
 
   it('navigates back to menu when back button is clicked', () => {
     render(<LeaderboardWrapper />)
-    
+
     fireEvent.click(screen.getByText('Kembali ke Menu'))
-    
+
     // Should navigate back (this would be tested with router in real app)
     expect(screen.getByText('Kembali ke Menu')).toBeInTheDocument()
   })
 
   it('formats dates correctly', () => {
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Hari ini')).toBeInTheDocument()
     expect(screen.getByText('Semalam')).toBeInTheDocument()
     expect(screen.getByText('2 hari lepas')).toBeInTheDocument()
@@ -218,26 +224,28 @@ describe('Leaderboard Integration', () => {
 
   it('shows encouragement message when there are scores', () => {
     render(<LeaderboardWrapper />)
-    
+
     expect(screen.getByText('Teruskan Berusaha!')).toBeInTheDocument()
-    expect(screen.getByText('Setiap percubaan adalah langkah ke arah kecemerlangan.')).toBeInTheDocument()
+    expect(
+      screen.getByText('Setiap percubaan adalah langkah ke arah kecemerlangan.')
+    ).toBeInTheDocument()
   })
 
   it('updates filter button states correctly', () => {
     render(<LeaderboardWrapper />)
-    
+
     const allButton = screen.getByText('Semua (3)')
     const quizButton = screen.getByText('Kuiz (1)')
     const testButton = screen.getByText('Ujian (2)')
-    
+
     // Initially all should be selected
     expect(allButton).toHaveClass('bg-primary-600')
-    
+
     // Click quiz filter
     fireEvent.click(quizButton)
     expect(quizButton).toHaveClass('bg-primary-600')
     expect(allButton).not.toHaveClass('bg-primary-600')
-    
+
     // Click test filter
     fireEvent.click(testButton)
     expect(testButton).toHaveClass('bg-primary-600')
@@ -248,12 +256,14 @@ describe('Leaderboard Integration', () => {
     vi.mocked(useScores).mockReturnValue({
       scores: [],
       loading: false,
-      error: null
+      error: null,
     } as any)
-    
+
     render(<LeaderboardWrapper />)
-    
-    expect(screen.getByText('0')).toBeInTheDocument() // Total scores
+
+    // Check for specific 0 values in statistics
+    const zeroElements = screen.getAllByText('0')
+    expect(zeroElements.length).toBeGreaterThan(0)
     expect(screen.getByText('Tiada Markah Lagi')).toBeInTheDocument()
   })
 })

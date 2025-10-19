@@ -1,14 +1,14 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { 
-  audioManager, 
-  playSound, 
-  setSoundEnabled, 
-  setMusicEnabled, 
+import {
+  audioManager,
+  playSound,
+  setSoundEnabled,
+  setMusicEnabled,
   setVolume,
   getAudioSettings,
   isSoundEnabled,
   isMusicEnabled,
-  getVolume
+  getVolume,
 } from '../audio'
 
 // Mock Web Audio API
@@ -17,22 +17,22 @@ const mockAudioContext = {
   createBufferSource: vi.fn(),
   createGain: vi.fn(),
   destination: {},
-  sampleRate: 44100
+  sampleRate: 44100,
 }
 
 const mockBuffer = {
-  getChannelData: vi.fn(() => new Float32Array(100))
+  getChannelData: vi.fn(() => new Float32Array(100)),
 }
 
 const mockSource = {
   buffer: null,
   connect: vi.fn(),
-  start: vi.fn()
+  start: vi.fn(),
 }
 
 const mockGainNode = {
   gain: { value: 0.7 },
-  connect: vi.fn()
+  connect: vi.fn(),
 }
 
 // Mock localStorage
@@ -40,19 +40,19 @@ const localStorageMock = {
   getItem: vi.fn(),
   setItem: vi.fn(),
   removeItem: vi.fn(),
-  clear: vi.fn()
+  clear: vi.fn(),
 }
 
 Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock
+  value: localStorageMock,
 })
 
 Object.defineProperty(window, 'AudioContext', {
-  value: vi.fn(() => mockAudioContext)
+  value: vi.fn(() => mockAudioContext),
 })
 
 Object.defineProperty(window, 'webkitAudioContext', {
-  value: vi.fn(() => mockAudioContext)
+  value: vi.fn(() => mockAudioContext),
 })
 
 describe('AudioManager', () => {
@@ -75,7 +75,7 @@ describe('AudioManager', () => {
       expect(settings).toEqual({
         soundEnabled: true,
         musicEnabled: false,
-        volume: 0.7
+        volume: 0.7,
       })
     })
 
@@ -83,7 +83,7 @@ describe('AudioManager', () => {
       const storedSettings = {
         soundEnabled: false,
         musicEnabled: true,
-        volume: 0.5
+        volume: 0.5,
       }
       localStorageMock.getItem.mockReturnValue(JSON.stringify(storedSettings))
 
@@ -95,12 +95,12 @@ describe('AudioManager', () => {
 
     it('should handle corrupted localStorage data gracefully', () => {
       localStorageMock.getItem.mockReturnValue('invalid json')
-      
+
       const settings = getAudioSettings()
       expect(settings).toEqual({
         soundEnabled: true,
         musicEnabled: false,
-        volume: 0.7
+        volume: 0.7,
       })
     })
 
@@ -111,7 +111,7 @@ describe('AudioManager', () => {
         JSON.stringify({
           soundEnabled: false,
           musicEnabled: false,
-          volume: 0.7
+          volume: 0.7,
         })
       )
     })
@@ -129,20 +129,20 @@ describe('AudioManager', () => {
     it('should enable/disable sound', () => {
       // Reset to default state
       localStorageMock.getItem.mockReturnValue(null)
-      
+
       setSoundEnabled(false)
       expect(isSoundEnabled()).toBe(false)
-      
+
       setSoundEnabled(true)
       expect(isSoundEnabled()).toBe(true)
     })
 
     it('should enable/disable music', () => {
       expect(isMusicEnabled()).toBe(false)
-      
+
       setMusicEnabled(true)
       expect(isMusicEnabled()).toBe(true)
-      
+
       setMusicEnabled(false)
       expect(isMusicEnabled()).toBe(false)
     })
@@ -150,10 +150,10 @@ describe('AudioManager', () => {
     it('should set volume within valid range', () => {
       setVolume(0.5)
       expect(getVolume()).toBe(0.5)
-      
+
       setVolume(1.5) // Should be clamped to 1
       expect(getVolume()).toBe(1)
-      
+
       setVolume(-0.5) // Should be clamped to 0
       expect(getVolume()).toBe(0)
     })
@@ -215,17 +215,19 @@ describe('AudioManager', () => {
     it('should not play sound when disabled', async () => {
       setSoundEnabled(false)
       await playSound('click')
-      
+
       expect(mockAudioContext.createBufferSource).not.toHaveBeenCalled()
     })
 
     it('should play sound when enabled', async () => {
       setSoundEnabled(true)
       await playSound('click')
-      
+
       expect(mockAudioContext.createBufferSource).toHaveBeenCalled()
       expect(mockSource.connect).toHaveBeenCalledWith(mockGainNode)
-      expect(mockGainNode.connect).toHaveBeenCalledWith(mockAudioContext.destination)
+      expect(mockGainNode.connect).toHaveBeenCalledWith(
+        mockAudioContext.destination
+      )
       expect(mockSource.start).toHaveBeenCalled()
     })
 
@@ -233,10 +235,10 @@ describe('AudioManager', () => {
       setSoundEnabled(true)
       // Clear the sounds map to simulate missing sound
       audioManager['sounds'].clear()
-      
+
       const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
       await playSound('click')
-      
+
       expect(consoleSpy).toHaveBeenCalledWith(
         expect.stringContaining("Sound effect 'click' not found")
       )
@@ -247,10 +249,10 @@ describe('AudioManager', () => {
       setSoundEnabled(true)
       // Clear sounds to trigger the missing sound error instead
       audioManager['sounds'].clear()
-      
+
       const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
       await playSound('click')
-      
+
       expect(consoleSpy).toHaveBeenCalledWith(
         expect.stringContaining("Sound effect 'click' not found")
       )

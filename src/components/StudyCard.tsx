@@ -25,7 +25,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
   onPrevious,
   onBack,
   canGoNext,
-  canGoPrevious
+  canGoPrevious,
 }) => {
   const { formatText } = useBilingual()
   // Format content with proper line breaks
@@ -34,7 +34,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
       if (line.trim() === '') {
         return <br key={index} />
       }
-      
+
       // Check if line starts with a number or bullet point
       if (/^\d+\./.test(line.trim())) {
         return (
@@ -42,20 +42,24 @@ const StudyCard: React.FC<StudyCardProps> = ({
             <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5">
               {line.match(/^\d+/)?.[0]}
             </span>
-            <span className="text-gray-700 leading-relaxed">{line.replace(/^\d+\.\s*/, '')}</span>
+            <span className="text-gray-700 leading-relaxed">
+              {line.replace(/^\d+\.\s*/, '')}
+            </span>
           </div>
         )
       }
-      
+
       if (/^•/.test(line.trim())) {
         return (
           <div key={index} className="flex items-start mb-2">
             <span className="flex-shrink-0 w-2 h-2 bg-primary-500 rounded-full mr-3 mt-3"></span>
-            <span className="text-gray-700 leading-relaxed">{line.replace(/^•\s*/, '')}</span>
+            <span className="text-gray-700 leading-relaxed">
+              {line.replace(/^•\s*/, '')}
+            </span>
           </div>
         )
       }
-      
+
       return (
         <p key={index} className="text-gray-700 leading-relaxed mb-3">
           {line}
@@ -113,24 +117,40 @@ const StudyCard: React.FC<StudyCardProps> = ({
           disabled={!canGoPrevious}
           variant="outline"
           className={cn(
-            "min-w-[140px]",
-            !canGoPrevious && "opacity-50 cursor-not-allowed"
+            'min-w-[140px]',
+            !canGoPrevious && 'opacity-50 cursor-not-allowed'
           )}
         >
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
           {TEXT.PREVIOUS}
         </Button>
 
         {/* Back to Menu Button */}
-        <Button
-          onClick={onBack}
-          variant="secondary"
-          className="min-w-[160px]"
-        >
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        <Button onClick={onBack} variant="secondary" className="min-w-[160px]">
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
           </svg>
           {TEXT.BACK_TO_MENU}
         </Button>
@@ -141,13 +161,23 @@ const StudyCard: React.FC<StudyCardProps> = ({
           disabled={!canGoNext}
           variant="primary"
           className={cn(
-            "min-w-[140px]",
-            !canGoNext && "opacity-50 cursor-not-allowed"
+            'min-w-[140px]',
+            !canGoNext && 'opacity-50 cursor-not-allowed'
           )}
         >
           {TEXT.NEXT}
-          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <svg
+            className="w-4 h-4 ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </Button>
       </div>
@@ -161,7 +191,8 @@ const StudyCard: React.FC<StudyCardProps> = ({
               {TEXT.TOPIC_COMPLETE}
             </h3>
             <p className="text-green-700">
-              Syabas! Anda telah selesai mempelajari topik ini. Teruskan dengan topik lain atau kembali ke menu utama.
+              Syabas! Anda telah selesai mempelajari topik ini. Teruskan dengan
+              topik lain atau kembali ke menu utama.
             </p>
           </div>
         </div>

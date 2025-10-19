@@ -16,7 +16,7 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
   topics,
   onTopicSelect,
   onBack,
-  loading = false
+  loading = false,
 }) => {
   if (loading) {
     return (
@@ -58,7 +58,7 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
 
       {/* Topics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {topics.map((topic) => (
+        {topics.map(topic => (
           <Card
             key={topic.id}
             className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-0 overflow-hidden"
@@ -71,7 +71,7 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
                 <div className="absolute bottom-4 left-4 w-8 h-8 rounded-full bg-white opacity-30"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white opacity-10"></div>
               </div>
-              
+
               {/* Content */}
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
@@ -82,18 +82,28 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
                     {topic.notes.length} nota
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-100 transition-colors">
                   {topic.name}
                 </h3>
-                
+
                 <p className="text-blue-100 text-sm leading-relaxed mb-4">
                   {topic.description}
                 </p>
-                
+
                 <div className="flex items-center text-blue-100 text-sm">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                   Klik untuk mula belajar
                 </div>
@@ -108,13 +118,19 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
 
       {/* Back Button */}
       <div className="flex justify-center pt-6">
-        <Button
-          onClick={onBack}
-          variant="outline"
-          className="min-w-[200px]"
-        >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        <Button onClick={onBack} variant="outline" className="min-w-[200px]">
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
           </svg>
           {TEXT.BACK_TO_MENU}
         </Button>

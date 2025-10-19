@@ -5,10 +5,17 @@ import Card from '../Card'
 describe('Card', () => {
   it('renders with default props', () => {
     render(<Card>Card content</Card>)
-    
+
     const card = screen.getByText('Card content')
     expect(card).toBeInTheDocument()
-    expect(card).toHaveClass('rounded-xl', 'bg-white', 'shadow-sm', 'border', 'border-gray-200', 'p-6')
+    expect(card).toHaveClass(
+      'rounded-xl',
+      'bg-white',
+      'shadow-sm',
+      'border',
+      'border-gray-200',
+      'p-6'
+    )
   })
 
   it('renders with different variants', () => {
@@ -19,7 +26,11 @@ describe('Card', () => {
     expect(screen.getByText('Elevated')).toHaveClass('bg-white', 'shadow-lg')
 
     rerender(<Card variant="outlined">Outlined</Card>)
-    expect(screen.getByText('Outlined')).toHaveClass('bg-transparent', 'border-2', 'border-gray-300')
+    expect(screen.getByText('Outlined')).toHaveClass(
+      'bg-transparent',
+      'border-2',
+      'border-gray-300'
+    )
 
     rerender(<Card variant="filled">Filled</Card>)
     expect(screen.getByText('Filled')).toHaveClass('bg-gray-50')
@@ -41,14 +52,14 @@ describe('Card', () => {
 
   it('applies custom className', () => {
     render(<Card className="custom-class">Custom</Card>)
-    
+
     expect(screen.getByText('Custom')).toHaveClass('custom-class')
   })
 
   it('forwards ref correctly', () => {
     const ref = vi.fn()
     render(<Card ref={ref}>Ref test</Card>)
-    
+
     expect(ref).toHaveBeenCalled()
   })
 })

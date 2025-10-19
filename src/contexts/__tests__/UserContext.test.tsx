@@ -8,7 +8,7 @@ import { User } from '../../types'
 const mockUseUsers = vi.fn(() => ({
   users: [
     { id: '1', name: 'Ahmad', createdAt: '2025-01-01T00:00:00.000Z' },
-    { id: '2', name: 'Siti', createdAt: '2025-01-02T00:00:00.000Z' }
+    { id: '2', name: 'Siti', createdAt: '2025-01-02T00:00:00.000Z' },
   ],
   currentUser: null,
   loading: false,
@@ -17,11 +17,11 @@ const mockUseUsers = vi.fn(() => ({
   updateUser: vi.fn(),
   removeUser: vi.fn(),
   selectUser: vi.fn(),
-  clearError: vi.fn()
+  clearError: vi.fn(),
 }))
 
 vi.mock('../../hooks/useUsers', () => ({
-  useUsers: mockUseUsers
+  useUsers: mockUseUsers,
 }))
 
 // Test component that uses the context
@@ -36,7 +36,7 @@ const TestComponent = () => {
     clearError,
     showUserSelectionModal,
     openUserSelectionModal,
-    closeUserSelectionModal
+    closeUserSelectionModal,
   } = useUserContext()
 
   return (
@@ -45,8 +45,10 @@ const TestComponent = () => {
       <div data-testid="current-user">{currentUser?.name || 'None'}</div>
       <div data-testid="loading">{loading ? 'Loading' : 'Not Loading'}</div>
       <div data-testid="error">{error || 'No Error'}</div>
-      <div data-testid="modal-open">{showUserSelectionModal ? 'Open' : 'Closed'}</div>
-      
+      <div data-testid="modal-open">
+        {showUserSelectionModal ? 'Open' : 'Closed'}
+      </div>
+
       <button onClick={() => addUser('Test User')}>Add User</button>
       <button onClick={() => selectUser(users[0])}>Select User</button>
       <button onClick={clearError}>Clear Error</button>
@@ -86,7 +88,7 @@ describe('UserContext', () => {
       updateUser: vi.fn(),
       removeUser: vi.fn(),
       selectUser: vi.fn(),
-      clearError: vi.fn()
+      clearError: vi.fn(),
     })
 
     render(
@@ -102,7 +104,7 @@ describe('UserContext', () => {
 
   it('handles modal open/close', async () => {
     const user = userEvent.setup()
-    
+
     render(
       <UserProvider>
         <TestComponent />
@@ -112,13 +114,13 @@ describe('UserContext', () => {
     // Open modal
     const openButton = screen.getByText('Open Modal')
     await user.click(openButton)
-    
+
     expect(screen.getByTestId('modal-open')).toHaveTextContent('Open')
 
     // Close modal
     const closeButton = screen.getByText('Close Modal')
     await user.click(closeButton)
-    
+
     expect(screen.getByTestId('modal-open')).toHaveTextContent('Closed')
   })
 
@@ -130,7 +132,7 @@ describe('UserContext', () => {
 
     mockUseUsers.mockReturnValue({
       users: [
-        { id: '1', name: 'Ahmad', createdAt: '2025-01-01T00:00:00.000Z' }
+        { id: '1', name: 'Ahmad', createdAt: '2025-01-01T00:00:00.000Z' },
       ],
       currentUser: null,
       loading: false,
@@ -139,7 +141,7 @@ describe('UserContext', () => {
       updateUser: vi.fn(),
       removeUser: vi.fn(),
       selectUser: mockSelectUser,
-      clearError: mockClearError
+      clearError: mockClearError,
     })
 
     render(
@@ -156,7 +158,11 @@ describe('UserContext', () => {
     // Test select user
     const selectButton = screen.getByText('Select User')
     await user.click(selectButton)
-    expect(mockSelectUser).toHaveBeenCalledWith({ id: '1', name: 'Ahmad', createdAt: '2025-01-01T00:00:00.000Z' })
+    expect(mockSelectUser).toHaveBeenCalledWith({
+      id: '1',
+      name: 'Ahmad',
+      createdAt: '2025-01-01T00:00:00.000Z',
+    })
 
     // Test clear error
     const clearButton = screen.getByText('Clear Error')

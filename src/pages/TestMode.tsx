@@ -17,9 +17,13 @@ const TestMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
   const { formatText } = useBilingual()
-  const { quizCategories, loading: contentLoading, error: contentError } = useContentData()
+  const {
+    quizCategories,
+    loading: contentLoading,
+    error: contentError,
+  } = useContentData()
   const { saveScore } = useScores()
-  
+
   const {
     currentQuestion,
     currentQuestionIndex,
@@ -69,10 +73,10 @@ const TestMode: React.FC = () => {
         percentage: Math.round((score / totalQuestions) * 100),
         timestamp: new Date().toISOString(),
         type: 'test',
-        answers: [] // Partial progress
+        answers: [], // Partial progress
       })
     }
-    
+
     resetTest()
     setTestResults([])
     setShowResults(false)
@@ -101,7 +105,7 @@ const TestMode: React.FC = () => {
       const results = finishTest()
       setTestResults(results)
       setShowResults(true)
-      
+
       // Save score to localStorage
       if (currentUser) {
         saveScore({
@@ -119,8 +123,8 @@ const TestMode: React.FC = () => {
             questionId: result.question.id,
             userAnswer: result.userAnswer,
             correctAnswer: result.correctAnswer,
-            isCorrect: result.isCorrect
-          }))
+            isCorrect: result.isCorrect,
+          })),
         })
       }
     } else {
@@ -177,9 +181,7 @@ const TestMode: React.FC = () => {
               <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 Ralat Memuatkan Kandungan
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                {contentError}
-              </p>
+              <p className="text-lg text-gray-600 mb-8">{contentError}</p>
               <Button
                 onClick={handleBackToMenu}
                 variant="primary"
@@ -224,7 +226,9 @@ const TestMode: React.FC = () => {
     return (
       <Layout
         title={formatText(TEXT.TEST_MODE)}
-        subtitle={formatText(`اوجيان کومڤرهنسيف - سوالن ${currentQuestionIndex + 1} | Ujian Komprehensif - Soalan ${currentQuestionIndex + 1}`)}
+        subtitle={formatText(
+          `اوجيان کومڤرهنسيف - سوالن ${currentQuestionIndex + 1} | Ujian Komprehensif - Soalan ${currentQuestionIndex + 1}`
+        )}
         currentUser={currentUser?.name}
         onUserClick={() => navigate('/')}
         showUser={true}
@@ -259,7 +263,9 @@ const TestMode: React.FC = () => {
   return (
     <Layout
       title={formatText(TEXT.TEST_MODE)}
-      subtitle={formatText("مود اوجيان - اوجيان کومڤرهنسيف | Mod Ujian - Ujian Komprehensif")}
+      subtitle={formatText(
+        'مود اوجيان - اوجيان کومڤرهنسيف | Mod Ujian - Ujian Komprehensif'
+      )}
       currentUser={currentUser?.name}
       onUserClick={() => navigate('/')}
       showUser={true}
@@ -274,8 +280,9 @@ const TestMode: React.FC = () => {
               Ujian Komprehensif
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Ujian ini mengandungi 30 soalan yang dipilih secara rawak dari semua topik. 
-              Jawab semua soalan dengan teliti untuk mendapatkan markah yang terbaik.
+              Ujian ini mengandungi 30 soalan yang dipilih secara rawak dari
+              semua topik. Jawab semua soalan dengan teliti untuk mendapatkan
+              markah yang terbaik.
             </p>
 
             {/* Test Details */}
@@ -285,11 +292,15 @@ const TestMode: React.FC = () => {
                 <div className="text-sm text-blue-700">Soalan</div>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg">
-                <div className="text-2xl font-bold text-green-600">Semua Topik</div>
+                <div className="text-2xl font-bold text-green-600">
+                  Semua Topik
+                </div>
                 <div className="text-sm text-green-700">Kategori</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
-                <div className="text-2xl font-bold text-purple-600">Tiada Had Masa</div>
+                <div className="text-2xl font-bold text-purple-600">
+                  Tiada Had Masa
+                </div>
                 <div className="text-sm text-purple-700">Masa</div>
               </div>
             </div>
@@ -306,19 +317,28 @@ const TestMode: React.FC = () => {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-purple-500 mt-1">•</span>
-                  <span>Setiap soalan mempunyai 4 pilihan jawapan (A, B, C, D)</span>
+                  <span>
+                    Setiap soalan mempunyai 4 pilihan jawapan (A, B, C, D)
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-purple-500 mt-1">•</span>
-                  <span>Pilih jawapan yang paling tepat untuk setiap soalan</span>
+                  <span>
+                    Pilih jawapan yang paling tepat untuk setiap soalan
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-purple-500 mt-1">•</span>
-                  <span>Anda boleh menggunakan butang "Sebelum" untuk menukar jawapan</span>
+                  <span>
+                    Anda boleh menggunakan butang "Sebelum" untuk menukar
+                    jawapan
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-purple-500 mt-1">•</span>
-                  <span>Markah anda akan disimpan dan dipaparkan di papan markah</span>
+                  <span>
+                    Markah anda akan disimpan dan dipaparkan di papan markah
+                  </span>
                 </li>
               </ul>
             </div>

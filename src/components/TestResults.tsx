@@ -34,11 +34,11 @@ const TestResults: React.FC<TestResultsProps> = ({
   onRetake,
   onBackToMenu,
   onViewLeaderboard,
-  className
+  className,
 }) => {
   const { playTestCompleteSound, playCelebrationSound } = useQuizAudio()
   const { formatText } = useBilingual()
-  
+
   const percentage = Math.round((score / totalQuestions) * 100)
   const isPerfect = score === totalQuestions
   const isExcellent = percentage >= 90
@@ -58,45 +58,55 @@ const TestResults: React.FC<TestResultsProps> = ({
     if (isPerfect) {
       return {
         message: formatText('سيمڤورنا! 🏆 | Sempurna! 🏆'),
-        description: formatText('اندا ميندافت مارکاه ڤنوه دالم اوجيان! تحنيه! | Anda mendapat markah penuh dalam ujian! Tahniah!'),
+        description: formatText(
+          'اندا ميندافت مارکاه ڤنوه دالم اوجيان! تحنيه! | Anda mendapat markah penuh dalam ujian! Tahniah!'
+        ),
         color: 'text-green-600',
         bgColor: 'bg-green-50',
-        borderColor: 'border-green-200'
+        borderColor: 'border-green-200',
       }
     }
     if (isExcellent) {
       return {
         message: formatText('چميرلڠ! 🌟 | Cemerlang! 🌟'),
-        description: formatText('ڤرستاسي يڠ ساڠت چميرلڠ دالم اوجيان! | Prestasi yang sangat cemerlang dalam ujian!'),
+        description: formatText(
+          'ڤرستاسي يڠ ساڠت چميرلڠ دالم اوجيان! | Prestasi yang sangat cemerlang dalam ujian!'
+        ),
         color: 'text-blue-600',
         bgColor: 'bg-blue-50',
-        borderColor: 'border-blue-200'
+        borderColor: 'border-blue-200',
       }
     }
     if (isGood) {
       return {
         message: formatText('باݢوس! 👍 | Bagus! 👍'),
-        description: formatText('ڤرستاسي يڠ بايق دالم اوجيان! | Prestasi yang baik dalam ujian!'),
+        description: formatText(
+          'ڤرستاسي يڠ بايق دالم اوجيان! | Prestasi yang baik dalam ujian!'
+        ),
         color: 'text-yellow-600',
         bgColor: 'bg-yellow-50',
-        borderColor: 'border-yellow-200'
+        borderColor: 'border-yellow-200',
       }
     }
     if (isPassing) {
       return {
         message: formatText('لولس! ✅ | Lulus! ✅'),
-        description: formatText('اندا تله لولس اوجيان دڠن ممواسکن! | Anda telah lulus ujian dengan memuaskan!'),
+        description: formatText(
+          'اندا تله لولس اوجيان دڠن ممواسکن! | Anda telah lulus ujian dengan memuaskan!'
+        ),
         color: 'text-orange-600',
         bgColor: 'bg-orange-50',
-        borderColor: 'border-orange-200'
+        borderColor: 'border-orange-200',
       }
     }
     return {
       message: formatText('چوبا لاݢي! 💪 | Cuba Lagi! 💪'),
-      description: formatText('جڠن برڤوتس اسا، تروسکن بروسها! | Jangan berputus asa, teruskan berusaha!'),
+      description: formatText(
+        'جڠن برڤوتس اسا، تروسکن بروسها! | Jangan berputus asa, teruskan berusaha!'
+      ),
       color: 'text-red-600',
       bgColor: 'bg-red-50',
-      borderColor: 'border-red-200'
+      borderColor: 'border-red-200',
     }
   }
 
@@ -127,15 +137,27 @@ const TestResults: React.FC<TestResultsProps> = ({
             {formatText('کڤوتوسان اوجيان | Keputusan Ujian')}
           </h1>
           <p className="text-lg text-gray-600">
-            {formatText('اوجيان کومڤرهنسيف - 30 سوالن | Ujian Komprehensif - 30 Soalan')}
+            {formatText(
+              'اوجيان کومڤرهنسيف - 30 سوالن | Ujian Komprehensif - 30 Soalan'
+            )}
           </p>
         </div>
 
         {/* Score Card */}
-        <Card className={cn('mb-8', performance.bgColor, performance.borderColor)}>
+        <Card
+          className={cn('mb-8', performance.bgColor, performance.borderColor)}
+        >
           <div className="p-8 text-center">
             <div className="text-6xl mb-4">
-              {isPerfect ? '🏆' : isExcellent ? '🌟' : isGood ? '👍' : isPassing ? '✅' : '💪'}
+              {isPerfect
+                ? '🏆'
+                : isExcellent
+                  ? '🌟'
+                  : isGood
+                    ? '👍'
+                    : isPassing
+                      ? '✅'
+                      : '💪'}
             </div>
             <h2 className={cn('text-3xl font-bold mb-2', performance.color)}>
               {performance.message}
@@ -150,26 +172,34 @@ const TestResults: React.FC<TestResultsProps> = ({
                 <div className="text-4xl font-bold text-gray-800">
                   {score}/{totalQuestions}
                 </div>
-                <div className="text-sm text-gray-600">{formatText('مارکاه | Markah')}</div>
+                <div className="text-sm text-gray-600">
+                  {formatText('مارکاه | Markah')}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800">
                   {percentage}%
                 </div>
-                <div className="text-sm text-gray-600">{formatText('ڤراتوسن | Peratusan')}</div>
+                <div className="text-sm text-gray-600">
+                  {formatText('ڤراتوسن | Peratusan')}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-800">
                   {getGrade()}
                 </div>
-                <div className="text-sm text-gray-600">{formatText('ݢريد | Gred')}</div>
+                <div className="text-sm text-gray-600">
+                  {formatText('ݢريد | Gred')}
+                </div>
               </div>
               {timeSpent && (
                 <div className="text-center">
                   <div className="text-4xl font-bold text-gray-800">
                     {formatTime(timeSpent)}
                   </div>
-                  <div className="text-sm text-gray-600">{formatText('ماسا | Masa')}</div>
+                  <div className="text-sm text-gray-600">
+                    {formatText('ماسا | Masa')}
+                  </div>
                 </div>
               )}
             </div>
@@ -210,19 +240,33 @@ const TestResults: React.FC<TestResultsProps> = ({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <div className="text-2xl font-bold text-green-600">{score}</div>
-                <div className="text-sm text-green-700">{formatText('بتول | Betul')}</div>
+                <div className="text-sm text-green-700">
+                  {formatText('بتول | Betul')}
+                </div>
               </div>
               <div className="text-center p-4 bg-red-50 rounded-lg">
-                <div className="text-2xl font-bold text-red-600">{totalQuestions - score}</div>
-                <div className="text-sm text-red-700">{formatText('ساله | Salah')}</div>
+                <div className="text-2xl font-bold text-red-600">
+                  {totalQuestions - score}
+                </div>
+                <div className="text-sm text-red-700">
+                  {formatText('ساله | Salah')}
+                </div>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600">{totalQuestions}</div>
-                <div className="text-sm text-blue-700">{formatText('جومله | Jumlah')}</div>
+                <div className="text-2xl font-bold text-blue-600">
+                  {totalQuestions}
+                </div>
+                <div className="text-sm text-blue-700">
+                  {formatText('جومله | Jumlah')}
+                </div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
-                <div className="text-2xl font-bold text-purple-600">{getGrade()}</div>
-                <div className="text-sm text-purple-700">{formatText('ݢريد | Gred')}</div>
+                <div className="text-2xl font-bold text-purple-600">
+                  {getGrade()}
+                </div>
+                <div className="text-sm text-purple-700">
+                  {formatText('ݢريد | Gred')}
+                </div>
               </div>
             </div>
           </div>
@@ -261,7 +305,8 @@ const TestResults: React.FC<TestResultsProps> = ({
                       <div className="space-y-2">
                         {result.shuffledOptions.map((option, optionIndex) => {
                           const isUserAnswer = optionIndex === result.userAnswer
-                          const isCorrectAnswer = optionIndex === result.newCorrectIndex
+                          const isCorrectAnswer =
+                            optionIndex === result.newCorrectIndex
                           const letter = String.fromCharCode(65 + optionIndex)
 
                           return (
@@ -272,14 +317,16 @@ const TestResults: React.FC<TestResultsProps> = ({
                                 isCorrectAnswer
                                   ? 'bg-green-100 border border-green-300'
                                   : isUserAnswer && !result.isCorrect
-                                  ? 'bg-red-100 border border-red-300'
-                                  : 'bg-gray-50'
+                                    ? 'bg-red-100 border border-red-300'
+                                    : 'bg-gray-50'
                               )}
                             >
                               <div className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-semibold">
                                 {letter}
                               </div>
-                              <span className="text-sm">{formatText(option)}</span>
+                              <span className="text-sm">
+                                {formatText(option)}
+                              </span>
                               <div className="flex-shrink-0">
                                 {isCorrectAnswer && '✅'}
                                 {isUserAnswer && !result.isCorrect && '❌'}
@@ -293,17 +340,28 @@ const TestResults: React.FC<TestResultsProps> = ({
                       <div className="mt-3 flex items-center space-x-2">
                         {result.isCorrect ? (
                           <>
-                            <span className="text-green-600 font-semibold">✓ {formatText('بتول | Betul')}</span>
+                            <span className="text-green-600 font-semibold">
+                              ✓ {formatText('بتول | Betul')}
+                            </span>
                             <span className="text-sm text-gray-500">
-                              {formatText('جوابن اندا | Jawapan anda')}: {typeof result.userAnswer === 'number' ? String.fromCharCode(65 + result.userAnswer) : result.userAnswer}
+                              {formatText('جوابن اندا | Jawapan anda')}:{' '}
+                              {typeof result.userAnswer === 'number'
+                                ? String.fromCharCode(65 + result.userAnswer)
+                                : result.userAnswer}
                             </span>
                           </>
                         ) : (
                           <>
-                            <span className="text-red-600 font-semibold">✗ {formatText('ساله | Salah')}</span>
+                            <span className="text-red-600 font-semibold">
+                              ✗ {formatText('ساله | Salah')}
+                            </span>
                             <span className="text-sm text-gray-500">
-                              {formatText('جوابن اندا | Jawapan anda')}: {typeof result.userAnswer === 'number' ? String.fromCharCode(65 + result.userAnswer) : result.userAnswer} | 
-                              {formatText('جوابن بتول | Jawapan betul')}: {String.fromCharCode(65 + result.newCorrectIndex)}
+                              {formatText('جوابن اندا | Jawapan anda')}:{' '}
+                              {typeof result.userAnswer === 'number'
+                                ? String.fromCharCode(65 + result.userAnswer)
+                                : result.userAnswer}{' '}
+                              |{formatText('جوابن بتول | Jawapan betul')}:{' '}
+                              {String.fromCharCode(65 + result.newCorrectIndex)}
                             </span>
                           </>
                         )}

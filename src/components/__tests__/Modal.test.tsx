@@ -7,7 +7,7 @@ vi.mock('react-dom', async () => {
   const actual = await vi.importActual('react-dom')
   return {
     ...actual,
-    createPortal: (node: React.ReactNode) => node
+    createPortal: (node: React.ReactNode) => node,
   }
 })
 
@@ -23,7 +23,7 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
+
     expect(screen.getByText('Modal content')).toBeInTheDocument()
     expect(screen.getByRole('dialog')).toBeInTheDocument()
   })
@@ -34,7 +34,7 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
+
     expect(screen.queryByText('Modal content')).not.toBeInTheDocument()
   })
 
@@ -44,9 +44,12 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
+
     expect(screen.getByText('Test Title')).toBeInTheDocument()
-    expect(screen.getByRole('dialog')).toHaveAttribute('aria-labelledby', 'modal-title')
+    expect(screen.getByRole('dialog')).toHaveAttribute(
+      'aria-labelledby',
+      'modal-title'
+    )
   })
 
   it('renders with different sizes', () => {
@@ -86,7 +89,7 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
+
     fireEvent.click(screen.getByLabelText('Tutup modal'))
     expect(onClose).toHaveBeenCalledTimes(1)
   })
@@ -98,8 +101,10 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
-    const overlay = screen.getByRole('dialog').parentElement?.querySelector('.absolute')
+
+    const overlay = screen
+      .getByRole('dialog')
+      .parentElement?.querySelector('.absolute')
     fireEvent.click(overlay!)
     expect(onClose).toHaveBeenCalledTimes(1)
   })
@@ -111,8 +116,10 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
-    const overlay = screen.getByRole('dialog').parentElement?.querySelector('.absolute')
+
+    const overlay = screen
+      .getByRole('dialog')
+      .parentElement?.querySelector('.absolute')
     fireEvent.click(overlay!)
     expect(onClose).not.toHaveBeenCalled()
   })
@@ -124,7 +131,7 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
+
     fireEvent.keyDown(document, { key: 'Escape' })
     expect(onClose).toHaveBeenCalledTimes(1)
   })
@@ -135,7 +142,7 @@ describe('Modal', () => {
         Modal content
       </Modal>
     )
-    
+
     expect(screen.getByRole('dialog')).toHaveClass('custom-class')
   })
 })

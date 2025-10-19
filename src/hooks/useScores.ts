@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
 import { ScoreRecord, LeaderboardEntry } from '../types'
-import { 
-  getScores, 
-  saveScore, 
-  getScoresByUser, 
-  getScoresByQuiz, 
-  getTopScores, 
-  isValidScore 
+import {
+  getScores,
+  saveScore,
+  getScoresByUser,
+  getScoresByQuiz,
+  getTopScores,
+  isValidScore,
 } from '../utils/localStorage'
 
 export function useScores() {
@@ -18,7 +18,7 @@ export function useScores() {
   useEffect(() => {
     try {
       const loadedScores = getScores()
-      
+
       // Validate scores data
       const validScores = loadedScores.filter(isValidScore)
       setScores(validScores)
@@ -66,58 +66,72 @@ export function useScores() {
   }, [])
 
   // Get top scores for leaderboard
-  const getLeaderboard = useCallback((quizId: string, limit: number = 10): LeaderboardEntry[] => {
-    const topScores = getTopScores(quizId, limit)
-    
-    return topScores.map((score, index) => ({
-      rank: index + 1,
-      userName: score.userName,
-      score: score.score,
-      percentage: score.percentage,
-      date: new Date(score.timestamp).toLocaleDateString('ms-MY'),
-      quizId: score.quizId
-    }))
-  }, [])
+  const getLeaderboard = useCallback(
+    (quizId: string, limit: number = 10): LeaderboardEntry[] => {
+      const topScores = getTopScores(quizId, limit)
+
+      return topScores.map((score, index) => ({
+        rank: index + 1,
+        userName: score.userName,
+        score: score.score,
+        percentage: score.percentage,
+        date: new Date(score.timestamp).toLocaleDateString('ms-MY'),
+        quizId: score.quizId,
+      }))
+    },
+    []
+  )
 
   // Get user's best score for a quiz
-  const getUserBestScore = useCallback((userName: string, quizId: string): ScoreRecord | null => {
-    const userScores = getUserScores(userName)
-    const quizScores = userScores.filter(score => score.quizId === quizId)
-    
-    if (quizScores.length === 0) return null
-    
-    return quizScores.reduce((best, current) => 
-      current.percentage > best.percentage ? current : best
-    )
-  }, [getUserScores])
+  const getUserBestScore = useCallback(
+    (userName: string, quizId: string): ScoreRecord | null => {
+      const userScores = getUserScores(userName)
+      const quizScores = userScores.filter(score => score.quizId === quizId)
+
+      if (quizScores.length === 0) return null
+
+      return quizScores.reduce((best, current) =>
+        current.percentage > best.percentage ? current : best
+      )
+    },
+    [getUserScores]
+  )
 
   // Get user's average score for a quiz
-  const getUserAverageScore = useCallback((userName: string, quizId: string): number => {
-    const userScores = getUserScores(userName)
-    const quizScores = userScores.filter(score => score.quizId === quizId)
-    
-    if (quizScores.length === 0) return 0
-    
-    const totalPercentage = quizScores.reduce((sum, score) => sum + score.percentage, 0)
-    return Math.round(totalPercentage / quizScores.length)
-  }, [getUserScores])
+  const getUserAverageScore = useCallback(
+    (userName: string, quizId: string): number => {
+      const userScores = getUserScores(userName)
+      const quizScores = userScores.filter(score => score.quizId === quizId)
+
+      if (quizScores.length === 0) return 0
+
+      const totalPercentage = quizScores.reduce(
+        (sum, score) => sum + score.percentage,
+        0
+      )
+      return Math.round(totalPercentage / quizScores.length)
+    },
+    [getUserScores]
+  )
 
   // Get statistics for a quiz
   const getQuizStats = useCallback((quizId: string) => {
     const quizScores = getScoresByQuiz(quizId)
-    
+
     if (quizScores.length === 0) {
       return {
         totalAttempts: 0,
         averageScore: 0,
         highestScore: 0,
-        lowestScore: 0
+        lowestScore: 0,
       }
     }
 
     const percentages = quizScores.map(score => score.percentage)
     const totalAttempts = quizScores.length
-    const averageScore = Math.round(percentages.reduce((sum, p) => sum + p, 0) / totalAttempts)
+    const averageScore = Math.round(
+      percentages.reduce((sum, p) => sum + p, 0) / totalAttempts
+    )
     const highestScore = Math.max(...percentages)
     const lowestScore = Math.min(...percentages)
 
@@ -125,7 +139,7 @@ export function useScores() {
       totalAttempts,
       averageScore,
       highestScore,
-      lowestScore
+      lowestScore,
     }
   }, [])
 
@@ -146,6 +160,6 @@ export function useScores() {
     getUserBestScore,
     getUserAverageScore,
     getQuizStats,
-    clearError
+    clearError,
   }
 }

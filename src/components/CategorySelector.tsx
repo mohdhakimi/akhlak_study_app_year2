@@ -17,11 +17,16 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
   onCategorySelect,
   onBack,
   loading = false,
-  className
+  className,
 }) => {
   if (loading) {
     return (
-      <div className={cn('min-h-screen flex items-center justify-center', className)}>
+      <div
+        className={cn(
+          'min-h-screen flex items-center justify-center',
+          className
+        )}
+      >
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
           <p className="text-lg text-primary-600">Memuatkan kategori kuiz...</p>
@@ -32,7 +37,12 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
 
   if (categories.length === 0) {
     return (
-      <div className={cn('min-h-screen flex items-center justify-center', className)}>
+      <div
+        className={cn(
+          'min-h-screen flex items-center justify-center',
+          className
+        )}
+      >
         <Card className="text-center py-12 max-w-md mx-auto">
           <div className="text-6xl mb-6">📚</div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -58,7 +68,8 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
             Pilih Kategori Kuiz
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Pilih kategori yang ingin anda kuiz. Setiap kuiz mengandungi 10 soalan dengan pilihan jawapan.
+            Pilih kategori yang ingin anda kuiz. Setiap kuiz mengandungi 10
+            soalan dengan pilihan jawapan.
           </p>
         </div>
 
@@ -76,7 +87,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
 
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category) => (
+          {categories.map(category => (
             <Card
               key={category.id}
               className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 border-2 hover:border-primary-300"
@@ -101,9 +112,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
 
                   {/* Question Count */}
                   <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-                    <span className="font-medium">
-                      10 Soalan
-                    </span>
+                    <span className="font-medium">10 Soalan</span>
                     <span>•</span>
                     <span>10 minit</span>
                   </div>
@@ -114,7 +123,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
                   <Button
                     variant="primary"
                     className="w-full group-hover:bg-primary-700 transition-colors"
-                    onClick={(e) => {
+                    onClick={e => {
                       e.stopPropagation()
                       onCategorySelect(category)
                     }}
@@ -137,19 +146,29 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
               <ul className="text-blue-700 space-y-2 text-sm">
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-500 mt-1">•</span>
-                  <span>Pilih jawapan yang paling tepat untuk setiap soalan</span>
+                  <span>
+                    Pilih jawapan yang paling tepat untuk setiap soalan
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-500 mt-1">•</span>
-                  <span>Anda akan mendapat maklum balas serta-merta selepas memilih jawapan</span>
+                  <span>
+                    Anda akan mendapat maklum balas serta-merta selepas memilih
+                    jawapan
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-500 mt-1">•</span>
-                  <span>Skor anda akan disimpan dan dipaparkan di papan markah</span>
+                  <span>
+                    Skor anda akan disimpan dan dipaparkan di papan markah
+                  </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-500 mt-1">•</span>
-                  <span>Anda boleh menggunakan butang "Sebelum" untuk menukar jawapan</span>
+                  <span>
+                    Anda boleh menggunakan butang "Sebelum" untuk menukar
+                    jawapan
+                  </span>
                 </li>
               </ul>
             </div>

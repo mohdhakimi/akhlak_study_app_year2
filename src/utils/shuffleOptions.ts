@@ -5,7 +5,7 @@
  * This module provides utility functions for shuffling arrays, randomizing
  * quiz options, and selecting random subsets of data. These functions are
  * essential for creating varied and fair quiz experiences.
- * 
+ *
  * Features:
  * - Fisher-Yates shuffle algorithm for unbiased randomization
  * - Quiz option shuffling with correct answer preservation
@@ -29,13 +29,13 @@
 export function shuffleArray<T>(array: T[]): T[] {
   // Create a copy to avoid mutating the original array
   const shuffled = [...array]
-  
+
   // Fisher-Yates shuffle algorithm
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
     ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
-  
+
   return shuffled
 }
 
@@ -63,21 +63,23 @@ export function shuffleQuizOptions<T>(
 
   // Validate correct index bounds
   if (correctIndex < 0 || correctIndex >= options.length) {
-    throw new Error(`Invalid correct index: ${correctIndex}. Must be between 0 and ${options.length - 1}`)
+    throw new Error(
+      `Invalid correct index: ${correctIndex}. Must be between 0 and ${options.length - 1}`
+    )
   }
 
   // Create array of indices for shuffling
   const indices = Array.from({ length: options.length }, (_, i) => i)
-  
+
   // Shuffle the indices to get new positions
   const shuffledIndices = shuffleArray(indices)
-  
+
   // Find where the correct answer ended up after shuffling
   const newCorrectIndex = shuffledIndices.indexOf(correctIndex)
-  
+
   // Map shuffled indices back to actual option values
   const shuffledOptions = shuffledIndices.map(index => options[index])
-  
+
   return { shuffledOptions, newCorrectIndex }
 }
 
@@ -101,7 +103,7 @@ export function randomSelect<T>(array: T[], count: number): T[] {
   if (count >= array.length) {
     return shuffleArray(array)
   }
-  
+
   const shuffled = shuffleArray(array)
   return shuffled.slice(0, count)
 }
@@ -126,21 +128,21 @@ export function selectQuizOptions(
 
   // Get the correct answer
   const correctAnswer = options[correctIndex]
-  
+
   // Get all distractors (all options except the correct one)
   const distractors = options.filter((_, index) => index !== correctIndex)
-  
+
   // Select 3 random distractors
   const selectedDistractors = randomSelect(distractors, 3)
-  
+
   // Combine correct answer with selected distractors
   const allSelected = [correctAnswer, ...selectedDistractors]
-  
+
   // Shuffle the final 4 options
   const shuffled = shuffleArray(allSelected)
-  
+
   // Find the new position of the correct answer
   const newCorrectIndex = shuffled.findIndex(option => option === correctAnswer)
-  
+
   return { selectedOptions: shuffled, newCorrectIndex }
 }

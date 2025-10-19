@@ -1,3 +1,4 @@
+import React from 'react'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
@@ -93,7 +94,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
   })
 
@@ -126,7 +129,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Answer first question - click any available option
@@ -134,14 +139,20 @@ describe('TestMode Integration', () => {
     fireEvent.click(option1)
     
     await waitFor(() => {
-      expect(screen.getByText('ستروسڽا | Seterusnya →')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      })).toBeInTheDocument()
     })
     
     // Go to next question
-    fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+    fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 2 دري 30') && element?.textContent?.includes('Soalan 2 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Answer second question - click any available option
@@ -149,11 +160,15 @@ describe('TestMode Integration', () => {
     fireEvent.click(secondOption)
     
     await waitFor(() => {
-      expect(screen.getByText('ستروسڽا | Seterusnya →')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      })).toBeInTheDocument()
     })
     
     // Go to next question
-    fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+    fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     
     await waitFor(() => {
       expect(screen.getByText('سوالن 3 دري 30 | Soalan 3 dari 30')).toBeInTheDocument()
@@ -181,7 +196,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Click any available option
@@ -189,11 +206,15 @@ describe('TestMode Integration', () => {
     fireEvent.click(option1Q)
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     })
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 2 دري 30') && element?.textContent?.includes('Soalan 2 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Click any available option
@@ -201,7 +222,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(option2Q)
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     })
     
     await waitFor(() => {
@@ -235,7 +258,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Answer first question - click any available option
@@ -243,18 +268,24 @@ describe('TestMode Integration', () => {
     fireEvent.click(option1)
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     })
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 2 دري 30') && element?.textContent?.includes('Soalan 2 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Go back to previous question
     fireEvent.click(screen.getByText('← سبلوم | Sebelum'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
   })
 
@@ -265,7 +296,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Click any available option
@@ -273,11 +306,15 @@ describe('TestMode Integration', () => {
     fireEvent.click(option1R)
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     })
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 2 دري 30 | Soalan 2 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 2 دري 30') && element?.textContent?.includes('Soalan 2 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Click any available option
@@ -285,7 +322,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(option2R)
     
     await waitFor(() => {
-      fireEvent.click(screen.getByText('ستروسڽا | Seterusnya →'))
+      fireEvent.click(screen.getByText('(content, element) => {
+        return element?.textContent?.includes('ستروسڽا') && element?.textContent?.includes('Seterusnya')
+      }'))
     })
     
     await waitFor(() => {
@@ -310,7 +349,9 @@ describe('TestMode Integration', () => {
     fireEvent.click(screen.getByText('Mula Ujian'))
     
     await waitFor(() => {
-      expect(screen.getByText('سوالن 1 دري 30 | Soalan 1 dari 30')).toBeInTheDocument()
+      expect(screen.getByText((content, element) => {
+        return element?.textContent?.includes('سوالن 1 دري 30') && element?.textContent?.includes('Soalan 1 dari 30')
+      })).toBeInTheDocument()
     })
     
     // Go back to menu

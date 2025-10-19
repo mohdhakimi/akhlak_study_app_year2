@@ -1,6 +1,10 @@
 import { useState, useCallback, useRef } from 'react'
 import { Question, QuizCategory, QuizResult } from '../types'
-import { shuffleArray, randomSelect, selectQuizOptions } from '../utils/shuffleOptions'
+import {
+  shuffleArray,
+  randomSelect,
+  selectQuizOptions,
+} from '../utils/shuffleOptions'
 
 export interface TestState {
   currentQuestionIndex: number
@@ -24,7 +28,7 @@ export interface UseTestModeReturn {
   isComplete: boolean
   currentCorrectAnswer: number
   currentShuffledOptions: string[]
-  
+
   // Actions
   startTest: (allCategories: QuizCategory[]) => void
   selectAnswer: (answerIndex: number) => void
@@ -32,7 +36,7 @@ export interface UseTestModeReturn {
   goToPrevious: () => void
   finishTest: () => QuizResult[]
   resetTest: () => void
-  
+
   // Navigation
   canGoNext: boolean
   canGoPrevious: boolean
@@ -46,13 +50,13 @@ export function useTestMode(): UseTestModeReturn {
     isAnswered: false,
     isRevealed: false,
     startTime: null,
-    endTime: null
+    endTime: null,
   })
-  
+
   const [questions, setQuestions] = useState<Question[]>([])
   const [shuffledOptions, setShuffledOptions] = useState<string[][]>([])
   const [correctAnswers, setCorrectAnswers] = useState<number[]>([])
-  
+
   const startTimeRef = useRef<number | null>(null)
 
   const startTest = useCallback((allCategories: QuizCategory[]) => {
@@ -70,55 +74,60 @@ export function useTestMode(): UseTestModeReturn {
 
     // Select 30 random questions without duplicates
     const selectedQuestions = randomSelect(allQuestions, 30)
-    
+
     // Questions selected successfully
-    
+
     // All questions are MCQ
-    const mixedQuestions = selectedQuestions.map((question) => ({
+    const mixedQuestions = selectedQuestions.map(question => ({
       ...question,
-      type: 'mcq' as const
+      type: 'mcq' as const,
     }))
-    
+
     // Prepare 4 selected options and correct answers for all MCQ questions
     const optionsData = mixedQuestions.map(question => {
       const options = [...question.options]
       const correctIndex = question.correctAnswer
-      
+
       // Select 4 options (1 correct + 3 random distractors)
-      const { selectedOptions, newCorrectIndex } = selectQuizOptions(options, correctIndex)
-      
+      const { selectedOptions, newCorrectIndex } = selectQuizOptions(
+        options,
+        correctIndex
+      )
+
       return { selectedOptions, newCorrectIndex }
     })
 
     setQuestions(mixedQuestions)
     setShuffledOptions(optionsData.map(data => data.selectedOptions))
     setCorrectAnswers(optionsData.map(data => data.newCorrectIndex))
-    
+
     setTestState({
       currentQuestionIndex: 0,
       selectedAnswers: new Array(mixedQuestions.length).fill(null),
       isAnswered: false,
       isRevealed: false,
       startTime: Date.now(),
-      endTime: null
+      endTime: null,
     })
-    
+
     startTimeRef.current = Date.now()
   }, [])
 
-  const selectAnswer = useCallback((answerIndex: number) => {
-    if (testState.isAnswered) return
+  const selectAnswer = useCallback(
+    (answerIndex: number) => {
+      if (testState.isAnswered) return
 
-    setTestState(prev => ({
-      ...prev,
-      selectedAnswers: prev.selectedAnswers.map((answer, index) =>
-        index === prev.currentQuestionIndex ? answerIndex : answer
-      ),
-      isAnswered: true,
-      isRevealed: true
-    }))
-  }, [testState.isAnswered, testState.currentQuestionIndex])
-
+      setTestState(prev => ({
+        ...prev,
+        selectedAnswers: prev.selectedAnswers.map((answer, index) =>
+          index === prev.currentQuestionIndex ? answerIndex : answer
+        ),
+        isAnswered: true,
+        isRevealed: true,
+      }))
+    },
+    [testState.isAnswered, testState.currentQuestionIndex]
+  )
 
   const goToNext = useCallback(() => {
     setTestState(prev => {
@@ -128,8 +137,10 @@ export function useTestMode(): UseTestModeReturn {
       return {
         ...prev,
         currentQuestionIndex: prev.currentQuestionIndex + 1,
-        isAnswered: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
-        isRevealed: prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null
+        isAnswered:
+          prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
+        isRevealed:
+          prev.selectedAnswers[prev.currentQuestionIndex + 1] !== null,
       }
     })
   }, [questions.length])
@@ -142,8 +153,10 @@ export function useTestMode(): UseTestModeReturn {
       return {
         ...prev,
         currentQuestionIndex: prev.currentQuestionIndex - 1,
-        isAnswered: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
-        isRevealed: prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null
+        isAnswered:
+          prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
+        isRevealed:
+          prev.selectedAnswers[prev.currentQuestionIndex - 1] !== null,
       }
     })
   }, [])
@@ -160,10 +173,11 @@ export function useTestMode(): UseTestModeReturn {
     const results: QuizResult[] = questions.map((question, index) => {
       const userAnswer = testState.selectedAnswers[index]
       const correctAnswer = correctAnswers[index]
-      
+
       // All questions are MCQ, so compare indices
       const isCorrect = userAnswer === correctAnswer
-      const processedUserAnswer = userAnswer !== null && userAnswer !== undefined ? userAnswer : -1
+      const processedUserAnswer =
+        userAnswer !== null && userAnswer !== undefined ? userAnswer : -1
 
       return {
         question,
@@ -171,7 +185,7 @@ export function useTestMode(): UseTestModeReturn {
         correctAnswer,
         isCorrect,
         shuffledOptions: shuffledOptions[index] || [],
-        newCorrectIndex: correctAnswer
+        newCorrectIndex: correctAnswer,
       }
     })
 
@@ -185,7 +199,7 @@ export function useTestMode(): UseTestModeReturn {
       isAnswered: false,
       isRevealed: false,
       startTime: null,
-      endTime: null
+      endTime: null,
     })
     setQuestions([])
     setShuffledOptions([])
@@ -196,25 +210,36 @@ export function useTestMode(): UseTestModeReturn {
   // Computed values
   const currentQuestion = questions[testState.currentQuestionIndex] || null
   const totalQuestions = questions.length
-  const isComplete = testState.currentQuestionIndex >= totalQuestions - 1 && testState.isAnswered
-  
+  const isComplete =
+    testState.currentQuestionIndex >= totalQuestions - 1 && testState.isAnswered
+
   const canGoNext = testState.currentQuestionIndex < totalQuestions - 1
   const canGoPrevious = testState.currentQuestionIndex > 0
-  
-  const progress = totalQuestions > 0 ? (testState.currentQuestionIndex + 1) / totalQuestions : 0
-  
-  const currentCorrectAnswer = correctAnswers[testState.currentQuestionIndex] || 0
-  const currentShuffledOptions = shuffledOptions[testState.currentQuestionIndex] || []
-  
-  const score = testState.selectedAnswers.reduce((acc: number, answer, index) => {
-    // All questions are MCQ, so compare indices
-    if (answer !== null && answer === correctAnswers[index]) {
-      return acc + 1
-    }
-    return acc
-  }, 0)
-  
-  const timeSpent = startTimeRef.current ? Math.floor((Date.now() - startTimeRef.current) / 1000) : null
+
+  const progress =
+    totalQuestions > 0
+      ? (testState.currentQuestionIndex + 1) / totalQuestions
+      : 0
+
+  const currentCorrectAnswer =
+    correctAnswers[testState.currentQuestionIndex] || 0
+  const currentShuffledOptions =
+    shuffledOptions[testState.currentQuestionIndex] || []
+
+  const score = testState.selectedAnswers.reduce(
+    (acc: number, answer, index) => {
+      // All questions are MCQ, so compare indices
+      if (answer !== null && answer === correctAnswers[index]) {
+        return acc + 1
+      }
+      return acc
+    },
+    0
+  )
+
+  const timeSpent = startTimeRef.current
+    ? Math.floor((Date.now() - startTimeRef.current) / 1000)
+    : null
 
   return {
     // State
@@ -229,7 +254,7 @@ export function useTestMode(): UseTestModeReturn {
     isComplete,
     currentCorrectAnswer,
     currentShuffledOptions,
-    
+
     // Actions
     startTest,
     selectAnswer,
@@ -237,10 +262,10 @@ export function useTestMode(): UseTestModeReturn {
     goToPrevious,
     finishTest,
     resetTest,
-    
+
     // Navigation
     canGoNext,
     canGoPrevious,
-    progress
+    progress,
   }
 }

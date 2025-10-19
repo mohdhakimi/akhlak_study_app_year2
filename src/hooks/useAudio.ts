@@ -1,11 +1,11 @@
 import { useEffect, useCallback } from 'react'
-import { 
-  playSound, 
-  getAudioSettings, 
-  setSoundEnabled, 
-  setMusicEnabled, 
+import {
+  playSound,
+  getAudioSettings,
+  setSoundEnabled,
+  setMusicEnabled,
   setVolume,
-  type SoundEffect 
+  type SoundEffect,
 } from '../utils/audio'
 
 export interface UseAudioReturn {
@@ -46,7 +46,7 @@ export const useAudio = (): UseAudioReturn => {
     toggleSound,
     toggleMusic,
     setVolumeLevel,
-    settings
+    settings,
   }
 }
 
@@ -79,7 +79,7 @@ export const useButtonSound = () => {
 
   return {
     playClickSound,
-    playHoverSound
+    playHoverSound,
   }
 }
 
@@ -122,7 +122,7 @@ export const useQuizAudio = () => {
     playIncorrectSound,
     playQuizCompleteSound,
     playTestCompleteSound,
-    playCelebrationSound
+    playCelebrationSound,
   }
 }
 
@@ -137,6 +137,6 @@ export const usePageTransitionAudio = () => {
   }, [playSound, isSoundEnabled])
 
   return {
-    playTransitionSound
+    playTransitionSound,
   }
 }

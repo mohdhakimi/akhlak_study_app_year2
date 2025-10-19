@@ -1,5 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom'
 import { UserProvider, useUserContext } from './contexts/UserContext'
 import { BilingualProvider } from './contexts/BilingualContext'
 import UserSelectionModal from './components/UserSelectionModal'
@@ -20,7 +25,7 @@ const AppContent: React.FC = () => {
     selectUser,
     clearError,
     showUserSelectionModal,
-    closeUserSelectionModal
+    closeUserSelectionModal,
   } = useUserContext()
 
   const handleUserSelect = (user: any) => {

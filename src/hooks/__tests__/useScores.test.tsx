@@ -10,7 +10,7 @@ vi.mock('../../utils/localStorage', () => ({
   getScoresByUser: vi.fn(),
   getScoresByQuiz: vi.fn(),
   getTopScores: vi.fn(),
-  isValidScore: vi.fn()
+  isValidScore: vi.fn(),
 }))
 
 const mockScore: localStorageUtils.ScoreRecord = {
@@ -26,9 +26,9 @@ const mockScore: localStorageUtils.ScoreRecord = {
       questionId: 'q1',
       userAnswer: 1,
       correctAnswer: 1,
-      isCorrect: true
-    }
-  ]
+      isCorrect: true,
+    },
+  ],
 }
 
 describe('useScores', () => {
@@ -40,7 +40,7 @@ describe('useScores', () => {
 
   it('should initialize with empty state', () => {
     const { result } = renderHook(() => useScores())
-    
+
     expect(result.current.scores).toEqual([])
     expect(result.current.loading).toBe(false)
     expect(result.current.error).toBeNull()
@@ -49,22 +49,22 @@ describe('useScores', () => {
   it('should load scores on mount', () => {
     const mockScores = [mockScore]
     vi.mocked(localStorageUtils.getScores).mockReturnValue(mockScores)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     expect(result.current.scores).toEqual(mockScores)
   })
 
   it('should add a new score successfully', async () => {
     vi.mocked(localStorageUtils.saveScore).mockReturnValue(true)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const success = result.current.addScore(mockScore)
       expect(success).toBe(true)
     })
-    
+
     expect(localStorageUtils.saveScore).toHaveBeenCalledWith(mockScore)
     expect(result.current.scores).toHaveLength(1)
     expect(result.current.error).toBeNull()
@@ -72,42 +72,42 @@ describe('useScores', () => {
 
   it('should handle invalid score data', async () => {
     vi.mocked(localStorageUtils.isValidScore).mockReturnValue(false)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const success = result.current.addScore(mockScore)
       expect(success).toBe(false)
     })
-    
+
     expect(result.current.error).toBe('Data skor tidak sah')
   })
 
   it('should get user scores', async () => {
     const mockUserScores = [mockScore]
     vi.mocked(localStorageUtils.getScoresByUser).mockReturnValue(mockUserScores)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const userScores = result.current.getUserScores('Test User')
       expect(userScores).toEqual(mockUserScores)
     })
-    
+
     expect(localStorageUtils.getScoresByUser).toHaveBeenCalledWith('Test User')
   })
 
   it('should get quiz scores', async () => {
     const mockQuizScores = [mockScore]
     vi.mocked(localStorageUtils.getScoresByQuiz).mockReturnValue(mockQuizScores)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const quizScores = result.current.getQuizScores('quiz1')
       expect(quizScores).toEqual(mockQuizScores)
     })
-    
+
     expect(localStorageUtils.getScoresByQuiz).toHaveBeenCalledWith('quiz1')
   })
 
@@ -119,7 +119,7 @@ describe('useScores', () => {
         score: 9,
         percentage: 90,
         date: '18/10/2025',
-        quizId: 'quiz1'
+        quizId: 'quiz1',
       },
       {
         rank: 2,
@@ -127,17 +127,17 @@ describe('useScores', () => {
         score: 8,
         percentage: 80,
         date: '18/10/2025',
-        quizId: 'quiz1'
-      }
+        quizId: 'quiz1',
+      },
     ]
-    
+
     vi.mocked(localStorageUtils.getTopScores).mockReturnValue([
       { ...mockScore, userName: 'User1', percentage: 90 },
-      { ...mockScore, userName: 'User2', percentage: 80 }
+      { ...mockScore, userName: 'User2', percentage: 80 },
     ])
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const leaderboard = result.current.getLeaderboard('quiz1', 2)
       expect(leaderboard).toHaveLength(2)
@@ -151,13 +151,13 @@ describe('useScores', () => {
     const mockScores = [
       { ...mockScore, percentage: 60 },
       { ...mockScore, percentage: 80 },
-      { ...mockScore, percentage: 70 }
+      { ...mockScore, percentage: 70 },
     ]
-    
+
     vi.mocked(localStorageUtils.getScoresByUser).mockReturnValue(mockScores)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const bestScore = result.current.getUserBestScore('Test User', 'quiz1')
       expect(bestScore?.percentage).toBe(80)
@@ -166,9 +166,9 @@ describe('useScores', () => {
 
   it('should return null for user best score when no scores exist', async () => {
     vi.mocked(localStorageUtils.getScoresByUser).mockReturnValue([])
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const bestScore = result.current.getUserBestScore('Test User', 'quiz1')
       expect(bestScore).toBeNull()
@@ -179,26 +179,32 @@ describe('useScores', () => {
     const mockScores = [
       { ...mockScore, percentage: 60 },
       { ...mockScore, percentage: 80 },
-      { ...mockScore, percentage: 70 }
+      { ...mockScore, percentage: 70 },
     ]
-    
+
     vi.mocked(localStorageUtils.getScoresByUser).mockReturnValue(mockScores)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
-      const averageScore = result.current.getUserAverageScore('Test User', 'quiz1')
+      const averageScore = result.current.getUserAverageScore(
+        'Test User',
+        'quiz1'
+      )
       expect(averageScore).toBe(70) // (60 + 80 + 70) / 3 = 70
     })
   })
 
   it('should return 0 for user average score when no scores exist', async () => {
     vi.mocked(localStorageUtils.getScoresByUser).mockReturnValue([])
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
-      const averageScore = result.current.getUserAverageScore('Test User', 'quiz1')
+      const averageScore = result.current.getUserAverageScore(
+        'Test User',
+        'quiz1'
+      )
       expect(averageScore).toBe(0)
     })
   })
@@ -207,13 +213,13 @@ describe('useScores', () => {
     const mockScores = [
       { ...mockScore, percentage: 60 },
       { ...mockScore, percentage: 80 },
-      { ...mockScore, percentage: 70 }
+      { ...mockScore, percentage: 70 },
     ]
-    
+
     vi.mocked(localStorageUtils.getScoresByQuiz).mockReturnValue(mockScores)
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const stats = result.current.getQuizStats('quiz1')
       expect(stats.totalAttempts).toBe(3)
@@ -225,9 +231,9 @@ describe('useScores', () => {
 
   it('should return zero stats when no scores exist', async () => {
     vi.mocked(localStorageUtils.getScoresByQuiz).mockReturnValue([])
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     await act(async () => {
       const stats = result.current.getQuizStats('quiz1')
       expect(stats.totalAttempts).toBe(0)
@@ -239,21 +245,21 @@ describe('useScores', () => {
 
   it('should clear error', async () => {
     const { result } = renderHook(() => useScores())
-    
+
     // First set an error by adding invalid score
     vi.mocked(localStorageUtils.isValidScore).mockReturnValue(false)
-    
+
     await act(async () => {
       result.current.addScore(mockScore)
     })
-    
+
     expect(result.current.error).toBe('Data skor tidak sah')
-    
+
     // Then clear it
     act(() => {
       result.current.clearError()
     })
-    
+
     expect(result.current.error).toBeNull()
   })
 
@@ -261,9 +267,9 @@ describe('useScores', () => {
     vi.mocked(localStorageUtils.getScores).mockImplementation(() => {
       throw new Error('Storage error')
     })
-    
+
     const { result } = renderHook(() => useScores())
-    
+
     expect(result.current.error).toBe('Failed to load scores data')
     expect(result.current.loading).toBe(false)
   })

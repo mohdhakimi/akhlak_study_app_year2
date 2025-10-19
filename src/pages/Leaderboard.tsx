@@ -40,7 +40,7 @@ const Leaderboard: React.FC = () => {
       return date.toLocaleDateString('ms-MY', {
         year: 'numeric',
         month: 'short',
-        day: 'numeric'
+        day: 'numeric',
       })
     }
   }
@@ -76,7 +76,7 @@ const Leaderboard: React.FC = () => {
       percentage: score.percentage,
       date: formatDate(new Date(score.timestamp)),
       quizId: score.quizId,
-      quizName: score.quizName
+      quizName: score.quizName,
     }))
   }, [scores, filter])
 
@@ -127,9 +127,7 @@ const Leaderboard: React.FC = () => {
               <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 Ralat Memuatkan Papan Markah
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                {error}
-              </p>
+              <p className="text-lg text-gray-600 mb-8">{error}</p>
               <Button
                 onClick={handleBackToMenu}
                 variant="primary"
@@ -251,7 +249,7 @@ const Leaderboard: React.FC = () => {
                     Teruskan Berusaha!
                   </h3>
                   <p className="text-gray-600">
-                    Setiap percubaan adalah langkah ke arah kecemerlangan. 
+                    Setiap percubaan adalah langkah ke arah kecemerlangan.
                     Jangan berputus asa dan teruskan belajar!
                   </p>
                 </div>

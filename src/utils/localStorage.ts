@@ -5,7 +5,7 @@
  * This module provides comprehensive localStorage management for the Akhlak
  * Flashcard application. It handles data persistence, validation, and error
  * recovery for all application data stored in the browser's localStorage.
- * 
+ *
  * Features:
  * - Type-safe data serialization/deserialization
  * - Error handling and fallback values
@@ -62,13 +62,13 @@ export const getUsers = (): User[] => {
 export const saveUser = (user: User): boolean => {
   const users = getUsers()
   const existingUserIndex = users.findIndex(u => u.id === user.id)
-  
+
   if (existingUserIndex >= 0) {
     users[existingUserIndex] = user
   } else {
     users.push(user)
   }
-  
+
   return saveToStorage(STORAGE_KEYS.USERS, users)
 }
 
@@ -107,11 +107,12 @@ export const getScoresByQuiz = (quizId: string): ScoreRecord[] => {
   return scores.filter(score => score.quizId === quizId)
 }
 
-export const getTopScores = (quizId: string, limit: number = 10): ScoreRecord[] => {
+export const getTopScores = (
+  quizId: string,
+  limit: number = 10
+): ScoreRecord[] => {
   const scores = getScoresByQuiz(quizId)
-  return scores
-    .sort((a, b) => b.percentage - a.percentage)
-    .slice(0, limit)
+  return scores.sort((a, b) => b.percentage - a.percentage).slice(0, limit)
 }
 
 // Settings management functions
@@ -119,7 +120,7 @@ export const getSettings = (): AppSettings => {
   return getFromStorage<AppSettings>(STORAGE_KEYS.SETTINGS, {
     soundEnabled: true,
     animationsEnabled: true,
-    language: 'ms'
+    language: 'ms',
   })
 }
 
@@ -142,7 +143,11 @@ export const clearAllData = (): boolean => {
   }
 }
 
-export const getStorageUsage = (): { used: number; available: number; percentage: number } => {
+export const getStorageUsage = (): {
+  used: number
+  available: number
+  percentage: number
+} => {
   try {
     let used = 0
     Object.values(STORAGE_KEYS).forEach(key => {
@@ -151,12 +156,12 @@ export const getStorageUsage = (): { used: number; available: number; percentage
         used += item.length
       }
     })
-    
+
     // Estimate available space (most browsers have 5-10MB limit)
     const estimatedLimit = 5 * 1024 * 1024 // 5MB
     const available = Math.max(0, estimatedLimit - used)
     const percentage = (used / estimatedLimit) * 100
-    
+
     return { used, available, percentage }
   } catch (error) {
     console.error('Error calculating storage usage:', error)
