@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -41,6 +45,88 @@
 
   .input {
     @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  /* Arabic font styles */
+  .arabic-text {
+    font-family: 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+
+  .arabic-text-large {
+    font-family: 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-weight: 700;
+    line-height: 3 !important;
+    letter-spacing: 0.03em;
+    margin-bottom: 2rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  /* Additional spacing for Arabic text paragraphs */
+  .arabic-text-large p {
+    line-height: 3 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Ensure Arabic text has proper spacing */
+  .arabic-text-large br {
+    line-height: 3 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Jawi text styles - 50% bigger and easy to read */
+  .jawi-text {
+    font-family: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-size: 2.0em; /* 50% bigger than normal text */
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .jawi-text-large {
+    font-family: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-size: 2.25em; /* 50% bigger than large text */
+    font-weight: 600;
+    line-height: 2.5;
+    letter-spacing: 0.05em;
+    direction: rtl;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  /* Jawi text in cards and components */
+  .jawi-text-card {
+    font-family: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-size: 1.3em; /* 30% bigger for cards */
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    direction: rtl;
+  }
+
+  /* Jawi text in buttons */
+  .jawi-text-button {
+    font-family: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-size: 1.2em; /* 20% bigger for buttons */
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    direction: rtl;
+  }
+
+  /* Jawi text in main menu cards - 15% smaller */
+  .jawi-text-menu {
+    font-family: 'Noto Sans Arabic', 'IBM Plex Sans Arabic', 'Amiri', 'Scheherazade New', 'Times New Roman', serif;
+    font-size: 1.7em; /* 15% smaller than 2.0em (2.0 * 0.85 = 1.7) */
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    direction: rtl;
+    text-align: center;
   }
 
   /* Custom animations */

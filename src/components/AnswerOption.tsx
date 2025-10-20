@@ -53,7 +53,7 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
   className,
 }) => {
   // Bilingual context for text formatting
-  const { formatText } = useBilingual()
+  const { formatText, formatTextWithStyling } = useBilingual()
   
   // Audio hooks for sound effects
   const { playCorrectSound, playIncorrectSound } = useQuizAudio()
@@ -141,7 +141,7 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium break-words">
-            {formatText(option)}
+            {formatTextWithStyling(option)}
           </p>
         </div>
         <div className="flex-shrink-0 text-lg">{getIcon()}</div>

@@ -28,7 +28,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
   canGoNext,
   canGoPrevious,
 }) => {
-  const { formatText } = useBilingual()
+  const { formatText, formatTextWithStyling } = useBilingual()
   // Format content with proper line breaks
   const formatContent = (content: string) => {
     return content.split('\n').map((line, index) => {
@@ -36,7 +36,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
         return <br key={index} />
       }
 
-      // Format the line through bilingual context
+      // Format the line through bilingual context for logic
       const formattedLine = formatText(line)
 
       // Check if line starts with a number or bullet point
@@ -47,7 +47,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
               {formattedLine.match(/^\d+/)?.[0]}
             </span>
             <span className="text-gray-700 leading-relaxed">
-              {formatText(formattedLine.replace(/^\d+\.\s*/, ''))}
+              {formatTextWithStyling(line.replace(/^\d+\.\s*/, ''))}
             </span>
           </div>
         )
@@ -58,7 +58,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
           <div key={index} className="flex items-start mb-2">
             <span className="flex-shrink-0 w-2 h-2 bg-primary-500 rounded-full mr-3 mt-3"></span>
             <span className="text-gray-700 leading-relaxed">
-              {formatText(formattedLine.replace(/^•\s*/, ''))}
+              {formatTextWithStyling(line.replace(/^•\s*/, ''))}
             </span>
           </div>
         )
@@ -66,7 +66,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
 
       return (
         <p key={index} className="text-gray-700 leading-relaxed mb-3">
-          {formattedLine}
+          {formatTextWithStyling(line)}
         </p>
       )
     })
@@ -101,7 +101,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
               <span className="text-2xl">📖</span>
             </div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              {formatText(note.title)}
+              {formatTextWithStyling(note.title)}
             </h2>
             <div className="w-16 h-1 bg-primary-500 rounded-full mx-auto"></div>
           </div>

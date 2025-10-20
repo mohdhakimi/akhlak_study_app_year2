@@ -7,11 +7,12 @@
  * - User selection modal for multi-user support
  * - Loading states and error handling
  * 
- * The app supports 4 main learning modes:
+ * The app supports 5 main learning modes:
  * 1. Study Mode (Mod Belajar) - Reading and reviewing content
- * 2. Quiz Mode (Mod Kuiz) - 10-question interactive quizzes
- * 3. Test Mode (Mod Ujian) - 30-question comprehensive tests
- * 4. Leaderboard (Papan Markah) - Score tracking and rankings
+ * 2. Doa Mode (Mod Doa) - Islamic prayers and supplications learning
+ * 3. Quiz Mode (Mod Kuiz) - 10-question interactive quizzes
+ * 4. Test Mode (Mod Ujian) - 30-question comprehensive tests
+ * 5. Leaderboard (Papan Markah) - Score tracking and rankings
  */
 
 import React from 'react'
@@ -26,11 +27,14 @@ import { BilingualProvider } from './contexts/BilingualContext'
 import UserSelectionModal from './components/UserSelectionModal'
 import MainMenu from './pages/MainMenu'
 import StudyMode from './pages/StudyMode'
+import DoaMode from './pages/DoaMode'
 import QuizMode from './pages/QuizMode'
 import TestMode from './pages/TestMode'
 import Leaderboard from './pages/Leaderboard'
 import Analytics from './pages/Analytics'
 import { TEXT } from './constants/text'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import './App.css'
 
 /**
@@ -99,6 +103,9 @@ const AppContent: React.FC = () => {
           {/* Study Mode - Interactive content reading and review */}
           <Route path="/study" element={<StudyMode />} />
           
+          {/* Doa Mode - Islamic prayers and supplications learning */}
+          <Route path="/doa" element={<DoaMode />} />
+          
           {/* Quiz Mode - 10-question interactive quizzes by topic */}
           <Route path="/quiz" element={<QuizMode />} />
           
@@ -127,6 +134,12 @@ const AppContent: React.FC = () => {
         error={error}
         onClearError={clearError}
       />
+
+      {/* Vercel Analytics */}
+      <VercelAnalytics />
+      
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </>
   )
 }

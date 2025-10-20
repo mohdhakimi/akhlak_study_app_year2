@@ -37,6 +37,8 @@ interface BilingualContextType {
   setMode: (mode: BilingualMode) => void // Set specific mode
   cycleMode: () => void                  // Cycle through modes
   formatText: (text: string) => string   // Format text based on mode
+  formatTextWithStyling: (text: string) => React.ReactNode // Format text with CSS classes
+  formatTextWithMenuStyling: (text: string) => React.ReactNode // Format text with menu-specific CSS classes
 }
 
 // Create the context with undefined as default value
@@ -119,8 +121,78 @@ export function BilingualProvider({ children }: BilingualProviderProps) {
     }
   }
 
+  /**
+   * Format text with CSS styling for Jawi text
+   * Returns JSX with appropriate CSS classes applied
+   * 
+   * @param text - The text to format (expected format: "Jawi text | Rumi text")
+   * @returns React.ReactNode - The formatted JSX with styling
+   */
+  const formatTextWithStyling = (text: string): React.ReactNode => {
+    // Return text as-is if no text or mode is 'both'
+    if (!text || mode === 'both') {
+      return text
+    }
+
+    // Split by | separator (Jawi | Rumi format)
+    const parts = text.split(' | ')
+    
+    // Return as-is if not in expected "Jawi | Rumi" format
+    if (parts.length !== 2) {
+      return text
+    }
+
+    // Extract Jawi and Rumi parts
+    const [jawi, rumi] = parts
+
+    // Return appropriate part based on current mode with styling
+    switch (mode) {
+      case 'jawi':
+        return <span className="jawi-text">{jawi.trim()}</span>
+      case 'rumi':
+        return rumi.trim()
+      default:
+        return text
+    }
+  }
+
+  /**
+   * Format text with CSS styling for Jawi text in main menu
+   * Returns JSX with menu-specific CSS classes applied
+   * 
+   * @param text - The text to format (expected format: "Jawi text | Rumi text")
+   * @returns React.ReactNode - The formatted JSX with menu styling
+   */
+  const formatTextWithMenuStyling = (text: string): React.ReactNode => {
+    // Return text as-is if no text or mode is 'both'
+    if (!text || mode === 'both') {
+      return text
+    }
+
+    // Split by | separator (Jawi | Rumi format)
+    const parts = text.split(' | ')
+    
+    // Return as-is if not in expected "Jawi | Rumi" format
+    if (parts.length !== 2) {
+      return text
+    }
+
+    // Extract Jawi and Rumi parts
+    const [jawi, rumi] = parts
+
+    // Return appropriate part based on current mode with menu styling
+    switch (mode) {
+      case 'jawi':
+        return <span className="jawi-text-menu">{jawi.trim()}</span>
+      case 'rumi':
+        return rumi.trim()
+      default:
+        return text
+    }
+  }
+
   return (
-    <BilingualContext.Provider value={{ mode, setMode, cycleMode, formatText }}>
+    <BilingualContext.Provider value={{ mode, setMode, cycleMode, formatText, formatTextWithStyling, formatTextWithMenuStyling }}>
       {children}
     </BilingualContext.Provider>
   )

@@ -16,7 +16,7 @@ import BackToMenuButton from '../components/BackToMenuButton'
 const StudyMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
-  const { formatText } = useBilingual()
+  const { formatText, formatTextWithStyling } = useBilingual()
   const {
     topics,
     loading: contentLoading,

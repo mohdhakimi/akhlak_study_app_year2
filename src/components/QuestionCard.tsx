@@ -92,7 +92,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   // =============================================================================
 
   /** Bilingual context for text formatting */
-  const { formatText } = useBilingual()
+  const { formatText, formatTextWithStyling } = useBilingual()
 
   // =============================================================================
   // COMPUTED VALUES
@@ -156,7 +156,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         {/* Question Header */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 border-b border-gray-200">
           <h3 className="text-xl font-semibold text-gray-800 leading-relaxed">
-            {formatText(question.question)}
+            {formatTextWithStyling(question.question)}
           </h3>
         </div>
 

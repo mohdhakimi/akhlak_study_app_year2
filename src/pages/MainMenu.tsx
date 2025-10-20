@@ -34,7 +34,7 @@ const MainMenu: React.FC = () => {
   const { currentUser, openUserSelectionModal } = useUserContext()
   
   // Bilingual context for text formatting
-  const { formatText } = useBilingual()
+  const { formatText, formatTextWithStyling, formatTextWithMenuStyling } = useBilingual()
   
   // Analytics hook for tracking user interactions
   const { trackPageView, trackEvent } = useAnalytics(currentUser?.name)
@@ -66,6 +66,16 @@ const MainMenu: React.FC = () => {
       route: '/study',                // Navigation route
     },
     {
+      id: 'doa',
+      title: TEXT.DOA_MODE,
+      description:
+        'بلاجر دعاء دان ذکر براساس ادب اسلامي | Belajar doa dan zikir berdasarkan adab Islami',
+      icon: '🤲',
+      color: 'bg-amber-500',
+      hoverColor: 'hover:bg-amber-600',
+      route: '/doa',
+    },
+    {
       id: 'quiz',
       title: TEXT.QUIZ_MODE,
       description:
@@ -87,7 +97,7 @@ const MainMenu: React.FC = () => {
     {
       id: 'leaderboard',
       title: TEXT.LEADERBOARD,
-      description: 'ليه ماره ترتيڠڬي | Lihat markah tertinggi',
+      description: 'ليهت مارقه ترتيڠڬي | Lihat markah tertinggi',
       icon: '🏆',
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600',
@@ -186,10 +196,10 @@ const MainMenu: React.FC = () => {
                       {item.icon}
                     </div>
                     <h2 className="text-lg font-black mb-1 text-white drop-shadow-2xl">
-                      {formatText(item.title)}
+                      {formatTextWithStyling(item.title)}
                     </h2>
                     <p className="text-sm text-white font-bold drop-shadow-lg">
-                      {formatText(item.description)}
+                      {formatTextWithMenuStyling(item.description)}
                     </p>
                   </div>
 

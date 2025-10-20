@@ -18,7 +18,7 @@ import { TestResult } from '../components/TestResults'
 const TestMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
-  const { formatText } = useBilingual()
+  const { formatText, formatTextWithStyling } = useBilingual()
   const {
     quizCategories,
     loading: contentLoading,

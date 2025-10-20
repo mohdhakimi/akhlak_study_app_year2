@@ -1,17 +1,32 @@
 import React from 'react'
 import { cn } from '../utils/cn'
+import { useHaptic } from '../hooks/useHaptic'
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'default' | 'elevated' | 'outlined' | 'filled'
   padding?: 'none' | 'sm' | 'md' | 'lg'
+  enableHaptic?: boolean
   children: React.ReactNode
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   (
-    { className, variant = 'default', padding = 'md', children, ...props },
+    { className, variant = 'default', padding = 'md', enableHaptic = true, children, onClick, ...props },
     ref
   ) => {
+    // Haptic feedback hook
+    const { buttonPress } = useHaptic()
+
+    /**
+     * Handle card click with haptic feedback
+     * @param e - Mouse event
+     */
+    const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+      if (enableHaptic && onClick) {
+        buttonPress()
+      }
+      onClick?.(e)
+    }
     const baseClasses = 'rounded-xl transition-all duration-200'
 
     const variantClasses = {
@@ -37,6 +52,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           className
         )}
         ref={ref}
+        onClick={handleClick}
         {...props}
       >
         {children}

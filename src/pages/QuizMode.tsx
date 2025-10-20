@@ -6,6 +6,7 @@ import { useContentData } from '../hooks/useContentData'
 import { useQuizMode } from '../hooks/useQuizMode'
 import { useScores } from '../hooks/useScores'
 import { useAnalytics } from '../hooks/useAnalytics'
+import { useHaptic } from '../hooks/useHaptic'
 import { TEXT } from '../constants/text'
 import Layout from '../components/Layout'
 import CategorySelector from '../components/CategorySelector'
@@ -27,6 +28,7 @@ const QuizMode: React.FC = () => {
   } = useContentData()
   const { saveScore } = useScores()
   const { trackPageView, trackQuizStart, trackQuizComplete } = useAnalytics(currentUser?.name)
+  const { answerFeedback, navigation } = useHaptic()
 
   const {
     currentQuestion,
@@ -117,9 +119,16 @@ const QuizMode: React.FC = () => {
 
   const handleAnswerSelect = (answerIndex: number) => {
     selectAnswer(answerIndex)
+    
+    // Provide haptic feedback based on answer correctness
+    if (isAnswered) {
+      const isCorrect = answerIndex === currentCorrectAnswer
+      answerFeedback(isCorrect)
+    }
   }
 
   const handleNext = () => {
+    navigation() // Haptic feedback for navigation
     if (isComplete) {
       // Quiz is finished, show results
       const results = finishQuiz()

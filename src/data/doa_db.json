@@ -1,0 +1,174 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-19",
+  "categories": [
+    {
+      "id": "adab-makan-minum",
+      "name": "ادب ماكن دان مينوم | Adab Makan dan Minum",
+      "description": "Doa-doa yang berkaitan dengan adab makan dan minum",
+      "icon": "🍽️",
+      "color": "bg-orange-500",
+      "hoverColor": "hover:bg-orange-600",
+      "doas": [
+        {
+          "id": "doa-makan-umum",
+          "title": "دعاء ماكن | Doa Makan (Umum)",
+          "arabic": "اَللّٰهُمَّ بَارِكْ لَنَا فِيْمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ",
+          "jawi": "اَللّٰهُمَّ بَارِكْ لَنَا فِيْمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ",
+          "malay": "Ya Allah, berkatilah kami dalam rezeki yang telah Engkau berikan kepada kami dan peliharalah kami dari azab api neraka",
+          "context": "Sebelum makan, kita juga diajar untuk membaca Bismillah (سَمِّ اللهِ)",
+          "order": 1
+        },
+        {
+          "id": "doa-selepas-makan",
+          "title": "دعاء سلفس ماكن | Doa Selepas Makan",
+          "arabic": "اَلْحَمْدُ ِللهِ الَّذِىْ اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِيْنَ",
+          "jawi": "اَلْحَمْدُ ِللهِ الَّذِىْ اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِيْنَ",
+          "malay": "Segala puji bagi Allah yang telah memberi makan kami dan minuman kami, serta menjadikan kami sebagai orang-orang Islam",
+          "context": "Doa selepas selesai makan",
+          "order": 2
+        },
+        {
+          "id": "doa-selepas-minum",
+          "title": "دعاء سلفس مينوم | Doa Selepas Minum",
+          "arabic": "اَلْحَمْدُ ِللهِ الَّذِىْ جَعَلَهُ عَذْبًا فُرَاتًا بِرَحْمَتِهِ وَلَمْ يَجْعَلْهُ مِلْحًا اُجَاجًا بِذُنُوْبِنَا",
+          "jawi": "اَلْحَمْدُ ِللهِ الَّذِىْ جَعَلَهُ عَذْبًا فُرَاتًا بِرَحْمَتِهِ وَلَمْ يَجْعَلْهُ مِلْحًا اُجَاجًا بِذُنُوْبِنَا",
+          "malay": "Segala puji bagi Allah yang telah menjadikan air ini (minuman) segar dan menggiurkan dengan rahmat-Nya dan tidak menjadikan air ini (minuman) masin lagi pahit kerana dosa-dosa kami",
+          "context": "Doa selepas selesai minum",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "adab-tidur",
+      "name": "ادب تيدور | Adab Tidur",
+      "description": "Doa-doa yang berkaitan dengan adab tidur",
+      "icon": "😴",
+      "color": "bg-indigo-500",
+      "hoverColor": "hover:bg-indigo-600",
+      "doas": [
+        {
+          "id": "doa-sebelum-tidur",
+          "title": "دعاء سبلوم تيدور | Doa Sebelum Tidur",
+          "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+          "jawi": "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
+          "malay": "Dengan menyebut nama-Mu ya Allah, aku mati dan aku hidup",
+          "context": "Sumber: (رواية البخاري، نومبور ٦٣٢٤)",
+          "order": 1
+        },
+        {
+          "id": "doa-selepas-bangun-tidur",
+          "title": "دعاء سلفس باغون تيدور | Doa Selepas Bangun Tidur",
+          "arabic": "اَلْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+          "jawi": "اَلْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+          "malay": "Segala puji bagi Allah yang telah menghidupkan kami kembali selepas mematikan kami, dan hanya kepada-Nya kami akan dibangkitkan",
+          "context": "Sumber: (رواية البخاري دان مسلم)",
+          "order": 2
+        },
+        {
+          "id": "doa-terjaga-malam",
+          "title": "دعاء سلفس تباغون كتيك مالم | Doa Terjaga di Tengah Malam",
+          "arabic": "الْحَمْدُ لِلَّهِ الَّذِي رَدَّ عَلَيَّ رُوحِي وَعَافَانِي فِي جَسَدِي وَأَذِنَ لِي بِذِكْرِهِ",
+          "jawi": "الْحَمْدُ لِلَّهِ الَّذِي رَدَّ عَلَيَّ رُوحِي وَعَافَانِي فِي جَسَدِي وَأَذِنَ لِي بِذِكْرِهِ",
+          "malay": "Segala puji bagi Allah, Tuhan yang mengembalikan roh aku, menyihatkan tubuh badanku, serta membimbing hatiku agar mengingat dan menyebut nama-Nya",
+          "context": "Doa ketika terjaga di tengah malam",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "adab-berkenderaan",
+      "name": "ادب بركندراغن | Adab Berkenderaan",
+      "description": "Doa-doa yang berkaitan dengan adab berkenderaan",
+      "icon": "🚗",
+      "color": "bg-blue-500",
+      "hoverColor": "hover:bg-blue-600",
+      "doas": [
+        {
+          "id": "doa-mulakan-perjalanan",
+          "title": "دعاء كتيك مولاكن فرجالنن | Doa Ketika Memulakan Perjalanan",
+          "arabic": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",
+          "jawi": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",
+          "malay": "Maha suci Tuhan yang telah memudahkan kenderaan ini untuk kami, sedang kami sebelum ini tidak terdaya menguasainya. Dan sesungguhnya kepada Tuhan kamilah, kami akan kembali",
+          "context": "Sumber: (سورة الزخرف: ١٤-١٣)",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "adab-di-masjid",
+      "name": "ادب دمسجد | Adab di Masjid",
+      "description": "Doa-doa yang berkaitan dengan adab di masjid",
+      "icon": "🕌",
+      "color": "bg-green-500",
+      "hoverColor": "hover:bg-green-600",
+      "doas": [
+        {
+          "id": "doa-masuk-masjid",
+          "title": "دعاء ماسوق مسجد | Doa Masuk Masjid",
+          "arabic": "اللَّهُمَّ اغْفِرْلِي ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+          "jawi": "اللَّهُمَّ اغْفِرْلِي ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+          "malay": "Wahai Allah, ampunilah dosaku dan bukakanlah kepadaku pintu-pintu rahmat-Mu",
+          "context": "Sumber: (رواية ابن ماجه دان احمد)",
+          "order": 1
+        },
+        {
+          "id": "doa-keluar-masjid",
+          "title": "دعاء كلوار مسجد | Doa Keluar Masjid",
+          "arabic": "اللَّهُمَّ اغْفِرْلِي ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ فَضْلِكَ",
+          "jawi": "اللَّهُمَّ اغْفِرْلِي ذُنُوبِي وَافْتَحْ لِي أَبْوَابَ فَضْلِكَ",
+          "malay": "Wahai Allah, ampunilah dosaku dan bukakanlah kepadaku pintu-pintu kelebihan-Mu",
+          "context": "Sumber: (رواية ابن ماجه دان احمد)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "adab-belajar",
+      "name": "ادب بلاجر | Adab Belajar",
+      "description": "Doa-doa yang berkaitan dengan adab belajar",
+      "icon": "📚",
+      "color": "bg-purple-500",
+      "hoverColor": "hover:bg-purple-600",
+      "doas": [
+        {
+          "id": "doa-sebelum-belajar",
+          "title": "دعاء سبلوم بلاجر | Doa Sebelum Belajar",
+          "arabic": "رَبِّ زِدْنِي عِلْمًا وَارْزُقْنِي فَهْمًا، رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي يَفْقَهُوا قَوْلِي. اللَّهُمَّ أَخْرِجْنِي مِن ظُلُمَاتِ الْوَهْمِ وَأَكْرِمْنِي بِنُورِ الْفَهْمِ وَافْتَحْ لِي بِمَعْرِفَةِ الْعِلْمِ وَنَوِّرْ قَلْبِي كَمَا نَوَّرْتَ الشَّمْسَ وَالْقَمَرَ وَسَهِّلْ لِي أَبْوَابَ فَضْلِكَ، يَا أَرْحَمَ الرَّاحِمِينَ",
+          "jawi": "رَبِّ زِدْنِي عِلْمًا وَارْزُقْنِي فَهْمًا، رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي يَفْقَهُوا قَوْلِي. اللَّهُمَّ أَخْرِجْنِي مِن ظُلُمَاتِ الْوَهْمِ وَأَكْرِمْنِي بِنُورِ الْفَهْمِ وَافْتَحْ لِي بِمَعْرِفَةِ الْعِلْمِ وَنَوِّرْ قَلْبِي كَمَا نَوَّرْتَ الشَّمْسَ وَالْقَمَرَ وَسَهِّلْ لِي أَبْوَابَ فَضْلِكَ، يَا أَرْحَمَ الرَّاحِمِينَ",
+          "malay": "Wahai Tuhanku, tambahkan ilmu-ku dan luaskanlah kefahaman-ku, wahai Tuhanku lapangkanlah dadaku dan mudahkanlah bagiku urusan-ku dan lepaskanlah kebukuan lidahku supaya mereka faham akan perkataan-ku. Ya Allah, keluarkanlah daku dari kegelapan ragu dan muliakan daku dengan cahaya kefahaman dan bukakan daku dengan pengertian ilmu-ku dan terangilah hatiku sebagaimana Engkau menerangkan matahari dan bulan, dan mudahkan bagiku pintu-pintu kelebihan-Mu, wahai Tuhan yang maha pengasih",
+          "context": "Doa sebelum memulakan pembelajaran",
+          "order": 1
+        },
+        {
+          "id": "doa-selepas-belajar",
+          "title": "دعاء سلفس بلاجر | Doa Selepas Belajar",
+          "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ. يَافَتَّاحُ يَا عَلِيمُ، إِفْتَحْ قَلْبِي فُتُوحَ الْعَارِفِينَ. اللَّهُمَّ إِنِّي أَسْتَوْدِعُكَ مَا عَلَّمْتَنِيهِ فَارْدُدْهُ إِلَيَّ عِندَ حَاجَتِي إِلَيْهِ وَلَا تُنْسِنِيهِ يَا رَبَّ الْعَالَمِينَ",
+          "jawi": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ. يَافَتَّاحُ يَا عَلِيمُ، إِفْتَحْ قَلْبِي فُتُوحَ الْعَارِفِينَ. اللَّهُمَّ إِنِّي أَسْتَوْدِعُكَ مَا عَلَّمْتَنِيهِ فَارْدُدْهُ إِلَيَّ عِندَ حَاجَتِي إِلَيْهِ وَلَا تُنْسِنِيهِ يَا رَبَّ الْعَالَمِينَ",
+          "malay": "Wahai Tuhan kami, janganlah Engkau sesatkan hati kami sesudah Engkau berikan kepada kami petunjuk. Anugerahkanlah kepada kami rahmat kerana sesungguhnya Engkau maha pemberi anugerah. Wahai Tuhan yang maha pembuka dan maha mengetahui, bukakanlah hatiku seperti orang-orang yang arif. Wahai Tuhan, sesungguhnya aku mempertaruhkan kepada Engkau apa yang telah Engkau ajarkan kepadaku, kembalikanlah apa (ilmu) kepadaku ketika aku berhajat kepadanya dan janganlah Engkau lupakan aku (ilmu) wahai pentadbir sekalian alam",
+          "context": "Doa selepas selesai belajar",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "adab-dengan-al-quran",
+      "name": "ادب دغن مصحف القرءان | Adab dengan Mushaf Al-Quran",
+      "description": "Doa-doa yang berkaitan dengan adab membaca Al-Quran",
+      "icon": "📖",
+      "color": "bg-emerald-500",
+      "hoverColor": "hover:bg-emerald-600",
+      "doas": [
+        {
+          "id": "doa-selepas-baca-al-quran",
+          "title": "دعاء سلفس ممباچ القرءان | Doa Selepas Membaca Al-Quran",
+          "arabic": "اللَّهُمَّ ارْحَمْنَا بِالْقُرْآنِ، وَاجْعَلْهُ لَنَا إِمَامًا وَنُورًا وَهُدًى وَرَحْمَةً، اللَّهُمَّ ذَكِّرْنَا مِنْهُ مَا نَسِينَا وَعَلِّمْنَا مِنْهُ مَا جَهِلْنَا، وَارْزُقْنَا تِلَاوَتَهُ، آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ، وَاجْعَلْهُ لَنَا حُجَّةً يَا رَبَّ الْعَالَمِينَ",
+          "jawi": "اللَّهُمَّ ارْحَمْنَا بِالْقُرْآنِ، وَاجْعَلْهُ لَنَا إِمَامًا وَنُورًا وَهُدًى وَرَحْمَةً، اللَّهُمَّ ذَكِّرْنَا مِنْهُ مَا نَسِينَا وَعَلِّمْنَا مِنْهُ مَا جَهِلْنَا، وَارْزُقْنَا تِلَاوَتَهُ، آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ، وَاجْعَلْهُ لَنَا حُجَّةً يَا رَبَّ الْعَالَمِينَ",
+          "malay": "Wahai Allah, kasihanilah kami dengan berkat Al-Quran dan jadikan sebagai pemimpin, cahaya, petunjuk dan rahmat untuk kami. Wahai Allah, ingatkanlah kami apa yang kami telah lupa, dan ajarkanlah kami apa yang kami tidak tahu, dan kurniakanlah kami keupayaan untuk membacanya pada waktu malam dan siang, dan jadikanlah (Al-Quran) hujah untuk kami, wahai Tuhan pemelihara sekalian alam",
+          "context": "Selepas selesai membaca Al-Quran, kita tutup majlis ilmu itu dengan doa ini",
+          "order": 1
+        }
+      ]
+    }
+  ]
+}

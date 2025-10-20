@@ -18,6 +18,7 @@
 import React from 'react'
 import { cn } from '../utils/cn'
 import { useButtonSound } from '../hooks/useAudio'
+import { useHaptic } from '../hooks/useHaptic'
 
 /**
  * Props for the Button component
@@ -30,6 +31,7 @@ export interface ButtonProps
   loading?: boolean                                                               // Whether button is in loading state
   fullWidth?: boolean                                                             // Whether button should take full width
   enableSound?: boolean                                                           // Whether to play sound effects
+  enableHaptic?: boolean                                                         // Whether to enable haptic feedback
   children: React.ReactNode                                                      // Button content
 }
 
@@ -49,6 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       fullWidth = false,
       disabled,
       enableSound = true,
+      enableHaptic = true,
       children,
       onClick,
       onMouseEnter,
@@ -58,6 +61,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     // Audio hooks for button sound effects
     const { playClickSound, playHoverSound } = useButtonSound()
+    
+    // Haptic feedback hook
+    const { buttonPress } = useHaptic()
 
     /**
      * Handle button click with sound effect
@@ -66,6 +72,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       if (enableSound && !disabled && !loading) {
         playClickSound()
+      }
+      if (enableHaptic && !disabled && !loading) {
+        buttonPress()
       }
       onClick?.(e)
     }

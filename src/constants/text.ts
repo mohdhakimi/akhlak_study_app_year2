@@ -7,6 +7,7 @@ export const TEXT = {
   // Navigation and menus
   MAIN_MENU: 'Menu Utama',
   STUDY_MODE: 'Mod Belajar',
+  DOA_MODE: 'Mod Doa',
   QUIZ_MODE: 'Mod Kuiz',
   TEST_MODE: 'Mod Ujian',
   LEADERBOARD: 'Papan Markah',

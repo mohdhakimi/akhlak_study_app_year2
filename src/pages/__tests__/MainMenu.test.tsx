@@ -161,7 +161,7 @@ describe('MainMenu', () => {
       screen.getByText('اوجيان لڠکڤ 30 سوالن | Ujian lengkap 30 soalan')
     ).toBeInTheDocument()
     expect(
-      screen.getByText('ليه ماره ترتيڠڬي | Lihat markah tertinggi')
+      screen.getByText('ليهت مارقه ترتيڠڬي | Lihat markah tertinggi')
     ).toBeInTheDocument()
   })
 
