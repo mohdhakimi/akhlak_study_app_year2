@@ -12,16 +12,18 @@ import StudyCard from '../components/StudyCard'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import BackToMenuButton from '../components/BackToMenuButton'
+import { useParams } from 'react-router-dom'
 
 const StudyMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { subjectId } = useParams<{ subjectId: 'akhlak' | 'feqah' }>()
   const { formatText, formatTextWithStyling } = useBilingual()
   const {
     topics,
     loading: contentLoading,
     error: contentError,
-  } = useContentData()
+  } = useContentData(subjectId === 'feqah' ? 'feqah' : 'akhlak')
   const {
     currentTopic,
     currentNote,

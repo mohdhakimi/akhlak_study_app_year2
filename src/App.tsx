@@ -26,6 +26,7 @@ import { UserProvider, useUserContext } from './contexts/UserContext'
 import { BilingualProvider } from './contexts/BilingualContext'
 import UserSelectionModal from './components/UserSelectionModal'
 import MainMenu from './pages/MainMenu'
+import SubjectLanding from './pages/SubjectLanding'
 import StudyMode from './pages/StudyMode'
 import DoaMode from './pages/DoaMode'
 import QuizMode from './pages/QuizMode'
@@ -100,20 +101,23 @@ const AppContent: React.FC = () => {
           {/* Main menu - entry point of the application */}
           <Route path="/" element={<MainMenu />} />
           
-          {/* Study Mode - Interactive content reading and review */}
-          <Route path="/study" element={<StudyMode />} />
+          {/* Subject Landing - select a mode for a subject */}
+          <Route path="/subject/:subjectId" element={<SubjectLanding />} />
+
+          {/* Study Mode - Interactive content reading and review (subject-aware) */}
+          <Route path=":subjectId/study" element={<StudyMode />} />
           
           {/* Doa Mode - Islamic prayers and supplications learning */}
           <Route path="/doa" element={<DoaMode />} />
           
-          {/* Quiz Mode - 10-question interactive quizzes by topic */}
-          <Route path="/quiz" element={<QuizMode />} />
+          {/* Quiz Mode - 10-question interactive quizzes by topic (subject-aware) */}
+          <Route path=":subjectId/quiz" element={<QuizMode />} />
           
-          {/* Test Mode - 30-question comprehensive tests across all topics */}
-          <Route path="/test" element={<TestMode />} />
+          {/* Test Mode - 30-question comprehensive tests across all topics (subject-aware) */}
+          <Route path=":subjectId/test" element={<TestMode />} />
           
-          {/* Leaderboard - Score tracking and user rankings */}
-          <Route path="/leaderboard" element={<Leaderboard />} />
+          {/* Leaderboard - Score tracking and user rankings (subject-aware) */}
+          <Route path=":subjectId/leaderboard" element={<Leaderboard />} />
           
           {/* Analytics - Usage monitoring and performance dashboard */}
           <Route path="/analytics" element={<Analytics />} />

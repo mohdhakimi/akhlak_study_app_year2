@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
@@ -18,12 +18,13 @@ import { TestResult } from '../components/TestResults'
 const TestMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { subjectId } = useParams<{ subjectId: 'akhlak' | 'feqah' }>()
   const { formatText, formatTextWithStyling } = useBilingual()
   const {
     quizCategories,
     loading: contentLoading,
     error: contentError,
-  } = useContentData()
+  } = useContentData(subjectId === 'feqah' ? 'feqah' : 'akhlak')
   const { saveScore } = useScores()
   const { trackPageView, trackTestStart, trackTestComplete } = useAnalytics(currentUser?.name)
 

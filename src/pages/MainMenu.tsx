@@ -1,8 +1,8 @@
 /**
  * Main Menu Component - Application Entry Point
  * 
- * This is the main navigation hub of the Akhlak Flashcard application.
- * It provides access to all learning modes and user management features.
+ * This is now the Subject selection hub of the application.
+ * Users choose a Subject first (Akhlak or Feqah), then select a mode.
  * 
  * Features:
  * - Four main learning mode cards (Study, Quiz, Test, Leaderboard)
@@ -50,58 +50,25 @@ const MainMenu: React.FC = () => {
     })
   }, [trackPageView, currentUser?.name])
 
-  /**
-   * Menu items configuration for the main navigation cards
-   * Each item defines a learning mode with its visual properties and routing
-   */
+  // Subject selection cards
   const menuItems = [
     {
-      id: 'study',                    // Unique identifier
-      title: TEXT.STUDY_MODE,         // Display title from constants
-      description:                    // Bilingual description (Jawi | Rumi)
-        'باچ دان ڤلاجري نوتا-نوتا ڤنتڠ | Baca dan pelajari nota-nota penting',
-      icon: '📚',                     // Emoji icon for visual appeal
-      color: 'bg-blue-500',           // Base background color
-      hoverColor: 'hover:bg-blue-600', // Hover state color
-      route: '/study',                // Navigation route
+      id: 'akhlak',
+      title: 'اخالق | Akhlak',
+      description: 'مودول اخالق دڠن نوتا، کويز دان اوجيان | Modul Akhlak dengan nota, kuiz dan ujian',
+      icon: '🌟',
+      color: 'bg-blue-500',
+      hoverColor: 'hover:bg-blue-600',
+      route: '/subject/akhlak',
     },
     {
-      id: 'doa',
-      title: TEXT.DOA_MODE,
-      description:
-        'بلاجر دعاء دان ذکر براساس ادب اسلامي | Belajar doa dan zikir berdasarkan adab Islami',
-      icon: '🤲',
-      color: 'bg-amber-500',
-      hoverColor: 'hover:bg-amber-600',
-      route: '/doa',
-    },
-    {
-      id: 'quiz',
-      title: TEXT.QUIZ_MODE,
-      description:
-        'اوجي ڤنڬتاهوان دغن کویز ڤندق | Uji pengetahuan dengan kuiz pendek',
-      icon: '🧩',
-      color: 'bg-green-500',
-      hoverColor: 'hover:bg-green-600',
-      route: '/quiz',
-    },
-    {
-      id: 'test',
-      title: TEXT.TEST_MODE,
-      description: 'اوجيان لڠکڤ 30 سوالن | Ujian lengkap 30 soalan',
-      icon: '📝',
-      color: 'bg-purple-500',
-      hoverColor: 'hover:bg-purple-600',
-      route: '/test',
-    },
-    {
-      id: 'leaderboard',
-      title: TEXT.LEADERBOARD,
-      description: 'ليهت مارقه ترتيڠڬي | Lihat markah tertinggi',
-      icon: '🏆',
-      color: 'bg-yellow-500',
-      hoverColor: 'hover:bg-yellow-600',
-      route: '/leaderboard',
+      id: 'feqah',
+      title: 'فقه | Feqah',
+      description: 'مودول فقه: نجيس، حدث، مندي واجب/سنة | Modul Feqah: Najis, Hadath, Mandi Wajib/Sunat',
+      icon: '📖',
+      color: 'bg-emerald-500',
+      hoverColor: 'hover:bg-emerald-600',
+      route: '/subject/feqah',
     },
   ]
 
@@ -158,9 +125,7 @@ const MainMenu: React.FC = () => {
                   : formatText(TEXT.WELCOME)}
               </h1>
               <p className="text-xl text-primary-600 max-w-2xl mx-auto animate-slide-up">
-                {formatText(
-                  'ماري بلاجر اخالق دغن چرا يغ منيرونوکن! ڤليه مود ڤمبلاچرن يغ اندا سوكا. | Mari belajar Akhlak dengan cara yang menyeronokkan! Pilih mod pembelajaran yang anda suka.'
-                )}
+                {formatText('ڤيليه مڤلجرن | Pilih Subjek')}
               </p>
             </div>
           </PageTransition>
