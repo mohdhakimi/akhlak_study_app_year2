@@ -37,6 +37,42 @@
           "title": "بهاكين حدث | Bahagian Hadath",
           "content": "حدث تربهاكي كقد دوا: حدث کچيل دان حدث بسر | Hadath terbahagi kepada dua: Hadath Kecil dan Hadath Besar.",
           "order": 1
+        },
+        {
+          "id": "feqah-hadath-note-2",
+          "title": "فغرتين حدث کچيل | Pengertian Hadath Kecil",
+          "content": "كأداءن يغ مواجبكن وضوء باكي سسأورڠ اونتوق ملاكوكن عبادة ترتنتو سفرتي صلاة | Keadaan yang mewajibkan berwuduk bagi seseorang yang hendak melakukan ibadah tertentu seperti solat.",
+          "order": 2
+        },
+        {
+          "id": "feqah-hadath-note-3",
+          "title": "سبب ٢ حدث کچيل | Perkara-perkara yang menyebabkan Hadath Kecil",
+          "content": "• برستوهوه كوليت للاكي دان فرمڤوان بوكن محرم تنفا لاثيق | Bersentuhan antara kulit lelaki dan perempuan yang bukan mahram tanpa lapik.\n• كلوا ر سسواتو دري قوبول اتاو دبر (اڠين، اغير بسر، اغير کچيل) | Keluar sesuatu dari kubul atau dubur (angin, air besar, air kecil).\n• هيلڠ عقل | Hilang akal.\n• تيدور يغ تيدق تتف كدودوقن ڤوڠڬوڠ | Tidur yang tidak tetap kedudukan punggung.\n• مڽنتوه کمالوان دڠن تافق تاغن | Menyentuh kemaluan dengan tapak tangan.",
+          "order": 3
+        },
+        {
+          "id": "feqah-hadath-note-4",
+          "title": "لارڠن باڬي يغ برحدث کچيل | Larangan bagi orang berhadath Kecil",
+          "content": "• صلاة | Solat.\n• ممڤيڠ القرءان | Memegang Al-Quran.",
+          "order": 4
+        },
+        {
+          "id": "feqah-hadath-note-5",
+          "title": "فغرتين حدث بسر | Pengertian Hadath Besar",
+          "content": "كأداءن يغ مواجبكن مندي واجب سفرتي سلڤس برسـتوبوه اتاو كلوا ر اغير مني | Keadaan yang mewajibkan mandi wajib seperti selepas bersetubuh atau keluar air mani.",
+          "order": 5
+        },
+        {
+          "id": "feqah-hadath-note-6",
+          "title": "سبب ٢ حدث بسر | Perkara-perkara yang menyebabkan Hadath Besar",
+          "content": "• كلوار داره حيض | Keluar darah haid.\n• كلوار داره نفاس | Keluar darah nifas.\n• برستوبوه اتاو هو بوغن جنس | Bersetubuh atau melakukan hubungan jenis.\n• ملاهيركن انق اتاو کڬوڬورن | Melahirkan anak atau keguguran.\n• كلوار اغير مني | Keluar air mani.",
+          "order": 6
+        },
+        {
+          "id": "feqah-hadath-note-7",
+          "title": "لارڠن يغ برحدث بسر | Larangan bagi orang berhadath Besar",
+          "content": "• ددوق/برئيتيكاف ددالم مسجد | Berhenti atau duduk (i'tikaf) di dalam masjid.\n• طواف دبيت الله | Tawaf di Baitullah.\n• ممباچ، ممسوه اتاو ممباوا القرءان | Membaca, menyentuh atau membawa Al-Quran.",
+          "order": 7
         }
       ]
     },
@@ -44,13 +80,63 @@
       "id": "feqah-mandi-wajib",
       "name": "فقه: مندي واجب | Feqah: Mandi Wajib",
       "description": "Pengertian, sebab, rukun dan sunat mandi wajib",
-      "notes": []
+      "notes": [
+        {
+          "id": "feqah-mandiwajib-note-1",
+          "title": "فغرتين مندي واجب | Pengertian Mandi Wajib",
+          "content": "مڠالير دان مراتاكن اغير مطلق كسلوروه اغكوتا بادن دڠن نية مندي واجب | Mengalir dan meratakan air mutlak ke seluruh anggota badan dengan niat mandi wajib.",
+          "order": 1
+        },
+        {
+          "id": "feqah-mandiwajib-note-2",
+          "title": "سبب ٢ مندي واجب | Sebab-sebab Mandi Wajib",
+          "content": "• نفاس | Nifas.\n• حيض | Haid.\n• برستوبوه | Bersetubuh.\n• ملاهيركن انق | Melahirkan anak.\n• كلوار اغير مني | Keluar air mani.",
+          "order": 2
+        },
+        {
+          "id": "feqah-mandiwajib-note-3",
+          "title": "روكون ٢ مندي واجب | Rukun Mandi Wajib",
+          "content": "• مڠهيلڠكن نجيس درقد بادن | Menghilangkan najis daripada badan.\n• نية | Niat.\n• مراتاكن اغير مطلق كسلو روه اغكوتا بادن | Meratakan air mutlak ke seluruh badan.",
+          "order": 3
+        },
+        {
+          "id": "feqah-mandiwajib-note-4",
+          "title": "سنة ٢ مندي واجب | Sunat Mandi Wajib",
+          "content": "• ممباچ بسم الله | Membaca Bismillah.\n• ممباسوه كمالوان دڠن تاغن كيري | Membasuh kemaluan dengan tangan kiri.\n• ممباسوه تاغن تيك كالي | Membasuh tangan tiga kali.\n• بروضوء | Berwuduk.\n• ممباسوه كفالا تيك كالي دان مراتاكن رامبوت | Membasuh kepala tiga kali dan meratakan rambut.\n• مندهولوكن اغكوتا سبله كانن | Mendahulukan anggota sebelah kanan.\n• ممباسوه سلوروه اغكوتا تيك كالي | Membasuh seluruh anggota tiga kali.\n• مغکوسوق سلوروه اغكوتا بادن | Menggosok seluruh anggota badan.\n• ممباسوه كاكي | Membasuh kaki.\n• ممباچ دعاء سفرتي سلفس وضوء | Membaca doa seperti selepas wuduk.\n• ملاكوكن سچارا برتوروتن | Melakukan secara berturutan.",
+          "order": 4
+        },
+        {
+          "id": "feqah-mandiwajib-note-5",
+          "title": "چارا ٢ مندي واجب | Cara-cara Mandi Wajib",
+          "content": "• هيلغكن نجيس ڤد بادن | Hilangkan najis pada badan.\n• مولكن دڠن \"بسم الله الرحمن الرحيم\" | Mulakan dengan \"Bismillahirrahmanirrahim\".\n• ممباسوه كمالوان | Membasuh kemaluan.\n• ممباسوه تاغن تيك كالي | Membasuh tangan tiga kali.\n• بروضوء | Berwuduk.\n• نية مندي واجب | Niat mandi wajib.\n• ممباسوه كفالا تيك كالي دان مراتاكن رامبوت | Membasuh kepala tiga kali dan meratakan rambut.\n• مندهولوكن اغكوتا بادن سبله كانن | Mendahulukan anggota badan sebelah kanan.\n• مراتاكن اغير سهيڠڬ كسلوروه اغكوتا | Meratakan air sehingga seluruh anggota badan.\n• ممباچ دعاء سفرتي دعاء سلفس وضوء | Membaca doa seperti doa selepas wuduk.",
+          "order": 5
+        }
+      ]
     },
     {
       "id": "feqah-mandi-sunat",
       "name": "فقه: مندي ٢ سنة | Feqah: Mandi-mandi Sunat",
       "description": "Jenis-jenis mandi sunat dan tatacara",
-      "notes": []
+      "notes": [
+        {
+          "id": "feqah-mandisunat-note-1",
+          "title": "جنيس ٢ مندي سنة | Jenis-jenis Mandi Sunat",
+          "content": "• مندي سنة هاري راي | Mandi sunat Hari Raya.\n• مندي سنة کرهان | Mandi sunat Gerhana.\n• مندي سنة ماسوق مكة دان مدينة | Mandi sunat masuk Mekah dan Madinah.\n• مندي سنة سلفس ممنديكن ميت | Mandi sunat selepas memandikan mayat.\n• مندي سنة ڤوله درفد هيلغ عقل | Mandi sunat pulih daripada hilang akal.\n• مندي سنة وقوف عرفة | Mandi sunat Wuquf Arafah.\n• مندي سنة احرام | Mandi sunat ihram.\n• مندي سنة ماسوق اسلام | Mandi sunat masuk Islam.\n• مندي سنة جمعة | Mandi sunat Jumaat.",
+          "order": 1
+        },
+        {
+          "id": "feqah-mandisunat-note-2",
+          "title": "نية مندي سنة | Niat Mandi Sunat",
+          "content": "نويت الغسل سنة لله تعالى | Sahaja aku mandi sunat kerana Allah Taala.",
+          "order": 2
+        },
+        {
+          "id": "feqah-mandisunat-note-3",
+          "title": "چارا ٢ مندي سنة | Cara Mandi Sunat",
+          "content": "• مڠهيلڠكن نجيس ڤد بادن | Menghilangkan najis pada badan.\n• نية | Niat.\n• مراتاكن اغير کسلوروه اغكوتا بادن | Meratakan air keseluruhan anggota badan.",
+          "order": 3
+        }
+      ]
     }
   ],
   "quizCategories": [
