@@ -110,7 +110,7 @@ const QuizMode: React.FC = () => {
     setQuizResults([])
     setShowResults(false)
     setSelectedCategory(null)
-    navigate('/quiz') // Go back to category selection
+    navigate(`/${subjectId}/quiz`) // Go back to category selection with subject
   }
 
   const handleCategorySelect = (category: any) => {
@@ -331,12 +331,15 @@ const QuizMode: React.FC = () => {
       showBilingualToggle={true}
     >
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100">
-        <CategorySelector
-          categories={quizCategories}
-          onCategorySelect={handleCategorySelect}
-          onBack={handleBackToMenu}
-          loading={contentLoading}
-        />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="mb-4">{subjectBadge}</div>
+          <CategorySelector
+            categories={quizCategories}
+            onCategorySelect={handleCategorySelect}
+            onBack={handleBackToMenu}
+            loading={contentLoading}
+          />
+        </div>
       </div>
     </Layout>
   )

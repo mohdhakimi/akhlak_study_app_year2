@@ -105,19 +105,19 @@ const AppContent: React.FC = () => {
           <Route path="/subject/:subjectId" element={<SubjectLanding />} />
 
           {/* Study Mode - Interactive content reading and review (subject-aware) */}
-          <Route path=":subjectId/study" element={<StudyMode />} />
+          <Route path="/:subjectId/study" element={<StudyMode />} />
           
           {/* Doa Mode - Islamic prayers and supplications learning */}
           <Route path="/doa" element={<DoaMode />} />
           
           {/* Quiz Mode - 10-question interactive quizzes by topic (subject-aware) */}
-          <Route path=":subjectId/quiz" element={<QuizMode />} />
+          <Route path="/:subjectId/quiz" element={<QuizMode />} />
           
           {/* Test Mode - 30-question comprehensive tests across all topics (subject-aware) */}
-          <Route path=":subjectId/test" element={<TestMode />} />
+          <Route path="/:subjectId/test" element={<TestMode />} />
           
           {/* Leaderboard - Score tracking and user rankings (subject-aware) */}
-          <Route path=":subjectId/leaderboard" element={<Leaderboard />} />
+          <Route path="/:subjectId/leaderboard" element={<Leaderboard />} />
           
           {/* Analytics - Usage monitoring and performance dashboard */}
           <Route path="/analytics" element={<Analytics />} />

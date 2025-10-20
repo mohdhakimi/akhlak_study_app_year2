@@ -107,7 +107,7 @@ const TestMode: React.FC = () => {
     setTestResults([])
     setShowResults(false)
     setTestStarted(false)
-    navigate('/test') // Go back to test start screen
+    navigate(`/${subjectId}/test`) // Go back to test start screen with subject
   }
 
   const handleStartTest = () => {
