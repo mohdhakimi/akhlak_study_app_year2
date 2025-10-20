@@ -13,6 +13,7 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import BackToMenuButton from '../components/BackToMenuButton'
 import { useParams } from 'react-router-dom'
+import { getSubjectTheme } from '../utils/theme'
 
 const StudyMode: React.FC = () => {
   const navigate = useNavigate()
@@ -37,6 +38,7 @@ const StudyMode: React.FC = () => {
 
   // Subject badge styling
   const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const theme = getSubjectTheme(subject)
   const subjectBadge = (
     <span
       className={
@@ -125,7 +127,7 @@ const StudyMode: React.FC = () => {
         onUserClick={() => navigate('/')}
         showUser={true}
       >
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
+        <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="text-center py-12">
               <div className="text-6xl mb-6">❌</div>
@@ -196,7 +198,7 @@ const StudyMode: React.FC = () => {
         showKeluarButton={true}
         onKeluarClick={handleBackToMenu}
       >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
+      <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">{subjectBadge}</div>
           <TopicSelector

@@ -16,6 +16,7 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import BackToMenuButton from '../components/BackToMenuButton'
 import { QuizResult } from '../components/QuizResults'
+import { getSubjectTheme } from '../utils/theme'
 
 const QuizMode: React.FC = () => {
   const navigate = useNavigate()
@@ -33,6 +34,7 @@ const QuizMode: React.FC = () => {
 
   // Subject badge (double size)
   const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const theme = getSubjectTheme(subject)
   const subjectBadge = (
     <span
       className={
@@ -230,7 +232,7 @@ const QuizMode: React.FC = () => {
         onUserClick={() => navigate('/')}
         showUser={true}
       >
-        <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-8">
+        <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="text-center py-12">
               <div className="text-6xl mb-6">❌</div>
@@ -330,7 +332,7 @@ const QuizMode: React.FC = () => {
       showUser={true}
       showBilingualToggle={true}
     >
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100">
+      <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="mb-4">{subjectBadge}</div>
           <CategorySelector

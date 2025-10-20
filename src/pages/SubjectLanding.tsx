@@ -7,6 +7,7 @@ import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useAnalytics } from '../hooks/useAnalytics'
 import { cn } from '../utils/cn'
+import { getSubjectTheme } from '../utils/theme'
 
 const SubjectLanding: React.FC = () => {
   const navigate = useNavigate()
@@ -14,6 +15,7 @@ const SubjectLanding: React.FC = () => {
   const { currentUser } = useUserContext()
   const { formatText } = useBilingual()
   const { trackPageView } = useAnalytics(currentUser?.name)
+  const theme = getSubjectTheme(subjectId)
 
   useEffect(() => {
     trackPageView('subject_landing', { subject: subjectId })
@@ -73,7 +75,7 @@ const SubjectLanding: React.FC = () => {
       showUser
       showBilingualToggle
     >
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 py-8">
+      <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <PageTransition animation="fade">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

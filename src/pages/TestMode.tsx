@@ -14,6 +14,7 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import BackToMenuButton from '../components/BackToMenuButton'
 import { TestResult } from '../components/TestResults'
+import { getSubjectTheme } from '../utils/theme'
 
 const TestMode: React.FC = () => {
   const navigate = useNavigate()
@@ -30,6 +31,7 @@ const TestMode: React.FC = () => {
 
   // Subject badge (4x size like Study)
   const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const theme = getSubjectTheme(subject)
   const subjectBadge = (
     <span
       className={
@@ -214,7 +216,7 @@ const TestMode: React.FC = () => {
         onUserClick={() => navigate('/')}
         showUser={true}
       >
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
+        <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="text-center py-12">
               <div className="text-6xl mb-6">❌</div>
@@ -315,7 +317,7 @@ const TestMode: React.FC = () => {
       showKeluarButton={true}
       onKeluarClick={handleBackToMenu}
     >
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
+      <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">{subjectBadge}</div>
           {/* Test Introduction */}
