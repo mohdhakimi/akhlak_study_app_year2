@@ -41,8 +41,8 @@ const StudyMode: React.FC = () => {
     <span
       className={
         subject === 'feqah'
-          ? 'inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 border border-emerald-200'
-          : 'inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200'
+          ? 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-emerald-100 text-emerald-700 border border-emerald-200'
+          : 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-blue-100 text-blue-700 border border-blue-200'
       }
     >
       {formatText(subject === 'feqah' ? 'فقه | Feqah' : 'اخالق | Akhlak')}

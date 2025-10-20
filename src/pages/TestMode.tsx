@@ -28,6 +28,20 @@ const TestMode: React.FC = () => {
   const { saveScore } = useScores()
   const { trackPageView, trackTestStart, trackTestComplete } = useAnalytics(currentUser?.name)
 
+  // Subject badge (4x size like Study)
+  const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const subjectBadge = (
+    <span
+      className={
+        subject === 'feqah'
+          ? 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-emerald-100 text-emerald-700 border border-emerald-200'
+          : 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-blue-100 text-blue-700 border border-blue-200'
+      }
+    >
+      {formatText(subject === 'feqah' ? 'فقه | Feqah' : 'اخالق | Akhlak')}
+    </span>
+  )
+
   const {
     currentQuestion,
     currentQuestionIndex,
@@ -265,6 +279,7 @@ const TestMode: React.FC = () => {
       >
         <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-4">{subjectBadge}</div>
             <QuestionCard
               question={currentQuestion}
               questionNumber={currentQuestionIndex + 1}
@@ -302,6 +317,7 @@ const TestMode: React.FC = () => {
     >
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-4">{subjectBadge}</div>
           {/* Test Introduction */}
           <Card className="text-center py-12 mb-8">
             <div className="text-6xl mb-6">📝</div>
