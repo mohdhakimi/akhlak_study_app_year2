@@ -1,0 +1,344 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-10-20",
+  "topics": [
+    {
+      "id": "feqah-najis",
+      "name": "فقه: نجيس | Feqah: Najis",
+      "description": "Pengertian dan pembahagian najis serta cara menyucikannya",
+      "notes": [
+        {
+          "id": "feqah-najis-note-1",
+          "title": "فغرتين نجيس | Pengertian Najis",
+          "content": "سسواتو بندا كوتور يغ ميببكن تيدق صح عبادة سفرتي صلاة دان طواف. | Sesuatu benda kotor yang menyebabkan tidak sah ibadah seperti solat dan tawaf.",
+          "order": 1
+        },
+        {
+          "id": "feqah-najis-note-2",
+          "title": "بهاكين نجيس | Bahagian Najis",
+          "content": "• مخففة (ريغن) | Mukhaffafah (Ringan)\n• متوسطة (قرتغهن) | Mutawassitah (Pertengahan)\n• مغلظة (برت) | Mughallazah (Berat)",
+          "order": 2
+        },
+        {
+          "id": "feqah-najis-note-3",
+          "title": "چارا مپوچیکن نجيس | Cara Menyucikan Najis",
+          "content": "• مخففة: كنل ڤستي، هيلغكن سهيڠڬ كريڠ، رنجيس دڠن اغير مطلق | Mukhaffafah: Kenal pasti, hilangkan hingga kering, renjis air mutlak.\n• متوسطة: هيلغكن بؤ، راس دان ورنا | Mutawassitah: Hilangkan bau, rasa dan warna.\n• مغلظة: سكالي اغير تانه، انم كالي اغير مطلق | Mughallazah: Sekali air tanah, enam kali air mutlak.",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "feqah-hadath",
+      "name": "فقه: حدث | Feqah: Hadath",
+      "description": "Pengertian hadath kecil dan besar serta perkara berkaitan bersuci",
+      "notes": [
+        {
+          "id": "feqah-hadath-note-1",
+          "title": "بهاكين حدث | Bahagian Hadath",
+          "content": "حدث تربهاكي كقد دوا: حدث کچيل دان حدث بسر | Hadath terbahagi kepada dua: Hadath Kecil dan Hadath Besar.",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-wajib",
+      "name": "فقه: مندي واجب | Feqah: Mandi Wajib",
+      "description": "Pengertian, sebab, rukun dan sunat mandi wajib",
+      "notes": []
+    },
+    {
+      "id": "feqah-mandi-sunat",
+      "name": "فقه: مندي ٢ سنة | Feqah: Mandi-mandi Sunat",
+      "description": "Jenis-jenis mandi sunat dan tatacara",
+      "notes": []
+    }
+  ],
+  "quizCategories": [
+    {
+      "id": "feqah-najis",
+      "name": "ڤلاجرن فرتام: نجيس | Pelajaran Pertama: Najis",
+      "description": "Kuiz berkaitan pengertian, bahagian dan cara menyucikan najis",
+      "questions": [
+        {
+          "id": "feqah-najis-q1",
+          "question": "اڤاكه مقصود نجيس؟ | Apakah maksud Najis?",
+          "type": "mcq",
+          "options": [
+            "بندا کوتور يغ ممبواتکن کيت راس گمبيرا. | Benda kotor yang membuatkan kita rasa gembira.",
+            "بندا کوتور يغ تيدق مغهلغ عبادة کيت. | Benda kotor yang tidak menghalang ibadah kita.",
+            "بندا يغ حرام دماءكن. | Benda yang haram dimakan.",
+            "بندا يغ بوليه دڬوناکن اونتوق بروضوء. | Benda yang boleh digunakan untuk berwuduk.",
+            "بندا کوتور يغ ميببکن تيدق صح عبادة سفرتي صلاة. | Benda kotor yang menyebabkan tidak sah ibadah seperti solat.",
+            "بندا يغ برسیه تتافي تيدق واغي. | Benda yang bersih tetapi tidak wangi.",
+            "فاكاين كوتور يغ فرل دچوچي. | Pakaian kotor yang perlu dicuci."
+          ],
+          "correctAnswer": 4,
+          "explanation": "Najis ialah benda kotor yang menyebabkan tidak sah ibadah seperti solat."
+        },
+        {
+          "id": "feqah-najis-q2",
+          "question": "Najis مخففة برمقصود نجيس يغ...؟ | Najis Mukhaffafah bermaksud najis yang...?",
+          "type": "mcq",
+          "options": [
+            "سدرهان | Sederhana",
+            "کوتور | Kotor",
+            "برت | Berat",
+            "بياس | Biasa",
+            "جلس | Jelas",
+            "تيدق نम्पق | Tidak nampak",
+            "ريغن | Ringan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mukhaffafah bermaksud ringan."
+        },
+        {
+          "id": "feqah-najis-q3",
+          "question": "Najis مغلظة برمقصود نجيس يغ...؟ | Najis Mughallazah bermaksud najis yang...?",
+          "type": "mcq",
+          "options": [
+            "سدرهان | Sederhana",
+            "بياس | Biasa",
+            "ريغن | Ringan",
+            "کوتور | Kotor",
+            "جلس | Jelas",
+            "ترسمبوپي | Tersembunyi",
+            "برت | Berat"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mughallazah bermaksud berat."
+        },
+        {
+          "id": "feqah-najis-q4",
+          "question": "Najis متوسطة برمقصود نجيس يغ...؟ | Najis Mutawassitah bermaksud najis yang...?",
+          "type": "mcq",
+          "options": [
+            "ڤاليغ ريغن | Paling ringan",
+            "ڤاليغ برت | Paling berat",
+            "کوتورن بياس | Kotoran biasa",
+            "واغي | Wangi",
+            "ريغن | Ringan",
+            "برت | Berat",
+            "قرتغهن | Pertengahan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mutawassitah bermaksud pertengahan."
+        },
+        {
+          "id": "feqah-najis-q5",
+          "question": "Air kencing bayi lelaki < 2 tahun hanya minum susu ibu dikira najis jenis apa? | Air kencing bayi lelaki yang berumur kurang dua tahun dan hanya minum susu ibu dikira najis jenis apa?",
+          "type": "mcq",
+          "options": [
+            "متوسطة | Mutawassitah",
+            "برت | Berat",
+            "مغلظة | Mughallazah",
+            "سدرهان | Sederhana",
+            "مخففة | Mukhaffafah",
+            "بياس | Biasa",
+            "سدرهان | Sederhana"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Air kencing bayi lelaki di bawah 2 tahun yang hanya minum susu ibu adalah Najis Mukhaffafah."
+        },
+        {
+          "id": "feqah-najis-q6",
+          "question": "Salah satu contoh Najis Mutawassitah? | Apakah salah satu contoh Najis Mutawassitah?",
+          "type": "mcq",
+          "options": [
+            "انجيغ | Anjing",
+            "اغير کنچيغ بايي للاكي 1 تاهون | Air kencing bayi lelaki 1 tahun",
+            "بابي | Babi",
+            "كتورونن انجيغ | Keturunan anjing",
+            "داره | Darah",
+            "اغير مني | Air mani",
+            "اغير هوجن | Air hujan"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Contoh Mutawassitah: darah, muntah, air kencing, bangkai."
+        },
+        {
+          "id": "feqah-najis-q7",
+          "question": "Najis مغلظة اياله انجيغ دان … serta keturunannya. | Najis Mughallazah ialah anjing dan …, serta keturunannya.",
+          "type": "mcq",
+          "options": [
+            "تيکوس | Tikus",
+            "کوچيغ | Kucing",
+            "بابي | Babi",
+            "لمبو | Lembu",
+            "كمبيغ | Kambing",
+            "ارنب | Arnab",
+            "ايم | Ayam"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Mughallazah yang utama ialah anjing dan babi."
+        },
+        {
+          "id": "feqah-najis-q8",
+          "question": "Najis yang disucikan sekali air tanah ialah… | Najis jenis apakah yang disucikan sekali dengan air bercampur tanah?",
+          "type": "mcq",
+          "options": [
+            "متوسطة | Mutawassitah",
+            "ريغن | Ringan",
+            "مخففة | Mukhaffafah",
+            "سدرهان | Sederhana",
+            "مغلظة | Mughallazah",
+            "بياس | Biasa",
+            "اغير کنچيغ | Air kencing"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Mughallazah: sekali air tanah, enam kali air mutlak."
+        },
+        {
+          "id": "feqah-najis-q9",
+          "question": "Basuhan air mutlak selepas tanah untuk Mughallazah ialah… | Berapa kali basuhan air mutlak selepas air tanah?",
+          "type": "mcq",
+          "options": [
+            "سكالي | Sekali",
+            "دوا كالي | Dua kali",
+            "تيڬ كالي | Tiga kali",
+            "امڤت كالي | Empat kali",
+            "ليم كالي | Lima kali",
+            "انم كالي | Enam kali",
+            "توجوه كالي | Tujuh kali"
+          ],
+          "correctAnswer": 5,
+          "explanation": "Total tujuh kali: sekali tanah + enam kali air mutlak."
+        },
+        {
+          "id": "feqah-najis-q10",
+          "question": "چارا مپوچيكن نجيس مخففة؟ | Cara menyucikan Najis Mukhaffafah?",
+          "type": "mcq",
+          "options": [
+            "باسوه 7 كالي، سكالي اغير تانه | Basuh 7 kali, sekali air tanah",
+            "لڤ سهاج دڠن كأين | Lap sahaja dengan kain",
+            "باسوه 3 كالي سهاج | Basuh 3 kali sahaja",
+            "هيلڠكن نجيس دان رنجيس دڠن اغير مطلق | Hilangkan najis dan renjis dengan air mutlak",
+            "بياركن كريڠ سنديري | Biarkan kering sendiri",
+            "باسوه دڠن سابون واغي | Basuh dengan sabun wangi",
+            "چوم بؤغ بنداڽ سهاج | Cuma buang bendanya sahaja"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Mukhaffafah: hilangkan najis hingga kering, renjis air mutlak."
+        },
+        {
+          "id": "feqah-najis-q11",
+          "question": "Mutawassitah: perlu hilang sepenuhnya… | Apakah yang perlu hilang sepenuhnya bagi Mutawassitah?",
+          "type": "mcq",
+          "options": [
+            "هان راس دان بؤ سهاج | Hanya rasa dan bau",
+            "هان ورنا سهاج | Hanya warna",
+            "هان بؤ سهاج | Hanya bau",
+            "بؤ دان ورنا سهاج | Bau dan warna",
+            "راس دان ورنا سهاج | Rasa dan warna",
+            "نجيس ايت سنديري | Najis itu sendiri",
+            "بؤ، راس، دان ورنا | Bau, rasa, dan warna"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mutawassitah: hilangkan bau, rasa, warna."
+        }
+      ]
+    },
+    {
+      "id": "feqah-hadath",
+      "name": "ڤلاجرن كدوا: حدث | Pelajaran Kedua: Hadath",
+      "description": "Kuiz berkaitan hadath kecil dan besar serta larangannya",
+      "questions": [
+        {
+          "id": "feqah-hadath-q1",
+          "question": "Hadath terbahagi kepada dua ialah Hadath Kecil dan Hadath … | Hadath terbahagi kepada dua jenis, iaitu Hadath Kecil dan Hadath …",
+          "type": "mcq",
+          "options": [
+            "سدرهان | Sederhana",
+            "کوأت | Kuat",
+            "قرتڠاهن | Pertengahan",
+            "ريڠن | Ringan",
+            "مخففة | Mukhaffafah",
+            "مغلظة | Mughallazah",
+            "بسر | Besar"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Hadath: Kecil dan Besar."
+        },
+        {
+          "id": "feqah-hadath-q2",
+          "question": "Hadath Kecil mewajibkan seseorang melakukan apa sebelum solat?",
+          "type": "mcq",
+          "options": [
+            "مندي سنة | Mandi Sunat",
+            "استنجق | Istinjak",
+            "مندي واجب | Mandi Wajib",
+            "تيمم | Tayammum",
+            "مأکن | Makan",
+            "برسوڬي | Bersugi",
+            "وضوء | Wuduk"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Hadath Kecil mewajibkan wuduk untuk solat."
+        },
+        {
+          "id": "feqah-hadath-q3",
+          "question": "Yang manakah dilarang bagi orang berhadath Kecil?",
+          "type": "mcq",
+          "options": [
+            "برڤواسا | Berpuasa",
+            "برجلن | Berjalan",
+            "تيدور | Tidur",
+            "برچاڤ | Bercakap",
+            "مأکن | Makan",
+            "مندي | Mandi",
+            "صلاة | Solat"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Solat dilarang sebelum wuduk."
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-wajib",
+      "name": "ڤلاجرن كتيک: مندي واجب | Pelajaran Ketiga: Mandi Wajib",
+      "description": "Kuiz berkaitan mandi wajib: pengertian, sebab, rukun dan sunat",
+      "questions": [
+        {
+          "id": "feqah-mandiwajib-q1",
+          "question": "مندي واجب اياله … اغير مطلق … | Mandi wajib ialah perbuatan mengalir dan meratakan air … ke seluruh anggota badan dengan niat mandi wajib.",
+          "type": "mcq",
+          "options": [
+            "اغير ڤان | Air panas",
+            "اغير سابون | Air sabun",
+            "اغير ڤريڬي | Air perigi",
+            "اغير واڠي | Air wangi",
+            "اغير تيه | Air teh",
+            "اغير کوڤي | Air kopi",
+            "اغير مطلق | Air mutlak"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mandi wajib mesti dengan air mutlak."
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-sunat",
+      "name": "ڤلاجرن كأمفت: مندي ٢ سنة | Pelajaran Keempat: Mandi-mandi Sunat",
+      "description": "Kuiz berkaitan jenis-jenis mandi sunat dan tatacara",
+      "questions": [
+        {
+          "id": "feqah-mandisunat-q1",
+          "question": "جنيس مندي سنة يغ دلاكوكن کتيك هاري راي؟ | Jenis mandi sunat yang dilakukan ketika Hari Raya?",
+          "type": "mcq",
+          "options": [
+            "مندي سنة کران احرام | Mandi sunat kerana Ihram",
+            "مندي سنة کران کرهان | Mandi sunat Gerhana",
+            "مندي سنة کران صلاة جمعة | Mandi sunat Solat Jumaat",
+            "مندي سنة کران ماسوق مكة | Mandi sunat masuk Mekah",
+            "مندي سنة هاري راي | Mandi sunat Hari Raya",
+            "مندي سنة کران برستوبوه | Mandi sunat kerana bersetubuh",
+            "مندي سنة کران حيض | Mandi sunat kerana haid"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Terdapat mandi sunat Hari Raya."
+        }
+      ]
+    }
+  ]
+}
+
+
