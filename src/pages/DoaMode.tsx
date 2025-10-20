@@ -79,6 +79,13 @@ const DoaMode: React.FC = () => {
   // Get categories from doa data
   const categories: DoaCategory[] = doaData.categories
 
+  // Subject badge (Akhlak, 4x size like Study)
+  const subjectBadge = (
+    <span className="inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-blue-100 text-blue-700 border border-blue-200">
+      {formatText('اخالق | Akhlak')}
+    </span>
+  )
+
   // Track page view on component mount
   useEffect(() => {
     trackPageView('doa_mode', {
@@ -167,6 +174,7 @@ const DoaMode: React.FC = () => {
           {/* Header Section */}
           <PageTransition animation="fade">
             <div className="text-center mb-8">
+              <div className="mb-4 flex justify-center">{subjectBadge}</div>
               <h1 className="text-4xl font-bold text-primary-800 mb-4">
                 {formatText(TEXT.DOA_MODE)}
               </h1>

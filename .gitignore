@@ -42,3 +42,6 @@ Thumbs.db
 
 # Vite timestamp artifacts
 vite.config.ts.timestamp-*.mjs
+ 
+# Local utility scripts (not for commit)
+scripts/
