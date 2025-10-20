@@ -31,6 +31,20 @@ const QuizMode: React.FC = () => {
   const { trackPageView, trackQuizStart, trackQuizComplete } = useAnalytics(currentUser?.name)
   const { answerFeedback, navigation } = useHaptic()
 
+  // Subject badge (double size)
+  const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const subjectBadge = (
+    <span
+      className={
+        subject === 'feqah'
+          ? 'inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-emerald-100 text-emerald-700 border border-emerald-200'
+          : 'inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-blue-100 text-blue-700 border border-blue-200'
+      }
+    >
+      {formatText(subject === 'feqah' ? 'فقه | Feqah' : 'اخالق | Akhlak')}
+    </span>
+  )
+
   const {
     currentQuestion,
     currentQuestionIndex,
@@ -282,6 +296,7 @@ const QuizMode: React.FC = () => {
       >
         <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-4">{subjectBadge}</div>
             <QuestionCard
               question={currentQuestion}
               questionNumber={currentQuestionIndex + 1}
