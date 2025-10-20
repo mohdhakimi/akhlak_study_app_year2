@@ -1,5 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { ContentData, StudyTopic, QuizCategory } from '../types'
+// Statically import content to avoid runtime dynamic import fetch issues on some CDNs
+import akhlakData from '../data/akhlak_db.json'
+import feqahData from '../data/feqah_db.json'
 
 export interface UseContentDataReturn {
   contentData: ContentData | null
@@ -20,23 +23,17 @@ export function useContentData(subject: 'akhlak' | 'feqah' = 'akhlak'): UseConte
       setLoading(true)
       setError(null)
 
-      // Import the JSON data based on subject
-      const data = subject === 'feqah'
-        ? await import('../data/feqah_db.json')
-        : await import('../data/akhlak_db.json')
+      // Select pre-bundled data based on subject (no runtime network fetch)
+      const data = subject === 'feqah' ? feqahData : akhlakData
 
       // Validate the data structure
-      if (
-        !data.default ||
-        !data.default.topics ||
-        !Array.isArray(data.default.topics)
-      ) {
+      if (!data || !(data as any).topics || !Array.isArray((data as any).topics)) {
         throw new Error('Invalid content data structure')
       }
 
       // Data loaded successfully
 
-      setContentData(data.default as unknown as ContentData)
+      setContentData(data as unknown as ContentData)
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : 'Failed to load content data'
