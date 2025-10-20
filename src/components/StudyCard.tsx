@@ -107,7 +107,7 @@ const StudyCard: React.FC<StudyCardProps> = ({
           </div>
 
           {/* Note Content */}
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none study-body">
             {formatContent(formatText(note.content))}
           </div>
         </div>

@@ -55,7 +55,7 @@ const MainMenu: React.FC = () => {
     {
       id: 'akhlak',
       title: 'اخالق | Akhlak',
-      description: 'مودول اخالق دڠن نوتا، کويز دان اوجيان | Modul Akhlak dengan nota, kuiz dan ujian',
+      description: 'مودول اخالق | Modul Akhlak ',
       icon: '🌟',
       color: 'bg-blue-500',
       hoverColor: 'hover:bg-blue-600',
@@ -64,7 +64,7 @@ const MainMenu: React.FC = () => {
     {
       id: 'feqah',
       title: 'فقه | Feqah',
-      description: 'مودول فقه: نجيس، حدث، مندي واجب/سنة | Modul Feqah: Najis, Hadath, Mandi Wajib/Sunat',
+      description: 'مودول فقه   | Modul Feqah',
       icon: '📖',
       color: 'bg-emerald-500',
       hoverColor: 'hover:bg-emerald-600',
