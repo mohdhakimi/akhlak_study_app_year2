@@ -35,6 +35,20 @@ const StudyMode: React.FC = () => {
   } = useStudyMode()
   const { trackPageView, trackStudySession } = useAnalytics(currentUser?.name)
 
+  // Subject badge styling
+  const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const subjectBadge = (
+    <span
+      className={
+        subject === 'feqah'
+          ? 'inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 border border-emerald-200'
+          : 'inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200'
+      }
+    >
+      {formatText(subject === 'feqah' ? 'فقه | Feqah' : 'اخالق | Akhlak')}
+    </span>
+  )
+
   // Track page view on component mount
   useEffect(() => {
     trackPageView('study_mode', {
@@ -151,6 +165,7 @@ const StudyMode: React.FC = () => {
       >
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-4">{subjectBadge}</div>
             <StudyCard
               note={currentNote}
               currentIndex={currentNote.order - 1}
@@ -183,6 +198,7 @@ const StudyMode: React.FC = () => {
       >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-4">{subjectBadge}</div>
           <TopicSelector
             topics={topics}
             onTopicSelect={handleTopicSelect}
