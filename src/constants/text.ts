@@ -1,7 +1,7 @@
 // Bahasa Melayu text constants for the application
 export const TEXT = {
   // App title and branding
-  APP_TITLE: 'Akhlak Tahun Dua KSRI',
+  APP_TITLE: 'Pelajaran Subjek Tahun Dua KSRI',
   APP_SUBTITLE: 'Aplikasi Pembelajaran Interaktif',
 
   // Navigation and menus

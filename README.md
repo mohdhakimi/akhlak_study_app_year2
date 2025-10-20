@@ -1,6 +1,6 @@
-# Akhlak Tahun Dua KSRI - Aplikasi Pembelajaran Interaktif
+# Pelajaran Subjek Tahun Dua KSRI - Aplikasi Pembelajaran Interaktif
 
-Aplikasi web interaktif untuk pembelajaran Akhlak Tahun Dua mengikut sukatan KSRI. Dibangunkan dengan React, TypeScript, dan Tailwind CSS dengan fokus pada pengalaman pembelajaran yang menarik dan berkesan.
+Aplikasi web interaktif untuk pembelajaran Subjek Tahun Dua (Akhlak & Feqah) mengikut sukatan KSRI. Menyokong aliran "pilih subjek dahulu" (Subject-First), dwibahasa Jawi | Rumi dengan gaya tipografi yang dioptimumkan, serta analitik dan haptic untuk pengalaman pembelajaran yang moden.
 
 ## 🚀 Teknologi
 
@@ -11,6 +11,8 @@ Aplikasi web interaktif untuk pembelajaran Akhlak Tahun Dua mengikut sukatan KSR
 - **Code Quality**: ESLint + Prettier
 - **Deployment**: Vercel
 - **Audio**: Web Audio API untuk kesan bunyi
+- **Haptic Feedback**: Web Vibration API untuk getaran peranti mudah alih
+- **Analytics**: Vercel Analytics + Speed Insights
 - **State Management**: React Context + Custom Hooks
 - **Architecture**: Modular Component System dengan Type-Safe Interfaces
 
@@ -19,11 +21,16 @@ Aplikasi web interaktif untuk pembelajaran Akhlak Tahun Dua mengikut sukatan KSR
 - 📚 **Mod Belajar**: Baca dan ulang kaji nota pembelajaran
 - 🧠 **Mod Kuiz**: Ujian 10 soalan dengan maklum balas segera
 - 📝 **Mod Ujian**: Ujian komprehensif 30 soalan
+- 🤲 **Mod Doa**: Doa dan zikir (Subjek Akhlak)
 - 🏆 **Papan Markah**: Rekod pencapaian pelajar
 - 🔊 **Audio & Animasi**: Kesan bunyi dan animasi yang menarik
 - 📱 **Responsif**: Berfungsi di semua peranti
 - 🧩 **Modular**: Sistem komponen yang boleh digunakan semula dan mudah diselenggara
 - 🎯 **Type-Safe**: TypeScript untuk keselamatan jenis dan pengalaman pembangun yang lebih baik
+- 🧭 **Aliran Subjek-First**: Pilih subjek (Akhlak/Feqah) dahulu, kemudian pilih mod pembelajaran
+- 🔤 **Dwibahasa Jawi | Rumi**: Pemformatan teks dengan gaya tipografi khas untuk kebolehbacaan
+- 📳 **Haptic Feedback**: Getaran untuk interaksi (butang, navigasi, jawapan kuiz)
+- 📈 **Analitik**: Vercel Analytics & Speed Insights diintegrasikan
 
 ## Persediaan Pembangunan
 
@@ -77,9 +84,12 @@ src/
 │   └── index.ts         # Eksport terpusat untuk semua komponen
 ├── pages/               # Halaman aplikasi utama
 │   ├── __tests__/       # Ujian unit untuk halaman
-│   ├── MainMenu.tsx     # Menu utama
+│   ├── MainMenu.tsx     # Pilihan subjek (Akhlak / Feqah)
+│   ├── SubjectLanding.tsx # Pilih mod selepas pilih subjek
+│   ├── DoaMode.tsx      # Mod Doa (Akhlak sahaja)
 │   ├── QuizMode.tsx     # Mod kuiz
 │   ├── TestMode.tsx     # Mod ujian
+│   ├── Leaderboard.tsx  # Papan markah
 │   └── StudyMode.tsx    # Mod belajar
 ├── hooks/               # Custom React hooks
 │   ├── __tests__/       # Ujian unit untuk hooks
@@ -105,8 +115,11 @@ src/
 │   ├── text.ts         # Teks dalam Bahasa Melayu
 │   └── components.ts   # Pemalar komponen
 ├── data/                # Data dan kandungan
-│   ├── akhlak_db.json   # Pangkalan data soalan
-│   └── akhlak.txt       # Kandungan asal
+│   ├── akhlak_db.json   # Pangkalan data Akhlak (nota/kuiz/doa)
+│   ├── feqah_db.json    # Pangkalan data Feqah (nota/kuiz)
+│   ├── doa_db.json      # Pangkalan data Mod Doa
+│   ├── Feqah_text.txt   # Teks sumber Feqah (nota + MCQ)
+│   └── content-structure.json # Struktur kandungan
 └── test/                # Konfigurasi ujian
     └── setup.tsx        # Setup ujian
 ```

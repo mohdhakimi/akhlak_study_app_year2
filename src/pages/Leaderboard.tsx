@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useScores } from '../hooks/useScores'
 import { useAnalytics } from '../hooks/useAnalytics'
@@ -16,6 +16,7 @@ type FilterType = 'all' | 'quiz' | 'test'
 const Leaderboard: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { subjectId } = useParams<{ subjectId: 'akhlak' | 'feqah' }>()
   const { scores, loading, error } = useScores()
   const { trackPageView } = useAnalytics(currentUser?.name)
   const [filter, setFilter] = useState<FilterType>('all')

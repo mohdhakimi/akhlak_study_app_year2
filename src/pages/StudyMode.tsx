@@ -12,16 +12,19 @@ import StudyCard from '../components/StudyCard'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import BackToMenuButton from '../components/BackToMenuButton'
+import { useParams } from 'react-router-dom'
+import { getSubjectTheme } from '../utils/theme'
 
 const StudyMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { subjectId } = useParams<{ subjectId: 'akhlak' | 'feqah' }>()
   const { formatText, formatTextWithStyling } = useBilingual()
   const {
     topics,
     loading: contentLoading,
     error: contentError,
-  } = useContentData()
+  } = useContentData(subjectId === 'feqah' ? 'feqah' : 'akhlak')
   const {
     currentTopic,
     currentNote,
@@ -32,6 +35,21 @@ const StudyMode: React.FC = () => {
     actions: { startStudying, goToNext, goToPrevious, resetStudy, setError },
   } = useStudyMode()
   const { trackPageView, trackStudySession } = useAnalytics(currentUser?.name)
+
+  // Subject badge styling
+  const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const theme = getSubjectTheme(subject)
+  const subjectBadge = (
+    <span
+      className={
+        subject === 'feqah'
+          ? 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-emerald-100 text-emerald-700 border border-emerald-200'
+          : 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-blue-100 text-blue-700 border border-blue-200'
+      }
+    >
+      {formatText(subject === 'feqah' ? 'فقه | Feqah' : 'اخالق | Akhlak')}
+    </span>
+  )
 
   // Track page view on component mount
   useEffect(() => {
@@ -109,7 +127,7 @@ const StudyMode: React.FC = () => {
         onUserClick={() => navigate('/')}
         showUser={true}
       >
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
+        <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="text-center py-12">
               <div className="text-6xl mb-6">❌</div>
@@ -149,6 +167,7 @@ const StudyMode: React.FC = () => {
       >
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-4">{subjectBadge}</div>
             <StudyCard
               note={currentNote}
               currentIndex={currentNote.order - 1}
@@ -179,8 +198,9 @@ const StudyMode: React.FC = () => {
         showKeluarButton={true}
         onKeluarClick={handleBackToMenu}
       >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-8">
+      <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-4">{subjectBadge}</div>
           <TopicSelector
             topics={topics}
             onTopicSelect={handleTopicSelect}

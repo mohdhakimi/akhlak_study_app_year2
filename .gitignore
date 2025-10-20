@@ -25,8 +25,8 @@ dist-ssr
 
 # Testing
 coverage
-test-results
-playwright-report
+test-results/
+playwright-report/
 playwright/.cache
 
 # Environment variables
@@ -39,3 +39,9 @@ playwright/.cache
 # OS generated files
 Thumbs.db
 .vercel
+
+# Vite timestamp artifacts
+vite.config.ts.timestamp-*.mjs
+ 
+# Local utility scripts (not for commit)
+scripts/

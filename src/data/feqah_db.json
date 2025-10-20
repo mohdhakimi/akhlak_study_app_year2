@@ -1,0 +1,1192 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-10-20",
+  "topics": [
+    {
+      "id": "feqah-najis",
+      "name": "فقه: نجيس | Feqah: Najis",
+      "description": "Pengertian najis, contoh, bahagian dan kaedah menyucikan",
+      "notes": [
+        {
+          "id": "feqah-najis-note-1",
+          "title": "فغرتين نجيس | Pengertian Najis",
+          "content": "سسواتو بندا كوتور يغ ميببكن تيدق صح عبادة سفرتي صلاة دان طواف. | Sesuatu benda kotor yang menyebabkan tidak sah ibadah seperti solat dan tawaf.",
+          "order": 1
+        },
+        {
+          "id": "feqah-najis-note-2",
+          "title": "چونتوه نجيس | Contoh Najis",
+          "content": "• مونته | Muntah\n• ارق | Arak\n• تاهي | Tahi\n• بغكاي حيوان | Bangkai haiwan\n• داره | Darah\n• نانه | Nanah\n• اویر کنچیغ | Air kencing\n• انجيع | Anjing\n• بابي | Babi",
+          "order": 2
+        },
+        {
+          "id": "feqah-najis-note-3",
+          "title": "بهاكين نجيس | Bahagian Najis",
+          "content": "• مخففة (ريغن) | Mukhaffafah (Ringan)\n• متوسطة (قرتغهن) | Mutawassitah (Pertengahan)\n• مغلظة (برت) | Mughallazah (Berat)",
+          "order": 3
+        },
+        {
+          "id": "feqah-najis-note-4",
+          "title": "فغرتين نجيس مخففة | Pengertian Najis Mukhaffafah",
+          "content": "ا҆ي҆ر کنچیغ کانق ٢ للاكي يغ برعمور كورغ درقد دوا تاهون يغ هان مينوم سوسو ايبو سهاج | Air kencing kanak-kanak lelaki yang berumur kurang daripada dua tahun yang hanya minum susu ibu sahaja.",
+          "order": 4
+        },
+        {
+          "id": "feqah-najis-note-5",
+          "title": "چارا مپوچیکن نجيس مخففة | Cara Menyucikan Najis Mukhaffafah",
+          "content": "• کنل فستي نجيس مخففة | Kenal pasti najis mukhaffafah.\n• هيلغكن نجيس مخففة سهيغك كريغ | Hilangkan najis mukhaffafah sehingga kering.\n• رنجيس دغن اءير مطلق | Renjis dengan air mutlak.",
+          "order": 5
+        },
+        {
+          "id": "feqah-najis-note-6",
+          "title": "فغرتين نجيس متوسطة | Pengertian Najis Mutawassitah",
+          "content": "نجيس سلاءین در قد نجيس مخففة دان نجيس مغلظة | Najis selain daripada najis mukhaffafah dan najis mughallazah.",
+          "order": 6
+        },
+        {
+          "id": "feqah-najis-note-7",
+          "title": "چونتوه نجيس متوسطة | Contoh Najis Mutawassitah",
+          "content": "• دارم | Darah\n• مونته | Muntah\n• اویر کنچیغ | Air kencing\n• بغكاي | Bangkai",
+          "order": 7
+        },
+        {
+          "id": "feqah-najis-note-8",
+          "title": "چارا مپوچیکن نجيس متوسطة | Cara Menyucikan Najis Mutawassitah",
+          "content": "• مغنل فستي نجيس متوسطة | Mengenal pasti najis mutawassitah.\n• هيلغكن نجيس ترلبيه دهولو | Hilangkan najis terlebih dahulu.\n• باسوه تمقت نجيس دعن اءير مطلق هينڬ هيلغ باءو، راس دان ورنا | Basuh tempat najis dengan air mutlak hingga hilang bau, rasa dan warna.",
+          "order": 8
+        },
+        {
+          "id": "feqah-najis-note-9",
+          "title": "فغرتين نجيس مغلظة | Pengertian Najis Mughallazah",
+          "content": "انجيغ دان بابي سرتا کتورونن درقد كدوان اتاو ساله ساتو در قد كدوان | Anjing dan babi serta keturunan daripada kedua-duanya atau salah satu daripada kedua-duanya.",
+          "order": 9
+        },
+        {
+          "id": "feqah-najis-note-10",
+          "title": "چارا مپوچیکن نجيس مغلظة | Cara Menyucikan Najis Mughallazah",
+          "content": "• مغنل قستی نجیس مغلظة | Mengenal pasti najis mughallazah.\n• هيلثكن نجيس | Hilangkan najis.\n• باسوه تمقت نجيس سكالي دغن اءير برچمور تانه | Basuh tempat najis sekali dengan air bercampur tanah.\n• باسوه تمقت نجيس انم كالي دغن اءير مطلق | Basuh tempat najis enam kali dengan air mutlak.",
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "feqah-hadath",
+      "name": "فقه: حدث | Feqah: Hadas",
+      "description": "Bahagian hadas, pengertian, sebab-sebab dan larangan serta cara bersuci",
+      "notes": [
+        {
+          "id": "feqah-hadath-note-1",
+          "title": "بهاكين حدث | Bahagian Hadas",
+          "content": "حدث تربهاكي كقد دوا | Hadas terbahagi kepada dua:\n• حدث کچيل | Hadas Kecil\n• حدث بسر | Hadas Besar",
+          "order": 1
+        },
+        {
+          "id": "feqah-hadath-note-2",
+          "title": "فغرتين حدث کچيل | Pengertian Hadas Kecil",
+          "content": "كأداءن يغ مواجبكن وضوء باكي سسأورڠ يغ هندق ملاكوكن عبادة يغ ترتنتو سفرتي صلاة | Keadaan yang mewajibkan berwuduk bagi seseorang yang hendak melakukan ibadah tertentu seperti solat.",
+          "order": 2
+        },
+        {
+          "id": "feqah-hadath-note-3",
+          "title": "سبب ٢ حدث کچيل | Perkara-perkara yang menyebabkan Hadas Kecil",
+          "content": "• برستوهوه انتارا کوليت للاكي دان فرمقوان بوكن محرم تنفا لاثيق | Bersentuhan antara kulit lelaki dan perempuan yang bukan mahram tanpa lapik.\n• کلوار سسواتو دري قوبول اتاو دبر: اغيین، اءير بسر، اءير کچيل | Keluar sesuatu dari kubul atau dubur: Angin, Air besar, Air kecil.\n• هيلڠ عقل | Hilang akal.\n• تيدور يغ تيدق تتف کدودوقن ڤوڠڬوڠ | Tidur yang tidak tetap kedudukan punggung.\n• مبنتوه کمالوان دغن تافق تاغن | Menyentuh kemaluan dengan tapak tangan.",
+          "order": 3
+        },
+        {
+          "id": "feqah-hadath-note-4",
+          "title": "لارڠن حدث کچيل | Larangan bagi orang berhadas Kecil",
+          "content": "• صلاة | Solat\n• طواف | Tawaf\n• سجود شکور | Sujud Syukur\n• ممكغ/مڽنتوه القرءان | Memegang al-Quran",
+          "order": 4
+        },
+        {
+          "id": "feqah-hadath-note-5",
+          "title": "چارا برسوچي درقد حدث کچيل | Cara Bersuci daripada Hadas Kecil",
+          "content": "• بروضوء | Berwuduk\n• بروضوء مغهاروسکن | Berwuduk mengharuskan\n• سجود تلاوة | Sujud Tilawah\n• مڽنتوه القرءان | Menyentuh al-Quran\n• طواف | Tawaf\n• صلاة | Solat",
+          "order": 5
+        },
+        {
+          "id": "feqah-hadath-note-6",
+          "title": "فغرتين حدث بسر | Pengertian Hadas Besar",
+          "content": "كأداءن يغ مواجبكن مندي واجب باكي سسأورڠ يغ هندق ملاكوكن عبادة سفرتي صلاة دان ممباچ القرءان | Keadaan yang mewajibkan mandi wajib bagi seseorang yang hendak melakukan ibadah seperti solat dan membaca al-Quran.",
+          "order": 6
+        },
+        {
+          "id": "feqah-hadath-note-7",
+          "title": "سبب ٢ حدث بسر | Perkara-perkara yang menyebabkan Hadas Besar",
+          "content": "• كلوار داره حيض | Keluar darah haid\n• كلوار داره نفاس | Keluar darah nifas\n• برستوبوه اتاو ملاكوكن هو بوغن جنس | Bersetubuh atau melakukan hubungan jenis\n• ملاهير كن انق اتاو ککوکورن | Melahirkan anak atau keguguran\n• كلوار اعير مني | Keluar air mani",
+          "order": 7
+        },
+        {
+          "id": "feqah-hadath-note-8",
+          "title": "لارڠن حدث بسر | Larangan bagi orang berhadas Besar",
+          "content": "• صلاة فرض اتاو صلاة سنة | Solat fardu atau solat sunat\n• برهنتي اتاو دودوق ددالم مسجد | Berhenti atau duduk di dalam masjid\n• ممباچ، مڽنتوه اتاو ممباوا القرءان | Membaca, menyentuh atau membawa al-Quran\n• برڤواسا باكي فرمقوان يغ حيض دان نفاس | Berpuasa bagi perempuan yang haid dan nifas\n• طواف دبيت الله | Tawaf di Baitullah\n• براعتكاف ددالم مسجد | Beriktikaf di dalam masjid",
+          "order": 8
+        },
+        {
+          "id": "feqah-hadath-note-9",
+          "title": "چارا برسوچي درقد حدث بسر | Cara Bersuci daripada Hadas Besar",
+          "content": "• مندي واجب | Mandi Wajib",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-wajib",
+      "name": "فقه: مندي واجب | Feqah: Mandi Wajib",
+      "description": "Pengertian, sebab, rukun, sunat dan cara mandi wajib",
+      "notes": [
+        {
+          "id": "feqah-mandiwajib-note-1",
+          "title": "فغرتين مندي واجب | Pengertian Mandi Wajib",
+          "content": "مغالير دان مراتاکن اءير مطلق کسلوروه اغکوتا بادن دڠن نية مندي واجب | Mengalir dan meratakan air mutlak ke seluruh anggota badan dengan niat mandi wajib.",
+          "order": 1
+        },
+        {
+          "id": "feqah-mandiwajib-note-2",
+          "title": "سبب ٢ مندي واجب | Sebab-sebab Mandi Wajib",
+          "content": "• نفاس | Nifas\n• حيض | Haid\n• برستوبوه | Bersetubuh\n• ملاهير كن انق | Melahirkan anak\n• كلوار اعير مني | Keluar air mani",
+          "order": 2
+        },
+        {
+          "id": "feqah-mandiwajib-note-3",
+          "title": "روكون ٢ مندي واجب | Rukun Mandi Wajib",
+          "content": "• مغهيلغکن نجيس درقد بادن | Menghilangkan najis daripada badan\n• نية | Niat\n• مراتاكن اءير مطلق کسلوروه بادن | Meratakan air mutlak ke seluruh anggota badan",
+          "order": 3
+        },
+        {
+          "id": "feqah-mandiwajib-note-4",
+          "title": "لفظ نية مندي واجب دان ارتينۂ | Lafaz Niat Mandi Wajib dan Ertinya",
+          "content": "نَوَيْتُ رَفْعَ الْحَدَثِ اْلاَكْبَرِ لِلَّهِ تَعَالَى | Nawaitu Raf'al Hadasil Akbar Lillahi Ta'ala.\nارتينۂ: سهاج اكو مغغكت حدث بسر كران الله تعالى | Ertinya: Sahaja aku mengangkat hadas besar kerana Allah Taala.",
+          "order": 4
+        },
+        {
+          "id": "feqah-mandiwajib-note-5",
+          "title": "سنة ٢ مندي واجب | Sunat Mandi Wajib",
+          "content": "• ممباچ \"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ\" | Membaca \"Bismillahirrahmanirrahim\"\n• ممباسوه کمالوان دغن تاغن كيري | Membasuh kemaluan dengan tangan kiri\n• ممباسوه تاغن تيک کالي | Membasuh tangan tiga kali\n• بروضوء | Berwuduk\n• ممباسوه کڤالا تيک کالي دان مٙراتاکن رامبوت يغ جارغ | Membasuh kepala tiga kali dan meratakan rambut yang jarang\n• مندهولوكن اغكوتا سبله كانن | Mendahulukan anggota sebelah kanan\n• ممباسوه سلوروه اغکوتا تيک کالي | Membasuh seluruh anggota sebanyak tiga kali\n• مغکوسوق سلوروه اغکوتا بادن | Menggosok seluruh anggota badan\n• ممباسوه کاکي | Membasuh kaki\n• ممباچ دعاء سفرتي دعاء سلفس وضوء | Membaca doa seperti doa selepas wuduk\n• ملاکوکن سچارا برتوروتن | Melakukan secara berturutan",
+          "order": 5
+        },
+        {
+          "id": "feqah-mandiwajib-note-6",
+          "title": "چارا ۲ مندي واجب | Cara Mandi Wajib",
+          "content": "• هيلثكن نجيس ڤد بادن | Hilangkan najis pada badan\n• مولاكن دغن \"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ\" | Mulakan dengan \"Bismillahirrahmanirrahim\"\n• ممباسوه کمالوان | Membasuh kemaluan\n• ممباسوه تاغن تيک کالي | Membasuh tangan tiga kali\n• بروضوء | Berwuduk\n• نية مندي واجب | Niat mandi wajib\n• ممباسوه کڤالا تيک کالي دان مٙراتاکن رامبوت | Membasuh kepala tiga kali dan meratakan rambut\n• مندهولوكن اغكوتا بادن سبله كانن | Mendahulukan anggota badan sebelah kanan\n• مراتاكن اءير سهيڠڬ كسلوروه اغكوتا بادن | Meratakan air sehingga keseluruhan anggota badan\n• ممباچ دعاء سفرتي دعاء سلفس بروضوء | Membaca doa seperti doa selepas wuduk",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-sunat",
+      "name": "فقه: مندي ٢ سنة | Feqah: Mandi-mandi Sunat",
+      "description": "Jenis-jenis mandi sunat, niat dan cara",
+      "notes": [
+        {
+          "id": "feqah-mandisunat-note-1",
+          "title": "جنيس ٢ مندي سنة | Jenis-jenis Mandi Sunat",
+          "content": "• مندي سنة هاري راي | Mandi sunat Hari Raya\n• مندي سنة کرهان | Mandi sunat gerhana\n• مندي سنة ماسوق مكة دان مدينة | Mandi sunat masuk Mekah dan Madinah\n• مندي سنة سلفس ممنديکن ميت | Mandi sunat selepas memandikan mayat\n• مندي سنة ڤوليه درفد هيلغ عقل | Mandi sunat pulih daripada hilang akal\n• مندي سنة وقوف عرفة | Mandi sunat kerana Wuquf Arafah\n• مندي سنة کران احرام | Mandi sunat kerana ihram\n• مندي سنة کران ماسوق إسلام | Mandi sunat kerana masuk Islam\n• مندي سنة کران صلاة جمعة | Mandi sunat kerana solat Jumaat",
+          "order": 1
+        },
+        {
+          "id": "feqah-mandisunat-note-2",
+          "title": "نية مندي سنة | Niat Mandi Sunat",
+          "content": "نَوَيْتُ الْغُسْلَ سُنَّةً لِلَّهِ تَعَالَى | Nawaitul ghusla sunnatan lillahi ta'ala",
+          "order": 2
+        },
+        {
+          "id": "feqah-mandisunat-note-3",
+          "title": "چارا ٢ مندي سنة | Cara Mandi Sunat",
+          "content": "• مغهيلغكن نجيس ڤد بادن | Menghilangkan najis pada badan\n• نية | Niat\n• مراتاكن اءير کسلوروه اغكوتا بادن | Meratakan air keseluruhan anggota badan",
+          "order": 3
+        }
+      ]
+    }
+  ],
+  "quizCategories": [
+    {
+      "id": "feqah-najis",
+      "name": "ڤلاجرن فرتام: نجيس | Pelajaran Pertama: Najis",
+      "description": "Kuiz tentang pengertian, bahagian dan kaedah menyucikan najis",
+      "questions": [
+        {
+          "id": "feqah-najis-q1",
+          "question": "افاکه مقصود نجيس؟ | Apakah maksud Najis?",
+          "type": "mcq",
+          "options": [
+            "بندا کوتور يغ ممبواتکن کيت راس گمبيرا. | Benda kotor yang membuatkan kita rasa gembira.",
+            "بندا کوتور يغ تيدق مغهلغ عبادة کيت. | Benda kotor yang tidak menghalang ibadah kita.",
+            "بندا يغ حرام دماءكن. | Benda yang haram dimakan.",
+            "بندا يغ بوليه دڬوناکن اونتوق بروضوء. | Benda yang boleh digunakan untuk berwuduk.",
+            "بندا کوتور يغ ميببکن تيدق صح عبادة سفرتي صلاة. | Benda kotor yang menyebabkan tidak sah ibadah seperti solat.",
+            "بندا يغ برسیه تتافي تيدق واغي. | Benda yang bersih tetapi tidak wangi.",
+            "فاكاين كوتور يغ فرل دچوچي. | Pakaian kotor yang perlu dicuci."
+          ],
+          "correctAnswer": 4,
+          "explanation": "Najis ialah benda kotor yang buat ibadah kita, macam solat, jadi tak sah."
+        },
+        {
+          "id": "feqah-najis-q2",
+          "question": "نجيس مخففة برمقصود نجيس يغ...؟ | Najis Mukhaffafah (مخففة) bermaksud najis yang...?",
+          "type": "mcq",
+          "options": [
+            "سدرهان | Sederhana",
+            "کوتور | Kotor",
+            "برت | Berat",
+            "بياس | Biasa",
+            "جلس | Jelas",
+            "تيدق نम्पق | Tidak nampak",
+            "ريغن | Ringan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mukhaffafah (مخففة) bermaksud 'ringan' (ريغن)."
+        },
+        {
+          "id": "feqah-najis-q3",
+          "question": "نجيس مغلظة برمقصود نجيس يغ...؟ | Najis Mughallazah (مغلظة) bermaksud najis yang...?",
+          "type": "mcq",
+          "options": [
+            "سدرهان | Sederhana",
+            "بياس | Biasa",
+            "ريغن | Ringan",
+            "کوتور | Kotor",
+            "جلس | Jelas",
+            "ترسمبوپي | Tersembunyi",
+            "برت | Berat"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mughallazah (مغلظة) bermaksud 'berat' (برت)."
+        },
+        {
+          "id": "feqah-najis-q4",
+          "question": "نجيس متوسطة برمقصود نجيس يغ...؟ | Najis Mutawassitah (متوسطة) bermaksud najis yang...?",
+          "type": "mcq",
+          "options": [
+            "ڤاليغ ريغن | Paling ringan",
+            "ڤاليغ برت | Paling berat",
+            "کوتورن بياس | Kotoran biasa",
+            "واغي | Wangi",
+            "ريغن | Ringan",
+            "برت | Berat",
+            "قرتغهن | Pertengahan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mutawassitah (متوسطة) bermaksud 'pertengahan' (قرتغهن)."
+        },
+        {
+          "id": "feqah-najis-q5",
+          "question": "اءير کنچيغ بايي للاكي يغ برعمور كورغ دوا تاهون دان هان مينوم سوسو ايبو دکيرا نجيس جنيس اف؟ | Air kencing bayi lelaki yang berumur kurang dua tahun dan hanya minum susu ibu dikira najis jenis apa?",
+          "type": "mcq",
+          "options": [
+            "متوسطة | Mutawassitah",
+            "برت | Berat",
+            "مغلظة | Mughallazah",
+            "ڤاليغ برت | Paling berat",
+            "مخففة | Mukhaffafah",
+            "بياس | Biasa",
+            "سدرهان | Sederhana"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Air kencing bayi lelaki di bawah 2 tahun yang hanya minum susu ibu adalah Najis Mukhaffafah (ringan)."
+        },
+        {
+          "id": "feqah-najis-q6",
+          "question": "افاکه ساله ساتو چونتوه نجيس متوسطة؟ | Apakah salah satu contoh Najis Mutawassitah?",
+          "type": "mcq",
+          "options": [
+            "انجيغ | Anjing",
+            "اءير کنچيغ بايي للاكي 1 تاهون | Air kencing bayi lelaki 1 tahun",
+            "بابي | Babi",
+            "كتورونن انجيغ | Keturunan anjing",
+            "داره | Darah",
+            "اءير مني | Air mani",
+            "اءير هوجن | Air hujan"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Contoh Najis Mutawassitah yang disebut dalam teks ialah darah, muntah, air kencing, dan bangkai."
+        },
+        {
+          "id": "feqah-najis-q7",
+          "question": "نجيس مغلظة اياله انجيغ دان ______، سرتا كتورونن دري کدواڽ. | Najis Mughallazah ialah anjing dan _______, serta keturunan dari keduanya.",
+          "type": "mcq",
+          "options": [
+            "تيکوس | Tikus",
+            "کوچيغ | Kucing",
+            "بابي | Babi",
+            "لمبو | Lembu",
+            "كمبيغ | Kambing",
+            "ارنب | Arnab",
+            "ايم | Ayam"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Najis Mughallazah yang utama ialah anjing dan babi."
+        },
+        {
+          "id": "feqah-najis-q8",
+          "question": "نجيس جنيس افاکه يغ دسوچيکن دغن ممباسوه سکالي دغن اءير برچمڤور تانه؟ | Najis jenis apakah yang disucikan dengan membasuh sekali dengan air bercampur tanah?",
+          "type": "mcq",
+          "options": [
+            "متوسطة | Mutawassitah",
+            "ريغن | Ringan",
+            "مخففة | Mukhaffafah",
+            "سدرهان | Sederhana",
+            "مغلظة | Mughallazah",
+            "بياس | Biasa",
+            "اءير کنچيغ | Air kencing"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Najis Mughallazah disucikan dengan satu basuhan air tanah, diikuti enam basuhan air mutlak."
+        },
+        {
+          "id": "feqah-najis-q9",
+          "question": "براڤا کاليکاه کيت فرل ممباسوه تمڤت نجيس مغلظة دغن اءير مطلق سلفس اءير تانه؟ | Berapa kalikah kita perlu membasuh tempat Najis Mughallazah dengan air mutlak selepas air tanah?",
+          "type": "mcq",
+          "options": [
+            "سکالي | Sekali",
+            "دوا کالي | Dua kali",
+            "تيڬ کالي | Tiga kali",
+            "امڤت کالي | Empat kali",
+            "ليم کالي | Lima kali",
+            "انم کالي | Enam kali",
+            "توجوه کالي | Tujuh kali"
+          ],
+          "correctAnswer": 5,
+          "explanation": "Ia dibasuh sekali dengan air tanah, dan enam kali dengan air mutlak (total 7 kali basuhan)."
+        },
+        {
+          "id": "feqah-najis-q10",
+          "question": "بڬايماناکه چارا اونتوق مپوچيکن نجيس مخففة؟ | Bagaimanakah cara untuk menyucikan Najis Mukhaffafah?",
+          "type": "mcq",
+          "options": [
+            "باسوه 7 کالي، سکالي اءير تانه. | Basuh 7 kali, sekali air tanah.",
+            "لڤ سهاج دڠن کأين. | Lap sahaja dengan kain.",
+            "باسوه 3 کالي سهاج. | Basuh 3 kali sahaja.",
+            "هيلڠکن نجيس دان رنجيس دڠن اءير مطلق. | Hilangkan najis dan renjis dengan air mutlak.",
+            "بيارکن کريڠ سنديري. | Biarkan kering sendiri.",
+            "باسوه دڠن سابون واغي. | Basuh dengan sabun wangi.",
+            "چوم بؤغ بنداڽ سهاج. | Cuma buang bendanya sahaja."
+          ],
+          "correctAnswer": 3,
+          "explanation": "Selepas hilangkan najis Mukhaffafah, ia hanya perlu direnjis dengan air mutlak."
+        },
+        {
+          "id": "feqah-najis-q11",
+          "question": "افاکه يغ فرل هيلڠ سڤنوهڽ اڤابيل کيت مپوچيکن نجيس متوسطة؟ | Apakah yang perlu hilang sepenuhnya apabila kita menyucikan Najis Mutawassitah?",
+          "type": "mcq",
+          "options": [
+            "هان راس دان بؤ سهاج. | Hanya rasa dan bau sahaja.",
+            "هان ورنا سهاج. | Hanya warna sahaja.",
+            "هان بؤ سهاج. | Hanya bau sahaja.",
+            "بؤ دان ورنا سهاج. | Bau dan warna sahaja.",
+            "راس دان ورنا سهاج. | Rasa dan warna sahaja.",
+            "نجيس ايت سنديري. | Najis itu sendiri.",
+            "بؤ، راس، دان ورنا. | Bau, rasa, dan warna."
+          ],
+          "correctAnswer": 6,
+          "explanation": "Basuhan Najis Mutawassitah mesti menghilangkan bau, rasa, dan warna najis."
+        },
+        {
+          "id": "feqah-najis-q12",
+          "question": "يڠ ماناکه انتارا بريکوت بوکن چونتوه نجيس يغ دسبوتکن دالم ڤلاجرن؟ | Yang manakah antara berikut bukan contoh Najis yang disebutkan dalam pelajaran?",
+          "type": "mcq",
+          "options": [
+            "داره | Darah",
+            "تاهي | Tahi",
+            "مونته | Muntah",
+            "اءير کنچيغ | Air kencing",
+            "اءير ليور | Air liur",
+            "بڠكاي | Bangkai",
+            "اريق | Arak"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Air liur (kecuali dari anjing/babi) tidak disebut sebagai najis dalam senarai contoh."
+        },
+        {
+          "id": "feqah-najis-q13",
+          "question": "سلوم مرنجيس اءير مطلق کأتس نجيس مخففة، افاکه لڠکاه کدوا يغ فرل د بوات؟ | Sebelum merenjis air mutlak ke atas Najis Mukhaffafah, apakah langkah kedua yang perlu dibuat?",
+          "type": "mcq",
+          "options": [
+            "باسوه دڠن سابون. | Basuh dengan sabun.",
+            "باسوه دڠن اءير تانه. | Basuh dengan air tanah.",
+            "باسوه 7 کالي. | Basuh 7 kali.",
+            "باچ نية. | Baca niat.",
+            "ڬوسوق دڠن کأين. | Gosok dengan kain.",
+            "مندي واجب. | Mandi wajib.",
+            "هيلڠکن نجيس سهيڠڬ کريڠ. | Hilangkan najis sehingga kering."
+          ],
+          "correctAnswer": 6,
+          "explanation": "Langkah menyucikan Najis Mukhaffafah ialah 1. Kenal pasti, 2. Hilangkan najis hingga kering, dan 3. Renjis air mutlak."
+        },
+        {
+          "id": "feqah-najis-q14",
+          "question": "تاهي، داره، دان اراق دکلسکن سباڬاي نجيس جنيس اف؟ | `Tahi` (تاهي), `Darah` (داره), dan `Arak` (اراق) dikelaskan sebagai Najis jenis apa?",
+          "type": "mcq",
+          "options": [
+            "مخففة | Mukhaffafah",
+            "مغلظة | Mughallazah",
+            "ريغن | Ringan",
+            "متوسطة | Mutawassitah",
+            "برت | Berat",
+            "ڤاليغ ريغن | Paling ringan",
+            "ڤاليغ برت | Paling berat"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Tahi, darah, dan arak adalah Najis Mutawassitah (pertengahan), kerana ia bukan air kencing bayi lelaki (Mukhaffafah) atau anjing/babi (Mughallazah)."
+        },
+        {
+          "id": "feqah-najis-q15",
+          "question": "اءير جنيس افاکه يغ فرل دڬوناکن اونتوق مرنجيس نجيس مخففة؟ | Air jenis apakah yang perlu digunakan untuk merenjis Najis Mukhaffafah?",
+          "type": "mcq",
+          "options": [
+            "اءير ڤأيڤ بياس | Air paip biasa",
+            "اءير سابون | Air sabun",
+            "اءير واغي | Air wangi",
+            "اءير ڤان | Air panas",
+            "اءير باسوهن | Air basuhan",
+            "اءير تيه | Air teh",
+            "اءير مطلق | Air mutlak"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Najis Mukhaffafah disucikan dengan merenjis air mutlak."
+        }
+      ]
+    },
+    {
+      "id": "feqah-hadath",
+      "name": "ڤلاجرن كدوا: حدث | Pelajaran Kedua: Hadas",
+      "description": "Kuiz tentang hadas kecil/besar, larangan dan cara bersuci",
+      "questions": [
+        {
+          "id": "feqah-hadath-q1",
+          "question": "حدث تربهاڬي کڤد دوا جنيس، يأيت حدث کچيل دان حدث ________. | Hadas terbahagi kepada dua jenis, iaitu Hadas Kecil dan Hadas ________.",
+          "type": "mcq",
+          "options": [
+            "سدرهان | Sederhana",
+            "کوأت | Kuat",
+            "قرتڠاهن | Pertengahan",
+            "ريڠن | Ringan",
+            "مخففة | Mukhaffafah",
+            "مغلظة | Mughallazah",
+            "بسر | Besar"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Hadas terbahagi kepada dua: Hadas Kecil dan Hadas Besar."
+        },
+        {
+          "id": "feqah-hadath-q2",
+          "question": "حدث کچيل اياله كأداءن يغ مواجبکن سسأورڠ اونتوق ملاکوکن اف سبلوم صلاة؟ | Hadas Kecil ialah keadaan yang mewajibkan seseorang untuk melakukan apa sebelum solat?",
+          "type": "mcq",
+          "options": [
+            "مندي سنة | Mandi Sunat",
+            "استنجق | Istinjak",
+            "مندي واجب | Mandi Wajib",
+            "تيمم | Tayammum",
+            "مأکن | Makan",
+            "برسوڬي | Bersugi",
+            "وضوء | Wuduk"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Hadas Kecil mewajibkan kita berwuduk untuk solat."
+        },
+        {
+          "id": "feqah-hadath-q3",
+          "question": "افاکه ساله ساتو ڤرکارا يڠ دلارڠ باڬي اورڠ يڠ برحدث کچيل؟ | Apakah salah satu perkara yang dilarang bagi orang yang berhadas Kecil?",
+          "type": "mcq",
+          "options": [
+            "برڤواسا | Berpuasa",
+            "برجلن | Berjalan",
+            "تيدور | Tidur",
+            "برچاڤ | Bercakap",
+            "مأکن | Makan",
+            "مندي | Mandi",
+            "صلاة | Solat"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Seseorang yang berhadas Kecil tidak boleh melakukan solat sebelum berwuduk."
+        },
+        {
+          "id": "feqah-hadath-q4",
+          "question": "يڠ ماناکه انتارا بريکوت بوکن ڤرکارا يڠ ممبطلکن وضوء (ميببکن حدث کچيل)؟ | Yang manakah antara berikut bukan perkara yang membatalkan wuduk (menyebabkan Hadas Kecil)?",
+          "type": "mcq",
+          "options": [
+            "تيدور يڠ تيدق تتف ڤوڠڬوڠ | Tidur yang tidak tetap punggung",
+            "مڽنتوه کمالوان دڠن تافق تاڠن | Menyentuh kemaluan dengan tapak tangan",
+            "کلوار اڠين (کنتوت) | Keluar angin (kentut)",
+            "کلوار اءير کچيل | Keluar air kecil",
+            "برسن توهکن کوليت للاكي دان ڤرمڤوان بوکن محرم | Bersentuhan kulit lelaki dan perempuan bukan mahram",
+            "هيلڠ عقل | Hilang akal",
+            "مأکن دان مينوم | Makan dan minum"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Makan dan minum tidak menyebabkan hadas kecil."
+        },
+        {
+          "id": "feqah-hadath-q5",
+          "question": "افاکه چارا اونتوق برسوچي دريڤد حدث کچيل؟ | Apakah cara untuk bersuci daripada Hadas Kecil?",
+          "type": "mcq",
+          "options": [
+            "مندي سنة | Mandi sunat",
+            "مندي واجب | Mandi wajib",
+            "مندي بياس | Mandi biasa",
+            "برنام | Berenang",
+            "لڤ دڠن کأين | Lap dengan kain",
+            "تيمم | Tayammum",
+            "بروضوء | Berwuduk"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Cara bersuci daripada Hadas Kecil ialah dengan berwuduk."
+        },
+        {
+          "id": "feqah-hadath-q6",
+          "question": "حدث بسر اياله کأداءن يغ مواجبکن سسأورڠ ايت ________ سبلوم بوليه صلاة اتاو ممباچ القرءان. | Hadas Besar ialah keadaan yang mewajibkan seseorang itu ________ sebelum boleh solat atau membaca al-Quran.",
+          "type": "mcq",
+          "options": [
+            "بروضوء | Berwuduk",
+            "برتيمم | Bertayammum",
+            "مندي سنة | Mandi Sunat",
+            "مڠڬوسوق ڬيڬي | Menggosok gigi",
+            "برسوڬي | Bersugi",
+            "ممباسوه موک | Membasuh muka",
+            "مندي واجب | Mandi Wajib"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Hadas Besar mewajibkan kita mandi wajib."
+        },
+        {
+          "id": "feqah-hadath-q7",
+          "question": "ڤرکارا کلوار داره نفاس اياله ساله ساتو سبب حدث ________. | Perkara `Keluar darah nifas` adalah salah satu sebab Hadas ________.",
+          "type": "mcq",
+          "options": [
+            "کچيل | Kecil",
+            "بياس | Biasa",
+            "مخففة | Mukhaffafah",
+            "متوسطة | Mutawassitah",
+            "ريڠن | Ringan",
+            "سدرهان | Sederhana",
+            "بسر | Besar"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Keluar darah nifas mewajibkan mandi, maka ia adalah Hadas Besar."
+        },
+        {
+          "id": "feqah-hadath-q8",
+          "question": "افاکه يڠ دلارڠ باڬي اورڠ يڠ برحدث بسر د دالم مسجد؟ | Apakah yang dilarang bagi orang yang berhadas Besar di dalam masjid?",
+          "type": "mcq",
+          "options": [
+            "برجلن | Berjalan",
+            "برچاڤ | Bercakap",
+            "مأکن | Makan",
+            "مينوم | Minum",
+            "مڠوروسکن جنازه | Menguruskan jenazah",
+            "برهنتي اتاو دودوق | Berhenti atau duduk",
+            "ممباسوه تاڠن | Membasuh tangan"
+          ],
+          "correctAnswer": 5,
+          "explanation": "Orang berhadas Besar dilarang berhenti atau duduk (beriktikaf) di dalam masjid."
+        },
+        {
+          "id": "feqah-hadath-q9",
+          "question": "يڠ ماناکه انتارا بريکوت دلارڠ سام سكالي کأتس اورڠ يڠ برحدث بسر؟ | Yang manakah antara berikut dilarang sama sekali ke atas orang yang berhadas Besar?",
+          "type": "mcq",
+          "options": [
+            "ممباسوه تاڠن | Membasuh tangan",
+            "برجلن | Berjalan",
+            "بردعاء | Berdoa",
+            "مأکن | Makan",
+            "مينوم | Minum",
+            "تيدور | Tidur",
+            "طواف دبيت الله | Tawaf di Baitullah"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Orang berhadas Besar dilarang tawaf di Baitullah."
+        },
+        {
+          "id": "feqah-hadath-q10",
+          "question": "افاکه يغ برلاکو جيک سأورڠ للاكي دان ڤرمڤوان يغ بوکن محرم برسن توهکن کوليت تنڤا لاڤيق؟ | Apakah yang berlaku jika seorang lelaki dan perempuan yang bukan mahram bersentuhan kulit tanpa lapik?",
+          "type": "mcq",
+          "options": [
+            "تياد اڤا٢ | Tiada apa-apa",
+            "مندي واجب | Mandi wajib",
+            "حدث بسر | Hadas Besar",
+            "مندي سنة | Mandi sunat",
+            "نجيس مخففة | Najis Mukhaffafah",
+            "نجيس مغلظة | Najis Mughallazah",
+            "حدث کچيل | Hadas Kecil"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Bersentuhan kulit lelaki dan perempuan bukan mahram tanpa lapik menyebabkan Hadas Kecil (membatalkan wuduk)."
+        },
+        {
+          "id": "feqah-hadath-q11",
+          "question": "کلوار سسواتو دري قوبول اتاو دبر: اڠين، اءير بسر، اتاو اءير کچيل اداله سبب کڤد حدث اف؟ | Keluar sesuatu dari kubul (kemaluan depan) atau dubur: Angin, Air besar, atau Air kecil adalah sebab kepada Hadas apa?",
+          "type": "mcq",
+          "options": [
+            "متوسطة | Mutawassitah",
+            "مغلظة | Mughallazah",
+            "بسر | Besar",
+            "ريڠن | Ringan",
+            "کچيل | Kecil",
+            "بياس | Biasa",
+            "برت | Berat"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Keluar sesuatu dari kubul atau dubur membatalkan wuduk, yang bermaksud menyebabkan Hadas Kecil."
+        },
+        {
+          "id": "feqah-hadath-q12",
+          "question": "ڤرکارا ممباچ، مڽنتوه، اتاو ممباوا القرءان اداله دلارڠ کأتس اورڠ يڠ برحدث ________. | Perkara `Membaca, menyentuh, atau membawa al-Quran` adalah dilarang ke atas orang yang berhadas ________.",
+          "type": "mcq",
+          "options": [
+            "بياس | Biasa",
+            "ريڠن | Ringan",
+            "متوسطة | Mutawassitah",
+            "مخففة | Mukhaffafah",
+            "کچيل سهاج | Kecil sahaja",
+            "کچيل دان بسر | Kecil dan Besar",
+            "بسر سهاج | Besar sahaja"
+          ],
+          "correctAnswer": 5,
+          "explanation": "Membaca, menyentuh, atau membawa al-Quran dilarang bagi orang berhadas Besar. Memegang al-Quran juga dilarang bagi orang berhadas Kecil. Jadi ia dilarang bagi kedua-duanya."
+        },
+        {
+          "id": "feqah-hadath-q13",
+          "question": "ڤرکارا ملاهيرکن انق اتاو کڬوڬورن اداله ساله ساتو سبب حدث ________. | Perkara `Melahirkan anak atau keguguran` adalah salah satu sebab Hadas ________.",
+          "type": "mcq",
+          "options": [
+            "کچيل | Kecil",
+            "بياس | Biasa",
+            "مخففة | Mukhaffafah",
+            "متوسطة | Mutawassitah",
+            "ريڠن | Ringan",
+            "سدرهان | Sederhana",
+            "بسر | Besar"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Melahirkan anak atau keguguran mewajibkan mandi, maka ia adalah Hadas Besar."
+        },
+        {
+          "id": "feqah-hadath-q14",
+          "question": "افاکه يڠ دلارڠ باڬي اورڠ يڠ برحدث بسر يڠ دألامي اوليه ڤرمڤوان، دان بوليه مڽببکن دي تيدق بوليه برڤواسا؟ | Apakah yang dilarang bagi orang yang berhadas Besar yang dialami oleh perempuan, dan boleh menyebabkan dia tidak boleh berpuasa?",
+          "type": "mcq",
+          "options": [
+            "برستوبوه | Bersetubuh",
+            "ملاهيرکن انق | Melahirkan anak",
+            "کلوار اءير مني | Keluar air mani",
+            "حيض دان نفاس | Haid dan Nifas",
+            "مڽنتوه القرءان | Menyentuh al-Quran",
+            "صلاة | Solat",
+            "طواف | Tawaf"
+          ],
+          "correctAnswer": 3,
+          "explanation": "Berpuasa dilarang bagi perempuan yang sedang haid dan nifas."
+        },
+        {
+          "id": "feqah-hadath-q15",
+          "question": "افاکه ڤرکارا يڠ مستي دلاکوکن اوليه اورڠ يڠ برحدث کچيل سبلوم دي بوليه ملاکوکن صلاة؟ | Apakah perkara yang mesti dilakukan oleh orang yang berhadas Kecil sebelum dia boleh melakukan Solat?",
+          "type": "mcq",
+          "options": [
+            "مندي واجب | Mandi wajib",
+            "مندي سنة | Mandi sunat",
+            "ممباچ بسم الله | Membaca Bismillah",
+            "برتيمم | Bertayammum",
+            "مڽنتوه القرءان | Menyentuh al-Quran",
+            "بروضوء | Berwuduk",
+            "سجود شکور | Sujud Syukur"
+          ],
+          "correctAnswer": 5,
+          "explanation": "Cara bersuci daripada Hadas Kecil adalah Berwuduk (بروضوء)."
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-wajib",
+      "name": "ڤلاجرن كتيک: مندي واجب | Pelajaran Ketiga: Mandi Wajib",
+      "description": "Kuiz tentang pengertian, sebab, rukun dan sunat mandi wajib",
+      "questions": [
+        {
+          "id": "feqah-mandi-wajib-q1",
+          "question": "مندي واجب اياله ڤربواتن مڠالير دان مراتاکن اءير ________ کسلوروه اڠڬوتا بادن دڠن نية مندي واجب. | Mandi wajib ialah perbuatan mengalir dan meratakan air ________ ke seluruh anggota badan dengan niat mandi wajib.",
+          "type": "mcq",
+          "options": [
+            "اءير ڤان | Air panas",
+            "اءير سابون | Air sabun",
+            "اءير ڤريڬي | Air perigi",
+            "اءير واڠي | Air wangi",
+            "اءير تيه | Air teh",
+            "اءير کوڤي | Air kopi",
+            "اءير مطلق | Air mutlak"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mandi wajib mesti menggunakan air mutlak."
+        },
+        {
+          "id": "feqah-mandi-wajib-q2",
+          "question": "افاکه ساله ساتو سبب يڠ مواجبکن سسأورڠ ايت مندي واجب؟ | Apakah salah satu sebab yang mewajibkan seseorang itu mandi wajib?",
+          "type": "mcq",
+          "options": [
+            "دمم | Demam",
+            "مأکن ترلالو باڽق | Makan terlalu banyak",
+            "تيدور ڽيڽق | Tidur nyenyak",
+            "ترکن نجيس مخففة | Terkena najis Mukhaffafah",
+            "ترکن نجيس متوسطة | Terkena najis Mutawassitah",
+            "ترکن نجيس مغلظة | Terkena najis Mughallazah",
+            "کلوار اءير مني | Keluar air mani"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Keluar air mani adalah salah satu sebab mandi wajib."
+        },
+        {
+          "id": "feqah-mandi-wajib-q3",
+          "question": "لأفظ نية مندي واجب اياله: \"Nawaitu Raf’al Hadasil Akbar Lillahi Taala.\" افاکه مقصود اكبر دالم نية ايت؟ | Lafaz niat mandi wajib ialah: \"Nawaitu Raf’al Hadasil Akbar Lillahi Taala.\" Apakah maksud Akbar (اكبر) dalam niat itu?",
+          "type": "mcq",
+          "options": [
+            "کچيل | Kecil",
+            "ريڠن | Ringan",
+            "سدرهان | Sederhana",
+            "سمو | Semua",
+            "مطلق | Mutlak",
+            "واجب | Wajib",
+            "بسر | Besar"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Hadasil Akbar bermaksud Hadas Besar."
+        },
+        {
+          "id": "feqah-mandi-wajib-q4",
+          "question": "يڠ ماناکه انتارا بريکوت بوکن سبب ديواجبکن مندي؟ | Yang manakah antara berikut bukan sebab diwajibkan mandi?",
+          "type": "mcq",
+          "options": [
+            "کلوار داره نفاس | Keluar darah nifas",
+            "ملاهيرکن انق | Melahirkan anak",
+            "برستوبوه | Bersetubuh",
+            "کلوار داره حيض | Keluar darah haid",
+            "کلوار اءير مني | Keluar air mani",
+            "کڬوڬورن | Keguguran",
+            "بروضوء | Berwuduk"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Berwuduk adalah cara bersuci dari Hadas Kecil, bukan sebab mandi wajib."
+        },
+        {
+          "id": "feqah-mandi-wajib-q5",
+          "question": "افاکه يڠ ڤرل دلاکوکن ڤرتام کالي سبلوم ممولاکن مندي واجب، يڠ جوڬ مرڤاکن روكون مندي واجب؟ | Apakah yang perlu dilakukan pertama kali sebelum memulakan mandi wajib, yang juga merupakan rukun Mandi Wajib?",
+          "type": "mcq",
+          "options": [
+            "بروضوء | Berwuduk",
+            "ممباچ دعاء سلفس وضوء | Membaca doa selepas wuduk",
+            "ممباسوه کمالوان | Membasuh kemaluan",
+            "ممباچ بسم الله | Membaca Bismillah",
+            "ممباسوه کاکي | Membasuh kaki",
+            "نية | Niat",
+            "مڠهيلڠکن نجيس دري بادن | Menghilangkan najis dari badan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Rukun Mandi Wajib yang pertama ialah menghilangkan najis dari badan."
+        },
+        {
+          "id": "feqah-mandi-wajib-q6",
+          "question": "براڤاکه جومله روكون مندي واجب؟ | Berapakah jumlah rukun Mandi Wajib?",
+          "type": "mcq",
+          "options": [
+            "ساتو | Satu",
+            "دوا | Dua",
+            "امڤت | Empat",
+            "ليم | Lima",
+            "انم | Enam",
+            "توجوه | Tujuh",
+            "تيڬ | Tiga"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Rukun Mandi Wajib ada tiga: menghilangkan najis, niat, dan meratakan air mutlak ke seluruh badan."
+        },
+        {
+          "id": "feqah-mandi-wajib-q7",
+          "question": "مراتاکن اءير کسلوروه اڠڬوتا بادن اداله ساله ساتو ________ مندي واجب. | `Meratakan air ke seluruh anggota badan` adalah salah satu ________ Mandi Wajib.",
+          "type": "mcq",
+          "options": [
+            "سنة | Sunat",
+            "ادب | Adab",
+            "مکروه | Makruh",
+            "مباح | Mubah",
+            "حرام | Haram",
+            "واجب | Wajib",
+            "روکون | Rukun"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Meratakan air ke seluruh badan adalah rukun Mandi Wajib yang ketiga."
+        },
+        {
+          "id": "feqah-mandi-wajib-q8",
+          "question": "يڠ ماناکه انتارا بريکوت اداله سنة کتيک مندي واجب؟ | Yang manakah antara berikut adalah sunat ketika mandi wajib?",
+          "type": "mcq",
+          "options": [
+            "نية | Niat",
+            "مراتاكن اءير كسلواروه بادن | Meratakan air ke seluruh badan",
+            "مڠهيلڠکن نجيس | Menghilangkan najis",
+            "ممباچ فاتحه | Membaca Fatihah",
+            "ممباچ دعاء قنوت | Membaca doa Qunut",
+            "ممباسوه بادن سکالي سهاج | Membasuh badan sekali sahaja",
+            "منداهولوکن اڠڬوتا سبله کانن | Mendahulukan anggota sebelah kanan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mendahulukan anggota kanan adalah salah satu sunat mandi wajib."
+        },
+        {
+          "id": "feqah-mandi-wajib-q9",
+          "question": "مڠيکوت سنة مندي واجب، ممباسوه کڤالا دلاکوکن سباڽق ________ کالي. | Mengikut sunat Mandi Wajib, membasuh kepala dilakukan sebanyak ________ kali.",
+          "type": "mcq",
+          "options": [
+            "سکالي | Sekali",
+            "دوا کالي | Dua kali",
+            "امڤت کالي | Empat kali",
+            "ليم کالي | Lima kali",
+            "انم کالي | Enam kali",
+            "توجوه کالي | Tujuh kali",
+            "تيڬ کالي | Tiga kali"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Sunat membasuh kepala tiga kali."
+        },
+        {
+          "id": "feqah-mandi-wajib-q10",
+          "question": "سنة باڬي سسأورڠ يڠ مندي واجب اونتوق ملاکوکن وضوء ڤد ماس بيل؟ | Sunat bagi seseorang yang mandi wajib untuk melakukan wuduk pada masa bila?",
+          "type": "mcq",
+          "options": [
+            "سلفس سسلساي مندي واجب | Selepas selesai Mandi Wajib",
+            "د ڤرتڠاهن مندي واجب | Di pertengahan Mandi Wajib",
+            "سماس د دالم اءير | Semasa di dalam air",
+            "سلفس نية | Selepas niat",
+            "سبلوم ممباسوه کاکي | Sebelum membasuh kaki",
+            "سبلوم ممباسوه کڤالا | Sebelum membasuh kepala",
+            "سبلوم نية | Sebelum niat"
+          ],
+          "correctAnswer": 5,
+          "explanation": "Wuduk adalah sunat mandi wajib, dilakukan selepas membasuh kemaluan dan tangan, dan sebelum membasuh kepala/meratakan air ke seluruh badan."
+        },
+        {
+          "id": "feqah-mandi-wajib-q11",
+          "question": "سماس مندي واجب، دسونتکن ممباسوه کمالوان دڠن تاڠن __________ . | Semasa mandi wajib, disunatkan membasuh kemaluan dengan tangan __________.",
+          "type": "mcq",
+          "options": [
+            "کانن | Kanan",
+            "کدوا-دوا بله | Kedua-dua belah",
+            "تيدق ڤرل باسوه | Tidak perlu basuh",
+            "تاڠن اورڠ لاءين | Tangan orang lain",
+            "کاکي | Kaki",
+            "سيکو | Siku",
+            "کيري | Kiri"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Sunat membasuh kemaluan dengan tangan kiri."
+        },
+        {
+          "id": "feqah-mandi-wajib-q12",
+          "question": "نية مندي واجب اداله ساله ساتو دريڤد ________ مندي واجب. | `Niat` (نية) mandi wajib adalah salah satu daripada ________ Mandi Wajib.",
+          "type": "mcq",
+          "options": [
+            "سنة | Sunat",
+            "ادب | Adab",
+            "مکروه | Makruh",
+            "مباح | Mubah",
+            "حرام | Haram",
+            "واجب | Wajib",
+            "روکون | Rukun"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Niat adalah rukun kedua Mandi Wajib."
+        },
+        {
+          "id": "feqah-mandi-wajib-q13",
+          "question": "افاکه يڠ ڤرل دباچ سبلوم ممولاکن مندي واجب؟ | Apakah yang perlu dibaca sebelum memulakan Mandi Wajib?",
+          "type": "mcq",
+          "options": [
+            "دعاء سلفس وضوء | Doa selepas wuduk",
+            "سورة الفاتحة | Surah Al-Fatihah",
+            "نية مندي واجب | Niat mandi wajib",
+            "صلوات | Selawat",
+            "استغفار | Istighfar",
+            "ذکر | Zikir",
+            "بسم الله | Bismillah"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Sunat membaca \"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ\" di awal mandi wajib."
+        },
+        {
+          "id": "feqah-mandi-wajib-q14",
+          "question": "افاکه ڤرکارا يڠ ديواجبکن مندي جيک اي برلاکو کڤد ڤرمڤوان؟ | Apakah perkara yang diwajibkan mandi jika ia berlaku kepada perempuan?",
+          "type": "mcq",
+          "options": [
+            "مڽنتوه کمالوان | Menyentuh kemaluan",
+            "تيدور ڽيڽق | Tidur nyenyak",
+            "برجلن | Berjalan",
+            "صلاة | Solat",
+            "برڤواسا | Berpuasa",
+            "ممباسوه تاڠن | Membasuh tangan",
+            "نفاس | Nifas"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Nifas (نفاس) ialah salah satu sebab mandi wajib."
+        },
+        {
+          "id": "feqah-mandi-wajib-q15",
+          "question": "سهاج اكو مڠڠکت حدث بسر کران الله تعالى اداله نية اونتوق اف؟ | `Sahaja aku mengangkat hadas besar kerana Allah Taala` (سهاج اكو مڠڠكت حدث بسر کران الله تعالى) adalah niat untuk apa?",
+          "type": "mcq",
+          "options": [
+            "بروضوء | Berwuduk",
+            "مندي سنة | Mandi sunat",
+            "مندي بياس | Mandi biasa",
+            "تيمم | Tayammum",
+            "ممباسوه نجيس | Membasuh najis",
+            "برڤواسا | Berpuasa",
+            "مندي واجب | Mandi wajib"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Itu adalah ertinya Lafaz Niat Mandi Wajib."
+        }
+      ]
+    },
+    {
+      "id": "feqah-mandi-sunat",
+      "name": "ڤلاجرن كأمفت: مندي ٢ سنة | Pelajaran Keempat: Mandi-mandi Sunat",
+      "description": "Kuiz tentang jenis mandi sunat dan amalan berkaitan",
+      "questions": [
+        {
+          "id": "feqah-mandi-sunat-q1",
+          "question": "افاکه جنيس مندي سنة يغ دلاکوکن کتيک هاري راي؟ | Apakah jenis mandi sunat yang dilakukan ketika Hari Raya?",
+          "type": "mcq",
+          "options": [
+            "مندي سنة کران احرام | Mandi sunat kerana Ihram",
+            "مندي سنة کران کرهان | Mandi sunat kerana Gerhana",
+            "مندي سنة کران صلاة جمعة | Mandi sunat kerana Solat Jumaat",
+            "مندي سنة کران ماسوق مكة | Mandi sunat kerana masuk Mekah",
+            "مندي سنة هاري راي | Mandi sunat Hari Raya",
+            "مندي سنة کران برستوبوه | Mandi sunat kerana bersetubuh",
+            "مندي سنة کران حيض | Mandi sunat kerana haid"
+          ],
+          "correctAnswer": 4,
+          "explanation": "Terdapat Mandi sunat Hari Raya dalam jenis mandi sunat."
+        },
+        {
+          "id": "feqah-mandi-sunat-q2",
+          "question": "افاکه نية باڬي مندي سنة؟ | Apakah niat bagi Mandi Sunat?",
+          "type": "mcq",
+          "options": [
+            "سهاج اكو مندي سنة هاري راي کران الله تعالى. | Sahaja aku mandi sunat Hari Raya kerana Allah Taala.",
+            "سهاج اكو مڠڠکت حدث کچيل کران الله تعالى. | Sahaja aku mengangkat hadas kecil kerana Allah Taala.",
+            "سهاج اكو مڠڠکت حدث بسر کران الله تعالى. | Sahaja aku mengangkat hadas besar kerana Allah Taala.",
+            "سهاج اكو مندي واجب. | Sahaja aku mandi wajib.",
+            "سهاج اكو مندي کران ممبرسيهکن ديري. | Sahaja aku mandi kerana membersihkan diri.",
+            "سهاج اكو مندي فرض. | Sahaja aku mandi fardu.",
+            "سهاج اكو مندي سنة کران الله تعالى. | Sahaja aku mandi sunat kerana Allah Taala."
+          ],
+          "correctAnswer": 6,
+          "explanation": "Niat Mandi Sunat secara umum ialah \"Sahaja aku mandi sunat kerana Allah Taala\" (`نَوَيْتُ الْغُسْلَ سُنَّةً لِلَّهِ تَعَالَى`)."
+        },
+        {
+          "id": "feqah-mandi-sunat-q3",
+          "question": "مندي سنة اونتوق صلاة جمعة دلاکوکن ڤد هاري اف؟ | Mandi Sunat untuk Solat Jumaat (صلاة جمعة) dilakukan pada hari apa?",
+          "type": "mcq",
+          "options": [
+            "هاري راي | Hari Raya",
+            "هاري احد | Hari Ahad",
+            "هاري اثنين | Hari Isnin",
+            "هاري رابو | Hari Rabu",
+            "هاري خميس | Hari Khamis",
+            "هاري سبتو | Hari Sabtu",
+            "هاري جمعة | Hari Jumaat"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mandi sunat kerana Solat Jumaat dilakukan pada Hari Jumaat."
+        },
+        {
+          "id": "feqah-mandi-sunat-q4",
+          "question": "يڠ ماناکه انتارا بريکوت اداله جنيس مندي سنة؟ | Yang manakah antara berikut adalah jenis Mandi Sunat?",
+          "type": "mcq",
+          "options": [
+            "مندي کران ترکن نجيس مغلظة | Mandi kerana terkena najis Mughallazah",
+            "مندي کران کلوار داره نفاس | Mandi kerana keluar darah nifas",
+            "مندي کران ترتيدور | Mandi kerana tertidur",
+            "مندي کران بروضوء | Mandi kerana berwuduk",
+            "مندي کران برڤواسا | Mandi kerana berpuasa",
+            "مندي کران مأکن | Mandi kerana makan",
+            "مندي کران احرام | Mandi kerana Ihram"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mandi sunat kerana Ihram (untuk Haji/Umrah) adalah salah satu jenisnya."
+        },
+        {
+          "id": "feqah-mandi-sunat-q5",
+          "question": "لڠکاه ڤرتام دالم چارا مندي سنة اياله: | Langkah pertama dalam cara Mandi Sunat ialah:",
+          "type": "mcq",
+          "options": [
+            "نية | Niat",
+            "بروضوء | Berwuduk",
+            "ممباچ بسم الله | Membaca Bismillah",
+            "مراتاكن اءير | Meratakan air",
+            "ممباسوه کڤالا | Membasuh kepala",
+            "ممباسوه کاکي | Membasuh kaki",
+            "مڠهيلڠکن نجيس ڤد بادن | Menghilangkan najis pada badan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Sama seperti mandi wajib, langkah pertama Mandi Sunat ialah menghilangkan najis pada badan."
+        },
+        {
+          "id": "feqah-mandi-sunat-q6",
+          "question": "مندي سنة کرهان اياله مندي يڠ دلاکوکن کتيک برلاکوڽ کرهان ________. | Mandi Sunat Gerhana ialah mandi yang dilakukan ketika berlakunya Gerhana ________.",
+          "type": "mcq",
+          "options": [
+            "چهاي | Cahaya",
+            "اڠين | Angin",
+            "بينتڠ | Bintang",
+            "بومي | Bumi",
+            "ڤلانيت | Planet",
+            "ميتيور | Meteor",
+            "ماتاهاري اتاو بولن | Matahari atau Bulan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Mandi sunat Gerhana merujuk kepada gerhana matahari atau bulan."
+        },
+        {
+          "id": "feqah-mandi-sunat-q7",
+          "question": "افاکه روكون مندي سنة يڠ تراخير؟ | Apakah rukun Mandi Sunat yang terakhir?",
+          "type": "mcq",
+          "options": [
+            "نية | Niat",
+            "ممباچ بسم الله | Membaca Bismillah",
+            "هيلڠکن نجيس | Hilangkan najis",
+            "ممباسوه کڤالا | Membasuh kepala",
+            "بروضوء | Berwuduk",
+            "ممباسوه کاکي | Membasuh kaki",
+            "مراتاكن اءير کسلوروه اڠڬوتا بادن | Meratakan air keseluruhan anggota badan"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Rukun Mandi Sunat ketiga dan terakhir ialah meratakan air keseluruhan anggota badan."
+        },
+        {
+          "id": "feqah-mandi-sunat-q8",
+          "question": "مندي سنة جوڬ دلاکوکن کڤد سسأورڠ سلفس دي ممنديکن اف؟ | Mandi Sunat juga dilakukan kepada seseorang selepas dia memandikan apa?",
+          "type": "mcq",
+          "options": [
+            "انجيغ | Anjing",
+            "بابي | Babi",
+            "کوچيغ | Kucing",
+            "بيناتڠ | Binatang",
+            "انق کچيل | Anak kecil",
+            "ايبو باڤ | Ibu bapa",
+            "ميت | Mayat"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Ada Mandi Sunat selepas memandikan mayat."
+        },
+        {
+          "id": "feqah-mandi-sunat-q9",
+          "question": "مندي سنة کران وقوف عرفة دلاکوکن سماس منونايکن عبادة اف؟ | Mandi Sunat kerana Wuquf Arafah (وقوف عرفة) dilakukan semasa menunaikan ibadah apa?",
+          "type": "mcq",
+          "options": [
+            "عمره | Umrah",
+            "صلاة جمعة | Solat Jumaat",
+            "هاري راي | Hari Raya",
+            "کرهان | Gerhana",
+            "ماسوق اسلام | Masuk Islam",
+            "ڤواسا | Puasa",
+            "حاجي | Haji"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Wuquf Arafah adalah rukun Haji."
+        },
+        {
+          "id": "feqah-mandi-sunat-q10",
+          "question": "مندي سنة جوڬ دسونتکن باڬي اورڠ يڠ بارو سهاج ________. | Mandi Sunat juga disunatkan bagi orang yang baru sahaja ________.",
+          "type": "mcq",
+          "options": [
+            "باڠون تيدور | Bangun tidur",
+            "مأکن | Makan",
+            "کلوار رومه | Keluar rumah",
+            "ممباچ القرءان | Membaca Quran",
+            "منڠيس | Menangis",
+            "کتاوا | Ketawa",
+            "ماسوق اسلام | Masuk Islam"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Terdapat Mandi Sunat kerana masuk Islam."
+        },
+        {
+          "id": "feqah-mandi-sunat-q11",
+          "question": "براڤاکه جومله روكون مندي سنة؟ | Berapakah jumlah rukun Mandi Sunat?",
+          "type": "mcq",
+          "options": [
+            "ساتو | Satu",
+            "دوا | Dua",
+            "امڤت | Empat",
+            "ليم | Lima",
+            "انم | Enam",
+            "توجوه | Tujuh",
+            "تيڬ | Tiga"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Rukun Mandi Sunat ada tiga: menghilangkan najis, niat, dan meratakan air."
+        },
+        {
+          "id": "feqah-mandi-sunat-q12",
+          "question": "افاکه مندي سنة يڠ دلاکوکن اڤابيل کيت سمڤأي د تانه سوچي؟ | Apakah Mandi Sunat yang dilakukan apabila kita sampai di Tanah Suci?",
+          "type": "mcq",
+          "options": [
+            "مندي سنة هاري راي | Mandi sunat Hari Raya",
+            "مندي سنة احرام | Mandi sunat Ihram",
+            "مندي سنة کرهان | Mandi sunat Gerhana",
+            "مندي سنة عرفة | Mandi sunat Arafah",
+            "مندي سنة جمعة | Mandi sunat Jumaat",
+            "مندي سنة سلفس ممنديکن ميت | Mandi sunat selepas memandikan mayat",
+            "مندي سنة ماسوق مكة دان مدينة | Mandi sunat masuk Mekah dan Madinah"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Terdapat Mandi sunat kerana masuk Mekah dan Madinah."
+        },
+        {
+          "id": "feqah-mandi-sunat-q13",
+          "question": "مندي سنة جوڬ دسونتکن باڬي اورڠ يڠ بارو ڤوليه دريڤد اف؟ | Mandi Sunat juga disunatkan bagi orang yang baru pulih daripada apa?",
+          "type": "mcq",
+          "options": [
+            "ساکيت ڤروت | Sakit perut",
+            "دمم | Demam",
+            "ساکيت ڬيڬي | Sakit gigi",
+            "ساکيت کاکي | Sakit kaki",
+            "ساکيت تاڠن | Sakit tangan",
+            "سسلسم | Selesema",
+            "هيلڠ عقل | Hilang akal"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Ada Mandi Sunat selepas pulih daripada hilang akal."
+        },
+        {
+          "id": "feqah-mandi-sunat-q14",
+          "question": "نية مندي سنة اداله ساله ساتو دريڤد ________ مندي سنة. | `Niat` (نية) mandi sunat adalah salah satu daripada ________ Mandi Sunat.",
+          "type": "mcq",
+          "options": [
+            "سنة | Sunat",
+            "ادب | Adab",
+            "مکروه | Makruh",
+            "مباح | Mubah",
+            "حرام | Haram",
+            "واجب | Wajib",
+            "روکون | Rukun"
+          ],
+          "correctAnswer": 6,
+          "explanation": "Niat adalah rukun kedua Mandi Sunat."
+        },
+        {
+          "id": "feqah-mandi-sunat-q15",
+          "question": "نية مندي سنة يڠ بتول اياله: نَوَيْتُ الْغُسْلَ سُنَّةً لِلَّهِ تَعَالَى. افاکه ارتيڽ؟ | Niat Mandi Sunat yang betul ialah: `نَوَيْتُ الْغُسْلَ سُنَّةً لِلَّهِ تَعَالَى`. Apakah ertinya?",
+          "type": "mcq",
+          "options": [
+            "سهاج اكو مڠڠکت حدث بسر کران الله تعالى. | Sahaja aku mengangkat hadas besar kerana Allah Taala.",
+            "سهاج اكو مڠڠکت حدث کچيل کران الله تعالى. | Sahaja aku mengangkat hadas kecil kerana Allah Taala.",
+            "سهاج اكو مندي واجب کران الله تعالى. | Sahaja aku mandi wajib kerana Allah Taala.",
+            "سهاج اكو مندي سنة کران الله تعالى. | Sahaja aku mandi sunat kerana Allah Taala.",
+            "سهاج اكو بروضوء کران الله تعالى. | Sahaja aku berwuduk kerana Allah Taala.",
+            "سهاج اكو مڠهيلڠکن نجيس کران الله تعالى. | Sahaja aku menghilangkan najis kerana Allah Taala.",
+            "سهاج اكو مندي هاري راي کران الله تعالى. | Sahaja aku mandi hari raya kerana Allah Taala."
+          ],
+          "correctAnswer": 3,
+          "explanation": "Ertinya adalah \"Sahaja aku mandi sunat kerana Allah Taala\"."
+        }
+      ]
+    }
+  ]
+}

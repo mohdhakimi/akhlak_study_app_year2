@@ -118,31 +118,31 @@ export function selectQuizOptions(
   options: string[],
   correctIndex: number
 ): { selectedOptions: string[]; newCorrectIndex: number } {
-  if (options.length !== 7) {
-    throw new Error('Expected exactly 7 options')
-  }
+  const totalOptions = options.length
 
-  if (correctIndex < 0 || correctIndex >= 7) {
+  // Validate bounds
+  if (totalOptions === 0) {
+    return { selectedOptions: [], newCorrectIndex: -1 }
+  }
+  if (correctIndex < 0 || correctIndex >= totalOptions) {
     throw new Error('Invalid correct index')
   }
 
-  // Get the correct answer
+  // If there are 4 or fewer options, just shuffle all and remap correct index
+  if (totalOptions <= 4) {
+    const indices = Array.from({ length: totalOptions }, (_, i) => i)
+    const shuffledIndices = shuffleArray(indices)
+    const newCorrectIndex = shuffledIndices.indexOf(correctIndex)
+    const selectedOptions = shuffledIndices.map(i => options[i])
+    return { selectedOptions, newCorrectIndex }
+  }
+
+  // There are more than 4 options: pick 1 correct + 3 distractors
   const correctAnswer = options[correctIndex]
-
-  // Get all distractors (all options except the correct one)
-  const distractors = options.filter((_, index) => index !== correctIndex)
-
-  // Select 3 random distractors
+  const distractors = options.filter((_, idx) => idx !== correctIndex)
   const selectedDistractors = randomSelect(distractors, 3)
-
-  // Combine correct answer with selected distractors
-  const allSelected = [correctAnswer, ...selectedDistractors]
-
-  // Shuffle the final 4 options
-  const shuffled = shuffleArray(allSelected)
-
-  // Find the new position of the correct answer
-  const newCorrectIndex = shuffled.findIndex(option => option === correctAnswer)
-
+  const combined = [correctAnswer, ...selectedDistractors]
+  const shuffled = shuffleArray(combined)
+  const newCorrectIndex = shuffled.findIndex(opt => opt === correctAnswer)
   return { selectedOptions: shuffled, newCorrectIndex }
 }

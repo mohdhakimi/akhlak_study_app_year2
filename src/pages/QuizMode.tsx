@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useUserContext } from '../contexts/UserContext'
 import { useBilingual } from '../contexts/BilingualContext'
 import { useContentData } from '../hooks/useContentData'
@@ -16,19 +16,36 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import BackToMenuButton from '../components/BackToMenuButton'
 import { QuizResult } from '../components/QuizResults'
+import { getSubjectTheme } from '../utils/theme'
 
 const QuizMode: React.FC = () => {
   const navigate = useNavigate()
   const { currentUser } = useUserContext()
+  const { subjectId } = useParams<{ subjectId: 'akhlak' | 'feqah' }>()
   const { formatText } = useBilingual()
   const {
     quizCategories,
     loading: contentLoading,
     error: contentError,
-  } = useContentData()
+  } = useContentData(subjectId === 'feqah' ? 'feqah' : 'akhlak')
   const { saveScore } = useScores()
   const { trackPageView, trackQuizStart, trackQuizComplete } = useAnalytics(currentUser?.name)
   const { answerFeedback, navigation } = useHaptic()
+
+  // Subject badge (double size)
+  const subject = subjectId === 'feqah' ? 'feqah' : 'akhlak'
+  const theme = getSubjectTheme(subject)
+  const subjectBadge = (
+    <span
+      className={
+        subject === 'feqah'
+          ? 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-emerald-100 text-emerald-700 border border-emerald-200'
+          : 'inline-flex items-center px-12 py-4 rounded-full text-2xl font-extrabold bg-blue-100 text-blue-700 border border-blue-200'
+      }
+    >
+      {formatText(subject === 'feqah' ? 'فقه | Feqah' : 'اخالق | Akhlak')}
+    </span>
+  )
 
   const {
     currentQuestion,
@@ -95,7 +112,7 @@ const QuizMode: React.FC = () => {
     setQuizResults([])
     setShowResults(false)
     setSelectedCategory(null)
-    navigate('/quiz') // Go back to category selection
+    navigate(`/${subjectId}/quiz`) // Go back to category selection with subject
   }
 
   const handleCategorySelect = (category: any) => {
@@ -215,7 +232,7 @@ const QuizMode: React.FC = () => {
         onUserClick={() => navigate('/')}
         showUser={true}
       >
-        <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-8">
+        <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo} py-8`}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="text-center py-12">
               <div className="text-6xl mb-6">❌</div>
@@ -281,6 +298,7 @@ const QuizMode: React.FC = () => {
       >
         <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-8">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-4">{subjectBadge}</div>
             <QuestionCard
               question={currentQuestion}
               questionNumber={currentQuestionIndex + 1}
@@ -314,13 +332,16 @@ const QuizMode: React.FC = () => {
       showUser={true}
       showBilingualToggle={true}
     >
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100">
-        <CategorySelector
-          categories={quizCategories}
-          onCategorySelect={handleCategorySelect}
-          onBack={handleBackToMenu}
-          loading={contentLoading}
-        />
+      <div className={`min-h-screen bg-gradient-to-br ${theme.gradientFrom} ${theme.gradientTo}`}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="mb-4">{subjectBadge}</div>
+          <CategorySelector
+            categories={quizCategories}
+            onCategorySelect={handleCategorySelect}
+            onBack={handleBackToMenu}
+            loading={contentLoading}
+          />
+        </div>
       </div>
     </Layout>
   )

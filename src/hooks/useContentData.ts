@@ -10,7 +10,7 @@ export interface UseContentDataReturn {
   refetch: () => void
 }
 
-export function useContentData(): UseContentDataReturn {
+export function useContentData(subject: 'akhlak' | 'feqah' = 'akhlak'): UseContentDataReturn {
   const [contentData, setContentData] = useState<ContentData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -20,8 +20,10 @@ export function useContentData(): UseContentDataReturn {
       setLoading(true)
       setError(null)
 
-      // Import the JSON data directly
-      const data = await import('../data/akhlak_db.json')
+      // Import the JSON data based on subject
+      const data = subject === 'feqah'
+        ? await import('../data/feqah_db.json')
+        : await import('../data/akhlak_db.json')
 
       // Validate the data structure
       if (
@@ -43,7 +45,7 @@ export function useContentData(): UseContentDataReturn {
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [subject])
 
   useEffect(() => {
     loadContentData()
